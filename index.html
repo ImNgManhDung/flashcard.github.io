@@ -3,17 +3,27 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>App học từ vựng</title>
   <style>
+    /* Chung cho tất cả các màn hình */
     body {
       font-family: Arial, sans-serif;
       background: #eef2f5;
       padding: 30px;
       text-align: center;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
     .card {
-      width: 300px;
+      width: 90%;
+      max-width: 300px;
       margin: 20px auto;
       background: #fff;
       border-radius: 12px;
@@ -59,6 +69,39 @@
       margin: 5px;
       padding: 10px 20px;
       font-size: 16px;
+    }
+
+    /* Media Query cho thiết bị di động */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      .card {
+        width: 95%;
+        padding: 15px;
+      }
+
+      .word {
+        font-size: 24px;
+      }
+
+      .meaning {
+        font-size: 18px;
+      }
+
+      .example {
+        font-size: 16px;
+      }
+
+      .status {
+        font-size: 12px;
+      }
+
+      button {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
     }
   </style>
 </head>
@@ -154,6 +197,7 @@
         console.error(err);
       });
   </script>
+
 </body>
 
 </html>
