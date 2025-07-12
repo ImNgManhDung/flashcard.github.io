@@ -323,11 +323,14 @@
     </div>
   </div>
 
- 
+  <!-- <div class="buttons">
+    <button class="nav-btn" onclick="prevCard()">⬅️ Trước</button>
+    <button class="nav-btn" onclick="nextCard()">Tiếp ➡️</button>
+  </div> -->
 
   <div class="status" id="status"></div>
- 
-
+  <!-- <div class="swipe-hint">💡 Vuốt trái/phải để chuyển thẻ, click để xem nghĩa</div> -->
+<button onclick="openMiniPopup()">📱 Mini Popup</button>
 
   <script>
     let vocabulary = [];
@@ -378,6 +381,14 @@
       'exclamation': { short: 'interj', name: 'Thán từ', class: 'interj' }
     };
 
+
+    function openMiniPopup() {
+  const popup = window.open(
+    'pip-frame.html',  // File HTML chứa từ vựng, giống như bên trên
+    'MiniPopup',
+    'width=300,height=400,resizable=yes'
+  );
+}
 
 
     // Fallback function to get word data from local enhanced data

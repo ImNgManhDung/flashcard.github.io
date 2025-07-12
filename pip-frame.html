@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Vocab PIP</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 10px;
+      font-family: sans-serif;
+      background: white;
+    }
+    .word { font-size: 24px; font-weight: bold; margin-top: 5px; color: #2c3e50; }
+    .pronunciation { font-size: 16px; font-style: italic; color: gray; }
+    .meaning { font-size: 18px; margin-top: 5px; color: #34495e; }
+    .example { font-size: 14px; font-style: italic; color: #7f8c8d; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <div class="word" id="word">Loading...</div>
+  <div class="pronunciation" id="pronunciation"></div>
+  <div class="meaning" id="meaning"></div>
+  <div class="example" id="example"></div>
+
+  <script>
+    const data = [
+      {
+        word: "intend",
+        pronunciation: "/ɪnˈtend/",
+        meaning: "Có ý định, dự định",
+        example: "I intend to finish this project by tomorrow."
+      },
+      {
+        word: "serendipity",
+        pronunciation: "/ˌsɛrənˈdɪpɪti/",
+        meaning: "Sự tình cờ may mắn",
+        example: "Finding this book was pure serendipity."
+      },
+      {
+        word: "ephemeral",
+        pronunciation: "/ɪˈfɛmərəl/",
+        meaning: "Tạm thời, phù du",
+        example: "The beauty of cherry blossoms is ephemeral."
+      },
+      {
+        word: "quintessential",
+        pronunciation: "/ˌkwɪntɪˈsɛnʃəl/",
+        meaning: "Điển hình, tinh túy",
+        example: "This painting is quintessential of the Renaissance period."
+      }
+    ];
+
+    let index = 0;
+
+    function render() {
+      const item = data[index];
+      document.getElementById("word").textContent = item.word;
+      document.getElementById("pronunciation").textContent = item.pronunciation;
+      document.getElementById("meaning").textContent = item.meaning;
+      document.getElementById("example").textContent = item.example;
+    }
+
+    render();
+    setInterval(() => {
+      index = (index + 1) % data.length;
+      render();
+    }, 10000);
+  </script>
+</body>
+</html>
