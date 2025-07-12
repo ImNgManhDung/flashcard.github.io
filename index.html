@@ -9,36 +9,40 @@
     /* Chung cho tất cả các màn hình */
     body {
       font-family: Arial, sans-serif;
-      background: #eef2f5;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       padding: 30px;
       text-align: center;
       margin: 0;
       box-sizing: border-box;
+      min-height: 100vh;
     }
 
     h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
     .card-container {
       position: relative;
       width: 90%;
-      max-width: 300px;
+      max-width: 350px;
       margin: 20px auto;
-      height: 200px;
+      height: 250px;
       overflow: hidden;
+      perspective: 1000px;
     }
 
     .card {
       width: 100%;
       height: 100%;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 20px;
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      padding: 25px;
       cursor: pointer;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: absolute;
       top: 0;
       left: 0;
@@ -47,124 +51,222 @@
       justify-content: center;
       box-sizing: border-box;
       user-select: none;
+      border: 2px solid rgba(255,255,255,0.8);
     }
 
     .card-controls {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 15px;
+      right: 15px;
       display: flex;
-      gap: 5px;
+      gap: 8px;
     }
 
     .control-btn {
-      background: #f8f9fa;
+      background: rgba(255,255,255,0.9);
       border: none;
       border-radius: 50%;
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.2s;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      backdrop-filter: blur(10px);
     }
 
     .control-btn:hover {
-      background: #e9ecef;
+      background: rgba(255,255,255,1);
       transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
 
     .control-btn.learned {
-      background: #28a745;
+      background: linear-gradient(145deg, #28a745, #20c997);
       color: white;
     }
 
     .control-btn.copy {
-      background: #007acc;
+      background: linear-gradient(145deg, #007acc, #0056b3);
+      color: white;
+    }
+
+    .control-btn.sound {
+      background: linear-gradient(145deg, #6f42c1, #563d7c);
       color: white;
     }
 
     .card:hover {
-      transform: scale(1.03);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     }
 
     .word {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: bold;
-      color: #007acc;
+      color: #2c3e50;
+      margin-bottom: 8px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .pronunciation {
+      font-size: 18px;
+      color: #7f8c8d;
+      font-style: italic;
+      margin-bottom: 12px;
+      min-height: 20px;
     }
 
     .meaning {
-      margin-top: 10px;
+      margin-top: 15px;
       font-size: 20px;
-      color: #444;
+      color: #34495e;
+      font-weight: 500;
+      line-height: 1.4;
     }
 
     .example {
-      margin-top: 10px;
+      margin-top: 15px;
       font-style: italic;
-      color: #666;
+      color: #7f8c8d;
+      font-size: 16px;
+      line-height: 1.3;
+      border-left: 3px solid #3498db;
+      padding-left: 10px;
     }
 
     .word-type {
-      margin-top: 8px;
+      margin-top: 5px;
       font-size: 14px;
-      color: #fff;
-      background: #007acc;
-      border-radius: 15px;
-      padding: 3px 10px;
+      color: #7f8c8d;
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      display: inline-block;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .word-type.n { color: #28a745; }
+    .word-type.v { color: #dc3545; }
+    .word-type.adj { color: #ffc107; }
+    .word-type.adv { color: #6f42c1; }
+    .word-type.prep { color: #fd7e14; }
+    .word-type.conj { color: #20c997; }
+    .word-type.interj { color: #e83e8c; }
+    .word-type.pron { color: #17a2b8; }
+    .word-type.det { color: #6c757d; }
+
+    .loading {
+      color: #95a5a6;
+      font-style: italic;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .status {
+      margin-top: 20px;
+      font-size: 16px;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
       display: inline-block;
     }
 
-    .word-type.noun { background: #28a745; }
-    .word-type.verb { background: #dc3545; }
-    .word-type.adjective { background: #ffc107; color: #000; }
-    .word-type.adverb { background: #6f42c1; }
-    .word-type.preposition { background: #fd7e14; }
-    .word-type.conjunction { background: #20c997; }
-    .word-type.interjection { background: #e83e8c; }
-
-    .status {
-      margin-top: 15px;
-      font-size: 14px;
-      color: green;
-    }
-
     .buttons {
-      margin-top: 20px;
+      margin-top: 25px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    button {
-      margin: 5px;
-      padding: 10px 20px;
+    .nav-btn {
+      padding: 12px 25px;
       font-size: 16px;
+      background: linear-gradient(145deg, #ffffff, #f8f9fa);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      background: linear-gradient(145deg, #f8f9fa, #e9ecef);
     }
 
     .swipe-hint {
-      margin-top: 10px;
+      margin-top: 15px;
       font-size: 14px;
-      color: #888;
+      color: rgba(255,255,255,0.8);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
+
+    .progress-bar {
+      width: 90%;
+      max-width: 350px;
+      height: 6px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 3px;
+      margin: 20px auto;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #28a745, #20c997);
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+
+.word-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px; /* khoảng cách giữa từ và loại từ */
+  flex-wrap: wrap; /* nếu không đủ chỗ sẽ xuống dòng */
+}
 
     /* Media Query cho thiết bị di động */
     @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
       h1 {
-        font-size: 20px;
+        font-size: 24px;
       }
 
       .card-container {
         width: 95%;
+        height: 220px;
       }
 
       .card {
-        padding: 15px;
+        padding: 20px;
       }
 
       .word {
-        font-size: 24px;
+        font-size: 28px;
+      }
+
+      .pronunciation {
+        font-size: 16px;
       }
 
       .meaning {
@@ -172,15 +274,21 @@
       }
 
       .example {
-        font-size: 16px;
+        font-size: 14px;
       }
 
       .status {
-        font-size: 12px;
+        font-size: 14px;
       }
 
-      button {
-        padding: 8px 16px;
+      .nav-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+
+      .control-btn {
+        width: 35px;
+        height: 35px;
         font-size: 14px;
       }
     }
@@ -191,31 +299,42 @@
 
   <h1>💡 Từ vựng mỗi ngày</h1>
 
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
   <div class="card-container">
     <div class="card" id="card" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)" onclick="flipCard(event)">
       <div class="card-controls">
         <button class="control-btn" id="learnBtn" onclick="toggleLearned(event)" title="Đánh dấu đã học">○</button>
         <button class="control-btn copy" onclick="copyWord(event)" title="Sao chép từ">📋</button>
+        <button class="control-btn sound" onclick="playPronunciation(event)" title="Phát âm">🔊</button>
       </div>
-      <div class="word" id="word">Đang tải...</div>
-
-      <div class="word-type" id="wordType"></div>
+      <div class="word-line">
+  <div class="word" id="word">Đang tải...</div>
+  <div class="pronunciation" id="pronunciation"></div>
+  <div class="word-type" id="wordType"></div>
+</div>
+     
+    
       <div class="meaning" id="meaning"></div>
       <div class="example" id="example"></div>
+      
     </div>
   </div>
 
-  <div class="buttons">
-    <!-- Removed the "Đã học" button as it's now integrated into the card -->
-  </div>
+ 
 
   <div class="status" id="status"></div>
-  <!-- Removed swipe hint -->
+ 
+
 
   <script>
     let vocabulary = [];
     let currentIndex = 0;
     let flipped = false;
+    let currentAudio = null;
+    let wordDataCache = {};
 
     // Touch/swipe variables
     let startX = 0;
@@ -226,141 +345,53 @@
     let cardEl = null;
 
     const wordEl = document.getElementById("word");
+    const pronunciationEl = document.getElementById("pronunciation");
     const meaningEl = document.getElementById("meaning");
     const exampleEl = document.getElementById("example");
     const statusEl = document.getElementById("status");
     const wordTypeEl = document.getElementById("wordType");
     const learnBtnEl = document.getElementById("learnBtn");
+    const progressFillEl = document.getElementById("progressFill");
 
-    // Hệ thống phân loại loại từ
-    const wordTypePatterns = {
-      noun: {
-        name: "Danh từ",
-        class: "noun",
-        patterns: [
-          /tion$/i, /sion$/i, /ment$/i, /ness$/i, /ity$/i, /ity$/i,
-          /ism$/i, /ist$/i, /er$/i, /or$/i, /ship$/i, /hood$/i,
-          /ance$/i, /ence$/i, /ing$/i, /ful$/i, /dom$/i, /age$/i
-        ],
-        keywords: ['person', 'place', 'thing', 'idea', 'concept']
-      },
-      verb: {
-        name: "Động từ",
-        class: "verb",
-        patterns: [
-          /ed$/i, /ing$/i, /ize$/i, /ise$/i, /fy$/i, /ate$/i,
-          /en$/i
-        ],
-        keywords: ['action', 'do', 'make', 'go', 'come', 'run', 'walk', 'eat', 'drink', 'take',
-    'get', 'give', 'put', 'bring', 'send', 'see', 'look', 'watch', 'hear', 'listen',
-    'write', 'read', 'say', 'tell', 'talk', 'speak', 'move', 'stand', 'sit',
-    'start', 'stop', 'begin', 'end', 'open', 'close', 'drive', 'fly', 'swim', 'jump',
-    'think', 'know', 'understand', 'feel', 'love', 'like', 'hate', 'need', 'want',
-    'work', 'help', 'try', 'use', 'play', 'build', 'create', 'develop', 'learn',
-    'teach', 'buy', 'sell', 'pay', 'cut', 'cook', 'clean', 'live', 'die']
-      },
-      adjective: {
-        name: "Tính từ",
-        class: "adjective",
-        patterns: [
-          /ful$/i, /less$/i, /ous$/i, /ious$/i, /eous$/i, /ive$/i,
-          /able$/i, /ible$/i, /al$/i, /ic$/i, /ical$/i, /ish$/i,
-          /y$/i, /ed$/i, /ing$/i, /ent$/i, /ant$/i, /ary$/i
-        ],
-        keywords: ['describe', 'quality', 'characteristic']
-      },
-      adverb: {
-        name: "Trạng từ",
-        class: "adverb",
-        patterns: [
-          /ly$/i, /ward$/i, /wise$/i
-        ],
-        keywords: ['how', 'when', 'where', 'manner', 'degree']
-      },
-      preposition: {
-        name: "Giới từ",
-        class: "preposition",
-        commonWords: [
-          'in', 'on', 'at', 'by', 'for', 'with', 'without', 'through',
-          'during', 'before', 'after', 'above', 'below', 'under', 'over',
-          'between', 'among', 'against', 'toward', 'towards', 'into',
-          'onto', 'upon', 'within', 'throughout', 'beneath', 'beside',
-          'besides', 'beyond', 'across', 'along', 'around', 'behind',
-          'inside', 'outside', 'despite', 'except', 'regarding', 'concerning'
-        ]
-      },
-      conjunction: {
-        name: "Liên từ",
-        class: "conjunction",
-        commonWords: [
-          'and', 'but', 'or', 'nor', 'for', 'so', 'yet', 'although',
-          'because', 'since', 'while', 'when', 'where', 'if', 'unless',
-          'until', 'before', 'after', 'as', 'than', 'though', 'whether',
-          'however', 'therefore', 'moreover', 'furthermore', 'nevertheless'
-        ]
-      },
-      interjection: {
-        name: "Thán từ",
-        class: "interjection",
-        commonWords: [
-          'oh', 'ah', 'wow', 'hey', 'hello', 'hi', 'bye', 'oops',
-          'ouch', 'hooray', 'yay', 'alas', 'bravo', 'darn', 'gosh',
-          'hmm', 'huh', 'phew', 'shh', 'ugh', 'whoa', 'yikes'
-        ]
-      }
+    // Enhanced word data with pronunciation and part of speech
+    const enhancedWordData = {
+      'intend': { pronunciation: '/ɪnˈtend/', partOfSpeech: 'verb' },
+      'serendipity': { pronunciation: '/ˌsɛrənˈdɪpɪti/', partOfSpeech: 'noun' },
+      'ephemeral': { pronunciation: '/ɪˈfɛmərəl/', partOfSpeech: 'adjective' },
+      'ubiquitous': { pronunciation: '/juːˈbɪkwɪtəs/', partOfSpeech: 'adjective' },
+      'mellifluous': { pronunciation: '/məˈlɪfluəs/', partOfSpeech: 'adjective' },
+      'quintessential': { pronunciation: '/ˌkwɪntɪˈsɛnʃəl/', partOfSpeech: 'adjective' },
+      'quickly': { pronunciation: '/ˈkwɪkli/', partOfSpeech: 'adverb' },     
     };
 
-    function detectWordType(word, meaning, example) {
+    // Mapping cho từ loại
+    const partOfSpeechMap = {
+      'noun': { short: 'n', name: 'Danh từ', class: 'n' },
+      'verb': { short: 'v', name: 'Động từ', class: 'v' },
+      'adjective': { short: 'adj', name: 'Tính từ', class: 'adj' },
+      'adverb': { short: 'adv', name: 'Trạng từ', class: 'adv' },
+      'preposition': { short: 'prep', name: 'Giới từ', class: 'prep' },
+      'conjunction': { short: 'conj', name: 'Liên từ', class: 'conj' },
+      'interjection': { short: 'interj', name: 'Thán từ', class: 'interj' },
+      'pronoun': { short: 'pron', name: 'Đại từ', class: 'pron' },
+      'determiner': { short: 'det', name: 'Từ hạn định', class: 'det' },
+      'exclamation': { short: 'interj', name: 'Thán từ', class: 'interj' }
+    };
+
+
+
+    // Fallback function to get word data from local enhanced data
+    function getWordData(word) {
       const wordLower = word.toLowerCase();
-      
-      // Kiểm tra từ phổ biến trước
-      for (const [type, data] of Object.entries(wordTypePatterns)) {
-        if (data.commonWords && data.commonWords.includes(wordLower)) {
-          return { type: data.name, class: data.class };
-        }
+      if (enhancedWordData[wordLower]) {
+        return enhancedWordData[wordLower];
       }
       
-      // Kiểm tra pattern từ suffix
-      for (const [type, data] of Object.entries(wordTypePatterns)) {
-        if (data.patterns) {
-          for (const pattern of data.patterns) {
-            if (pattern.test(word)) {
-              return { type: data.name, class: data.class };
-            }
-          }
-        }
-      }
-      
-      // Kiểm tra từ nghĩa và ví dụ
-      const meaningLower = meaning.toLowerCase();
-      const exampleLower = example.toLowerCase();
-      
-      // Động từ - tìm "to" trong ví dụ hoặc nghĩa có dấu hiệu hành động
-      if (exampleLower.includes(' to ' + wordLower) || 
-          meaningLower.includes('hành động') || 
-          meaningLower.includes('làm') || 
-          meaningLower.includes('thực hiện')) {
-        return { type: "Động từ", class: "verb" };
-      }
-      
-      // Tính từ - mô tả đặc điểm
-      if (meaningLower.includes('tính') || 
-          meaningLower.includes('đặc điểm') || 
-          meaningLower.includes('chất lượng') ||
-          exampleLower.includes(' is ' + wordLower) ||
-          exampleLower.includes(' very ' + wordLower)) {
-        return { type: "Tính từ", class: "adjective" };
-      }
-      
-      // Trạng từ - mô tả cách thức
-      if (meaningLower.includes('cách') || 
-          meaningLower.includes('thức') ||
-          exampleLower.includes(' ' + wordLower + 'ly')) {
-        return { type: "Trạng từ", class: "adverb" };
-      }
-      
-      // Mặc định là danh từ
-      return { type: "Danh từ", class: "noun" };
+      // Default fallback
+      return {
+        pronunciation: `/${word}/`,
+        partOfSpeech: 'noun'
+      };
     }
 
     function shuffle(array) {
@@ -370,31 +401,65 @@
       }
     }
 
-    function loadCard(index) {
+    function updateProgress() {
+      const progress = ((currentIndex + 1) / vocabulary.length) * 100;
+      progressFillEl.style.width = progress + '%';
+    }
+
+    async function loadCard(index) {
       const word = vocabulary[index];
-      const wordType = detectWordType(word.word, word.meaning, word.example);
       
+      // Hiển thị từ ngay lập tức
       wordEl.textContent = word.word;
-      wordTypeEl.textContent = wordType.type;
-      wordTypeEl.className = `word-type ${wordType.class}`;
+      pronunciationEl.textContent = '';
+      wordTypeEl.textContent = '';
+      wordTypeEl.style.display = 'none';
       
       meaningEl.textContent = flipped ? word.meaning : '';
       exampleEl.textContent = flipped ? word.example : '';
 
-      // Ẩn/hiện loại từ theo trạng thái flip
-      wordTypeEl.style.display = flipped ? 'inline-block' : 'none';
+      // Cập nhật trạng thái học
+      updateLearnedStatus(word.word);
+      updateProgress();
 
-      const learned = JSON.parse(localStorage.getItem("learnedWords") || "[]");
-      const isLearned = learned.includes(word.word);
+      // Lấy thông tin từ dữ liệu cục bộ
+      const wordData = getWordData(word.word);
       
-      // Cập nhật nút học
+      // Hiển thị phiên âm
+      pronunciationEl.textContent = wordData.pronunciation;
+      pronunciationEl.className = 'pronunciation';
+      
+      // Hiển thị từ loại - luôn hiển thị trong dạng viết tắt
+      if (wordData.partOfSpeech && partOfSpeechMap[wordData.partOfSpeech]) {
+        const posInfo = partOfSpeechMap[wordData.partOfSpeech];
+        wordTypeEl.textContent = `(${posInfo.short})`;
+        wordTypeEl.className = `word-type ${posInfo.class}`;
+        wordTypeEl.title = posInfo.name;
+        wordTypeEl.style.display = 'inline-block';
+      } else {
+        wordTypeEl.textContent = '(n)';
+        wordTypeEl.className = 'word-type n';
+        wordTypeEl.title = 'Danh từ';
+        wordTypeEl.style.display = 'inline-block';
+      }
+
+      // Chỉ hiển thị nghĩa và ví dụ khi đã flip
+      if (flipped) {
+        // Từ loại đã được hiển thị ở trên
+      }
+    }
+
+    function updateLearnedStatus(word) {
+      const learned = JSON.parse(localStorage.getItem("learnedWords") || "[]");
+      const isLearned = learned.includes(word);
+      
       learnBtnEl.textContent = isLearned ? "✓" : "○";
       learnBtnEl.className = isLearned ? "control-btn learned" : "control-btn";
       
       if (isLearned) {
-        statusEl.textContent = "✅ Bạn đã học từ này.";
+        statusEl.textContent = "✅ Bạn đã học từ này";
       } else {
-        statusEl.textContent = "🔔 Bạn chưa học từ này.";
+        statusEl.textContent = "🔔 Bạn chưa học từ này";
       }
     }
 
@@ -407,14 +472,8 @@
       if (!isDragging) {
         flipped = !flipped;
         loadCard(currentIndex);
-       
       }
     }
-
- 
-
-
-
 
     function toggleLearned(event) {
       event.stopPropagation();
@@ -422,36 +481,54 @@
       let learned = JSON.parse(localStorage.getItem("learnedWords") || "[]");
       
       if (learned.includes(word)) {
-        // Bỏ đánh dấu đã học
         learned = learned.filter(w => w !== word);
       } else {
-        // Đánh dấu đã học
         learned.push(word);
       }
       
       localStorage.setItem("learnedWords", JSON.stringify(learned));
-      loadCard(currentIndex);
+      updateLearnedStatus(word);
     }
 
     function copyWord(event) {
       event.stopPropagation();
       const word = vocabulary[currentIndex];
-      const textToCopy = word.word; // Chỉ copy từ vựng
+      const textToCopy = word.word;
       
       navigator.clipboard.writeText(textToCopy).then(() => {
-        // Hiển thị thông báo ngắn
         const copyBtn = event.target;
         const originalText = copyBtn.textContent;
         copyBtn.textContent = "✓";
-        copyBtn.style.background = "#28a745";
+        copyBtn.style.background = "linear-gradient(145deg, #28a745, #20c997)";
         
         setTimeout(() => {
           copyBtn.textContent = originalText;
-          copyBtn.style.background = "#007acc";
+          copyBtn.style.background = "linear-gradient(145deg, #007acc, #0056b3)";
         }, 1000);
       }).catch(err => {
         console.error('Không thể sao chép:', err);
       });
+    }
+
+    function playPronunciation(event) {
+      event.stopPropagation();
+      
+      // Sử dụng Web Speech API
+      const word = vocabulary[currentIndex].word;
+      if ('speechSynthesis' in window) {
+        // Dừng phát âm hiện tại nếu có
+        speechSynthesis.cancel();
+        
+        const utterance = new SpeechSynthesisUtterance(word);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.8;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+        
+        speechSynthesis.speak(utterance);
+      } else {
+        console.log('Trình duyệt không hỗ trợ phát âm');
+      }
     }
 
     function nextCard() {
@@ -488,7 +565,6 @@
       const diffX = currentX - startX;
       const diffY = currentY - startY;
       
-      // Chỉ xử lý swipe ngang nếu di chuyển ngang nhiều hơn dọc
       if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
         isDragging = true;
         cardEl.style.transform = `translateX(${diffX}px) rotate(${diffX * 0.1}deg)`;
@@ -503,9 +579,7 @@
       const threshold = 80;
       
       if (Math.abs(diffX) > threshold) {
-        // Swipe đủ mạnh để chuyển thẻ
         if (diffX > 0) {
-          // Swipe right - thẻ trước
           cardEl.style.transform = 'translateX(100%) rotate(20deg)';
           cardEl.style.opacity = '0';
           setTimeout(() => {
@@ -513,7 +587,6 @@
             resetCardPosition();
           }, 300);
         } else {
-          // Swipe left - thẻ tiếp theo
           cardEl.style.transform = 'translateX(-100%) rotate(-20deg)';
           cardEl.style.opacity = '0';
           setTimeout(() => {
@@ -522,7 +595,6 @@
           }, 300);
         }
       } else {
-        // Swipe không đủ mạnh - trở về vị trí ban đầu
         resetCardPosition();
       }
       
@@ -605,68 +677,44 @@
       }
     });
 
-    // Sample data for demonstration
+    // Enhanced sample data
     const sampleData = [
       {
-        word: "Serendipity",
+        word: "intend",
+        meaning: "Có ý định, dự định",
+        example: "I intend to finish this project by tomorrow."
+      },
+      {
+        word: "serendipity",
         meaning: "Sự tình cờ may mắn",
         example: "Finding this book was pure serendipity."
       },
       {
-        word: "Ephemeral",
+        word: "ephemeral",
         meaning: "Tạm thời, phù du",
         example: "The beauty of cherry blossoms is ephemeral."
       },
       {
-        word: "Ubiquitous",
+        word: "ubiquitous",
         meaning: "Có mặt khắp nơi",
         example: "Smartphones are ubiquitous in modern society."
       },
       {
-        word: "Mellifluous",
+        word: "mellifluous",
         meaning: "Ngọt ngào, du dương",
         example: "Her mellifluous voice captivated the audience."
       },
       {
-        word: "Quintessential",
+        word: "quintessential",
         meaning: "Điển hình, tinh túy",
         example: "This painting is quintessential of the Renaissance period."
       },
       {
-        word: "Quickly",
+        word: "quickly",
         meaning: "Một cách nhanh chóng",
         example: "She ran quickly to catch the bus."
       },
-      {
-        word: "Beautiful",
-        meaning: "Đẹp, xinh đẹp",
-        example: "The sunset was beautiful tonight."
-      },
-      {
-        word: "Run",
-        meaning: "Chạy, vận hành",
-        example: "I like to run in the morning."
-      },
-      {
-        word: "Happiness",
-        meaning: "Hạnh phúc, niềm vui",
-        example: "Money cannot buy happiness."
-      },
-      {
-        word: "Through",
-        meaning: "Qua, xuyên qua",
-        example: "We walked through the forest."
-      },
-      {
-        word: "Although",
-        meaning: "Mặc dù, tuy rằng",
-        example: "Although it rained, we still went out."
-      },
-      {
-        word: "Wow",
-        meaning: "Ôi, thật tuyệt",
-        example: "Wow! That's amazing!"
-      }
+      
     ];
 
     // Initialize with sample data
