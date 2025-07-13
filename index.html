@@ -4,299 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>App học từ vựng</title>
-  <style>
-    /* Chung cho tất cả các màn hình */
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      padding: 30px;
-      text-align: center;
-      margin: 0;
-      box-sizing: border-box;
-      min-height: 100vh;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 30px;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-
-    .card-container {
-      position: relative;
-      width: 90%;
-      max-width: 350px;
-      margin: 20px auto;
-      height: 250px;
-      overflow: hidden;
-      perspective: 1000px;
-    }
-
-    .card {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(145deg, #ffffff, #f0f0f0);
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      padding: 25px;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      box-sizing: border-box;
-      user-select: none;
-      border: 2px solid rgba(255,255,255,0.8);
-    }
-
-    .card-controls {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      display: flex;
-      gap: 8px;
-    }
-
-    .control-btn {
-      background: rgba(255,255,255,0.9);
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      backdrop-filter: blur(10px);
-    }
-
-    .control-btn:hover {
-      background: rgba(255,255,255,1);
-      transform: scale(1.1);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    }
-
-    .control-btn.learned {
-      background: linear-gradient(145deg, #28a745, #20c997);
-      color: white;
-    }
-
-    .control-btn.copy {
-      background: linear-gradient(145deg, #007acc, #0056b3);
-      color: white;
-    }
-
-    .control-btn.sound {
-      background: linear-gradient(145deg, #6f42c1, #563d7c);
-      color: white;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    }
-
-    .word {
-      font-size: 32px;
-      font-weight: bold;
-      color: #2c3e50;
-      margin-bottom: 8px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    }
-
-    .pronunciation {
-      font-size: 18px;
-      color: #7f8c8d;
-      font-style: italic;
-      margin-bottom: 12px;
-      min-height: 20px;
-    }
-
-    .meaning {
-      margin-top: 15px;
-      font-size: 20px;
-      color: #34495e;
-      font-weight: 500;
-      line-height: 1.4;
-    }
-
-    .example {
-      margin-top: 15px;
-      font-style: italic;
-      color: #7f8c8d;
-      font-size: 16px;
-      line-height: 1.3;
-      border-left: 3px solid #3498db;
-      padding-left: 10px;
-    }
-
-    .word-type {
-      margin-top: 5px;
-      font-size: 14px;
-      color: #7f8c8d;
-      background: transparent;
-      border-radius: 0;
-      padding: 0;
-      display: inline-block;
-      font-weight: 500;
-      font-style: italic;
-    }
-
-    .word-type.n { color: #28a745; }
-    .word-type.v { color: #dc3545; }
-    .word-type.adj { color: #ffc107; }
-    .word-type.adv { color: #6f42c1; }
-    .word-type.prep { color: #fd7e14; }
-    .word-type.conj { color: #20c997; }
-    .word-type.interj { color: #e83e8c; }
-    .word-type.pron { color: #17a2b8; }
-    .word-type.det { color: #6c757d; }
-
-    .loading {
-      color: #95a5a6;
-      font-style: italic;
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-
-    .status {
-      margin-top: 20px;
-      font-size: 16px;
-      color: white;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-      padding: 10px 20px;
-      border-radius: 25px;
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      display: inline-block;
-    }
-
-    .buttons {
-      margin-top: 25px;
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .nav-btn {
-      padding: 12px 25px;
-      font-size: 16px;
-      background: linear-gradient(145deg, #ffffff, #f8f9fa);
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      color: #2c3e50;
-      font-weight: 600;
-    }
-
-    .nav-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      background: linear-gradient(145deg, #f8f9fa, #e9ecef);
-    }
-
-    .swipe-hint {
-      margin-top: 15px;
-      font-size: 14px;
-      color: rgba(255,255,255,0.8);
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    }
-
-    .progress-bar {
-      width: 90%;
-      max-width: 350px;
-      height: 6px;
-      background: rgba(255,255,255,0.2);
-      border-radius: 3px;
-      margin: 20px auto;
-      overflow: hidden;
-    }
-
-    .progress-fill {
-      height: 100%;
-      background: linear-gradient(90deg, #28a745, #20c997);
-      border-radius: 3px;
-      transition: width 0.5s ease;
-    }
-
-.word-line {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 10px; /* khoảng cách giữa từ và loại từ */
-  flex-wrap: wrap; /* nếu không đủ chỗ sẽ xuống dòng */
-}
-
-    /* Media Query cho thiết bị di động */
-    @media (max-width: 600px) {
-      body {
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      .card-container {
-        width: 95%;
-        height: 220px;
-      }
-
-      .card {
-        padding: 20px;
-      }
-
-      .word {
-        font-size: 28px;
-      }
-
-      .pronunciation {
-        font-size: 16px;
-      }
-
-      .meaning {
-        font-size: 18px;
-      }
-
-      .example {
-        font-size: 14px;
-      }
-
-      .status {
-        font-size: 14px;
-      }
-
-      .nav-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-      }
-
-      .control-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 14px;
-      }
-    }
-  </style>
+  <title>Flashcard</title>
+ <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-
   <h1>💡 Từ vựng mỗi ngày</h1>
 
   <div class="progress-bar">
@@ -311,23 +23,17 @@
         <button class="control-btn sound" onclick="playPronunciation(event)" title="Phát âm">🔊</button>
       </div>
       <div class="word-line">
-  <div class="word" id="word">Đang tải...</div>
-  <div class="pronunciation" id="pronunciation"></div>
-  <div class="word-type" id="wordType"></div>
-</div>
-     
-    
+        <div class="word" id="word">Đang tải...</div>
+        <div class="pronunciation" id="pronunciation"></div>
+        <div class="word-type" id="wordType"></div>
+      </div>
       <div class="meaning" id="meaning"></div>
       <div class="example" id="example"></div>
-      
     </div>
   </div>
 
- 
-
   <div class="status" id="status"></div>
- 
-
+  <div class="api-status" id="apiStatus" style="display: none;"></div>
 
   <script>
     let vocabulary = [];
@@ -352,17 +58,7 @@
     const wordTypeEl = document.getElementById("wordType");
     const learnBtnEl = document.getElementById("learnBtn");
     const progressFillEl = document.getElementById("progressFill");
-
-    // Enhanced word data with pronunciation and part of speech
-    const enhancedWordData = {
-      'intend': { pronunciation: '/ɪnˈtend/', partOfSpeech: 'verb' },
-      'serendipity': { pronunciation: '/ˌsɛrənˈdɪpɪti/', partOfSpeech: 'noun' },
-      'ephemeral': { pronunciation: '/ɪˈfɛmərəl/', partOfSpeech: 'adjective' },
-      'ubiquitous': { pronunciation: '/juːˈbɪkwɪtəs/', partOfSpeech: 'adjective' },
-      'mellifluous': { pronunciation: '/məˈlɪfluəs/', partOfSpeech: 'adjective' },
-      'quintessential': { pronunciation: '/ˌkwɪntɪˈsɛnʃəl/', partOfSpeech: 'adjective' },
-      'quickly': { pronunciation: '/ˈkwɪkli/', partOfSpeech: 'adverb' },     
-    };
+    const apiStatusEl = document.getElementById("apiStatus");
 
     // Mapping cho từ loại
     const partOfSpeechMap = {
@@ -378,20 +74,205 @@
       'exclamation': { short: 'interj', name: 'Thán từ', class: 'interj' }
     };
 
+    // Hàm hiển thị trạng thái API
+    function showApiStatus(message, type) {
+      apiStatusEl.textContent = message;
+      apiStatusEl.className = `api-status ${type}`;
+      apiStatusEl.style.display = 'block';
+      
+      setTimeout(() => {
+        apiStatusEl.style.display = 'none';
+      }, 3000);
+    }
 
+    // Enhanced word data với phiên âm có sẵn
+    const enhancedWordData = {
+      'intend': { pronunciation: '/ɪnˈtend/', partOfSpeech: 'verb' },
+      'serendipity': { pronunciation: '/ˌsɛrənˈdɪpɪti/', partOfSpeech: 'noun' },
+      'ephemeral': { pronunciation: '/ɪˈfɛmərəl/', partOfSpeech: 'adjective' },
+      'ubiquitous': { pronunciation: '/juːˈbɪkwɪtəs/', partOfSpeech: 'adjective' },
+      'mellifluous': { pronunciation: '/məˈlɪfluəs/', partOfSpeech: 'adjective' },
+      'quintessential': { pronunciation: '/ˌkwɪntɪˈsɛnʃəl/', partOfSpeech: 'adjective' },
+      'quickly': { pronunciation: '/ˈkwɪkli/', partOfSpeech: 'adverb' },
+      'beautiful': { pronunciation: '/ˈbjuːtɪfəl/', partOfSpeech: 'adjective' },
+      'adventure': { pronunciation: '/ədˈventʃər/', partOfSpeech: 'noun' },
+      'mysterious': { pronunciation: '/mɪˈstɪəriəs/', partOfSpeech: 'adjective' },
+      'important': { pronunciation: '/ɪmˈpɔːrtənt/', partOfSpeech: 'adjective' },
+      'understand': { pronunciation: '/ˌʌndərˈstænd/', partOfSpeech: 'verb' },
+      'develop': { pronunciation: '/dɪˈveləp/', partOfSpeech: 'verb' },
+      'different': { pronunciation: '/ˈdɪfərənt/', partOfSpeech: 'adjective' },
+      'available': { pronunciation: '/əˈveɪləbəl/', partOfSpeech: 'adjective' },
+      'necessary': { pronunciation: '/ˈnesəseri/', partOfSpeech: 'adjective' },
+      'possible': { pronunciation: '/ˈpɑːsəbəl/', partOfSpeech: 'adjective' },
+      'environment': { pronunciation: '/ɪnˈvaɪrənmənt/', partOfSpeech: 'noun' },
+      'knowledge': { pronunciation: '/ˈnɑːlɪdʒ/', partOfSpeech: 'noun' },
+      'experience': { pronunciation: '/ɪkˈspɪriəns/', partOfSpeech: 'noun' }
+    };
 
-    // Fallback function to get word data from local enhanced data
-    function getWordData(word) {
+    // Hàm lấy dữ liệu từ Dictionary API với nhiều fallback
+    async function fetchWordData(word) {
       const wordLower = word.toLowerCase();
+      
+      // Kiểm tra cache trước
+      if (wordDataCache[wordLower]) {
+        return wordDataCache[wordLower];
+      }
+
+      // Kiểm tra dữ liệu có sẵn trước
       if (enhancedWordData[wordLower]) {
-        return enhancedWordData[wordLower];
+        const data = enhancedWordData[wordLower];
+        wordDataCache[wordLower] = data;
+        return data;
+      }
+
+      // Thử gọi API với timeout và retry
+      const apiUrls = [
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${wordLower}`,
+        `https://api.dictionaryapi.dev/api/v2/entries/en_US/${wordLower}`
+      ];
+
+      for (const apiUrl of apiUrls) {
+        try {
+          // showApiStatus('Đang tải phiên âm...', 'loading');
+            
+          // Tạo AbortController để timeout
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+
+          const response = await fetch(apiUrl, {
+            signal: controller.signal,
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            }
+          });
+
+          clearTimeout(timeoutId);
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+
+          const data = await response.json();
+          
+          if (data && data.length > 0) {
+            const entry = data[0];
+            
+            // Lấy phiên âm
+            let pronunciation = '';
+            if (entry.phonetics && entry.phonetics.length > 0) {
+              // Tìm phiên âm có text
+              const phoneticWithText = entry.phonetics.find(p => p.text && p.text.trim());
+              if (phoneticWithText) {
+                pronunciation = phoneticWithText.text;
+              } else if (entry.phonetics[0].text) {
+                pronunciation = entry.phonetics[0].text;
+              }
+            }
+            
+            // Lấy từ loại
+            let partOfSpeech = 'noun';
+            if (entry.meanings && entry.meanings.length > 0) {
+              partOfSpeech = entry.meanings[0].partOfSpeech || 'noun';
+            }
+            
+            // Lấy âm thanh phát âm
+            let audioUrl = '';
+            if (entry.phonetics && entry.phonetics.length > 0) {
+              const phoneticWithAudio = entry.phonetics.find(p => p.audio && p.audio.trim());
+              if (phoneticWithAudio) {
+                audioUrl = phoneticWithAudio.audio;
+              }
+            }
+
+            const wordData = {
+              pronunciation: pronunciation || `/${wordLower}/`,
+              partOfSpeech: partOfSpeech,
+              audioUrl: audioUrl
+            };
+
+            // Lưu vào cache
+            wordDataCache[wordLower] = wordData;
+            // showApiStatus('Tải phiên âm thành công!', 'success');
+            
+            return wordData;
+          }
+        } catch (error) {
+          console.error(`Lỗi khi gọi API ${apiUrl}:`, error);
+          
+          if (error.name === 'AbortError') {
+            showApiStatus('Timeout - Sử dụng dữ liệu offline', 'error');
+          } else {
+            showApiStatus('Lỗi mạng - Sử dụng dữ liệu offline', 'error');
+          }
+          
+          // Thử API tiếp theo
+          continue;
+        }
+      }
+
+      // Fallback data với phiên âm ước tính
+      const fallbackData = {
+        pronunciation: generateFallbackPronunciation(wordLower),
+        partOfSpeech: guessPartOfSpeech(wordLower),
+        audioUrl: ''
+      };
+      
+      wordDataCache[wordLower] = fallbackData;
+      return fallbackData;
+    }
+
+    // Hàm tạo phiên âm ước tính đơn giản
+    function generateFallbackPronunciation(word) {
+      // Một số quy tắc phiên âm cơ bản
+      const rules = {
+        'tion': 'ʃən',
+        'sion': 'ʃən',
+        'ough': 'ʌf',
+        'ight': 'aɪt',
+        'ph': 'f',
+        'th': 'θ',
+        'ch': 'tʃ',
+        'sh': 'ʃ',
+        'ing': 'ɪŋ',
+        'ed': 'd',
+        'ly': 'li'
+      };
+      
+      let pronunciation = word.toLowerCase();
+      
+      // Áp dụng các quy tắc
+      for (const [pattern, replacement] of Object.entries(rules)) {
+        pronunciation = pronunciation.replace(new RegExp(pattern, 'g'), replacement);
       }
       
-      // Default fallback
-      return {
-        pronunciation: `/${word}/`,
-        partOfSpeech: 'noun'
-      };
+      return `/${pronunciation}/`;
+    }
+
+    // Hàm đoán từ loại dựa trên hậu tố
+    function guessPartOfSpeech(word) {
+      const adjSuffixes = ['able', 'ible', 'al', 'ful', 'less', 'ous', 'ive', 'ic'];
+      const nounSuffixes = ['tion', 'sion', 'ment', 'ness', 'ity', 'er', 'or', 'ist'];
+      const verbSuffixes = ['ate', 'ize', 'ify', 'en'];
+      const advSuffixes = ['ly'];
+      
+      for (const suffix of adjSuffixes) {
+        if (word.endsWith(suffix)) return 'adjective';
+      }
+      
+      for (const suffix of nounSuffixes) {
+        if (word.endsWith(suffix)) return 'noun';
+      }
+      
+      for (const suffix of verbSuffixes) {
+        if (word.endsWith(suffix)) return 'verb';
+      }
+      
+      for (const suffix of advSuffixes) {
+        if (word.endsWith(suffix)) return 'adverb';
+      }
+      
+      return 'noun'; // Default
     }
 
     function shuffle(array) {
@@ -411,7 +292,8 @@
       
       // Hiển thị từ ngay lập tức
       wordEl.textContent = word.word;
-      pronunciationEl.textContent = '';
+      pronunciationEl.textContent = 'Đang tải...';
+      pronunciationEl.className = 'pronunciation loading';
       wordTypeEl.textContent = '';
       wordTypeEl.style.display = 'none';
       
@@ -422,30 +304,42 @@
       updateLearnedStatus(word.word);
       updateProgress();
 
-      // Lấy thông tin từ dữ liệu cục bộ
-      const wordData = getWordData(word.word);
-      
-      // Hiển thị phiên âm
-      pronunciationEl.textContent = wordData.pronunciation;
-      pronunciationEl.className = 'pronunciation';
-      
-      // Hiển thị từ loại - luôn hiển thị trong dạng viết tắt
-      if (wordData.partOfSpeech && partOfSpeechMap[wordData.partOfSpeech]) {
-        const posInfo = partOfSpeechMap[wordData.partOfSpeech];
-        wordTypeEl.textContent = `(${posInfo.short})`;
-        wordTypeEl.className = `word-type ${posInfo.class}`;
-        wordTypeEl.title = posInfo.name;
-        wordTypeEl.style.display = 'inline-block';
-      } else {
+      // Lấy thông tin từ API
+      try {
+        const wordData = await fetchWordData(word.word);
+        
+        // Hiển thị phiên âm
+        pronunciationEl.textContent = wordData.pronunciation;
+        pronunciationEl.className = 'pronunciation';
+        
+        // Lưu URL audio để sử dụng khi phát âm
+        if (wordData.audioUrl) {
+          word.audioUrl = wordData.audioUrl;
+        }
+
+        // Hiển thị từ loại
+        if (wordData.partOfSpeech && partOfSpeechMap[wordData.partOfSpeech]) {
+          const posInfo = partOfSpeechMap[wordData.partOfSpeech];
+          wordTypeEl.textContent = `(${posInfo.short})`;
+          wordTypeEl.className = `word-type ${posInfo.class}`;
+          wordTypeEl.title = posInfo.name;
+          wordTypeEl.style.display = 'inline-block';
+        } else {
+          wordTypeEl.textContent = '(n)';
+          wordTypeEl.className = 'word-type n';
+          wordTypeEl.title = 'Danh từ';
+          wordTypeEl.style.display = 'inline-block';
+        }
+
+      } catch (error) {
+        console.error('Lỗi khi tải card:', error);
+        pronunciationEl.textContent = `/${word.word}/`;
+        pronunciationEl.className = 'pronunciation error';
+        
         wordTypeEl.textContent = '(n)';
         wordTypeEl.className = 'word-type n';
         wordTypeEl.title = 'Danh từ';
         wordTypeEl.style.display = 'inline-block';
-      }
-
-      // Chỉ hiển thị nghĩa và ví dụ khi đã flip
-      if (flipped) {
-        // Từ loại đã được hiển thị ở trên
       }
     }
 
@@ -513,8 +407,33 @@
     function playPronunciation(event) {
       event.stopPropagation();
       
-      // Sử dụng Web Speech API
-      const word = vocabulary[currentIndex].word;
+      const word = vocabulary[currentIndex];
+      
+      // Thử phát âm từ API trước (nếu có)
+      if (word.audioUrl) {
+        try {
+          // Dừng audio hiện tại nếu có
+          if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+          }
+          
+          currentAudio = new Audio(word.audioUrl);
+          currentAudio.play().catch(err => {
+            console.log('Không thể phát âm từ API, chuyển sang Web Speech API');
+            playWithSpeechAPI(word.word);
+          });
+          return;
+        } catch (error) {
+          console.log('Lỗi khi phát âm từ API:', error);
+        }
+      }
+      
+      // Fallback sang Web Speech API
+      playWithSpeechAPI(word.word);
+    }
+
+    function playWithSpeechAPI(word) {
       if ('speechSynthesis' in window) {
         // Dừng phát âm hiện tại nếu có
         speechSynthesis.cancel();
@@ -677,7 +596,7 @@
       }
     });
 
-    // Enhanced sample data
+    // Sample data
     const sampleData = [
       {
         word: "intend",
@@ -714,7 +633,21 @@
         meaning: "Một cách nhanh chóng",
         example: "She ran quickly to catch the bus."
       },
-      
+      {
+        word: "beautiful",
+        meaning: "Đẹp, xinh đẹp",
+        example: "The sunset was beautiful tonight."
+      },
+      {
+        word: "adventure",
+        meaning: "Cuộc phiêu lưu, mạo hiểm",
+        example: "Their trip to the mountains was quite an adventure."
+      },
+      {
+        word: "mysterious",
+        meaning: "Bí ẩn, khó hiểu",
+        example: "The old mansion had a mysterious atmosphere."
+      }
     ];
 
     // Initialize with sample data
@@ -737,7 +670,5 @@
         // Keep using sample data
       });
   </script>
-
 </body>
-
 </html>
