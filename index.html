@@ -1,674 +1,763 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flashcard</title>
- <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+
+        .quiz-container {
+            width: 1359px;
+            height: 190px;
+            background: white;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Header - Compact */
+        .top-header {
+            background: linear-gradient(135deg, #00c851, #007e33);
+            color: white;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-info {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .project-selector {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .choose-project-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            transition: background 0.2s;
+        }
+
+        .choose-project-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .go-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .go-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .center-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .timer {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 4px 10px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .timer.warning {
+            background: #ff4444;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .right-section {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .header-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .header-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .icon-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 4px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+        }
+
+        .icon-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Step Progress Bar - Compact */
+        .step-progress {
+            background: white;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            gap: 1px;
+            height: 32px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .step {
+            width: 40px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .step.active {
+            background: #333;
+            color: white;
+        }
+
+        .step.completed {
+            background: #28a745;
+            color: white;
+        }
+
+        .step.review {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .step:not(.active):not(.completed):not(.review) {
+            background: #e9ecef;
+            color: #6c757d;
+        }
+
+        .step:hover:not(.active) {
+            background: #dee2e6;
+        }
+
+        /* Question Area - More Compact */
+        .question-area {
+            flex: 1;
+            background: white;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            min-height: 50px;
+        }
+
+        .question-text {
+            font-size: 13px;
+            line-height: 1.4;
+            color: #333;
+            width: 100%;
+            text-align: left;
+        }
+
+        .task-status {
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-review {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        /* Bottom Controls - Compact */
+        .bottom-controls {
+            background: #f8f9fa;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #e9ecef;
+            height: 40px;
+        }
+
+        .control-btn {
+            padding: 4px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            height: 28px;
+        }
+
+        .control-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-previous {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-previous:hover:not(:disabled) {
+            background: #5a6268;
+        }
+
+        .btn-completed {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-completed:hover {
+            background: #218838;
+        }
+
+        .btn-review {
+            background: #ffc107;
+            color: #212529;
+        }
+
+        .btn-review:hover {
+            background: #e0a800;
+        }
+
+        .btn-next {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-next:hover:not(:disabled) {
+            background: #0056b3;
+        }
+
+        .btn-help {
+            background: #17a2b8;
+            color: white;
+            padding: 4px;
+            width: 28px;
+            height: 28px;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .btn-help:hover {
+            background: #138496;
+        }
+
+        .center-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Project dropdown */
+        .project-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            min-width: 200px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .project-dropdown.show {
+            display: block;
+        }
+
+        .project-option {
+            padding: 8px 12px;
+            color: #333;
+            cursor: pointer;
+            font-size: 11px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .project-option:hover {
+            background: #f8f9fa;
+        }
+
+        .project-option:last-child {
+            border-bottom: none;
+        }
+    </style>
 </head>
-
 <body>
-  <h1>💡 Từ vựng mỗi ngày</h1>
+    <div class="quiz-container">
+        <!-- Top Header -->
+        <div class="top-header">
+            <div class="left-section">
+                <div class="project-info">
+                    Project <span id="currentProject">1</span> of <span id="totalProjects">12</span>
+                </div>
+                
+                <div class="project-selector">
+                    <button class="choose-project-btn" onclick="toggleProjectDropdown()">
+                        Choose Project ▼
+                    </button>
+                    <button class="go-btn">Go</button>
+                    
+                    <div class="project-dropdown" id="projectDropdown">
+                        <div class="project-option" onclick="selectProject(1)">Project 1: Excel Basics</div>
+                        <div class="project-option" onclick="selectProject(2)">Project 2: Word Processing</div>
+                        <div class="project-option" onclick="selectProject(3)">Project 3: PowerPoint</div>
+                        <div class="project-option" onclick="selectProject(4)">Project 4: Access Database</div>
+                        <div class="project-option" onclick="selectProject(5)">Project 5: Web Design</div>
+                        <div class="project-option" onclick="selectProject(6)">Project 6: Email Marketing</div>
+                        <div class="project-option" onclick="selectProject(7)">Project 7: Data Analysis</div>
+                    </div>
+                </div>
+            </div>
 
-  <div class="progress-bar">
-    <div class="progress-fill" id="progressFill"></div>
-  </div>
+            <div class="center-section">
+                <div class="timer" id="timer">4:58:11</div>
+            </div>
 
-  <div class="card-container">
-    <div class="card" id="card" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)" onclick="flipCard(event)">
-      <div class="card-controls">
-        <button class="control-btn" id="learnBtn" onclick="toggleLearned(event)" title="Đánh dấu đã học">○</button>
-        <button class="control-btn copy" onclick="copyWord(event)" title="Sao chép từ">📋</button>
-        <button class="control-btn sound" onclick="playPronunciation(event)" title="Phát âm">🔊</button>
-      </div>
-      <div class="word-line">
-        <div class="word" id="word">Đang tải...</div>
-        <div class="pronunciation" id="pronunciation"></div>
-        <div class="word-type" id="wordType"></div>
-      </div>
-      <div class="meaning" id="meaning"></div>
-      <div class="example" id="example"></div>
+            <div class="right-section">
+                <button class="header-btn" onclick="nextProject()">Next Project</button>
+                <button class="header-btn" onclick="restartProject()">Restart Project</button>
+                <button class="icon-btn">✓</button>
+                <button class="icon-btn">✕</button>
+            </div>
+        </div>
+
+        <!-- Step Progress Bar -->
+        <div class="step-progress">
+            <div class="step active" id="step1" onclick="goToStep(1)">1</div>
+            <div class="step" id="step2" onclick="goToStep(2)">2</div>
+            <div class="step" id="step3" onclick="goToStep(3)">3</div>
+            <div class="step" id="step4" onclick="goToStep(4)">4</div>
+            <div class="step" id="step5" onclick="goToStep(5)">5</div>
+            <div class="step" id="step6" onclick="goToStep(6)">6</div>
+        </div>
+
+        <!-- Question Area -->
+        <div class="question-area">
+            <div class="question-text" id="questionText">
+                Lọc dữ liệu trong bảng Company_Information để chỉ hiển thị các khu vực (Region) bắt đầu bằng "To".
+            </div>
+            <div class="task-status status-review" id="taskStatus" style="display: none;">
+                Marked for Review
+            </div>
+        </div>
+
+        <!-- Bottom Controls -->
+        <div class="bottom-controls">
+            <button class="control-btn btn-previous" onclick="previousTask()" id="prevBtn">
+                ◀ Previous Task
+            </button>
+
+            <div class="center-controls">
+                <button class="control-btn btn-completed" onclick="markCompleted()">
+                    Mark Completed
+                </button>
+                <button class="control-btn btn-review" onclick="markForReview()">
+                    Mark for review
+                </button>
+                <button class="control-btn btn-help" onclick="showHelp()">
+                    ?
+                </button>
+            </div>
+
+            <button class="control-btn btn-next" onclick="nextTask()" id="nextBtn">
+                Next Task ▶
+            </button>
+        </div>
     </div>
-  </div>
 
-  <div class="status" id="status"></div>
-  <div class="api-status" id="apiStatus" style="display: none;"></div>
+    <script>
+        // Data structure - 7 Projects
+        const quizData = {
+            projects: [
+                {
+                    id: 1,
+                    title: "Excel Basics",
+                    tasks: [
+                        "Lọc dữ liệu trong bảng Company_Information để chỉ hiển thị các khu vực (Region) bắt đầu bằng \"To\"",
+                        "Tạo công thức SUM cho cột doanh thu theo từng khu vực",
+                        "Định dạng ô và áp dụng border cho toàn bộ bảng dữ liệu",
+                        "Tạo biểu đồ cột thể hiện doanh thu theo region",
+                        "Thiết lập print area cho vùng dữ liệu A1:F20",
+                        "Lưu file với tên Company_Report.xlsx"
+                    ]
+                },
+                {
+                    id: 2,
+                    title: "Word Processing",
+                    tasks: [
+                        "Tạo document mới và nhập văn bản tiêu đề",
+                        "Định dạng font chữ và paragraph spacing",
+                        "Chèn header với logo công ty và footer với số trang",
+                        "Tạo table of contents tự động",
+                        "Chèn hình ảnh và thiết lập text wrapping",
+                        "Export document sang PDF format"
+                    ]
+                },
+                {
+                    id: 3,
+                    title: "PowerPoint Presentation",
+                    tasks: [
+                        "Tạo presentation với slide master template",
+                        "Thêm slide title và content layout",
+                        "Chèn SmartArt diagram cho quy trình làm việc",
+                        "Áp dụng animation effects cho text và objects",
+                        "Thiết lập slide transitions",
+                        "Setup slideshow timing và presenter notes"
+                    ]
+                },
+                {
+                    id: 4,
+                    title: "Access Database",
+                    tasks: [
+                        "Tạo database mới và thiết kế bảng Customers",
+                        "Định nghĩa relationships giữa các bảng",
+                        "Tạo form nhập liệu cho bảng Products",
+                        "Thiết kế query để tìm kiếm dữ liệu",
+                        "Tạo report hiển thị thống kê doanh số",
+                        "Backup database và thiết lập security"
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "Web Design HTML/CSS",
+                    tasks: [
+                        "Tạo cấu trúc HTML cho trang chủ website",
+                        "Thiết kế CSS layout với responsive design",
+                        "Thêm navigation menu và footer",
+                        "Tạo form liên hệ với validation",
+                        "Tối ưu hóa images và SEO meta tags",
+                        "Test website trên multiple browsers"
+                    ]
+                },
+                {
+                    id: 6,
+                    title: "Email Marketing",
+                    tasks: [
+                        "Thiết kế email template với HTML",
+                        "Tạo subject line và preview text",
+                        "Thêm call-to-action buttons",
+                        "Setup tracking và analytics",
+                        "Test email trên different email clients",
+                        "Schedule và send email campaign"
+                    ]
+                },
+                {
+                    id: 7,
+                    title: "Data Analysis",
+                    tasks: [
+                        "Import dữ liệu từ CSV file",
+                        "Làm sạch và chuẩn hóa dữ liệu",
+                        "Tạo pivot tables để phân tích",
+                        "Thiết kế dashboard với charts",
+                        "Áp dụng statistical analysis",
+                        "Export báo cáo final report"
+                    ]
+                }
+            ]
+        };
 
-  <script>
-    let vocabulary = [];
-    let currentIndex = 0;
-    let flipped = false;
-    let currentAudio = null;
-    let wordDataCache = {};
+        // State management
+        let currentProjectIndex = 0;    // Start from project 1
+        let currentTaskIndex = 0;       // Start from task 1
+        let taskStatuses = {};          // Store task statuses
+        let timeLeft = 50*60;           // 50 minutes timer
 
-    // Touch/swipe variables
-    let startX = 0;
-    let startY = 0;
-    let currentX = 0;
-    let currentY = 0;
-    let isDragging = false;
-    let cardEl = null;
-
-    const wordEl = document.getElementById("word");
-    const pronunciationEl = document.getElementById("pronunciation");
-    const meaningEl = document.getElementById("meaning");
-    const exampleEl = document.getElementById("example");
-    const statusEl = document.getElementById("status");
-    const wordTypeEl = document.getElementById("wordType");
-    const learnBtnEl = document.getElementById("learnBtn");
-    const progressFillEl = document.getElementById("progressFill");
-    const apiStatusEl = document.getElementById("apiStatus");
-
-    // Mapping cho từ loại
-    const partOfSpeechMap = {
-      'noun': { short: 'n', name: 'Danh từ', class: 'n' },
-      'verb': { short: 'v', name: 'Động từ', class: 'v' },
-      'adjective': { short: 'adj', name: 'Tính từ', class: 'adj' },
-      'adverb': { short: 'adv', name: 'Trạng từ', class: 'adv' },
-      'preposition': { short: 'prep', name: 'Giới từ', class: 'prep' },
-      'conjunction': { short: 'conj', name: 'Liên từ', class: 'conj' },
-      'interjection': { short: 'interj', name: 'Thán từ', class: 'interj' },
-      'pronoun': { short: 'pron', name: 'Đại từ', class: 'pron' },
-      'determiner': { short: 'det', name: 'Từ hạn định', class: 'det' },
-      'exclamation': { short: 'interj', name: 'Thán từ', class: 'interj' }
-    };
-
-    // Hàm hiển thị trạng thái API
-    function showApiStatus(message, type) {
-      apiStatusEl.textContent = message;
-      apiStatusEl.className = `api-status ${type}`;
-      apiStatusEl.style.display = 'block';
-      
-      setTimeout(() => {
-        apiStatusEl.style.display = 'none';
-      }, 3000);
-    }
-
-    // Enhanced word data với phiên âm có sẵn
-    const enhancedWordData = {
-      'intend': { pronunciation: '/ɪnˈtend/', partOfSpeech: 'verb' },
-      'serendipity': { pronunciation: '/ˌsɛrənˈdɪpɪti/', partOfSpeech: 'noun' },
-      'ephemeral': { pronunciation: '/ɪˈfɛmərəl/', partOfSpeech: 'adjective' },
-      'ubiquitous': { pronunciation: '/juːˈbɪkwɪtəs/', partOfSpeech: 'adjective' },
-      'mellifluous': { pronunciation: '/məˈlɪfluəs/', partOfSpeech: 'adjective' },
-      'quintessential': { pronunciation: '/ˌkwɪntɪˈsɛnʃəl/', partOfSpeech: 'adjective' },
-      'quickly': { pronunciation: '/ˈkwɪkli/', partOfSpeech: 'adverb' },
-      'beautiful': { pronunciation: '/ˈbjuːtɪfəl/', partOfSpeech: 'adjective' },
-      'adventure': { pronunciation: '/ədˈventʃər/', partOfSpeech: 'noun' },
-      'mysterious': { pronunciation: '/mɪˈstɪəriəs/', partOfSpeech: 'adjective' },
-      'important': { pronunciation: '/ɪmˈpɔːrtənt/', partOfSpeech: 'adjective' },
-      'understand': { pronunciation: '/ˌʌndərˈstænd/', partOfSpeech: 'verb' },
-      'develop': { pronunciation: '/dɪˈveləp/', partOfSpeech: 'verb' },
-      'different': { pronunciation: '/ˈdɪfərənt/', partOfSpeech: 'adjective' },
-      'available': { pronunciation: '/əˈveɪləbəl/', partOfSpeech: 'adjective' },
-      'necessary': { pronunciation: '/ˈnesəseri/', partOfSpeech: 'adjective' },
-      'possible': { pronunciation: '/ˈpɑːsəbəl/', partOfSpeech: 'adjective' },
-      'environment': { pronunciation: '/ɪnˈvaɪrənmənt/', partOfSpeech: 'noun' },
-      'knowledge': { pronunciation: '/ˈnɑːlɪdʒ/', partOfSpeech: 'noun' },
-      'experience': { pronunciation: '/ɪkˈspɪriəns/', partOfSpeech: 'noun' }
-    };
-
-    // Hàm lấy dữ liệu từ Dictionary API với nhiều fallback
-    async function fetchWordData(word) {
-      const wordLower = word.toLowerCase();
-      
-      // Kiểm tra cache trước
-      if (wordDataCache[wordLower]) {
-        return wordDataCache[wordLower];
-      }
-
-      // Kiểm tra dữ liệu có sẵn trước
-      if (enhancedWordData[wordLower]) {
-        const data = enhancedWordData[wordLower];
-        wordDataCache[wordLower] = data;
-        return data;
-      }
-
-      // Thử gọi API với timeout và retry
-      const apiUrls = [
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${wordLower}`,
-        `https://api.dictionaryapi.dev/api/v2/entries/en_US/${wordLower}`
-      ];
-
-      for (const apiUrl of apiUrls) {
-        try {
-          // showApiStatus('Đang tải phiên âm...', 'loading');
+        // Initialize
+        function init() {
+            updateDisplay();
+            startTimer();
             
-          // Tạo AbortController để timeout
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.project-selector')) {
+                    document.getElementById('projectDropdown').classList.remove('show');
+                }
+            });
+        }
 
-          const response = await fetch(apiUrl, {
-            signal: controller.signal,
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
+        // Timer functions
+        function startTimer() {
+            setInterval(() => {
+                timeLeft--;
+                if (timeLeft <= 0) {
+                    timeLeft = 0;
+                }
+                updateTimer();
+            }, 1000);
+        }
+
+        function updateTimer() {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            
+            const timeString = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            const timerEl = document.getElementById('timer');
+            timerEl.textContent = timeString;
+            
+            // Warning when less than 5 minutes
+            if (timeLeft < 300) {
+                timerEl.classList.add('warning');
             }
-          });
+        }
 
-          clearTimeout(timeoutId);
-          
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}`);
-          }
-
-          const data = await response.json();
-          
-          if (data && data.length > 0) {
-            const entry = data[0];
+        // Display update functions
+        function updateDisplay() {
+            // Update project info
+            document.getElementById('currentProject').textContent = currentProjectIndex + 1;
+            document.getElementById('totalProjects').textContent = quizData.projects.length;
             
-            // Lấy phiên âm
-            let pronunciation = '';
-            if (entry.phonetics && entry.phonetics.length > 0) {
-              // Tìm phiên âm có text
-              const phoneticWithText = entry.phonetics.find(p => p.text && p.text.trim());
-              if (phoneticWithText) {
-                pronunciation = phoneticWithText.text;
-              } else if (entry.phonetics[0].text) {
-                pronunciation = entry.phonetics[0].text;
-              }
+            // Update question
+            const currentProject = quizData.projects[currentProjectIndex];
+            const currentTask = currentProject.tasks[currentTaskIndex];
+            document.getElementById('questionText').textContent = currentTask;
+            
+            // Update step progress
+            updateStepProgress();
+            
+            // Update button states
+            updateButtonStates();
+            
+            // Update task status display
+            updateTaskStatusDisplay();
+        }
+
+        function updateStepProgress() {
+            const currentProject = quizData.projects[currentProjectIndex];
+            const totalSteps = currentProject.tasks.length;
+            
+            for (let i = 1; i <= 6; i++) {
+                const stepEl = document.getElementById(`step${i}`);
+                const stepIndex = i - 1;
+                
+                if (i > totalSteps) {
+                    stepEl.style.display = 'none';
+                } else {
+                    stepEl.style.display = 'flex';
+                    stepEl.className = 'step';
+                    
+                    const status = getTaskStatus(currentProjectIndex, stepIndex);
+                    
+                    if (stepIndex === currentTaskIndex) {
+                        stepEl.classList.add('active');
+                    } else if (status === 'completed') {
+                        stepEl.classList.add('completed');
+                    } else if (status === 'review') {
+                        stepEl.classList.add('review');
+                    }
+                }
+            }
+        }
+
+        function updateButtonStates() {
+            const currentProject = quizData.projects[currentProjectIndex];
+            
+            // Previous/Next task buttons
+            document.getElementById('prevBtn').disabled = currentTaskIndex === 0;
+            document.getElementById('nextBtn').disabled = currentTaskIndex >= currentProject.tasks.length - 1;
+        }
+
+        function updateTaskStatusDisplay() {
+            const statusEl = document.getElementById('taskStatus');
+            const status = getTaskStatus(currentProjectIndex, currentTaskIndex);
+            
+            if (status === 'completed') {
+                statusEl.textContent = 'Completed';
+                statusEl.className = 'task-status status-completed';
+                statusEl.style.display = 'block';
+            } else if (status === 'review') {
+                statusEl.textContent = 'Marked for Review';
+                statusEl.className = 'task-status status-review';
+                statusEl.style.display = 'block';
+            } else {
+                statusEl.style.display = 'none';
+            }
+        }
+
+        // Task status management
+        function getTaskStatus(projectIndex, taskIndex) {
+            return taskStatuses[`${projectIndex}-${taskIndex}`] || null;
+        }
+
+        function setTaskStatus(projectIndex, taskIndex, status) {
+            taskStatuses[`${projectIndex}-${taskIndex}`] = status;
+        }
+
+        // Navigation functions
+        function previousTask() {
+            if (currentTaskIndex > 0) {
+                currentTaskIndex--;
+                updateDisplay();
+            }
+        }
+
+        function nextTask() {
+            const currentProject = quizData.projects[currentProjectIndex];
+            if (currentTaskIndex < currentProject.tasks.length - 1) {
+                currentTaskIndex++;
+                updateDisplay();
+            }
+        }
+
+        function goToStep(stepNumber) {
+            const stepIndex = stepNumber - 1;
+            const currentProject = quizData.projects[currentProjectIndex];
+            
+            if (stepIndex >= 0 && stepIndex < currentProject.tasks.length) {
+                currentTaskIndex = stepIndex;
+                updateDisplay();
+            }
+        }
+
+        function nextProject() {
+            if (currentProjectIndex < quizData.projects.length - 1) {
+                currentProjectIndex++;
+                currentTaskIndex = 0;
+                updateDisplay();
+            }
+        }
+
+        function restartProject() {
+            // Clear all statuses for current project
+            const currentProject = quizData.projects[currentProjectIndex];
+            for (let i = 0; i < currentProject.tasks.length; i++) {
+                delete taskStatuses[`${currentProjectIndex}-${i}`];
             }
             
-            // Lấy từ loại
-            let partOfSpeech = 'noun';
-            if (entry.meanings && entry.meanings.length > 0) {
-              partOfSpeech = entry.meanings[0].partOfSpeech || 'noun';
-            }
+            currentTaskIndex = 0;
+            updateDisplay();
+        }
+
+        // Project selector functions
+        function toggleProjectDropdown() {
+            const dropdown = document.getElementById('projectDropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        function selectProject(projectNumber) {
+            currentProjectIndex = projectNumber - 1;
+            currentTaskIndex = 0;
+            updateDisplay();
             
-            // Lấy âm thanh phát âm
-            let audioUrl = '';
-            if (entry.phonetics && entry.phonetics.length > 0) {
-              const phoneticWithAudio = entry.phonetics.find(p => p.audio && p.audio.trim());
-              if (phoneticWithAudio) {
-                audioUrl = phoneticWithAudio.audio;
-              }
-            }
+            document.getElementById('projectDropdown').classList.remove('show');
+        }
 
-            const wordData = {
-              pronunciation: pronunciation || `/${wordLower}/`,
-              partOfSpeech: partOfSpeech,
-              audioUrl: audioUrl
-            };
-
-            // Lưu vào cache
-            wordDataCache[wordLower] = wordData;
-            // showApiStatus('Tải phiên âm thành công!', 'success');
+        // Task action functions
+        function markCompleted() {
+            const currentStatus = getTaskStatus(currentProjectIndex, currentTaskIndex);
             
-            return wordData;
-          }
-        } catch (error) {
-          console.error(`Lỗi khi gọi API ${apiUrl}:`, error);
-          
-          if (error.name === 'AbortError') {
-            showApiStatus('Timeout - Sử dụng dữ liệu offline', 'error');
-          } else {
-            showApiStatus('Lỗi mạng - Sử dụng dữ liệu offline', 'error');
-          }
-          
-          // Thử API tiếp theo
-          continue;
-        }
-      }
-
-      // Fallback data với phiên âm ước tính
-      const fallbackData = {
-        pronunciation: generateFallbackPronunciation(wordLower),
-        partOfSpeech: guessPartOfSpeech(wordLower),
-        audioUrl: ''
-      };
-      
-      wordDataCache[wordLower] = fallbackData;
-      return fallbackData;
-    }
-
-    // Hàm tạo phiên âm ước tính đơn giản
-    function generateFallbackPronunciation(word) {
-      // Một số quy tắc phiên âm cơ bản
-      const rules = {
-        'tion': 'ʃən',
-        'sion': 'ʃən',
-        'ough': 'ʌf',
-        'ight': 'aɪt',
-        'ph': 'f',
-        'th': 'θ',
-        'ch': 'tʃ',
-        'sh': 'ʃ',
-        'ing': 'ɪŋ',
-        'ed': 'd',
-        'ly': 'li'
-      };
-      
-      let pronunciation = word.toLowerCase();
-      
-      // Áp dụng các quy tắc
-      for (const [pattern, replacement] of Object.entries(rules)) {
-        pronunciation = pronunciation.replace(new RegExp(pattern, 'g'), replacement);
-      }
-      
-      return `/${pronunciation}/`;
-    }
-
-    // Hàm đoán từ loại dựa trên hậu tố
-    function guessPartOfSpeech(word) {
-      const adjSuffixes = ['able', 'ible', 'al', 'ful', 'less', 'ous', 'ive', 'ic'];
-      const nounSuffixes = ['tion', 'sion', 'ment', 'ness', 'ity', 'er', 'or', 'ist'];
-      const verbSuffixes = ['ate', 'ize', 'ify', 'en'];
-      const advSuffixes = ['ly'];
-      
-      for (const suffix of adjSuffixes) {
-        if (word.endsWith(suffix)) return 'adjective';
-      }
-      
-      for (const suffix of nounSuffixes) {
-        if (word.endsWith(suffix)) return 'noun';
-      }
-      
-      for (const suffix of verbSuffixes) {
-        if (word.endsWith(suffix)) return 'verb';
-      }
-      
-      for (const suffix of advSuffixes) {
-        if (word.endsWith(suffix)) return 'adverb';
-      }
-      
-      return 'noun'; // Default
-    }
-
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
-
-    function updateProgress() {
-      const progress = ((currentIndex + 1) / vocabulary.length) * 100;
-      progressFillEl.style.width = progress + '%';
-    }
-
-    async function loadCard(index) {
-      const word = vocabulary[index];
-      
-      // Hiển thị từ ngay lập tức
-      wordEl.textContent = word.word;
-      pronunciationEl.textContent = 'Đang tải...';
-      pronunciationEl.className = 'pronunciation loading';
-      wordTypeEl.textContent = '';
-      wordTypeEl.style.display = 'none';
-      
-      meaningEl.textContent = flipped ? word.meaning : '';
-      exampleEl.textContent = flipped ? word.example : '';
-
-      // Cập nhật trạng thái học
-      updateLearnedStatus(word.word);
-      updateProgress();
-
-      // Lấy thông tin từ API
-      try {
-        const wordData = await fetchWordData(word.word);
-        
-        // Hiển thị phiên âm
-        pronunciationEl.textContent = wordData.pronunciation;
-        pronunciationEl.className = 'pronunciation';
-        
-        // Lưu URL audio để sử dụng khi phát âm
-        if (wordData.audioUrl) {
-          word.audioUrl = wordData.audioUrl;
+            if (currentStatus === 'completed') {
+                // If already completed, remove the status
+                delete taskStatuses[`${currentProjectIndex}-${currentTaskIndex}`];
+            } else {
+                // Mark as completed
+                setTaskStatus(currentProjectIndex, currentTaskIndex, 'completed');
+            }
+            updateDisplay();
         }
 
-        // Hiển thị từ loại
-        if (wordData.partOfSpeech && partOfSpeechMap[wordData.partOfSpeech]) {
-          const posInfo = partOfSpeechMap[wordData.partOfSpeech];
-          wordTypeEl.textContent = `(${posInfo.short})`;
-          wordTypeEl.className = `word-type ${posInfo.class}`;
-          wordTypeEl.title = posInfo.name;
-          wordTypeEl.style.display = 'inline-block';
-        } else {
-          wordTypeEl.textContent = '(n)';
-          wordTypeEl.className = 'word-type n';
-          wordTypeEl.title = 'Danh từ';
-          wordTypeEl.style.display = 'inline-block';
+        function markForReview() {
+            const currentStatus = getTaskStatus(currentProjectIndex, currentTaskIndex);
+            
+            if (currentStatus === 'review') {
+                // If already marked for review, remove the status
+                delete taskStatuses[`${currentProjectIndex}-${currentTaskIndex}`];
+            } else {
+                // Mark for review
+                setTaskStatus(currentProjectIndex, currentTaskIndex, 'review');
+            }
+            updateDisplay();
         }
 
-      } catch (error) {
-        console.error('Lỗi khi tải card:', error);
-        pronunciationEl.textContent = `/${word.word}/`;
-        pronunciationEl.className = 'pronunciation error';
-        
-        wordTypeEl.textContent = '(n)';
-        wordTypeEl.className = 'word-type n';
-        wordTypeEl.title = 'Danh từ';
-        wordTypeEl.style.display = 'inline-block';
-      }
-    }
-
-    function updateLearnedStatus(word) {
-      const learned = JSON.parse(localStorage.getItem("learnedWords") || "[]");
-      const isLearned = learned.includes(word);
-      
-      learnBtnEl.textContent = isLearned ? "✓" : "○";
-      learnBtnEl.className = isLearned ? "control-btn learned" : "control-btn";
-      
-      if (isLearned) {
-        statusEl.textContent = "✅ Bạn đã học từ này";
-      } else {
-        statusEl.textContent = "🔔 Bạn chưa học từ này";
-      }
-    }
-
-    function flipCard(event) {
-      // Không flip nếu click vào control buttons
-      if (event && event.target.closest('.card-controls')) {
-        return;
-      }
-      
-      if (!isDragging) {
-        flipped = !flipped;
-        loadCard(currentIndex);
-      }
-    }
-
-    function toggleLearned(event) {
-      event.stopPropagation();
-      const word = vocabulary[currentIndex].word;
-      let learned = JSON.parse(localStorage.getItem("learnedWords") || "[]");
-      
-      if (learned.includes(word)) {
-        learned = learned.filter(w => w !== word);
-      } else {
-        learned.push(word);
-      }
-      
-      localStorage.setItem("learnedWords", JSON.stringify(learned));
-      updateLearnedStatus(word);
-    }
-
-    function copyWord(event) {
-      event.stopPropagation();
-      const word = vocabulary[currentIndex];
-      const textToCopy = word.word;
-      
-      navigator.clipboard.writeText(textToCopy).then(() => {
-        const copyBtn = event.target;
-        const originalText = copyBtn.textContent;
-        copyBtn.textContent = "✓";
-        copyBtn.style.background = "linear-gradient(145deg, #28a745, #20c997)";
-        
-        setTimeout(() => {
-          copyBtn.textContent = originalText;
-          copyBtn.style.background = "linear-gradient(145deg, #007acc, #0056b3)";
-        }, 1000);
-      }).catch(err => {
-        console.error('Không thể sao chép:', err);
-      });
-    }
-
-    function playPronunciation(event) {
-      event.stopPropagation();
-      
-      const word = vocabulary[currentIndex];
-      
-      // Thử phát âm từ API trước (nếu có)
-      if (word.audioUrl) {
-        try {
-          // Dừng audio hiện tại nếu có
-          if (currentAudio) {
-            currentAudio.pause();
-            currentAudio.currentTime = 0;
-          }
-          
-          currentAudio = new Audio(word.audioUrl);
-          currentAudio.play().catch(err => {
-            console.log('Không thể phát âm từ API, chuyển sang Web Speech API');
-            playWithSpeechAPI(word.word);
-          });
-          return;
-        } catch (error) {
-          console.log('Lỗi khi phát âm từ API:', error);
+        function showHelp() {
+            alert('Help: Hướng dẫn chi tiết cho câu hỏi hiện tại sẽ được hiển thị ở đây.');
         }
-      }
-      
-      // Fallback sang Web Speech API
-      playWithSpeechAPI(word.word);
-    }
 
-    function playWithSpeechAPI(word) {
-      if ('speechSynthesis' in window) {
-        // Dừng phát âm hiện tại nếu có
-        speechSynthesis.cancel();
-        
-        const utterance = new SpeechSynthesisUtterance(word);
-        utterance.lang = 'en-US';
-        utterance.rate = 0.8;
-        utterance.pitch = 1;
-        utterance.volume = 1;
-        
-        speechSynthesis.speak(utterance);
-      } else {
-        console.log('Trình duyệt không hỗ trợ phát âm');
-      }
-    }
-
-    function nextCard() {
-      if (vocabulary.length === 0) return;
-      currentIndex = (currentIndex + 1) % vocabulary.length;
-      flipped = false;
-      loadCard(currentIndex);
-    }
-
-    function prevCard() {
-      if (vocabulary.length === 0) return;
-      currentIndex = (currentIndex - 1 + vocabulary.length) % vocabulary.length;
-      flipped = false;
-      loadCard(currentIndex);
-    }
-
-    // Touch handlers
-    function handleTouchStart(event) {
-      startX = event.touches[0].clientX;
-      startY = event.touches[0].clientY;
-      currentX = startX;
-      currentY = startY;
-      isDragging = false;
-      cardEl = event.target.closest('.card');
-    }
-
-    function handleTouchMove(event) {
-      if (!cardEl) return;
-      
-      event.preventDefault();
-      currentX = event.touches[0].clientX;
-      currentY = event.touches[0].clientY;
-      
-      const diffX = currentX - startX;
-      const diffY = currentY - startY;
-      
-      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
-        isDragging = true;
-        cardEl.style.transform = `translateX(${diffX}px) rotate(${diffX * 0.1}deg)`;
-        cardEl.style.opacity = 1 - Math.abs(diffX) / 300;
-      }
-    }
-
-    function handleTouchEnd(event) {
-      if (!cardEl) return;
-      
-      const diffX = currentX - startX;
-      const threshold = 80;
-      
-      if (Math.abs(diffX) > threshold) {
-        if (diffX > 0) {
-          cardEl.style.transform = 'translateX(100%) rotate(20deg)';
-          cardEl.style.opacity = '0';
-          setTimeout(() => {
-            prevCard();
-            resetCardPosition();
-          }, 300);
-        } else {
-          cardEl.style.transform = 'translateX(-100%) rotate(-20deg)';
-          cardEl.style.opacity = '0';
-          setTimeout(() => {
-            nextCard();
-            resetCardPosition();
-          }, 300);
-        }
-      } else {
-        resetCardPosition();
-      }
-      
-      isDragging = false;
-      cardEl = null;
-    }
-
-    function resetCardPosition() {
-      const card = document.getElementById('card');
-      card.style.transform = 'translateX(0) rotate(0deg)';
-      card.style.opacity = '1';
-    }
-
-    // Mouse events for desktop
-    let mouseDown = false;
-    let startMouseX = 0;
-    let startMouseY = 0;
-
-    document.getElementById('card').addEventListener('mousedown', (e) => {
-      mouseDown = true;
-      startMouseX = e.clientX;
-      startMouseY = e.clientY;
-      isDragging = false;
-      cardEl = e.target.closest('.card');
-    });
-
-    document.addEventListener('mousemove', (e) => {
-      if (!mouseDown || !cardEl) return;
-      
-      const diffX = e.clientX - startMouseX;
-      const diffY = e.clientY - startMouseY;
-      
-      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
-        isDragging = true;
-        cardEl.style.transform = `translateX(${diffX}px) rotate(${diffX * 0.1}deg)`;
-        cardEl.style.opacity = 1 - Math.abs(diffX) / 300;
-      }
-    });
-
-    document.addEventListener('mouseup', (e) => {
-      if (!mouseDown || !cardEl) return;
-      
-      const diffX = e.clientX - startMouseX;
-      const threshold = 80;
-      
-      if (Math.abs(diffX) > threshold) {
-        if (diffX > 0) {
-          cardEl.style.transform = 'translateX(100%) rotate(20deg)';
-          cardEl.style.opacity = '0';
-          setTimeout(() => {
-            prevCard();
-            resetCardPosition();
-          }, 300);
-        } else {
-          cardEl.style.transform = 'translateX(-100%) rotate(-20deg)';
-          cardEl.style.opacity = '0';
-          setTimeout(() => {
-            nextCard();
-            resetCardPosition();
-          }, 300);
-        }
-      } else {
-        resetCardPosition();
-      }
-      
-      mouseDown = false;
-      isDragging = false;
-      cardEl = null;
-    });
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') {
-        prevCard();
-      } else if (e.key === 'ArrowRight') {
-        nextCard();
-      } else if (e.key === ' ' || e.key === 'Enter') {
-        e.preventDefault();
-        flipCard();
-      }
-    });
-
-    // Sample data
-    const sampleData = [
-      {
-        word: "intend",
-        meaning: "Có ý định, dự định",
-        example: "I intend to finish this project by tomorrow."
-      },
-      {
-        word: "serendipity",
-        meaning: "Sự tình cờ may mắn",
-        example: "Finding this book was pure serendipity."
-      },
-      {
-        word: "ephemeral",
-        meaning: "Tạm thời, phù du",
-        example: "The beauty of cherry blossoms is ephemeral."
-      },
-      {
-        word: "ubiquitous",
-        meaning: "Có mặt khắp nơi",
-        example: "Smartphones are ubiquitous in modern society."
-      },
-      {
-        word: "mellifluous",
-        meaning: "Ngọt ngào, du dương",
-        example: "Her mellifluous voice captivated the audience."
-      },
-      {
-        word: "quintessential",
-        meaning: "Điển hình, tinh túy",
-        example: "This painting is quintessential of the Renaissance period."
-      },
-      {
-        word: "quickly",
-        meaning: "Một cách nhanh chóng",
-        example: "She ran quickly to catch the bus."
-      },
-      {
-        word: "beautiful",
-        meaning: "Đẹp, xinh đẹp",
-        example: "The sunset was beautiful tonight."
-      },
-      {
-        word: "adventure",
-        meaning: "Cuộc phiêu lưu, mạo hiểm",
-        example: "Their trip to the mountains was quite an adventure."
-      },
-      {
-        word: "mysterious",
-        meaning: "Bí ẩn, khó hiểu",
-        example: "The old mansion had a mysterious atmosphere."
-      }
-    ];
-
-    // Initialize with sample data
-    vocabulary = sampleData;
-    shuffle(vocabulary);
-    currentIndex = 0;
-    loadCard(currentIndex);
-
-    // Try to fetch data.json, fall back to sample data if not available
-    fetch("data.json")
-      .then(res => res.json())
-      .then(data => {
-        vocabulary = data;
-        shuffle(vocabulary);
-        currentIndex = 0;
-        loadCard(currentIndex);
-      })
-      .catch(err => {
-        console.log("Sử dụng dữ liệu mẫu vì không tìm thấy data.json");
-        // Keep using sample data
-      });
-  </script>
+        // Initialize when page loads
+        window.onload = init;
+    </script>
 </body>
 </html>

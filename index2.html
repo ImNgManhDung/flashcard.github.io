@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard</title>
+ <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <h1>💡 Từ vựng mỗi ngày</h1>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <div class="card-container">
+    <div class="card" id="card" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)" onclick="flipCard(event)">
+      <div class="card-controls">
+        <button class="control-btn" id="learnBtn" onclick="toggleLearned(event)" title="Đánh dấu đã học">○</button>
+        <button class="control-btn copy" onclick="copyWord(event)" title="Sao chép từ">📋</button>
+        <button class="control-btn sound" onclick="playPronunciation(event)" title="Phát âm">🔊</button>
+      </div>
+      <div class="word-line">
+        <div class="word" id="word">Đang tải...</div>
+        <div class="pronunciation" id="pronunciation"></div>
+        <div class="word-type" id="wordType"></div>
+      </div>
+      <div class="meaning" id="meaning"></div>
+      <div class="example" id="example"></div>
+    </div>
+  </div>
+
+  <div class="status" id="status"></div>
+  <div class="api-status" id="apiStatus" style="display: none;"></div>
+
+  <script>
+    let vocabulary = [];
+    let currentIndex = 0;
+    let flipped = false;
+    let currentAudio = null;
+    let wordDataCache = {};
+
+    // Touch/swipe variables
+    let startX = 0;
+    let startY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let isDragging = false;
+    let cardEl = null;
+
+    const wordEl = document.getElementById("word");
+    const pronunciationEl = document.getElementById("pronunciation");
+    const meaningEl = document.getElementById("meaning");
+    const exampleEl = document.getElementById("example");
+    const statusEl = document.getElementById("status");
+    const wordTypeEl = document.getElementById("wordType");
+    const learnBtnEl = document.getElementById("learnBtn");
+    const progressFillEl = document.getElementById("progressFill");
+    const apiStatusEl = document.getElementById("apiStatus");
+
+    // Mapping cho từ loại
+    const partOfSpeechMap = {
+      'noun': { short: 'n', name: 'Danh từ', class: 'n' },
+      'verb': { short: 'v', name: 'Động từ', class: 'v' },
+      'adjective': { short: 'adj', name: 'Tính từ', class: 'adj' },
+      'adverb': { short: 'adv', name: 'Trạng từ', class: 'adv' },
+      'preposition': { short: 'prep', name: 'Giới từ', class: 'prep' },
+      'conjunction': { short: 'conj', name: 'Liên từ', class: 'conj' },
+      'interjection': { short: 'interj', name: 'Thán từ', class: 'interj' },
+      'pronoun': { short: 'pron', name: 'Đại từ', class: 'pron' },
+      'determiner': { short: 'det', name: 'Từ hạn định', class: 'det' },
+      'exclamation': { short: 'interj', name: 'Thán từ', class: 'interj' }
+    };
+
+    // Hàm hiển thị trạng thái API
+    function showApiStatus(message, type) {
+      apiStatusEl.textContent = message;
+      apiStatusEl.className = `api-status ${type}`;
+      apiStatusEl.style.display = 'block';
+      
+      setTimeout(() => {
+        apiStatusEl.style.display = 'none';
+      }, 3000);
+    }
+
+    // Enhanced word data với phiên âm có sẵn
+    const enhancedWordData = {
+      'intend': { pronunciation: '/ɪnˈtend/', partOfSpeech: 'verb' },
+      'serendipity': { pronunciation: '/ˌsɛrənˈdɪpɪti/', partOfSpeech: 'noun' },
+      'ephemeral': { pronunciation: '/ɪˈfɛmərəl/', partOfSpeech: 'adjective' },
+      'ubiquitous': { pronunciation: '/juːˈbɪkwɪtəs/', partOfSpeech: 'adjective' },
+      'mellifluous': { pronunciation: '/məˈlɪfluəs/', partOfSpeech: 'adjective' },
+      'quintessential': { pronunciation: '/ˌkwɪntɪˈsɛnʃəl/', partOfSpeech: 'adjective' },
+      'quickly': { pronunciation: '/ˈkwɪkli/', partOfSpeech: 'adverb' },
+      'beautiful': { pronunciation: '/ˈbjuːtɪfəl/', partOfSpeech: 'adjective' },
+      'adventure': { pronunciation: '/ədˈventʃər/', partOfSpeech: 'noun' },
+      'mysterious': { pronunciation: '/mɪˈstɪəriəs/', partOfSpeech: 'adjective' },
+      'important': { pronunciation: '/ɪmˈpɔːrtənt/', partOfSpeech: 'adjective' },
+      'understand': { pronunciation: '/ˌʌndərˈstænd/', partOfSpeech: 'verb' },
+      'develop': { pronunciation: '/dɪˈveləp/', partOfSpeech: 'verb' },
+      'different': { pronunciation: '/ˈdɪfərənt/', partOfSpeech: 'adjective' },
+      'available': { pronunciation: '/əˈveɪləbəl/', partOfSpeech: 'adjective' },
+      'necessary': { pronunciation: '/ˈnesəseri/', partOfSpeech: 'adjective' },
+      'possible': { pronunciation: '/ˈpɑːsəbəl/', partOfSpeech: 'adjective' },
+      'environment': { pronunciation: '/ɪnˈvaɪrənmənt/', partOfSpeech: 'noun' },
+      'knowledge': { pronunciation: '/ˈnɑːlɪdʒ/', partOfSpeech: 'noun' },
+      'experience': { pronunciation: '/ɪkˈspɪriəns/', partOfSpeech: 'noun' }
+    };
+
+    // Hàm lấy dữ liệu từ Dictionary API với nhiều fallback
+    async function fetchWordData(word) {
+      const wordLower = word.toLowerCase();
+      
+      // Kiểm tra cache trước
+      if (wordDataCache[wordLower]) {
+        return wordDataCache[wordLower];
+      }
+
+      // Kiểm tra dữ liệu có sẵn trước
+      if (enhancedWordData[wordLower]) {
+        const data = enhancedWordData[wordLower];
+        wordDataCache[wordLower] = data;
+        return data;
+      }
+
+      // Thử gọi API với timeout và retry
+      const apiUrls = [
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${wordLower}`,
+        `https://api.dictionaryapi.dev/api/v2/entries/en_US/${wordLower}`
+      ];
+
+      for (const apiUrl of apiUrls) {
+        try {
+          // showApiStatus('Đang tải phiên âm...', 'loading');
+            
+          // Tạo AbortController để timeout
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+
+          const response = await fetch(apiUrl, {
+            signal: controller.signal,
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            }
+          });
+
+          clearTimeout(timeoutId);
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+
+          const data = await response.json();
+          
+          if (data && data.length > 0) {
+            const entry = data[0];
+            
+            // Lấy phiên âm
+            let pronunciation = '';
+            if (entry.phonetics && entry.phonetics.length > 0) {
+              // Tìm phiên âm có text
+              const phoneticWithText = entry.phonetics.find(p => p.text && p.text.trim());
+              if (phoneticWithText) {
+                pronunciation = phoneticWithText.text;
+              } else if (entry.phonetics[0].text) {
+                pronunciation = entry.phonetics[0].text;
+              }
+            }
+            
+            // Lấy từ loại
+            let partOfSpeech = 'noun';
+            if (entry.meanings && entry.meanings.length > 0) {
+              partOfSpeech = entry.meanings[0].partOfSpeech || 'noun';
+            }
+            
+            // Lấy âm thanh phát âm
+            let audioUrl = '';
+            if (entry.phonetics && entry.phonetics.length > 0) {
+              const phoneticWithAudio = entry.phonetics.find(p => p.audio && p.audio.trim());
+              if (phoneticWithAudio) {
+                audioUrl = phoneticWithAudio.audio;
+              }
+            }
+
+            const wordData = {
+              pronunciation: pronunciation || `/${wordLower}/`,
+              partOfSpeech: partOfSpeech,
+              audioUrl: audioUrl
+            };
+
+            // Lưu vào cache
+            wordDataCache[wordLower] = wordData;
+            // showApiStatus('Tải phiên âm thành công!', 'success');
+            
+            return wordData;
+          }
+        } catch (error) {
+          console.error(`Lỗi khi gọi API ${apiUrl}:`, error);
+          
+          if (error.name === 'AbortError') {
+            showApiStatus('Timeout - Sử dụng dữ liệu offline', 'error');
+          } else {
+            showApiStatus('Lỗi mạng - Sử dụng dữ liệu offline', 'error');
+          }
+          
+          // Thử API tiếp theo
+          continue;
+        }
+      }
+
+      // Fallback data với phiên âm ước tính
+      const fallbackData = {
+        pronunciation: generateFallbackPronunciation(wordLower),
+        partOfSpeech: guessPartOfSpeech(wordLower),
+        audioUrl: ''
+      };
+      
+      wordDataCache[wordLower] = fallbackData;
+      return fallbackData;
+    }
+
+    // Hàm tạo phiên âm ước tính đơn giản
+    function generateFallbackPronunciation(word) {
+      // Một số quy tắc phiên âm cơ bản
+      const rules = {
+        'tion': 'ʃən',
+        'sion': 'ʃən',
+        'ough': 'ʌf',
+        'ight': 'aɪt',
+        'ph': 'f',
+        'th': 'θ',
+        'ch': 'tʃ',
+        'sh': 'ʃ',
+        'ing': 'ɪŋ',
+        'ed': 'd',
+        'ly': 'li'
+      };
+      
+      let pronunciation = word.toLowerCase();
+      
+      // Áp dụng các quy tắc
+      for (const [pattern, replacement] of Object.entries(rules)) {
+        pronunciation = pronunciation.replace(new RegExp(pattern, 'g'), replacement);
+      }
+      
+      return `/${pronunciation}/`;
+    }
+
+    // Hàm đoán từ loại dựa trên hậu tố
+    function guessPartOfSpeech(word) {
+      const adjSuffixes = ['able', 'ible', 'al', 'ful', 'less', 'ous', 'ive', 'ic'];
+      const nounSuffixes = ['tion', 'sion', 'ment', 'ness', 'ity', 'er', 'or', 'ist'];
+      const verbSuffixes = ['ate', 'ize', 'ify', 'en'];
+      const advSuffixes = ['ly'];
+      
+      for (const suffix of adjSuffixes) {
+        if (word.endsWith(suffix)) return 'adjective';
+      }
+      
+      for (const suffix of nounSuffixes) {
+        if (word.endsWith(suffix)) return 'noun';
+      }
+      
+      for (const suffix of verbSuffixes) {
+        if (word.endsWith(suffix)) return 'verb';
+      }
+      
+      for (const suffix of advSuffixes) {
+        if (word.endsWith(suffix)) return 'adverb';
+      }
+      
+      return 'noun'; // Default
+    }
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function updateProgress() {
+      const progress = ((currentIndex + 1) / vocabulary.length) * 100;
+      progressFillEl.style.width = progress + '%';
+    }
+
+    async function loadCard(index) {
+      const word = vocabulary[index];
+      
+      // Hiển thị từ ngay lập tức
+      wordEl.textContent = word.word;
+      pronunciationEl.textContent = 'Đang tải...';
+      pronunciationEl.className = 'pronunciation loading';
+      wordTypeEl.textContent = '';
+      wordTypeEl.style.display = 'none';
+      
+      meaningEl.textContent = flipped ? word.meaning : '';
+      exampleEl.textContent = flipped ? word.example : '';
+
+      // Cập nhật trạng thái học
+      updateLearnedStatus(word.word);
+      updateProgress();
+
+      // Lấy thông tin từ API
+      try {
+        const wordData = await fetchWordData(word.word);
+        
+        // Hiển thị phiên âm
+        pronunciationEl.textContent = wordData.pronunciation;
+        pronunciationEl.className = 'pronunciation';
+        
+        // Lưu URL audio để sử dụng khi phát âm
+        if (wordData.audioUrl) {
+          word.audioUrl = wordData.audioUrl;
+        }
+
+        // Hiển thị từ loại
+        if (wordData.partOfSpeech && partOfSpeechMap[wordData.partOfSpeech]) {
+          const posInfo = partOfSpeechMap[wordData.partOfSpeech];
+          wordTypeEl.textContent = `(${posInfo.short})`;
+          wordTypeEl.className = `word-type ${posInfo.class}`;
+          wordTypeEl.title = posInfo.name;
+          wordTypeEl.style.display = 'inline-block';
+        } else {
+          wordTypeEl.textContent = '(n)';
+          wordTypeEl.className = 'word-type n';
+          wordTypeEl.title = 'Danh từ';
+          wordTypeEl.style.display = 'inline-block';
+        }
+
+      } catch (error) {
+        console.error('Lỗi khi tải card:', error);
+        pronunciationEl.textContent = `/${word.word}/`;
+        pronunciationEl.className = 'pronunciation error';
+        
+        wordTypeEl.textContent = '(n)';
+        wordTypeEl.className = 'word-type n';
+        wordTypeEl.title = 'Danh từ';
+        wordTypeEl.style.display = 'inline-block';
+      }
+    }
+
+    function updateLearnedStatus(word) {
+      const learned = JSON.parse(localStorage.getItem("learnedWords") || "[]");
+      const isLearned = learned.includes(word);
+      
+      learnBtnEl.textContent = isLearned ? "✓" : "○";
+      learnBtnEl.className = isLearned ? "control-btn learned" : "control-btn";
+      
+      if (isLearned) {
+        statusEl.textContent = "✅ Bạn đã học từ này";
+      } else {
+        statusEl.textContent = "🔔 Bạn chưa học từ này";
+      }
+    }
+
+    function flipCard(event) {
+      // Không flip nếu click vào control buttons
+      if (event && event.target.closest('.card-controls')) {
+        return;
+      }
+      
+      if (!isDragging) {
+        flipped = !flipped;
+        loadCard(currentIndex);
+      }
+    }
+
+    function toggleLearned(event) {
+      event.stopPropagation();
+      const word = vocabulary[currentIndex].word;
+      let learned = JSON.parse(localStorage.getItem("learnedWords") || "[]");
+      
+      if (learned.includes(word)) {
+        learned = learned.filter(w => w !== word);
+      } else {
+        learned.push(word);
+      }
+      
+      localStorage.setItem("learnedWords", JSON.stringify(learned));
+      updateLearnedStatus(word);
+    }
+
+    function copyWord(event) {
+      event.stopPropagation();
+      const word = vocabulary[currentIndex];
+      const textToCopy = word.word;
+      
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const copyBtn = event.target;
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = "✓";
+        copyBtn.style.background = "linear-gradient(145deg, #28a745, #20c997)";
+        
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.style.background = "linear-gradient(145deg, #007acc, #0056b3)";
+        }, 1000);
+      }).catch(err => {
+        console.error('Không thể sao chép:', err);
+      });
+    }
+
+    function playPronunciation(event) {
+      event.stopPropagation();
+      
+      const word = vocabulary[currentIndex];
+      
+      // Thử phát âm từ API trước (nếu có)
+      if (word.audioUrl) {
+        try {
+          // Dừng audio hiện tại nếu có
+          if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+          }
+          
+          currentAudio = new Audio(word.audioUrl);
+          currentAudio.play().catch(err => {
+            console.log('Không thể phát âm từ API, chuyển sang Web Speech API');
+            playWithSpeechAPI(word.word);
+          });
+          return;
+        } catch (error) {
+          console.log('Lỗi khi phát âm từ API:', error);
+        }
+      }
+      
+      // Fallback sang Web Speech API
+      playWithSpeechAPI(word.word);
+    }
+
+    function playWithSpeechAPI(word) {
+      if ('speechSynthesis' in window) {
+        // Dừng phát âm hiện tại nếu có
+        speechSynthesis.cancel();
+        
+        const utterance = new SpeechSynthesisUtterance(word);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.8;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+        
+        speechSynthesis.speak(utterance);
+      } else {
+        console.log('Trình duyệt không hỗ trợ phát âm');
+      }
+    }
+
+    function nextCard() {
+      if (vocabulary.length === 0) return;
+      currentIndex = (currentIndex + 1) % vocabulary.length;
+      flipped = false;
+      loadCard(currentIndex);
+    }
+
+    function prevCard() {
+      if (vocabulary.length === 0) return;
+      currentIndex = (currentIndex - 1 + vocabulary.length) % vocabulary.length;
+      flipped = false;
+      loadCard(currentIndex);
+    }
+
+    // Touch handlers
+    function handleTouchStart(event) {
+      startX = event.touches[0].clientX;
+      startY = event.touches[0].clientY;
+      currentX = startX;
+      currentY = startY;
+      isDragging = false;
+      cardEl = event.target.closest('.card');
+    }
+
+    function handleTouchMove(event) {
+      if (!cardEl) return;
+      
+      event.preventDefault();
+      currentX = event.touches[0].clientX;
+      currentY = event.touches[0].clientY;
+      
+      const diffX = currentX - startX;
+      const diffY = currentY - startY;
+      
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+        isDragging = true;
+        cardEl.style.transform = `translateX(${diffX}px) rotate(${diffX * 0.1}deg)`;
+        cardEl.style.opacity = 1 - Math.abs(diffX) / 300;
+      }
+    }
+
+    function handleTouchEnd(event) {
+      if (!cardEl) return;
+      
+      const diffX = currentX - startX;
+      const threshold = 80;
+      
+      if (Math.abs(diffX) > threshold) {
+        if (diffX > 0) {
+          cardEl.style.transform = 'translateX(100%) rotate(20deg)';
+          cardEl.style.opacity = '0';
+          setTimeout(() => {
+            prevCard();
+            resetCardPosition();
+          }, 300);
+        } else {
+          cardEl.style.transform = 'translateX(-100%) rotate(-20deg)';
+          cardEl.style.opacity = '0';
+          setTimeout(() => {
+            nextCard();
+            resetCardPosition();
+          }, 300);
+        }
+      } else {
+        resetCardPosition();
+      }
+      
+      isDragging = false;
+      cardEl = null;
+    }
+
+    function resetCardPosition() {
+      const card = document.getElementById('card');
+      card.style.transform = 'translateX(0) rotate(0deg)';
+      card.style.opacity = '1';
+    }
+
+    // Mouse events for desktop
+    let mouseDown = false;
+    let startMouseX = 0;
+    let startMouseY = 0;
+
+    document.getElementById('card').addEventListener('mousedown', (e) => {
+      mouseDown = true;
+      startMouseX = e.clientX;
+      startMouseY = e.clientY;
+      isDragging = false;
+      cardEl = e.target.closest('.card');
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!mouseDown || !cardEl) return;
+      
+      const diffX = e.clientX - startMouseX;
+      const diffY = e.clientY - startMouseY;
+      
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+        isDragging = true;
+        cardEl.style.transform = `translateX(${diffX}px) rotate(${diffX * 0.1}deg)`;
+        cardEl.style.opacity = 1 - Math.abs(diffX) / 300;
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      if (!mouseDown || !cardEl) return;
+      
+      const diffX = e.clientX - startMouseX;
+      const threshold = 80;
+      
+      if (Math.abs(diffX) > threshold) {
+        if (diffX > 0) {
+          cardEl.style.transform = 'translateX(100%) rotate(20deg)';
+          cardEl.style.opacity = '0';
+          setTimeout(() => {
+            prevCard();
+            resetCardPosition();
+          }, 300);
+        } else {
+          cardEl.style.transform = 'translateX(-100%) rotate(-20deg)';
+          cardEl.style.opacity = '0';
+          setTimeout(() => {
+            nextCard();
+            resetCardPosition();
+          }, 300);
+        }
+      } else {
+        resetCardPosition();
+      }
+      
+      mouseDown = false;
+      isDragging = false;
+      cardEl = null;
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        prevCard();
+      } else if (e.key === 'ArrowRight') {
+        nextCard();
+      } else if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        flipCard();
+      }
+    });
+
+    // Sample data
+    const sampleData = [
+      {
+        word: "intend",
+        meaning: "Có ý định, dự định",
+        example: "I intend to finish this project by tomorrow."
+      },
+      {
+        word: "serendipity",
+        meaning: "Sự tình cờ may mắn",
+        example: "Finding this book was pure serendipity."
+      },
+      {
+        word: "ephemeral",
+        meaning: "Tạm thời, phù du",
+        example: "The beauty of cherry blossoms is ephemeral."
+      },
+      {
+        word: "ubiquitous",
+        meaning: "Có mặt khắp nơi",
+        example: "Smartphones are ubiquitous in modern society."
+      },
+      {
+        word: "mellifluous",
+        meaning: "Ngọt ngào, du dương",
+        example: "Her mellifluous voice captivated the audience."
+      },
+      {
+        word: "quintessential",
+        meaning: "Điển hình, tinh túy",
+        example: "This painting is quintessential of the Renaissance period."
+      },
+      {
+        word: "quickly",
+        meaning: "Một cách nhanh chóng",
+        example: "She ran quickly to catch the bus."
+      },
+      {
+        word: "beautiful",
+        meaning: "Đẹp, xinh đẹp",
+        example: "The sunset was beautiful tonight."
+      },
+      {
+        word: "adventure",
+        meaning: "Cuộc phiêu lưu, mạo hiểm",
+        example: "Their trip to the mountains was quite an adventure."
+      },
+      {
+        word: "mysterious",
+        meaning: "Bí ẩn, khó hiểu",
+        example: "The old mansion had a mysterious atmosphere."
+      }
+    ];
+
+    // Initialize with sample data
+    vocabulary = sampleData;
+    shuffle(vocabulary);
+    currentIndex = 0;
+    loadCard(currentIndex);
+
+    // Try to fetch data.json, fall back to sample data if not available
+    fetch("data.json")
+      .then(res => res.json())
+      .then(data => {
+        vocabulary = data;
+        shuffle(vocabulary);
+        currentIndex = 0;
+        loadCard(currentIndex);
+      })
+      .catch(err => {
+        console.log("Sử dụng dữ liệu mẫu vì không tìm thấy data.json");
+        // Keep using sample data
+      });
+  </script>
+</body>
+</html>
