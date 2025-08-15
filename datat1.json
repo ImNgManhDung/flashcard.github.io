@@ -1,0 +1,29 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Project 1",
+            "tasks": [
+                "Chèn nội dung từ tập tin History.docx vào văn bản ở vị trí giữa đoạn “Lịch sử ra đời iPhone” và đoạn “Bảng giá iPhone chính hãng”",
+                "Chèn ký tự đặc biệt Trade Mark vào sau chữ “iPhone” ở đầu văn bản.",
+                "Lưu văn bản với tên iPhone sao cho tương thích với các phiên bản cũ hơn",
+                "Kiểm tra văn bản và xóa các thông tin thuộc tính và thông tin cá nhân trong văn bản",
+                "Thêm thuộc tính tiêu đề (Title) với nội dung “iPhone” cho văn bản",
+                "Thiết lập Word để hiển thị ký tự định dạng tab đoạn trong văn bản nhưng không hiển thị các loại kí tự khác."
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Word Processing",
+            "tasks": [
+                "Thay đổi hướng trang của trang đầu tiên thành Landscape.",
+                "Áp dụng chủ đề Metropolitan cho văn bản.",
+                "Thêm watermark cho văn bản với nội dung “Xách balo lên và đi”, chữ nằm ngang, kích cỡ chữ 54, kiểu chữ Times New Roman.",
+                "Đổi kiểu chữ của chủ đề thành Calibri Light - Constantia",
+                "Viền trang văn bản với kiểu khung viền là Shadow, màu khung Gold, Accent 1, Lighter 40%, độ dày viền là 3pt và đường viền được tính tới chữ (Measure from Text).",
+                "[]"
+            ]
+        }
+        
+    ]
+}
