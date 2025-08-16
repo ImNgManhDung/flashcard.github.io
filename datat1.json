@@ -4,26 +4,84 @@
             "id": 1,
             "title": "Project 1",
             "tasks": [
-                "Chèn nội dung từ tập tin History.docx vào văn bản ở vị trí giữa đoạn “Lịch sử ra đời iPhone” và đoạn “Bảng giá iPhone chính hãng”",
-                "Chèn ký tự đặc biệt Trade Mark vào sau chữ “iPhone” ở đầu văn bản.",
-                "Lưu văn bản với tên iPhone sao cho tương thích với các phiên bản cũ hơn",
-                "Kiểm tra văn bản và xóa các thông tin thuộc tính và thông tin cá nhân trong văn bản",
-                "Thêm thuộc tính tiêu đề (Title) với nội dung “iPhone” cho văn bản",
-                "Thiết lập Word để hiển thị ký tự định dạng tab đoạn trong văn bản nhưng không hiển thị các loại kí tự khác."
+                "Định dạng kiểu Heading 1 cho dòng “Du lịch Đà Lạt” và định dạng kiểu Heading 2 cho các nội dung từ “Combo 3N2Đ…” đến “…đồng/khách”, từ “HOẶC nâng cấp…” đến “…bao gồm”, “Điều kiện sử dụng” và “Hướng dẫn cách đặt khuyến mãi này:”",
+                "Thay đổi màu nền của kiểu Heading 1 là Green, Accent 6, màu nền của kiểu Heading 2 là Green, Accent 6, Lighter 80% và đổi kiểu chữ của kiểu Heading 1 và Heading 2 là Tahoma",
+                "Định dạng lại dòng tiêu đề “Du lịch Đà Lạt” sao cho hiệu ứng chữ (Text Effects and Typography) theo mẫu Fill Blue Accent 1, Outline – Background 1, Hard Shadow – Accent 1 và cỡ chữ 36.",
+                "Tạo Drop Cap cho đoạn văn bản sau dòng chữ “Du lịch Đà Lạt”",
+                "Tô nền (Highlight) màu xanh (green) cho dòng văn bản “Đặt online TẠI ĐÂY”",
+                "Di chuyển đến tiêu đề “HƯỚNG DẪN CÁCH ĐẶT KHUYẾN MÃI NÀY:” và giãn khoảng cách giữa các ký tự của tiêu đề này là Expanded 8pt như mẫu sau"
             ]
         },
         {
             "id": 2,
             "title": "Word Processing",
             "tasks": [
-                "Thay đổi hướng trang của trang đầu tiên thành Landscape.",
-                "Áp dụng chủ đề Metropolitan cho văn bản.",
-                "Thêm watermark cho văn bản với nội dung “Xách balo lên và đi”, chữ nằm ngang, kích cỡ chữ 54, kiểu chữ Times New Roman.",
-                "Đổi kiểu chữ của chủ đề thành Calibri Light - Constantia",
-                "Viền trang văn bản với kiểu khung viền là Shadow, màu khung Gold, Accent 1, Lighter 40%, độ dày viền là 3pt và đường viền được tính tới chữ (Measure from Text).",
-                "[]"
+                "Giãn khoảng cách giữa các ký tự (Character Spacing) của dòng tiêu đề “Du lịch Đà Lạt” là Expanded 8pt",
+                "Xem văn bản ở dạng Web layout, sau đó xem ở dạng Print Layout.",
+                "Chèn nội dung tập tin Tours.docx vào cuối văn bản.",
+                "Tìm và thay thế tất cả các từ “3N2Đ” trong bảng thành “3 ngày 2 đêm”",
+                "Thay đổi độ phóng đại của văn bản để có thể nhìn thấy toàn cảnh một trang văn bản trên màn hình.",
+                "Tách văn bản thành 2 phần và bỏ tách."
             ]
-        }
-        
+        },
+         {
+            "id": 3,
+            "title": "Word Processing",
+            "tasks": [
+                "Thay đổi khoảng cách giữa các dòng (Line spacing: 1.5 lines) của đoạn văn bản sau dòng “Du lịch Đà Lạt”",
+                "Định dạng đoạn bắt đầu từ “Bên cạnh đó, …” đến “… suốt cả chuyến du lịch” để không bị ngắt trang giữa đoạn.",
+                "Định dạng hai đoạn bắt đầu từ “Lưu trú tại khách sạn…” đến “… suốt cả chuyến du lịch” để hai đoạn này luôn nằm trên cùng một trang.",
+                "Thụt lề (Left và Right là 0.5”; First Line: 0.5”) cho đoạn văn bản nằm ngay sau dòng “Du lịch Đà Lạt”.",
+                "Thiết lập điểm dừng (Tab) cho các đoạn từ “Gọi 1900…” đến “… Miền Tây” và định dạng khoảng cách 0,5 – 1,5 – 3.",
+                "Thiết lập lại điểm dừng (Tab) cho các đoạn từ “Gọi 1900…” đến “… Miền Tây” thành ........"
+            ]
+        },
+         {
+            "id": 4,
+            "title": "Word Processing",
+            "tasks": [
+                "Định dạng bullet cho các đoạn từ “Combo bao gồm:…” đến “… nước ẩm, phòng gym” và khoảng cách giữa các đoạn (After: 12pt) bằng dấu tích (✔)",
+                "Định dạng số đầu dòng (numbering) cho các đoạn từ “Vé máy bay khứ hồi…” đến “… bay cuối tuần” và khoảng cách giữa các đoạn (After: 12pt).",
+                "Chèn nội dung tập tin Tours.docx vào cuối văn bản.",
+                "Thay đổi ký tự bullet cho các đoạn từ “Combo bao gồm:…” đến “… hồ bơi nước ấm, phòng gym” thành dấu sao từ hình Luckystar.png "
+               
+            ]
+        },
+         {
+            "id": 5,
+            "title": "Word Processing",
+            "tasks": [
+                "Giãn khoảng cách giữa các ký tự (Character Spacing) của dòng tiêu đề “Du lịch Đà Lạt” là Expanded 8pt",
+                "Xem văn bản ở dạng Web layout, sau đó xem ở dạng Print Layout.",
+                "Chèn nội dung tập tin Tours.docx vào cuối văn bản.",
+                "Tìm và thay thế tất cả các từ “3N2Đ” trong bảng thành “3 ngày 2 đêm”",
+                "Thay đổi độ phóng đại của văn bản để có thể nhìn thấy toàn cảnh một trang văn bản trên màn hình.",
+                "Tách văn bản thành 2 phần và bỏ tách."
+            ]
+        },
+ {
+            "id": 6,
+            "title": "Word Processing",
+            "tasks": [
+                "Giãn khoảng cách giữa các ký tự (Character Spacing) của dòng tiêu đề “Du lịch Đà Lạt” là Expanded 8pt",
+                "Xem văn bản ở dạng Web layout, sau đó xem ở dạng Print Layout.",
+                "Chèn nội dung tập tin Tours.docx vào cuối văn bản.",
+                "Tìm và thay thế tất cả các từ “3N2Đ” trong bảng thành “3 ngày 2 đêm”",
+                "Thay đổi độ phóng đại của văn bản để có thể nhìn thấy toàn cảnh một trang văn bản trên màn hình.",
+                "Tách văn bản thành 2 phần và bỏ tách."
+            ]
+        },  
+         {
+            "id": 7,
+            "title": "Word Processing",
+            "tasks": [
+                "Giãn khoảng cách giữa các ký tự (Character Spacing) của dòng tiêu đề “Du lịch Đà Lạt” là Expanded 8pt",
+                "Xem văn bản ở dạng Web layout, sau đó xem ở dạng Print Layout.",
+                "Chèn nội dung tập tin Tours.docx vào cuối văn bản.",
+                "Tìm và thay thế tất cả các từ “3N2Đ” trong bảng thành “3 ngày 2 đêm”",
+                "Thay đổi độ phóng đại của văn bản để có thể nhìn thấy toàn cảnh một trang văn bản trên màn hình.",
+                "Tách văn bản thành 2 phần và bỏ tách."
+            ]
+        }      
     ]
 }

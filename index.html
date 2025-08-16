@@ -363,6 +363,44 @@
         .project-option:last-child {
             border-bottom: none;
         }
+        /* Modal nền mờ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* Ảnh trong modal */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* Nút tắt */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ff6666;
+}
+
     </style>
 </head>
 <body>
@@ -379,12 +417,15 @@
                         Choose Project ▼
                     </button>
                     <button class="go-btn">Go</button>
-                    
+                    <button class="go-btn" onclick="DownloadProject(1)">Tải file project</button>
+
+
+
                     <div class="project-dropdown" id="projectDropdown">
-                        <div class="project-option" onclick="selectProject(1)">Project 1: Data1_Tuan4 </div>
-                        <div class="project-option" onclick="selectProject(2)">Project 2: Data1_Tuan4 </div>
-                        <div class="project-option" onclick="selectProject(3)">Project 3: Data1_Tuan5</div>
-                        <div class="project-option" onclick="selectProject(4)">Project 4: Data1_Tuan5</div>
+                        <div class="project-option" onclick="selectProject(1)">Project 1: Data1_Tuan6 </div>
+                        <div class="project-option" onclick="selectProject(2)">Project 2:  </div>
+                        <div class="project-option" onclick="selectProject(3)">Project 3: </div>
+                        <div class="project-option" onclick="selectProject(4)">Project 4: </div>
                         <div class="project-option" onclick="selectProject(5)">Project 5: </div>
                         <div class="project-option" onclick="selectProject(6)">Project 6: </div>
                         <div class="project-option" onclick="selectProject(7)">Project 7: </div>
@@ -393,7 +434,7 @@
             </div>
 
             <div class="center-section">
-                <div class="timer" id="timer">4:58:11</div>
+                <div class="timer" id="timer"></div>
             </div>
 
             <div class="right-section">
@@ -412,6 +453,12 @@
             <div class="step" id="step4" onclick="goToStep(4)">4</div>
             <div class="step" id="step5" onclick="goToStep(5)">5</div>
             <div class="step" id="step6" onclick="goToStep(6)">6</div>
+             <div class="step" id="step7" onclick="goToStep(7)">7</div>
+            <div class="step" id="step8" onclick="goToStep(8)">8</div>
+            <div class="step" id="step9" onclick="goToStep(9)">9</div>
+             <div class="step" id="step10" onclick="goToStep(10)">10</div>
+            <div class="step" id="step11" onclick="goToStep(11)">11</div>
+            <div class="step" id="step12" onclick="goToStep(12)">12</div>
         </div>
 
         <!-- Question Area -->
@@ -447,99 +494,12 @@
             </button>
         </div>
     </div>
-
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
     <script>
-        // Data structure - 7 Projects
-        const quizData1 = {
-            projects: [
-                {
-                    id: 1,
-                    title: "Project 1",
-                    tasks: [
-                        "Chèn nội dung từ tập tin History.docx vào văn bản ở vị trí giữa đoạn“Lịch sử ra đời iPhone” và đoạn “Bảng giá iPhone chính hãng”",
-                        "Chèn ký tự đặc biệt Trade Mark vào sau chữ “iPhone” ở đầu văn bản.",
-                        "Lưu văn bản với tên iPhone sao	cho	tương thích	với các phiên bản cũ hơn",
-                        "Kiểm tra văn bản và xóa các thông tin thuộc tính và thông tin cá nhân trong văn bản",
-                        "Thêm thuộc tính tiêu đề (Title) với nội dung “iPhone” cho	văn	bản",
-                        "Thiết lập	Word để hiển thị ký tự định dạng tab đoạn trong	văn	bản nhưng không hiển thị các loại kí tự khác."
-                    ]
-                },
-                {
-                    id: 2,
-                    title: "Word Processing",
-                       tasks: [
-                        "Thay	đổi	hướng trang của trang đầu tiên thành Landscape.",
-                        "Áp dụng chủ đề Metropolitancho	văn	bản.",
-                        "Thêm watermark	cho	văn	bản với nội dung “Xách	balo	lên	và	đi”, chữ nằm ngang, kích cỡ chữ 54, kiểu chữ Times New Roman.",
-                        "Đổi kiểu chữ của chủ đề thành CalibriLight-Constantia",
-                        "Viền trang văn	bản với kiểu khung viền là Shadow, màu khung Gold, Accent 1, Lighter 40%,	độ dầy viền là 3pt và đường viền	được tính tới chữ (Measure from Text).",
-                        "[]"
-                    ]
-                    
-                },
-                {
-                    id: 3,
-                    title: "PowerPoint Presentation",
-                  
-                    tasks: [
-                        "Sắp xếp bảng theo cột \"Division\" theo thứ tự tăng dần.",
-                        "Làm cho các tiêu đề của bảng \"Division\" lặp lại ở trang thứ hai.",
-                        "Ở trang 2, tạo một bảng từ đoạn văn bản \"Ontario\" đến \"Oshawa\". Tạo bảng được tách cột bằng dấu tab và trải rộng hết chiều ngang cửa sổ.",
-                        "Ở trang 2, bên phải tiêu đề \"Places to Play\", chèn một chú thích (footnote) với nội dung: \"We will be adding more locations soon!\"",
-                        "Bên dưới tiêu đề \"Our motto\", thêm một sơ đồ \Closed Chevron Process\. Từ trái sang phải, chèn vào sơ đồ các nội dung: \"Make friends\", \"Play safe\", \"Have fun\".",
-                        "Thêm văn bản \"Hokaido\" vào thuộc tính Subject của tài liệu này."
-                    ]
-                },
-                {
-                    id: 4,
-                    title: "Access Database",
-                    tasks: [
-                        "Tạo database mới và thiết kế bảng Customers",
-                        "Định nghĩa relationships giữa các bảng",
-                        "Tạo form nhập liệu cho bảng Products",
-                        "Thiết kế query để tìm kiếm dữ liệu",
-                        "Tạo report hiển thị thống kê doanh số",
-                        "Backup database và thiết lập security"
-                    ]
-                },
-                {
-                    id: 5,
-                    title: "Web Design HTML/CSS",
-                    tasks: [
-                        "Tạo cấu trúc HTML cho trang chủ website",
-                        "Thiết kế CSS layout với responsive design",
-                        "Thêm navigation menu và footer",
-                        "Tạo form liên hệ với validation",
-                        "Tối ưu hóa images và SEO meta tags",
-                        "Test website trên multiple browsers"
-                    ]
-                },
-                {
-                    id: 6,
-                    title: "Email Marketing",
-                    tasks: [
-                        "Thiết kế email template với HTML",
-                        "Tạo subject line và preview text",
-                        "Thêm call-to-action buttons",
-                        "Setup tracking và analytics",
-                        "Test email trên different email clients",
-                        "Schedule và send email campaign"
-                    ]
-                },
-                {
-                    id: 7,
-                    title: "Data Analysis",
-                    tasks: [
-                        "Import dữ liệu từ CSV file",
-                        "Làm sạch và chuẩn hóa dữ liệu",
-                        "Tạo pivot tables để phân tích",
-                        "Thiết kế dashboard với charts",
-                        "Áp dụng statistical analysis",
-                        "Export báo cáo final report"
-                    ]
-                }
-            ]
-        };
+     
 
 
 let quizData = {};
@@ -563,7 +523,8 @@ let quizData = {};
         let currentTaskIndex = 0;       // Start from task 1
         let taskStatuses = {};          // Store task statuses
         let timeLeft = 50*60;           // 50 minutes timer
-
+        updateTimer();
+        
         // Initialize
         function init() {
             updateDisplay();
@@ -604,31 +565,83 @@ let quizData = {};
         }
 
         // Display update functions
-        function updateDisplay() {
-            // Update project info
-            document.getElementById('currentProject').textContent = currentProjectIndex + 1;
-            document.getElementById('totalProjects').textContent = quizData.projects.length;
-            
-            // Update question
-            const currentProject = quizData.projects[currentProjectIndex];
-            const currentTask = currentProject.tasks[currentTaskIndex];
-            document.getElementById('questionText').textContent = currentTask;
-            
-            // Update step progress
-            updateStepProgress();
-            
-            // Update button states
-            updateButtonStates();
-            
-            // Update task status display
-            updateTaskStatusDisplay();
-        }
+      function updateDisplay() {
+    // Update project info
+    document.getElementById('currentProject').textContent = currentProjectIndex + 1;
+    document.getElementById('totalProjects').textContent = quizData.projects.length;
+    
+    // Update question
+    const currentProject = quizData.projects[currentProjectIndex];
+    const currentTask = currentProject.tasks[currentTaskIndex];
+    document.getElementById('questionText').innerHTML = `
+        ${currentTask.question} <br>
+        <img src="img/${currentTask.image}" 
+             alt="Question Image" 
+             style="width: 50px; height: 50px; object-fit: cover; cursor: pointer;"
+             onclick="openModal('img/${currentTask.image}')">
+    `;
+    
+    // Update step progress
+    updateStepProgress();
+    
+    // Update button states
+    updateButtonStates();
+    
+    // Update task status display
+    updateTaskStatusDisplay();
+}
+
+// === Modal functions ===
+function openModal(src) {
+    document.getElementById('imageModal').style.display = "block";
+    document.getElementById('modalImage').src = src;
+}
+
+function closeModal() {
+    document.getElementById('imageModal').style.display = "none";
+}
+function updateDisplay() {
+    // Update project info
+    document.getElementById('currentProject').textContent = currentProjectIndex + 1;
+    document.getElementById('totalProjects').textContent = quizData.projects.length;
+    
+    // Update question
+    const currentProject = quizData.projects[currentProjectIndex];
+    const currentTask = currentProject.tasks[currentTaskIndex];
+    document.getElementById('questionText').innerHTML = `
+        ${currentTask.question} <br>
+        <img src="img/${currentTask.image}" 
+             alt="Question Image" 
+             style="width: 50px; height: 50px; object-fit: cover; cursor: pointer;"
+             onclick="openModal('img/${currentTask.image}')">
+    `;
+    
+    // Update step progress
+    updateStepProgress();
+    
+    // Update button states
+    updateButtonStates();
+    
+    // Update task status display
+    updateTaskStatusDisplay();
+}
+
+// === Modal functions ===
+function openModal(src) {
+    document.getElementById('imageModal').style.display = "block";
+    document.getElementById('modalImage').src = src;
+}
+
+function closeModal() {
+    document.getElementById('imageModal').style.display = "none";
+}
+
 
         function updateStepProgress() {
             const currentProject = quizData.projects[currentProjectIndex];
             const totalSteps = currentProject.tasks.length;
             
-            for (let i = 1; i <= 6; i++) {
+            for (let i = 1; i <= 12; i++) {
                 const stepEl = document.getElementById(`step${i}`);
                 const stepIndex = i - 1;
                 
@@ -771,9 +784,45 @@ let quizData = {};
             updateDisplay();
         }
 
+function DownloadProject(projectId) {
+    // tìm project theo id
+    const project = quizData.projects.find(p => p.id === projectId);
+
+    if (!project) {
+        alert("Không tìm thấy project với id = " + projectId);
+        return;
+    }
+
+    const files = project.projectfile;
+
+    if (!files || files.length === 0) {
+        alert("Project này không có file để tải.");
+        return;
+    }
+
+    // tải từng file
+    files.forEach(fileName => {
+        const link = document.createElement("a");
+        link.href = "files/" + fileName;   // đổi "files/" thành đúng thư mục chứa file
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+}
+
+
+
         function showHelp() {
-            alert('Help: Hướng dẫn chi tiết cho câu hỏi hiện tại sẽ được hiển thị ở đây.');
-        }
+    const currentProject = quizData.projects[currentProjectIndex];
+    const currentTask = currentProject.tasks[currentTaskIndex];
+    
+    if (currentTask && currentTask.answers) {
+        alert("Đáp án: " + currentTask.answers);
+    } else {
+        alert('Không có đáp án cho câu hỏi này.');
+    }
+}
 
         // Initialize when page loads
         window.onload = init;
