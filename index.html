@@ -422,13 +422,13 @@
 
 
                     <div class="project-dropdown" id="projectDropdown">
-                        <div class="project-option" onclick="selectProject(1)">Project 1: Data1_Tuan6 </div>
-                        <div class="project-option" onclick="selectProject(2)">Project 2:  </div>
-                        <div class="project-option" onclick="selectProject(3)">Project 3: </div>
-                        <div class="project-option" onclick="selectProject(4)">Project 4: </div>
-                        <div class="project-option" onclick="selectProject(5)">Project 5: </div>
-                        <div class="project-option" onclick="selectProject(6)">Project 6: </div>
-                        <div class="project-option" onclick="selectProject(7)">Project 7: </div>
+                        <div class="project-option" onclick="selectProject(1)">Project 1: Data1_Tuan7 </div>
+                        <div class="project-option" onclick="selectProject(2)">Project 2: Data1_Tuan8 </div>
+                        <div class="project-option" onclick="selectProject(3)">Project 3: Data1_Tuan9</div>
+                        <div class="project-option" onclick="selectProject(4)">Project 4: Data1_Tuan10</div>
+                        <div class="project-option" onclick="selectProject(5)">Project 5: Data1_Tuan11</div>
+                        <div class="project-option" onclick="selectProject(6)">Project 6: Chưa có</div>
+                        <div class="project-option" onclick="selectProject(7)">Project 7: Chưa có</div>
                     </div>
                 </div>
             </div>
@@ -575,10 +575,12 @@ let quizData = {};
     const currentTask = currentProject.tasks[currentTaskIndex];
     document.getElementById('questionText').innerHTML = `
         ${currentTask.question} <br>
-        <img src="img/${currentTask.image}" 
+        ${currentTask.image 
+        ?` <img src="img/${currentTask.image}" 
              alt="Question Image" 
              style="width: 50px; height: 50px; object-fit: cover; cursor: pointer;"
-             onclick="openModal('img/${currentTask.image}')">
+             onclick="openModal('img/${currentTask.image}')"> `
+             : ""}
     `;
     
     // Update step progress
@@ -591,29 +593,38 @@ let quizData = {};
     updateTaskStatusDisplay();
 }
 
-// === Modal functions ===
 function openModal(src) {
-    document.getElementById('imageModal').style.display = "block";
-    document.getElementById('modalImage').src = src;
+    const modal = document.getElementById('imageModal');
+    const img = document.getElementById('modalImage');
+
+    modal.style.display = "block";
+    img.src = src;
+
+    // Dùng Fullscreen API
+    if (modal.requestFullscreen) {
+        modal.requestFullscreen();
+    } else if (modal.webkitRequestFullscreen) { // Safari
+        modal.webkitRequestFullscreen();
+    } else if (modal.msRequestFullscreen) { // IE/Edge cũ
+        modal.msRequestFullscreen();
+    }
 }
 
 function closeModal() {
-    document.getElementById('imageModal').style.display = "none";
+    const modal = document.getElementById('imageModal');
+    modal.style.display = "none";
+
+    // Thoát fullscreen nếu đang bật
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { 
+        document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+    }
 }
 
-
-// === Modal functions ===
-function openModal(src) {
-    document.getElementById('imageModal').style.display = "block";
-    document.getElementById('modalImage').src = src;
-}
-
-function closeModal() {
-    document.getElementById('imageModal').style.display = "none";
-}
-
-
-        function updateStepProgress() {
+       function updateStepProgress() {
             const currentProject = quizData.projects[currentProjectIndex];
             const totalSteps = currentProject.tasks.length;
             
@@ -794,7 +805,7 @@ function DownloadProject(projectId) {
     const currentTask = currentProject.tasks[currentTaskIndex];
     
     if (currentTask && currentTask.answers) {
-        alert("Đáp án: " + currentTask.answers);
+        alert("gợi ý: " + currentTask.answers);
     } else {
         alert('Không có đáp án cho câu hỏi này.');
     }

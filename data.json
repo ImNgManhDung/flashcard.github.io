@@ -3,55 +3,63 @@
     {
       "id": 1,
       "projectfile": [
-        "Data1_Tuan6.docx",
-        "Data2_Tuan6.docx"
+        "Data1_Tuan7.docx",
+        "Data1_Tuan8.docx",
+        "Data1_Tuan9.docx",
+        "Data1_Tuan10.docx"
+        
       ],
       "title": "Project 1",
       "tasks": [
         {
-          "question": "Mở file Data1_Tuan6.docx. Chèn hình ảnh và định dạng cho giống hình sau (Gợi ý: Wrap Text: Square)",
-          "answers": "Heading 1: Du lịch Đà Lạt",
-          "image": "Screenshot 2025-08-16 151356.png"
+          "question": "Mở file Data1_Tuan7.docx. Chèn ngắt trang trước đoạn văn bản bắt đầu bởi “Với mức giá hấp dẫn …” (đoạn thứ 2).",
+          "answers": "Insert -> Page Break -> Con trỏ trước đoạn “Với mức giá hấp dẫn …”",
+          "image": ""
         },
         {
-          "question": "Định dạng phong cách hình (Picture Styles) cho các hình đã chèn vào cho giống hình sau (Gợi ý: Picture Styles: Rotated, White; Relaxed Perspective,White)",
-          "answers": "Heading 1: Green, Accent 6",
-          "image": "Screenshot 2025-08-16 152202.png"
+          "question": "Định dạng kiểu Heading 2 cho các nội dung từ “Combo 3N2Đ…” đến “…đồng/khách”, từ “HOẶC nâng cấp…” đến “…bao gồm”, “Điều kiện sử dụng”và “Hướng dẫn cách đặt khuyến mãi này:”.",
+          "answers": "Home -> Chọn đoạn văn -> Click Heading 2",
+          "image": ""
         },
         {
-          "question": "Định dạng màu cho hình đã chèn giống với mẫu sau (Gợi ý: Color Saturation: 400%)",
-          "answers": "Text Effects: Fill Blue Accent 1",
-          "image": "Screenshot 2025-08-16 152233.png"
+          "question": "Thay đổi màu nền của kiểu Heading 2 là Green, Accent 1, Lighter 80% và đổi kiểu chữ của kiểu Heading 2 là Tw Cen MT (Body).",
+          "answers": "Home -> Styles -> Modify Style -> Format -> Font: Tw Cen MT (Body) -> Format -> Shading -> Fill: Green, Accent 1, Lighter 80%",
+          "image": ""
         },
         {
-          "question": "Định dạng hiệu ứng Artistic Effects cho hình thứ nhất kiểu Light Screen",
-          "answers": "Text Effects: Fill Blue Accent 1",
-          "image": "Screenshot 2025-08-16 152304.png"
+          "question": "Định dạng WordArt kiểu Fill – White, Outline – Accent 2, Hard Shadow – Accent 2 và WrapText kiểu Square cho nội dung “Du lịch Đà Lạt” ở đầu văn bản như sau:",
+          "answers": "Insert -> WordArt -> Chọn nội dung “Du lịch Đà Lạt” -> Format Shape -> WordArt Styles: Fill – White, Outline – Accent 2, Hard Shadow – Accent 2 -> Wrap Text -> Square",
+          "image": "Screenshot 2025-08-16 205739.png"
         },
         {
-          "question": "Thay đổi hình thứ nhất là hình LamVienSquare.jpg và chỉnh kích thước hình vừa thay đổi sao cho chiều cao hình là 2” và chiều ngang hình là 2.7”",
-          "answers": "Text Effects: Fill Blue Accent 1",
-          "image": "task5.png"
+          "question": "Định dạng Wrap Text kiểu Top and Bottom và hiệu ứng chữ (Text Effect Transform) kiểu Inflate cho WordArt vừa tạo như mẫu sau:",
+          "answers": "Chọn WordArt -> Format -> Wrap Text -> Top and Bottom -> Text Effects -> Transform -> Inflate",
+          "image": "Screenshot 2025-08-16 205812.png"
         },
         {
-          "question": "Thay đổi vị trí hình phòng ngủ xuống dưới cùng của trang (Align Bottom)",
-          "answers": "Text Effects: Fill Blue Accent 1",
-          "image": "task6.png"
+          "question": "Định dạng màu nền kiểu Green, Accent 1, chọn hiệu ứng (Shape Effects) làm mờ cạnh cho nền của WordArt kiểu Soft Edges 25 point và định dạng sao cho WordArt nằm giữa trang theo chiều ngang (Align Center) như hình sau:",
+          "answers": "Chọn WordArt -> Format Shape -> Shape Fill: Green, Accent 1 -> Shape Effects -> Soft Edges -> 25 point -> Align -> Align Center",
+          "image": "Screenshot 2025-08-16 205848.png"
         },
         {
-          "question": "Thay đổi dạng (Edit Shape  Change Shape) của shape hình mũi tên vừa chèn và nhập văn bản cho shape vừa đổi theo mẫu sau",
-          "answers": "Text Effects: Fill Blue Accent 1",
-          "image": "Screenshot 2025-08-16 152340.png"
+          "question": "Chèn WordArt kiểu Fill – White, Outline – Accent 2, Hard Shadow – Accent 2 với nội dung “Thông tin thêm” ở đầu trang 2 theo mẫu sau:",
+          "answers": "Page 2 -> Insert -> WordArt -> Chọn kiểu Fill – White, Outline – Accent 2, Hard Shadow – Accent 2 -> Nhập nội dung “Thông tin thêm”",
+          "image": "Screenshot 2025-08-16 205921.png"
         },
         {
-          "question": "Tạo thêm một bản sao của shape và thay đổi nội dung bản sao của shape như hình sau",
-          "answers": "Text Effects: Fill Blue Accent 1",
-          "image": "Screenshot 2025-08-16 152526.png"
+          "question": "Mở file Cac uu dai khac.pdf. Chụp lại màn hình các ưu đãi, chèn vào văn bản và định dạng vị trí các hình (Send Forward, Send Backward) cho giống với mẫu sau:",
+          "answers": "Mở file Cac uu dai khac.pdf -> Insert -> Screenshot -> Screen Clipping -> Chọn hình -> Format -> Position",
+          "image": "Screenshot 2025-08-16 210018.png"
         },
         {
-          "question": "Thực hiện nhóm (group) 2 shape trong hình sau",
-          "answers": "Text Effects: Fill Blue Accent 1",
-          "image": "Screenshot 2025-08-16 152445.png"
+          "question": "Chèn 2 TextBox, nhập nội dung và đặt tại các vị trí như hình sau:",
+          "answers": "Insert -> Text Box -> Draw Text Box -> Nhập nội dung vào TextBox thứ nhất ; Insert -> Text Box -> Draw Text Box -> Nhập nội dung vào TextBox thứ hai",
+          "image": "Screenshot 2025-08-16 210057.png"
+        },
+        {
+          "question": "Định dạng 2 TextBox vừa chèn theo mẫu sau:",
+          "answers": "Chọn TextBox -> Format Shape -> Shape Fill / Shape Outline / Shape Effects -",
+          "image": "Screenshot 2025-08-16 210140.png"
         }
       ]
     },
@@ -64,29 +72,312 @@
       "title": "Project 1",
       "tasks": [
         {
-          "question": "Định dạng kiểu Heading 1 cho dòng “Du lịch Đà Lạt” và định dạng kiểu Heading 2 cho các nội dung từ “Combo 3N2Đ…” đến “…đồng/khách”, từ “HOẶC nâng cấp…” đến “…bao gồm”, “Điều kiện sử dụng” và “Hướng dẫn cách đặt khuyến mãi này:”",
-          "answers": "Heading 1: Du lịch Đà Lạt",
-          "image": "task10.png"
+          "question": "Mở file Data1_Tuan8.docx. Định dạng màu khung và nền cho bảng ở trang 1 theo mẫu sau:",
+          "answers": "",
+          "image": "image1.png"
         },
         {
-          "question": "Thay đổi màu nền của kiểu Heading 1 và Heading 2 như thế nào?",
-          "answers": "Heading 1: Green, Accent 6",
-          "image": "task11.png"
+          "question": "Thay đổi khoảng cách lề trên và dưới của các ô thành 0.04”, lề trái và phải thành 0.07” (Gợi ý: Cell Margins)",
+          "answers": "",
+          "image": ""
+        },
+         {
+          "question": "Sắp xếp bảng tăng dần theo mẫu xe.",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "Thiết lập dòng tiêu đề của bảng hiển thị lặp lại ở đầu mỗi trang.",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "Chèn bảng và nhập nội dung như hình bên dưới vào sau tiêu đề “Bảng giá xe côn tay Honda 2018”:",
+          "answers": "",
+          "image": "image2.png"
+        }, {
+          "question": "Định dạng bảng vừa chèn theo mẫu sau:",
+          "answers": "",
+          "image": "image3.png"
+        }, {
+          "question": "Tách bảng vừa chèn thành 2 bảng và định dạng lại các bảng theo mẫu sau:",
+          "answers": "",
+          "image": "image4.png"
+        }, {
+          "question": "Chuyển nội dung từ “Giá xe Rebel…” đến “…151.000.000” thành bảng và định dạng theo mẫu sau:",
+          "answers": "",
+          "image": "image5.png"
+        }, {
+          "question": "Tạo  bookmark cho 4 nội dung bên dưới với tên theo yêu cầu:",
+          "answers": "",
+          "image": "Screenshot 2025-08-16 214209.png"
+        }, {
+          "question": "Tạo liên kết cho các nội dung ở đầu trang văn bản đến các tiêu đề và bookmark có tên tương ứng như hình sau:",
+          "answers": "",
+          "image": "image6.png"
+        }, {
+          "question": "Tạo liên kết cho nội dung “2 bánh” ở cuối văn bản liên kết đến địa chỉ https://giaxe.2banh.vn với gợi ý là “Bảng giá xe 2 bánh”.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [
+        "sss.docx",
+        "dd.docx"
+      ],
+      "title": "Data1_Tuan9",
+      "tasks": [
+        {
+          "question": "Mở file Data1_Tuan9.docx. Chèn trang bìa giống hình sau vào văn bản:",
+          "answers": "Insert -> Cover Page -> Chọn mẫu trang bìa phù hợp      ",
+          "image": "image7.png"
         },
         {
-          "question": "Định dạng lại dòng tiêu đề “Du lịch Đà Lạt” ra sao?",
-          "answers": "Text Effects: Fill Blue Accent 1",
-          "image": "task12.png"
+          "question": "Nhập thông tin vào trang bìa như sau:\na. Nhập \"GIỜ TRÁI ĐẤT\" vào trường Document Title (Tiêu đề tài liệu).\nb. Nhập \"Wikipedia\" vào trường Author (Tác giả). TRUNG TÂM CNTT ỨNG DỤNG\nc. Nhập \"Wikimedia Foundation, Inc.\" vào trường Company (Công ty).\nd. Xóa trường Company Address (Địa chỉ công ty).",
+          "answers": "Chọn trường tên -> ",
+          "image": ""
+        },
+         {
+          "question": "Thay đổi Wrap Text kiểu Square và đặt hình ảnh trong văn bản sao cho giống với hình sau:",
+          "answers": "Chọn hình ảnh -> Format -> Wrap Text -> Square -> Kéo đặt vị trí hình ảnh",
+          "image": "image8.png"
+        }, {
+          "question": "Chèn ngắt phân vùng dạng qua trang (Next Page) ngay trước tiêu đề “Giờ Trái Đất qua các năm”.",
+          "answers": "Đặt con trỏ trước tiêu đề “Giờ Trái Đất qua các năm” -> Layout -> Breaks -> Section Breaks -> Next Page",
+          "image": ""
+        }, {
+          "question": "Chèn tiêu đề đầu trang (Header) cho phân vùng đầu tiên của văn bản (trừ trang đầu tiên của phân vùng) cho giống hình sau:",
+          "answers": "Insert -> Header -> Chọn kiểu header -> Bỏ chọn Different First Page -> Nhập nội dung -> Định dạng",
+          "image": "image9.png"
+        }, {
+          "question": "Chèn tiêu đề đầu trang (Header) cho tất cả các trang của phân vùng thứ hai của văn bản cho giống hình sau:",
+          "answers": "Insert -> Header -> Chọn kiểu header -> Nhập nội dung -> Định dạng",
+          "image": "image10.png"
+        }, {
+          "question": "Chèn tiêu đề chân trang (Footer) cho văn bản (trừ trang đầu tiên của văn bản) cho giống hình sau:",
+          "answers": "Insert -> Footer -> Chọn kiểu footer -> Bỏ chọn Different First Page -> Nhập nội dung -> Định dạng",
+          "image": "image11.png"
+        }, {
+          "question": "Thay đổi khoảng cách từ cạnh trên của trang giấy đến tiêu đề đầu trang (Header) thành 0.6”",
+          "answers": "Layout -> Margins -> Custom Margins -> Header from Top -> Nhập 0.6”",
+          "image": ""
+        }, {
+          "question": "Thay đổi khoảng cách từ cạnh dưới của trang giấy đến tiêu đề chân trang (Footer) thành 0.2”",
+          "answers": "Layout -> Margins -> Custom Margins -> Footer from Bottom -> Nhập 0.2”",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [
+        "sss.docx",
+        "dd.docx"
+      ],
+      "title": "Tuan 10",
+      "tasks": [
+        {
+          "question": "Mở file Data1_Tuan10.docx. Tạo ghi chú cuối trang (Footnote) cho các nội dung “Hiệu ứng nhà kính” và “El Niño” ở trang 5 cho giống hình sau:",
+          "answers": "Chọn từ “Hiệu ứng nhà kính” -> References -> Insert Footnote -> Nhập nội dung  ",
+          "image": "Screenshot 2025-08-16 221227.png"
         },
         {
-          "question": "Định dạng lại dòng tiêu đề “Du lịch Đà Lạt” ra sao?",
-          "answers": "Text Effects: Fill Blue Accent 1",
-          "image": "task13.png"
+          "question": "Tạo ghi chú cuối tài liệu (Endnote) cho nội dung “UNESCO”, cắt đoạn cuối cùng trong tiêu đề “Những tổ chức ủng hộ” để làm nội dung mô tả cho ghi chú cuối tài liệu vừa tạo.",
+          "answers": "Chọn từ “UNESCO” -> References -> Insert Endnote -> Cắt đoạn văn cuối trong tiêu đề “Những tổ chức ủng hộ” -> Dán vào Endnote",
+          "image": ""
+        },
+         {
+          "question": "Tạo ghi chú cuối tài liệu (Endnote) cho các nội dung “HSBC”, “FIFA”, “UEFA” cho giống hình sau:",
+          "answers": "Chọn từ “HSBC” -> References -> Insert Endnote -> Nhập nội dung  Lặp lại cho “FIFA” và “UEFA”",
+          "image": "image12.png"
+        }, {
+          "question": "Xóa ghi chú cuối trang (Footnote) cho giống hình sau:",
+          "answers": "Chọn số ghi chú trong văn bản -> Delete (Không phải ghi chú ở footnote)",
+          "image": "image13.png"
+        }, {
+          "question": "Thay đổi định dạng của ghi chú cuối tài liệu (Endnote) cho giống hình sau:",
+          "answers": "References -> Footnotes dialog launcher (mũi tên nhỏ) -> Convert -> Chọn Endnote -> Format -> Chọn định dạng phù hợp",
+          "image": "image14.png"
+        }, {
+          "question": "Chèn mục lục vào văn bản sau nội dung “Mục lục” cho giống hình sau:",
+          "answers": "Đặt con trỏ sau dòng “Mục lục” -> References -> Table of Contents -> Chọn mẫu phù hợp",
+          "image": "image15.png"
+        }, {
+          "question": "Chỉnh sửa và cập nhật mục lục sao chỉ chỉ hiển thị tiêu đề mức 1 và mức 3.",
+          "answers": "References -> Table of Contents -> Custom Table of Contents -> Show levels: 3 -> Modify -> Ẩn mức 2",
+          "image": ""
+        }, {
+          "question": "Chỉnh sửa và cập nhật mục lục cho giống hình sau:",
+          "answers": "References -> Update Table -> Update entire table -> Điều chỉnh font/spacing theo hình mẫu",
+          "image": "image16.png"
+        }, {
+          "question": "Chèn trích dẫn của tác giả Thủy Tiên và Quốc Minh vào văn bản và chọn chuẩn trình bày tài liệu tham khảo kiểu (Style) kiểu IEEE sao cho giống hình sau:",
+          "answers": "References -> Style: IEEE -> Insert Citation -> Add New Source -> Nhập thông tin Thủy Tiên, Quốc Minh",
+          "image": "image17.png"
+        }, {
+          "question": "Chèn bảng tài liệu tham khảo (Bibliography) vào sau tiêu đề “Tham khảo” cho giống hình sau:",
+          "answers": "Đặt con trỏ sau tiêu đề “Tham khảo” -> References -> Bibliography -> Chọn mẫu phù hợp",
+          "image": "image18.png"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [
+        "sss.docx",
+        "dd.docx"
+      ],
+      "title": "Project 1",
+      "tasks": [
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
         },
         {
-          "question": "Định dạng lại dòng tiêu đề “Du lịch Đà Lạt” ra sao?",
-          "answers": "Text Effects: Fill Blue Accent 1",
-          "image": "task14.png"
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+         {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectfile": [
+        "sss.docx",
+        "dd.docx"
+      ],
+      "title": "Project 1",
+      "tasks": [
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+         {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectfile": [
+        "sss.docx",
+        "dd.docx"
+      ],
+      "title": "Project 1",
+      "tasks": [
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+         {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }, {
+          "question": "",
+          "answers": "",
+          "image": ""
         }
       ]
     }

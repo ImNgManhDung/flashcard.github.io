@@ -1,0 +1,94 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [
+        "Data1_Tuan6.docx",
+        "Data2_Tuan6.docx"
+      ],
+      "title": "Project 1",
+      "tasks": [
+        {
+          "question": "Mở file Data1_Tuan6.docx. Chèn hình ảnh và định dạng cho giống hình sau (Gợi ý: Wrap Text: Square)",
+          "answers": "Heading 1: Du lịch Đà Lạt",
+          "image": "Screenshot 2025-08-16 151356.png"
+        },
+        {
+          "question": "Định dạng phong cách hình (Picture Styles) cho các hình đã chèn vào cho giống hình sau (Gợi ý: Picture Styles: Rotated, White; Relaxed Perspective,White)",
+          "answers": "Heading 1: Green, Accent 6",
+          "image": "Screenshot 2025-08-16 152202.png"
+        },
+        {
+          "question": "Định dạng màu cho hình đã chèn giống với mẫu sau (Gợi ý: Color Saturation: 400%)",
+          "answers": "Text Effects: Fill Blue Accent 1",
+          "image": "Screenshot 2025-08-16 152233.png"
+        },
+        {
+          "question": "Định dạng hiệu ứng Artistic Effects cho hình thứ nhất kiểu Light Screen",
+          "answers": "Text Effects: Fill Blue Accent 1",
+          "image": "Screenshot 2025-08-16 152304.png"
+        },
+        {
+          "question": "Thay đổi hình thứ nhất là hình LamVienSquare.jpg và chỉnh kích thước hình vừa thay đổi sao cho chiều cao hình là 2” và chiều ngang hình là 2.7”",
+          "answers": "Text Effects: Fill Blue Accent 1",
+          "image": "task5.png"
+        },
+        {
+          "question": "Thay đổi vị trí hình phòng ngủ xuống dưới cùng của trang (Align Bottom)",
+          "answers": "Text Effects: Fill Blue Accent 1",
+          "image": "task6.png"
+        },
+        {
+          "question": "Thay đổi dạng (Edit Shape  Change Shape) của shape hình mũi tên vừa chèn và nhập văn bản cho shape vừa đổi theo mẫu sau",
+          "answers": "Text Effects: Fill Blue Accent 1",
+          "image": "Screenshot 2025-08-16 152340.png"
+        },
+        {
+          "question": "Tạo thêm một bản sao của shape và thay đổi nội dung bản sao của shape như hình sau",
+          "answers": "Text Effects: Fill Blue Accent 1",
+          "image": "Screenshot 2025-08-16 152526.png"
+        },
+        {
+          "question": "Thực hiện nhóm (group) 2 shape trong hình sau",
+          "answers": "Text Effects: Fill Blue Accent 1",
+          "image": "Screenshot 2025-08-16 152445.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectfile": [
+        "sss.docx",
+        "dd.docx"
+      ],
+      "title": "Project 1",
+      "tasks": [
+        {
+          "question": "Định dạng kiểu Heading 1 cho dòng “Du lịch Đà Lạt” và định dạng kiểu Heading 2 cho các nội dung từ “Combo 3N2Đ…” đến “…đồng/khách”, từ “HOẶC nâng cấp…” đến “…bao gồm”, “Điều kiện sử dụng” và “Hướng dẫn cách đặt khuyến mãi này:”",
+          "answers": "Heading 1: Du lịch Đà Lạt",
+          "image": "task10.png"
+        },
+        {
+          "question": "Thay đổi màu nền của kiểu Heading 1 và Heading 2 như thế nào?",
+          "answers": "Heading 1: Green, Accent 6",
+          "image": "task11.png"
+        },
+        {
+          "question": "Định dạng lại dòng tiêu đề “Du lịch Đà Lạt” ra sao?",
+          "answers": "Text Effects: Fill Blue Accent 1",
+          "image": "task12.png"
+        },
+        {
+          "question": "Định dạng lại dòng tiêu đề “Du lịch Đà Lạt” ra sao?",
+          "answers": "Text Effects: Fill Blue Accent 1",
+          "image": "task13.png"
+        },
+        {
+          "question": "Định dạng lại dòng tiêu đề “Du lịch Đà Lạt” ra sao?",
+          "answers": "Text Effects: Fill Blue Accent 1",
+          "image": "task14.png"
+        }
+      ]
+    }
+  ]
+}
