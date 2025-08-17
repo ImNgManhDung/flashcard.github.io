@@ -3,11 +3,9 @@
     {
       "id": 1,
       "projectfile": [
-        "Data1_Tuan7.docx",
-        "Data1_Tuan8.docx",
-        "Data1_Tuan9.docx",
-        "Data1_Tuan10.docx"
-        
+       
+        "Data1_Tuan11.docx",
+        "2010.jpg"        
       ],
       "title": "Project 1",
       "tasks": [
@@ -228,51 +226,35 @@
         "sss.docx",
         "dd.docx"
       ],
-      "title": "Project 1",
+      "title": "Tuann 11",
       "tasks": [
         {
-          "question": "",
-          "answers": "",
+          "question": "Mở file Data1_Tuan11.docx. Tạo một nhãn tùy chỉnh cho chú thích hình với tên “Hình”",
+          "answers": "Mở file Data1_Tuan11.docx -> References -> Insert Caption -> New Label gõ tên nhãn là “Hình” -> OK",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
-          "image": ""
+          "question": "Tạo chú thích hình (caption) cho các hình trong văn bản cho giống hình sau:",
+          "answers": "Chọn hình ảnh -> References -> Insert Caption -> Chỉnh nhãn và kiểu đánh số -> OK",
+          "image": "Screenshot 2025-08-17 211639.png"
         },
          {
-          "question": "",
-          "answers": "",
+          "question": "Chèn danh mục hình ảnh (Table of Figures) vào văn bản và đặt sau nội dung “Danh mục hình minh họa” cho giống hình sau",
+          "answers": "Đặt con trỏ sau “Danh mục hình minh họa” -> References -> Insert Table of Figures -> Chỉnh định dạng nếu cần -> OK",
+          "image": "image22.png"
+        }, {
+          "question": "Chèn hình “2010.jpg” vào văn bản và canh giữa trang theo chiều ngang",
+          "answers": "Insert -> Pictures -> Chọn hình “2010.jpg” -> Layout -> Center",
           "image": ""
         }, {
-          "question": "",
-          "answers": "",
-          "image": ""
+          "question": "Tạo chú thích hình (caption) cho hình vừa chèn theo mẫu sau",
+          "answers": "Chọn hình ảnh vừa chèn -> References -> Insert Caption -> Chỉnh nhãn và chú thích -> OK",
+          "image": "image21.png"
         }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }
+          "question": " Cập nhật danh mục hình ảnh (Update Table of Figures) trong văn bản cho giống hình sau:",
+          "answers": "Đặt con trỏ vào danh mục hình ảnh -> Click phải chuột -> Update Field -> Update Entire Table -> OK",
+          "image": "image20.png"
+        } 
       ]
     },
     {
@@ -284,46 +266,22 @@
       "title": "Project 1",
       "tasks": [
         {
-          "question": "",
-          "answers": "",
+          "question": "Tạo thẻ đánh dấu với tên <u>Entail</u> cho nội dung Consist Tables.",
+          "answers": "1. Tìm <b>Consist Tables</b> trong văn bản(Ctrl+F gõ vào Consist Tables để tìm).<br/>2. Dùng chuột chọn chuỗi <b>Consist Tables</b>. Sau đó  chọn thẻ <b>Insert</b>.<br/>3. Trong nhóm <b>Links</b> chọn <b>BookMark</b>.<br/>4. Nhập chuỗi <b>Entail</b> vào <b>BookMark name</b>  <b>Click vào Add</b>.",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Chèn cước chú ngay sau nội dung 'Sali Kaceli’s channel' trong văn bản  di chuyển đoạn 'At the moment  … as well as improvements! ' trong văn bản để nó trở thành nội dung giải thích cho cước chú vừa tạo.",
+          "answers": "1. Tìm <b>Sali Kaceli’s channel</b> trong văn bản(Ctrl+F gõ vào Sali Kaceli’s channel để tìm).<br/>2. Dùng chuột chọn chuỗi <b>Sali Kaceli’s channel</b>. Sau đó  chọn thẻ <b>References</b>.<br/>3. Trong nhóm <b>Footnotes</b> chọn <b>Insert Footnotes</b>.<br/>4. Tìm đoạn <b>At the moment  … as well as improvements! </b> trong văn bản(Ctrl+F gõ vào as well as improvements! để tìm).<br/>5. Dùng chuột chọn đoạn từ <b>At the moment </b> đến <b>as well as improvements!</b>.<br/>6. Click chuột phải vào dòng chữ và chọn <b>Cut</b> (hoặc Ctrl + X).<br/>7. Click chuột phải chọn ngay vị trí phía sau <b>Footnotes</b> vừa tạo (<b>Footnotes</b> thứ 4)<br/>8. Trong mục <b>Paste Options:</b> chọn <b>Keep Text Only (T)</b>.",
           "image": ""
         },
          {
-          "question": "",
-          "answers": "",
+          "question": "Chèn văn bản thay thế cho ảnh Youtube với tiêu đề <u>'Youtube'</u> và nội dung mô tả <u>'Closed Captioning'</u>.",
+          "answers": "1. Tìm ảnh <b>Youtube</b> trong văn bản  click chuột phải vào ảnh.<br/>2. Sau đó  chọn <b>Format Picture...</b>  trong  <b>Format Picture</b> (thanh bên phải)  chọn mục <b>Layout & Properties</b> (mục thứ 3).<br/>3. Click vào <b>Alt Text</b>  trong mục <b>Title</b> nhập vào <b>Youtube</b> và <b>Description</b> nhập vào <b>Closed Captioning</b>.",
           "image": ""
         }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
+          "question": "Dùng tính năng của Word để thay thế nội dung 'Music' thành 'Musical'",
+          "answers": "1. Click chuột ra ngoài ảnh <b>Youtube</b>  chọn vị trí bất kỳ trong văn bản.<br/>2. Chọn thẻ <b>Home</b>  trong nhóm <b>Editing</b> .<br/>3. Chọn <b>Replace</b>  nhập <b>Music</b> vào phần <b>Find What:</b> và  <b>Musical</b> vào phần <b>Replace With:</b> -> <b>Replace All</b>. <b>OK</b> -> <b>Close</b>.",
           "image": ""
         }
       ]
@@ -337,46 +295,22 @@
       "title": "Project 1",
       "tasks": [
         {
-          "question": "",
-          "answers": "",
+          "question": "Chèn văn bản thay thế cho bảng với tiêu đề <u>'Athletic'</u> và nội dung mô tả <u>'A form of scholarship'</u>.",
+          "answers": "1. Click chuột phải vào một vị trí bất kỳ trong bảng (Table). Sau đó  chọn <b>Table Properties...</b>.<br/>2. Chọn thẻ <b>Alt Text</b>  trong mục <b>Title</b> nhập vào <b>Athletic</b>  và <b>Description</b> nhập vào <b>A form of scholarship</b>",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Dùng chức năng của Word để tìm và thay thế nội dung 'Football' trong bảng thành <u>'Soccer Ball'</u>.",
+          "answers": "1. Click chuột vào ô đầu tiên trong bảng( <b>Table</b>).<br/>2. Chọn thẻ <b>Home</b>  trong nhóm <b>Editing</b> .<br/>3. Chọn <b>Replace</b>  nhập <b>FootBall</b> vào phần <b>Find What:</b> và  <b>Soccer Ball</b> vào phần <b>Replace With:</b>.<br/>4. Nhấn vào <b>Replace</b> để thay thế <b>từng từ một</b> cho đến hết trong bảng.<b>Close</b>.<br/> (<i>Lưu ý: không sử dụng Replace All vì nó sẽ thay thế cả các từ FootBall ở ngoài table)</i>",
           "image": ""
         },
          {
-          "question": "",
-          "answers": "",
+          "question": "Chèn tiêu đề chân trang kiểu Motion (Odd Page) vào văn bản sao cho tiêu đề chân trang không xuất hiện ở trang đầu tiên.",
+          "answers": "1. Chọn thẻ <b>Insert</b>  trong nhóm <b>Header & Footer</b>.<br/>2. Chọn <b>Footer</b> -> <b>Edit Footer</b><br/>3. Trong thẻ <b>Design</b> của <b>Header & Footer</b>  trong nhóm <b>Options</b> check vào<b>Different First Page</b>.<br/>4. Di chuyển đến trang thứ 2 và chọn vào phần tiêu đề cuối trang (phần bên trái trang có hiển thị <b>Footer</b>  <i>Phần chân trang hiển thị <b>First Page Footer</b> là trang đầu tiên</i>).<br/>5. Trong <b>Design</b> của <b>Header & Footer</b>   trong nhóm <b>Header & Footer</b>.<br/>6. Chọn <b>Footer</b>  tìm và chọn loại <b>Motion (Odd Page)</b>.",
           "image": ""
         }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }, {
-          "question": "",
-          "answers": "",
+          "question": "Thụt lề dòng đầu tiên của đoạn văn bản bắt đầu bằng 'Using our free resources...' đến '...a sports scholarship.' 0.75'.",
+          "answers": "1. Chọn thẻ <b>Design</b>  trong nhóm <b>Document Formating</b> .<br/>3. Mở rộng danh sách <b>Style Set</b> (danh sách có chữ Tile).<br/>3. Tìm và chọn <b>Lines (Simple)</b>.",
           "image": ""
         }
       ]
