@@ -268,7 +268,7 @@
         {
           "question": "Tạo thẻ đánh dấu với tên <u>Entail</u> cho nội dung Consist Tables.",
           "answers": "1. Tìm <b>Consist Tables</b> trong văn bản(Ctrl+F gõ vào Consist Tables để tìm).<br/>2. Dùng chuột chọn chuỗi <b>Consist Tables</b>. Sau đó  chọn thẻ <b>Insert</b>.<br/>3. Trong nhóm <b>Links</b> chọn <b>BookMark</b>.<br/>4. Nhập chuỗi <b>Entail</b> vào <b>BookMark name</b>  <b>Click vào Add</b>.",
-          "image": ""
+          "image": "" 
         },
         {
           "question": "Chèn cước chú ngay sau nội dung 'Sali Kaceli’s channel' trong văn bản  di chuyển đoạn 'At the moment  … as well as improvements! ' trong văn bản để nó trở thành nội dung giải thích cho cước chú vừa tạo.",
@@ -295,21 +295,21 @@
       "title": "Project 1",
       "tasks": [
         {
-          "question": "Chèn văn bản thay thế cho bảng với tiêu đề <u>'Athletic'</u> và nội dung mô tả <u>'A form of scholarship'</u>.",
-          "answers": "1. Click chuột phải vào một vị trí bất kỳ trong bảng (Table). Sau đó  chọn <b>Table Properties...</b>.<br/>2. Chọn thẻ <b>Alt Text</b>  trong mục <b>Title</b> nhập vào <b>Athletic</b>  và <b>Description</b> nhập vào <b>A form of scholarship</b>",
+          "question": "Trong thuộc tính tệp  thêm nội dung <b>'bicycles'</b> vào thuộc tính danh mục (<b>category</b>).",
+          "answers": "<b>Bước 1:</b> Vào tab <b>File</b> → chọn <b>Info</b>.",
           "image": ""
         },
         {
-          "question": "Dùng chức năng của Word để tìm và thay thế nội dung 'Football' trong bảng thành <u>'Soccer Ball'</u>.",
+          "question": "Sử dụng tính năng của Word  thay thế tất cả các lần xuất hiện của <b>'repair'</b> bằng <b>'maintain'</b>.",
           "answers": "1. Click chuột vào ô đầu tiên trong bảng( <b>Table</b>).<br/>2. Chọn thẻ <b>Home</b>  trong nhóm <b>Editing</b> .<br/>3. Chọn <b>Replace</b>  nhập <b>FootBall</b> vào phần <b>Find What:</b> và  <b>Soccer Ball</b> vào phần <b>Replace With:</b>.<br/>4. Nhấn vào <b>Replace</b> để thay thế <b>từng từ một</b> cho đến hết trong bảng.<b>Close</b>.<br/> (<i>Lưu ý: không sử dụng Replace All vì nó sẽ thay thế cả các từ FootBall ở ngoài table)</i>",
           "image": ""
         },
          {
-          "question": "Chèn tiêu đề chân trang kiểu Motion (Odd Page) vào văn bản sao cho tiêu đề chân trang không xuất hiện ở trang đầu tiên.",
+          "question": "Trong phần <b>Programs at other universities</b>  hợp nhất (gộp) các ô trong hàng đầu tiên của bảng.",
           "answers": "1. Chọn thẻ <b>Insert</b>  trong nhóm <b>Header & Footer</b>.<br/>2. Chọn <b>Footer</b> -> <b>Edit Footer</b><br/>3. Trong thẻ <b>Design</b> của <b>Header & Footer</b>  trong nhóm <b>Options</b> check vào<b>Different First Page</b>.<br/>4. Di chuyển đến trang thứ 2 và chọn vào phần tiêu đề cuối trang (phần bên trái trang có hiển thị <b>Footer</b>  <i>Phần chân trang hiển thị <b>First Page Footer</b> là trang đầu tiên</i>).<br/>5. Trong <b>Design</b> của <b>Header & Footer</b>   trong nhóm <b>Header & Footer</b>.<br/>6. Chọn <b>Footer</b>  tìm và chọn loại <b>Motion (Odd Page)</b>.",
           "image": ""
         }, {
-          "question": "Thụt lề dòng đầu tiên của đoạn văn bản bắt đầu bằng 'Using our free resources...' đến '...a sports scholarship.' 0.75'.",
+          "question": "",
           "answers": "1. Chọn thẻ <b>Design</b>  trong nhóm <b>Document Formating</b> .<br/>3. Mở rộng danh sách <b>Style Set</b> (danh sách có chữ Tile).<br/>3. Tìm và chọn <b>Lines (Simple)</b>.",
           "image": ""
         }
