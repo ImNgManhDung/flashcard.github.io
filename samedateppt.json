@@ -1,0 +1,226 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [
+        "PPT_TEST .rar"
+      ],
+      "title": "Project 1",
+      "tasks": [
+        {
+          "question": "Tạo một bố cục trang chiếu mới gọi là 'Trevorslayout' với một chỗ chứa hình ảnh ở bên trái và một chỗ chứa văn bản ở bên phải. Giữ nguyên tất cả các chỗ chứa mặc định. Kích thước và vị trí chính xác của các chỗ chứa mới không quan trọng.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Sắp xếp các hình ảnh trên trang chiếu 2 sao cho giữa của các bức ảnh được căn chỉnh với nhau.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Sắp xếp lại các hiệu ứng hoạt ảnh của các hình ảnh trên trang chiếu 2 sao cho chúng lần lượt mờ dần từ trái sang phải.Sắp xếp lại các hiệu ứng hoạt ảnh của các hình ảnh trên trang chiếu 2 sao cho chúng lần lượt mờ dần từ trái sang phải.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 3, thay đổi màu sắc của biểu tượng sách thành màu đỏ với đường viền màu xanh dương.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 3, tạo hiệu ứng cho sách sao cho chúng bay vào từ phía dưới.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Lưu bài thuyết trình này vào thư mục tài liệu của bạn dưới dạng tệp PDF với tên 'BasketWeaving'.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Cấu hình bài thuyết trình để chỉ in phần 'Course Introduction'.",
+          "answers": "",
+          "image": ""
+        }
+      
+      ]
+    },
+    {
+      "id": 2,
+      "projectfile": [],
+      "title": "Project 2",
+      "tasks": [
+        {
+          "question": "Thay đổi kích thước bài thuyết trình thành 8 inch (20,32 cm) rộng và 11 inch (27,94 cm) cao. Đảm bảo rằng nội dung phù hợp với kích thước mới.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tạo một trình chiếu tùy chỉnh có tên là 'Important Findings' chỉ bao gồm trang chiếu 3 và 5.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Nhúng phông chữ chỉ cho các ký tự được sử dụng trong bài thuyết trình này. Lưu bài thuyết trình.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 3, cấu hình đoạn âm thanh sao cho nó tự động phát. Ẩn biểu tượng trong suốt bài thuyết trình.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 5, áp dụng kiểu Snip Diagonal Corner, White và hiệu ứng Pastels Smooth cho hình ảnh.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [],
+      "title": "Project 3",
+      "tasks": [
+        {
+          "question": "Trên trang chiếu 3, di chuyển hình 'Mint Chocolate' lên phía trước.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Đặt hiệu ứng chuyển tiếp From Left cho tất cả các trang chiếu.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 1, áp dụng kiểu WordArt với nền màu trắng, đường viền màu cam (Accent colour 2), và hiệu ứng Hard Shadow màu cam (Accent colour 2) cho văn bản 'Himalayan Coffee House'.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Di chuyển trang chiếu 'Try our new flavours' giữa các trang chiếu 'Title' và 'Menu'.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [],
+      "title": "Project 4",
+      "tasks": [
+        {
+          "question": "Thêm một trang chiếu mới giữa trang chiếu 2 và 3 từ tệp Inclusive Practices.docx.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi biểu đồ trên trang chiếu 6 thành biểu đồ 3-D Clustered Column.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Ẩn các bình luận trong bài thuyết trình.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 7, áp dụng kiểu Medium Style 2, Accent 1 cho bảng. Chỉnh sửa bảng sao cho các cột có màu xen kẽ còn các hàng không thay đổi màu.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [],
+      "title": "Project 5",
+      "tasks": [
+        {
+          "question": "Ở cuối bài thuyết trình, thêm một trang chiếu từ phần nội dung có tên Niagara Facts.docx.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi Handout Master để phần chân trang bên trái hiển thị 'First Copy'.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 2, áp dụng hiệu ứng Moderate Effect, Pink Accent 5 cho hình trái tim.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 3, xóa cột có tiêu đề 'Rank'. Thêm một hàng trống giữa 'Botanical Gardens' và 'Skywheel'.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Đối với tất cả các hiệu ứng chuyển tiếp, đặt thời gian là 3 giây và âm thanh là Breeze.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectfile": [],
+      "title": "Project 6",
+      "tasks": [
+        {
+          "question": "Trên trang chiếu 3, cắt video sao cho khu vực hiển thị cách lề trái 6,5 inch (16,51 cm) và chiều rộng cắt là 4,4 inch (11,18 cm).",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 2, áp dụng motion path hình tròn cho hình có chữ 'no way'.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Thêm một chỗ chứa phương tiện vào bố cục 'Media'. Đặt nó dưới chỗ chứa tiêu đề và căn chỉnh các lề trái và phải với các lề của chỗ chứa tiêu đề.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Nhân bản trang chiếu 5.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 4, chuyển danh sách thành đồ họa Vertical Picture Accent List SmartArt.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectfile": [],
+      "title": "Project 7",
+      "tasks": [
+        {
+          "question": "Xóa trang chiếu 5, 'Our Sports Products'.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Cấu hình tùy chọn in để in 3 bản của bài thuyết trình, mỗi trang có 3 trang chiếu mỗi trang. Các bản của trang đầu tiên phải được in trước các trang tiếp theo.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 2, căn chỉnh văn bản 'You miss 100 percent of the shots you don't take' lên trên cùng của hộp văn bản và thêm hiệu ứng Small Caps.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trên trang chiếu 3, nhóm tất cả các hình ảnh lại.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
