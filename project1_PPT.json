@@ -1,0 +1,205 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [
+
+        "AdventureTravel.pptx",
+        "Candy.pptx",
+        "BusinessCamp.pptx",
+        "ComputerCare.pptx",
+        "LakeVacations.pptx",
+        "MobileApps.pptx",
+        "Rodeos.pptx",
+
+"Powerpoint.rar"
+
+      ],
+      "title": "AdventureTravel",
+      "tasks": [
+        {
+          "question": "Thay đổi tên phân vùng <i>Untitled Section</i> thành <u>Intro</u>.",
+          "answers": "1. Nhấp phải chuột vào dòng <b>Untitle Section</b> trong danh sách các slide phía bên phải<br/>2. Chọn <b>Rename Section</b>  sau đó nhập vào <b>Intro</b>.<br/>3. Chọn <b>Rename</b>."
+        },
+        {
+          "question": "Trên slide 3  Thay đổi vị trí hình dời về bên phải so với khung xén hình là 1\" mà không làm thay đổi kích thước và vị trí của khung xén hình.",
+          "answers": "1. Nhấp chuột chọn hình trong slide 3.<br/>2. Nhấp chuột phải chọn <b>Format Picture</b> để hiển thị chức năng <b>Format Picture</b> phía bên phải.<br/>3. Trong <b>Format Picture</b> chọn mục <b>Picture</b>-><b>Crop</b> thiết lập <b>Offset X</b> 1\"."
+        },
+        {
+          "question": "Trên slide 4  thay đổi kích thước để hình rộng gấp đôi kích thước ban đầu của nó mà vẫn giữ nguyên tỉ lệ hình.",
+          "answers": "1. Nhấp chuột chọn hình trong slide 4.<br/> 2. Nhấp chuột phải chọn <b>Size & Position</b>.<br/> 3. Trong <b>Size</b> thiết lập <b>Scale Width</b> thành <i>200%</i>.<br/>"
+        },
+        {
+          "question": "Trên slide 5  thiết lập vị trí của hình nằm giữa để nó nằm giữa slide theo chiều dọc và đặt nó nằm bên trên cả 2 hình còn lại.",
+          "answers": "1. Nhấp chuột chọn hình chính giữa trong slide 5.<br/> 2. Chọn thẻ <b>Picture Tools</b> <b>Format</b>.<br/> 3. Chọn chức năng <b>Align</b> trong nhóm <b>Arrange</b>.<br/> 4. Sau đó  thiết lập <b>Align to Slide</b> và <b>Align Midle</b>.<br/> 5. Trong nhóm <b>Arrange</b> chọn <b>Bring Forward</b> cho đến khi hình ở giữa nằm trên các hình còn lại.<br/>"
+        },
+        {
+          "question": "Trên slide 5  thiết lập vị trí sao cho các hình nằm giữa theo chiều cao so với slide.",
+          "answers": "1. Giữ phím <b>Ctrl</b> chọn các hình trong slide 5.<br/> 2. Chọn thẻ <b>Picture Tools</b> <b>Format</b>.<br/> 3. Chọn chức năng <b>Align</b> trong nhóm <b>Arrange</b>.<br/> 4. Sau đó  thiết lập <b>Align to Slide</b> và <b>Align Midle</b>.<br/>"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectfile": [],
+      "title": "Candy",
+      "tasks": [
+        {
+          "question": "Trên slide <u>Our mission statement</u> gom nhóm hình  và textbox <u>Mission</u>.",
+          "answers": "1. Chọn hình trên slide có tiêu đề <b>Our mission statement</b>.<br/> 2. Giữ Ctrl và chọn thêm Textbox <b>Mission</b>.<br/> 3. Chọn thẻ <b>Format</b> trong <b>Drawing Tools</b>.<br/> 4. Chọn <b>Align</b> trong nhóm <b>Arrange</b>  sau đó chọn <b>Group</b> -> <b>Group</b> trong nhóm <b>Arrange</b> để nhóm các hình.<br/>"
+        },
+        {
+          "question": "Trên slide <u>Our most popular flavors</u>  tạo bảng có 2 cột và 9 dòng trong khung chèn nội dung phía bên trái. Sau đó  áp dụng kiểu bảng <u>Light Style 2 - Accent 1<u>.",
+          "answers": "1. Chọn khung nội dung bên trái trên slide có tiêu đề <b>Our most popular flavors</b>.<br/> 2. Chọn thẻ <b>Insert</b>  sau đó chọn <b>Table</b> -> <b>Insert Table</b>.<br/> 3. Thiết lập <b>Number of Columns</b> -> <b>2</b> và <b>Number of Rows</b> -> <b>9</b>.<br/> 4. Chọn  thẻ <b>Design</b> trong <b>Table Tools</b>  chọn <b>Light Style 2 - Accent 1</b> trong nhóm <b>Table Styles</b>.<br/>"
+        },
+        {
+          "question": "Trên slide <u>Our most popular flavors</u>  chèn bảng từ tập tin <i>Flavors.xlsx</i> trong thư mục <i>Documents//PiMOS</i> vào khung chèn nội dung bên phải.",
+          "answers": "1. Chọn vào khung trống bên phải trên slide có tiêu đề <b>Our most popular flavors</b>.<br/> 2. Chọn thẻ <b>Insert</b>  sau đó chọn <b>Object</b> trong nhóm <b>Text</b>.<br/> 3. Chọn mục <b>Create from file</b> nhấn vào nút <b>Browse</b>.<br/> 4. Tìm đến thư mục <b>Document//PiMOS</b> chọn tập tin <b>Flavors.xlsx</b> -> <b>OK</b>.<br/>"
+        },
+        {
+          "question": "Chèn biểu đồ dạng Pie trên slide <u>Popular flavor Orders</u> sử dụng dữ liệu mặc định.",
+          "answers": "1. Chọn vào khung trống trên slide có tiêu đề <b>Popular flavor Orders</b>.<br/> 2. Chọn thẻ <b>Insert</b>  sau đó chọn <b>Chart</b> trong nhóm <b>Illustrations</b>.<br/> 3. Chọn mục <b>Pie</b> nhấn vào nút <b>OK</b>  sau đó đóng bảng dữ liệu(excel).<br/>"
+        },
+        {
+          "question": "Trên slide <u>How to order</u> tạo sơ đồ dạng <i>Basic Timeline</i> từ danh sách không có thứ tự cuối slide.",
+          "answers": "1. Chọn danh sách trong slide có tiêu đề <b>How to order</b>.<br/> 2. Chọn thẻ <b>Home</b>  sau đó chọn <b>Convert to SmartArt</b> trong nhóm <b>Paragraph</b>.<br/> 3. Chọn <b>Basic Timeline</b>(nếu không có chọn <b>More SmartArt Graphics</b>  sau đó tìm và chọn <b>Basic Timeline</b> trong nhóm <b>Process</b>).<br/>"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [],
+      "title": "BusinessCamp",
+      "tasks": [
+        {
+          "question": "Thiết lập để in bài thuyết trình hiện tại ra 6 bản  có in ghi chú (notes)  hướng in ngang và in tất cả các bản của trang 1 trước  sau đó mới in các bản của trang 2 và các trang còn lại sau.",
+          "answers": "1. Click vào tab <b>File</b> và chọn chức năng <b>Print</b>. <br/> 2. Trong hộp thoại <b>Print</b>  thiết lập số bản copy <b>Copies</b> thành 6  click vào chức năng <b>Full Page Slides</b> và chọn <b>Note Pages</b> <br/> 3. Click vào chức năng <b>Portrait Orientation</b> và chọn <b>Landscape Orientation</b>. Cuối cùng nhấn vào chức năng <b>Collated</b> và chọn <b>Uncollated</b>."
+        },
+        {
+          "question": "Thay đổi hiệu ứng chuyển slide thành dạng Flash giữa slide 3 và slide 4.",
+          "answers": "1. Click vào slide 4  chọn tab <Transitions</b>. Chọn hiệu ứng <b>Flash</b> trong nhóm chức năng <b>Transition to This Slide</b>."
+        },
+        {
+          "question": "Định dạng văn bản trong phần nội dung của slide 2 thành 2 cột với khoảng cách 0.5” giữa cột.",
+          "answers": "1. Click vào đường viền của hộp văn bản nội dung (hoặc chọn toàn bộ văn bản trong phần nội dung) trên slide 2. <br/> 2. Chọn thẻ <b>Home</b>  thiết lập <b>Two Column</b> trong nhóm <b>Paragraph</b>.<br/> 3. Mục Number (số cột): nhập 2  Mục Spacing (khoảng cách giữa cột): nhập 0.5\"."
+        },
+        {
+          "question": "Thêm khung chứa hình vào bố cục (layout) Blank của slide master.",
+          "answers": "1. Click chọn chức năng <b>Slide Master</b> (trong nhóm chức năng <b>Master Views</b>) của tab <b>View</b> <br/>2. Trong tab <b>Slide Master</b>  click chọn bố cục có tên <b>Blank Layout</b> trong hộp bên trái. Click vào chức năng <b>Insert Placeholder</b> và chọn chức năng <b>Picture</b> <br/> 3. Dùng chuột vẽ một khung vào slide. Sau đó nhấn <b>Close MasterView</b> để kết thúc."
+        },
+        {
+          "question": "Lưu bài thuyết trình hiện tại thành dạng pdf với tên <u>\"BussinessCamp\"</u> vào thư mục ….. nằm trong thư mục Documents.",
+          "answers": "1. Click vào tab <b>File</b> và chọn chức năng <b>Save As</b>. <br/> 2. Trong hộp thoại <b>Save As</b>  chọn chức năng <b>Browse</b> và tìm đến thư mục <b>PiMOS</b> trong thư mục <b>Documents</b> <br/> 3. Nhập \"BussinessCamp\" vào trường <b>File Name</b>  click chọn loại file là <b>PDF</b> tại trường <b>Save as type</b>. <br/> 3. Nhấn <b>Save</b> để kết thúc."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [],
+      "title": "ComputerCare",
+      "tasks": [
+        {
+          "question": "Thay đổi nền trang của slide 2 theo mẫu mặc định của kiểu nền Pattern fill.",
+          "answers": "1. Click chuột phải vào slide 2  chọn chức năng <b>Format Backgroud</b>. <br/> 2. Trong hộp thoại <b>Format Background</b> bên phải  click chọn <b>Gradient fill</b>."
+        },
+        {
+          "question": "Thay đổi bố cục (layout) của slide 3 là Two Content và áp dụng kiểu Intense Effect - Red  Accent 4 cho hình (shape) trên slide 3.",
+          "answers": "1. Chọn slide 3  click vào chức năng <b>Layout</b> trong nhóm chức năng <b>Slides</b> và chọn bố cục <b>Two Content</b>. <br/> 2. Chọn hình (shape)  trong tab <b>Shape Format</b> click chọn kiểu hình (shape style) với tên là <b>Intense Effect - Red  Accent 4</b> tại chức năng <b>Shape Styles</b>"
+        },
+        {
+          "question": "Trên slide 6  áp dụng kiểu WordArt Fill - Green  Accent color 1  Shadow cho chuỗi “Update At Least Weekly! ”.",
+          "answers": "1. Chọn chuỗi \"Update At Least Weekly!\"  trong tab <b>Shape Format</b> chọn kiểu (style) có tên là <b>Fill-Green  Accent color 1  Shadow</b> trong nhóm chức năng <b>WordArt Styles</b>."
+        },
+        {
+          "question": "Trên slide 5  thay đổi độ giãn kí tự của hộp văn bản dưới cùng thành Very Loose (expanded 6 pt)  thêm bóng chữ (Shadow) dạng Offset Left.",
+          "answers": "1. Click vào đường viền của hộp văn bản trên slide 5. <br/> 2. Mở rộng nhóm tính năng <b>Font</b> trong tab <b>Home</b> <br/> 3. Trong hộp thoại <b>Font</b>  chọn tab <b>Character Spacing</b>. Chỉnh <b>Spacing</b> thành <b>Expanded</b> và <b>By</b> thành 6 pt. Sau đó nhấn <b>OK</b>. <br/> 4. Chọn tab <b>Shape Format</b>  click vào chức năng <b>Text Effect</b> trong nhóm chức năng <b>WordArt Styles</b>  chọn chức năng <b>Offset Left</b> trong nhóm <b>Shadow</b>."
+        },
+        {
+          "question": "Đổi tên vùng chưa có tên (Untitiled Section) thành <u>\"Sample\"</u>.",
+          "answers": "1. Click chuột phải vào <b>Unitiled Section</b> trong hộp thoại bên trái  sau đó chọn chức năng <b>Rename Section</b>. <br/> 2. Trong hộp thoại <b>Rename Section</b>  nhập \"Sample\" và nhấn <b>Rename</b>."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [],
+      "title": "LakeVacations",
+      "tasks": [
+        {
+          "question": "Trên slide <u>Planning</u>  sắp xếp thứ tự hiệu ứng của các hình sao cho các hình xuất hiện lần lượt từ trái qua phải.",
+          "answers": "1. Chọn slide có tiêu đề <b>Planning</b>.<br/> 2. Chọn thẻ <b>Animation</b>  chọn <b>Animation Pane</b> trong nhóm <b>Advanced Animation</b>.<br/> 3. Giữ <b>Ctrl</b> chọn hiệu ứng số 5 và 6 của <b>Picture 6</b>  di chuyển lên trên hiệu ứng số 3(giữ chuột trái để di chuyển hoặc click vào nút di chuyển).<br/>"
+        },
+        {
+          "question": "Canh giữa hình dấu bằng trên slide <u>Condos and Hotels</u> theo hình cao nhất rồi nhóm các hình dấu bằng này lại.",
+          "answers": "1. Chọn slide có tiêu đề <b>Condos and Hotels</b>.<br/> 2. Giữ <b>Ctrl</b> chọn 3 khối hình dấu bằng.<br/> 3. Chọn thẻ <b>Format</b> trong <b>Drawing Tools</b>.<br/> 4. Chọn <b>Align</b> trong nhóm <b>Arrange</b>  sau đó chọn <b>Align to Selected Objects</b> và <b>Align Center</b>.<br/> 5. Chọn <b>Group</b> -> <b>Group</b> trong nhóm <b>Arrange</b> để nhóm các hình.<br/>"
+        },
+        {
+          "question": "Trên slide <u>Camping</u>  chọn hiệu ứng <u>Float in</u> hướng từ trên xuống cho dòng đầu tiên của danh sách không có thứ tự  hiệu ứng này xuất hiện ngay sau hiệu ứng chuyển slide. Các dòng còn lại cũng chọn hiệu ứng <u>Float in</u> từ trên xuống nhưng các hiệu ứng xuất hiện sau hiệu ứng trước nó 1 giây.",
+          "answers": "1. Tô đen dòng đầu tiên <b>Jack Rabbit Flats – 50 tent sites </b> trong slide có tiêu đề <b>Camping</b>.<br/> 2. Chọn thẻ <b>Animations</b>  thiết lập hiệu ứng <b>Float in</b> trong nhóm <b>Animation</b>.<br/> 3. Thiết lập <b>Float down</b> trong <b>Effect Options</b>  sau đó thiết lập <b>Start</b> thành <b>After previous</b>.<br/> 4. Tô đen 2 dòng còn lại. Làm tương tự các bước 2 và 3. sau đó thiết lập <b>Delay</b> thành <b>01.00</b>.<br/>"
+        },
+        {
+          "question": "Chuyển đổi danh sách trên slide <u>Planning</u> thành sơ đồ dạng <u>Vertical Accent List</u>.",
+          "answers": "1. Chọn danh sách trong slide có tiêu đề <b>Planning</b>.<br/> 2. Chọn thẻ <b>Home</b>  sau đó chọn <b>Convert to SmartArt</b> trong nhóm <b>Paragraph</b>.<br/> 3. Chọn <b>Vertical Accent List</b> trong nhóm <b>List</b>.<br/>"
+        },
+        {
+          "question": "Trên slide <u>Planning</u>  thay đổi hiệu ứng chữ trong ô textbox là hiệu ứng <u>Teeter</u>.",
+          "answers": "1. Chọn chữ trong ô textbox trong slide có tiêu đề <b>Planning</b>.<br/> 2. Chọn thẻ <b>Animations</b>  chọn hiệu ứng <b>Teeter</b> trong nhóm <b>Animation</b>.<br/>"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectfile": [],
+      "title": "MobileApps",
+      "tasks": [
+        {
+          "question": "Trên slide 2  đặt tiêu đề là <u>Mobile Apps</u>  sau đó chèn hình <i>Smartphone.jpg</i> trong thư mục Documents\\PiMOS vào dưới tiêu đề slide.",
+          "answers": "1. Chọn slide 2.<br/> 2. Nhập <b>Mobile Apps</b> vào ô tiêu đề.<br/> 3. Chọn thẻ <b>Insert</b>  chọn <b>Pictures</b> -> <b>This Device</b>.<br/> 4. Chọn hình <b>Smartphone.jpg</b> trong thư mục <b>Documents\\PiMOS</b> và nhấn <b>Insert</b>.<br/>"
+        },
+        {
+          "question": "Trên slide 3  tạo biểu đồ hình tròn từ bảng dữ liệu có sẵn.",
+          "answers": "1. Chọn slide 3.<br/> 2. Chọn bảng dữ liệu trên slide.<br/> 3. Chọn thẻ <b>Insert</b>  chọn <b>Chart</b>.<br/> 4. Chọn loại biểu đồ <b>Pie</b> và nhấn <b>OK</b>.<br/>"
+        },
+        {
+          "question": "Trên slide 4  chuyển danh sách thành sơ đồ SmartArt kiểu <u>Basic Block List</u>.",
+          "answers": "1. Chọn danh sách trên slide 4.<br/> 2. Chọn thẻ <b>Home</b>  chọn <b>Convert to SmartArt</b>.<br/> 3. Chọn kiểu <b>Basic Block List</b> trong nhóm <b>List</b>.<br/>"
+        },
+        {
+          "question": "Trên slide 5  thêm hiệu ứng chuyển động <u>Wipe</u> cho hình  hướng từ trái qua.",
+          "answers": "1. Chọn hình trên slide 5.<br/> 2. Chọn thẻ <b>Animations</b>  chọn hiệu ứng <b>Wipe</b>.<br/> 3. Trong <b>Effect Options</b>  chọn <b>From Left</b>.<br/>"
+        },
+        {
+          "question": "Trên slide cuối cùng  lưu slide này thành hình ảnh <u>JPEG</u> tên <u>LastSlide.jpg</u> vào thư mục Documents\\PiMOS.",
+          "answers": "1. Chọn slide cuối cùng.<br/> 2. Vào thẻ <b>File</b> -> <b>Save As</b>.<br/> 3. Chọn <b>JPEG File Interchange Format (*.jpg)</b> tại <b>Save as type</b>.<br/> 4. Đặt tên <b>LastSlide.jpg</b> và lưu vào thư mục <b>Documents\\PiMOS</b>.<br/>"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectfile": [],
+      "title": "Rodeos",
+      "tasks": [
+        {
+          "question": "Trên slide 2  chèn video <i>Rodeo.mp4</i> từ thư mục Documents\\PiMOS vào khung nội dung.",
+          "answers": "1. Chọn slide 2.<br/> 2. Chọn thẻ <b>Insert</b> -> <b>Video</b> -> <b>This Device</b>.<br/> 3. Tìm đến thư mục <b>Documents\\PiMOS</b>  chọn <b>Rodeo.mp4</b> và nhấn <b>Insert</b>.<br/>"
+        },
+        {
+          "question": "Trên slide 3  chèn biểu đồ cột  sử dụng dữ liệu mặc định.",
+          "answers": "1. Chọn slide 3.<br/> 2. Chọn thẻ <b>Insert</b> -> <b>Chart</b>.<br/> 3. Chọn loại <b>Column</b> và nhấn <b>OK</b>.<br/> 4. Đóng bảng dữ liệu Excel.<br/>"
+        },
+        {
+          "question": "Trên slide 4  chuyển danh sách thành sơ đồ SmartArt kiểu <u>Vertical Bullet List</u>.",
+          "answers": "1. Chọn danh sách trên slide 4.<br/> 2. Chọn thẻ <b>Home</b> -> <b>Convert to SmartArt</b>.<br/> 3. Chọn kiểu <b>Vertical Bullet List</b> trong nhóm <b>List</b>.<br/>"
+        },
+        {
+          "question": "Trên slide 5  thêm hiệu ứng chuyển động <u>Fly In</u> cho hình  hướng từ dưới lên.",
+          "answers": "1. Chọn hình trên slide 5.<br/> 2. Chọn thẻ <b>Animations</b> -> chọn hiệu ứng <b>Fly In</b>.<br/> 3. Trong <b>Effect Options</b>  chọn <b>From Bottom</b>.<br/>"
+        },
+        {
+          "question": "Trên slide cuối  lưu toàn bộ bài thuyết trình thành file video MP4 tên <u>Rodeos.mp4</u> vào thư mục Documents\\PiMOS.",
+          "answers": "1. Vào thẻ <b>File</b> -> <b>Export</b> -> <b>Create a Video</b>.<br/> 2. Chọn <b>Full HD (1080p)</b>.<br/> 3. Nhấn <b>Create Video</b>.<br/> 4. Lưu với tên <b>Rodeos.mp4</b> vào thư mục <b>Documents\\PiMOS</b>.<br/>"
+        }
+      ]
+    }
+  ]
+}
