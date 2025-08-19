@@ -10,9 +10,8 @@
         "ComputerCare.pptx",
         "LakeVacations.pptx",
         "MobileApps.pptx",
-        "Rodeos.pptx",
-        "Powerpoint.rar"
-
+        "Rodeos.pptx"
+       
       ],
       "title": "AdventureTravel",
       "tasks": [
@@ -200,12 +199,8 @@
           "question": "Kiểm tra và xóa toàn bộ thuộc tính và thông tin cá nhân của bài thuyết trình.",
           "answers": "1. Chọn thẻ <b>File</b>  chọn <b>Info</b>.<br/> 2. Nhấn <b>Check for Issues</b>  chọn <b>Inspect Document</b> -> <b>Inspect</b>.<br/> 3. Nhấn nút <b>Remove All</b> trong mục <b>Document properties and Personal Informations</b> -> <b>Close</b>.<br/>",
           "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
         }
+        
       ]
     }
   ]
