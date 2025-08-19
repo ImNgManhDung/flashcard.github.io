@@ -1,0 +1,254 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [
+
+        "Beekeeping.pptx",
+        "CertificationProgram.pptx",
+        "BikeSale.pptx",
+        "CustomConstruction.pptx",
+        "Fishing.pptx",
+        "Networking.pptx",
+        "Scuba.pptx"
+       
+      ],
+      "title": "AdventureTravel",
+      "tasks": [
+        {
+          "question": "Thêm mới các slide vào cuối tập tin với nội dung được nhập từ tập tin <i>BeeBooksdocx</i> trong thư mục <i>Documents/Powerpoint</i>.",
+          "answers": "1. Nhấp phải chuột vào dòng <b>Untitle Section</b> trong danh sách các slide phía bên phải<br/>2. Chọn <b>Rename Section</b>  sau đó nhập vào <b>Intro</b>.<br/>3. Chọn <b>Rename</b>."
+        },
+        {
+          "question": "Áp dụng bố cục <u>Content With Caption</u> cho slide <u>The Honeybee</u>.",
+          "answers": "1. Chọn slide có tiêu đề <b>The Honeybee</b>.<br/> 2. Chọn thẻ <b>Home</b>  sau đó chọn <b>Layout</b> trong nhóm <b>Slides</b>.<br/> 3. Chọn <b>Content With Caption</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Trên slide <u>The Honeybee</u>  áp dụng kiểu hình <u>Bevel Perspective Left  White</u> và hiệu ứng <u>Pencil Sketch</u> cho hình. Thêm một bố cục mới sao cho bố cục này chỉ chứa một khung chèn hình nằm giữa phần tiêu đề slide và vùng footer.",
+          "answers": "1. Chọn hình trong slide có tiêu đề <b>The Honeybee</b>.<br/> 2. Chọn thẻ <b>Format</b> trong nhóm <b>Picture Tools</b>.<br/> 3. Chọn kiểu hình <b>Bevel Perspective Left  White</b> trong nhóm <b>Picture Styles</b>.<br/> 4. Trong <b>Artistic Effects</b> trong nhóm <b>Adjust</b>  chọn hiệu ứng <b>Pencil Sketch</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Trên bố cục <u>Blank</u> trong Slide Master  hãy xóa footer  ngày tháng và số thứ tự trang.",
+          "answers": "1. Chọn thẻ <b>View</b>  sau đó chọn <b>Slide Master</b> trong nhóm <b>Master Views</b>.<br/> 2. Tìm và chọn <b>Blank Layout</b> trong danh sách layout phía bên trái(di chuột đến từng layout để hiển thị tên).<br/> 3. Click chọn vào các textbox <b>Footer</b> trong layout và bấm phím Detele để xóa.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi nội dung tiêu đề <u>Header</u> bên trái của Handout Master là chuỗi <i>Beekeeping</i>.",
+          "answers": "1. Chọn thẻ <b>View</b>  sau đó chọn <b>Handout Master</b> trong nhóm <b>Master Views</b>.<br/> 2. Nhập chuỗi <b>Beekeeping</b> vào khung <b>Header</b> phía bên trái.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Bật tính năng nhúng font chữ được sử dụng trong bài thuyết tình này và lưu bài thuyết trình.(Chấp nhận tất cả các mặc định)",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectfile": [],
+      "title": "CertificationProgram",
+      "tasks": [
+        {
+          "question": "Thêm slide cuối cùng có tiêu đề <u>Certifications Can Launch Careers</u> từ tập tin <i>Certifications.pptx</i> trong thư mục <i>Documents//Powerpoint</i> vào bài thuyết trình hiện tại ở vị trí giữa slide 1 và slide 2. Giữ nguyên định dạng dữ liệu nguồn. Thay đổi nền trang của slide <u>Purchase certification exams</u> thành kiểu nền <i>Pattern</i> mặc định.",
+          "answers": "1. Chọn vào khoảng trống giữa slide 1 và slide 2.<br/> 2. Chọn thẻ <b>Home</b>.<br/> 3. Chọn chức năng <b>New Slide</b> trong nhóm <b>Slides</b>.<br/> 4. Sau đó  chọn <b>Reuse Slides</b>.<br/> 5. Trong bảng Reuse slide (phía bên phải) <b>Browse</b> -> <b>Browse file</b>.<br/> 5. Tìm đến thư mục <b>Document//Powerpoint</b>  chọn tập tin <b>Certifications.pptx</b> -><b>Open</b>.<br/> 6. Check vào mục <b>Keep source formating</b>  sau đó chọn slide thứ 2 có tiêu đề <b>Certifications Can Launch Careers</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi nền trang của slide <u>Purchase certification exams</u> thành kiểu nền <i>Pattern</i> mặc định.",
+          "answers": "1. Chọn vào slide có tiêu đề <b>Purchase certification exams</b>.<br/> 2. Click chuột phải vào slide chọn <b>Format Background</b>.<br/> 3. Sau đó check vào <b>Pattern Fill</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Thêm một bố cục mới <u>PictureWithText</u> ngay sau bố cục hiện tại  thêm một khung chèn hình bên trái và một khung chèn chuỗi vào bên phải với kích thước bất kỳ.",
+          "answers": "1. Chọn thẻ <b>View</b>  sau đó chọn <b>Slide Master</b> trong nhóm <b>Master Views</b>.<br/> 2. Chọn tính năng <b>Insert Layout</b> trong nhóm <b>Edit Master</b>.<br/> 3. Click chuột phải vào layout vừa tạo chọn <b>Rename Layout</b>  nhập tên <b>PictureWithText</b> -> <b>Rename</b>.<br/> 4. Chọn tính năng <b>Insert Placeholder</b> <b>Picture</b> trong nhóm <b>Master Layout</b>.<br/> 5. Vẽ Picture vào bên trái layout vừa tạo.<br/> 6. Chọn tính năng <b>Insert Placeholder</b> <b>Text</b> trong nhóm <b>Master Layout</b>.<br/> 7. Vẽ Text vào bên phải layout vừa tạo.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Lưu bài thuyết trình trong thư mục <i>Documents//Powerpoint</i> dạng XPS với tên <i>Powerpoint.xps</i>",
+          "answers": "1. Chọn thẻ <b>File</b>  sau đó chọn <b>Save As</b> .<br/> 2. Chọn <b>Browse</b>  tìm đến thư mục <b>Documents//Powerpoint</b>.<br/> 3. Nhập <b>File name:</b> -> <b>Powerpoint.xps</b> và <b>Save as type</b> -> <b>XPS</b>.<br/> 4. Chọn tính năng <b>Insert Placeholder</b> <b>Picture</b> trong nhóm <b>Master Layout</b>.<br/> 5. <b>Chọn Save</b>.<br/>",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [],
+      "title": "BikeSale",
+      "tasks": [
+        {
+          "question": "Trên slide tiêu đề  thay đổi vị trí của hình (shape) để hình nằm sau hình người chạy xe đạp.",
+          "answers": "1. Click vào hình (shape) trên slide tiêu đề. <br/> 2. Chọn tab <b>Format</b>  sau đó chọn chức năng <b> Send Backward</b>.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide tiêu đề  đổi màu của hình (shape) thành màu trắng (White  Text 1) và màu nét viền hình thành màu đỏ (Red).",
+          "answers": "1. Click vào hình (shape) trên slide tiêu đề  sau đó chọn tab <b>Format</b>. <br/> 2. Click vào chức năng <b>Shape Fill</b> và tìm màu có tên <b>White  Text 1</b>. <br/> 3. Click vào chức năng <b>Shape Outline</b>  tìm màu có tên là <b>Red</b>.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide 3  thêm tiêu đề <u>“Bikes Sale”</u> cho slide.",
+          "answers": "1. Click vào slide 3. <br/> 2. Copy nội dung <b> Bikes Sale</b> vào tiêu đề của slide",
+          "image": ""
+        },
+        {
+          "question": "Trên slide 3  trong khung bên trái  chèn bảng có 4 cột và 7 dòng. Chấp nhận kiểu định dạng mặc định.",
+          "answers": "1. Chọn slide 3  click vào chức năng <b>Insert Table</b> trong khung bên trái. <br/> 2. Nhập số cột và số dòng tương ứng.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide cuối  định dạng kiểu hình Reflected Bevel  Black và hiệu ứng nghệ thuật Line Drawing cho hình người chạy xe đạp Tạo một bài trình chiếu tùy chỉnh với tên là <u>'Hardtail Bike Sale'</u> gồm các slide 1  3 và 6.",
+          "answers": "1. Chọn slide cuối cùng trong bài thuyết trình  click vào hình người xe đạp trong slide. <br/> 2. Click vào tab <b>Format</b>  trong chức năng <b>Picture Styles</b>  chọn style có tên <Reflected Bevel</b> <br/> 3. Trong tab <b>Format</b>  click vào chức năng <b>Artistic Effect</b> và chọn hiệu ứng có tên <b> Line Drawing</b>. 1. Chọn tab <b>Slide Show</b>  click vào chức năng <b>Custom Slide Show</b> và chọn chức năng <b>Custom Shows</b>. <br/> 2. Trong hộp thoại <b>Custom Shows</b>  nhấn <b>New</b> để tạo tùy chọn bài thuyết trình mới. <br/>. 3. Trong hộp thoại <b>Define Custom Show</b>  nhập nội dung 'Hardtail Bike Sale' vào trường <b>Slide show name</b> <br/> 4. Click chọn các slide 1 3 6 và nhấn <b>Add</b>. <br/> 5. Nhấn <b>Ok</b> sau đó nhấn <b>Close</b> để hoàn thành tác vụ.",
+          "image": ""
+        },
+        {
+          "question": "Hiệu chỉnh tùy chọn trình chiếu (slide show) để tắt các tính năng: phát lời thuyết trình (narrations)  sử dụng thời gian thuyết trình đã ghi (timings) và biểu diễn hiệu ứng hoạt hình (animation).",
+          "answers": "1. Chọn tab <b>Slide Show</b>  click chọn chức năng <b>Setup Slide Show</b>. <br/> 2. Trong hộp thoại <b> Set Up Show</b>  click chọn các chức năng sau: <b>Show without narration</b>  <b> Show without animation</b> và <b>Manually</b>. <br/> 3. Nhấn <b>OK</b> để hoàn thành tác vụ.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [],
+      "title": "CustomConstruction",
+      "tasks": [
+        {
+          "question": "Trên slide <u>Mission Statement</u>  thiết lập vị trí chữ nằm dưới cùng trong textbox và định dạng chữ hoa nhỏ.",
+          "answers": "1. Chọn khung nội dung trong slide có tiêu đề <b>Mission Statement</b>.<br/> 2. Chọn thẻ <b>Home</b>  trong nhóm <b>Paragraph</b> thiết lập <b>Align Text</b> -> <b>Bottom</b>.<br/> 3. Trong thẻ <b>Home</b>  chọn mở rộng nhóm <b>Font</b> sau đó check vào <b>Small Caps</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Tạo một bài thuyết trình tùy chỉnh bao gồm các slide theo thứ tự 2 3 5 và 2 .",
+          "answers": "1. Chọn thẻ <b>Slide Show</b>  sau đó chọn <b>Custom Slide Show</b> -> <b>Custom Shows</b>.<br/> 2. Chọn <b>New</b>  check vào slide <b>2  3  5</b> -> <b>Add</b>.<br/> 3. Check thêm vào slide <b>2</b> -> <b>Add</b>  nhấn nút <b>OK</b> -> <b>Close</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Chỉnh sửa chủ đề của bài thuyết trình thành <u>Atlas</u>.",
+          "answers": "1. Chọn thẻ <b>Design</b>  chọn chủ đề <b>Atlas</b> trong nhóm <b>Themes</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Thiết lập để in bài thuyết trình ra 4 bản  tùy chọn in ghi chú với hướng in trang giấy ngang và in tất cả các trang 1 trước  sau đó mới in các trang 2 và các trang còn lại sau.",
+          "answers": "1. Chọn thẻ <b>File</b>  sau đó chọn mục <b>Print</b>.<br/> 2. Thiết lập <b>Copies</b> -> <b>4</b>  <b>Print Layout</b> -> <b>Notes Page</b>(mục đang hiển thị Full Page Slides).<br/> 3. Thay đổi <b>Orientation</b> -> <b>Landscape Orientation</b> và <b>Collated</b> -> <b>Uncollated</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi kích thước bài thuyết trình thành 4:3 và đảm bảo nội dung được vừa với kích thước mới.",
+          "answers": "1. Chọn thẻ <b>Design</b>  sau đó chọn mục <b>Slide Size</b>.<br/> 2. Thiết lập <b>Standard 4:3</b> -> <b>Ensure Fit</b>.<br/>",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [],
+      "title": "Fishing",
+      "tasks": [
+        {
+          "question": "Kiểm tra tài liệu và xóa toàn bộ thuộc tính và thông tin cá nhân của bài thuyết trình.",
+          "answers": "1. Chọn tab <b>File</b>  click vào <b>Check for Ussues</b> sau đó chọn <b>Inspect Document</b>. <br/> 2. Trong hộp thoại <b>Document Inspector</b>  nhấn <b>Inspect</b>. <br/> 3.Chỉ nhấn <b>Remove All</b> tại <b>Document Properties and Personal Information</b>. Không xóa các thuộc tính khác.<br/> 4. Nhấn <b>Close</b> để hoàn tất tác vụ.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide 2  canh lề chữ sát cạnh trên của textbox và áp dụng hiệu ứng chữ hoa nhỏ (small caps) cho văn bản trong text box.",
+          "answers": "1. Chọn slide 2  click vào đường viền của text box. <br/> 2. Trong tab <b>Home</b>  click vào chức năng <b>AlignText </b> trong nhóm chức năng <b>Paragraph</b> và chọn <b>Top</b>. <br/> 3. Mở rộng nhóm chức năng <b>Font</b>  trong hộp thoại <b>Font</b> chọn chức năng <b>Small Caps</b>. <br/> 4. Nhấn <b>OK</b> để hoàn thành tác vụ.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide 2  áp dụng màu tím cho  3 đoạn văn bản “10%...”  “12%...”  và “60%...”  và áp dụng kiểu định dạng cân bằng độ cao chữ. Giữ nguyên các cài đặt mặc định khác.",
+          "answers": "1. Chọn slide 2  chọn các đoạn văn bản từ '10%....VisitorVisitor'. <br/> 2. Trong tab <b>Home</b>  click vào chức năng <b>Font Color</b> trong nhóm <b>Font</b> và chọn màu <b>Purple</b>. <br/> 3. Mở rộng nhóm chức năng <b>Font</b>  trong hộp thoại <b>Font</b> chọn chức năng <b>Equalize Character Height</b>. <br/> 4. Nhấn <b>OK</b> để hoàn thành",
+          "image": ""
+        },
+        {
+          "question": "Trên slide tiêu đề  định dạng chữ nghệ thuật kiểu Fill: White;Outline: Blue Accent color2;Hard Shadow: Blue  Accent color 2 cho chuỗi 'Fishing AdventuresAdventures'.",
+          "answers": "1. Chọn slide tiêu đề  chọn chuỗi 'Fishing Adventures'. <br/> 2. Chọn tab <b>Format</b>  trong nhóm chức năng <b>WordArt Styles</b> chọn WordArt có tên <b>Fill:White;Outline:Blue Accent color2;Hard Shadow:Blue Accent color 2</b>.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide 5  xén bớt 1' bên trái hình nhưng không làm thay đổi độ co giãn của hình và vị trí hình",
+          "answers": "1. Click chuột phải vào hình trên slide 5 và chọn <b>Format Picture</b>. <br/> 2. Trong hộp thoại <b>Format Picture</b>bên phải  chọn chức năng <b>Picture</b> và mở rộng tính năng <b>Crop</b> <br/> 3. Tại trường <b>Left</b> cộng thêm 1' vào giá trị hiện tại. <br/> 4. Nhấn <b>Enter</b> để hoàn thành.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide cuối  chuyển danh sách sang dạng sơ đồ kiểu Target List.",
+          "answers": "1. Trên slide cuối  chọn đoạn văn bản từ 'Book...Fish'. <br/> 2. Trong tab <b>Home</b>  click vào chức năng <b>Convert to SmartArt Graphic</b> và chọn SmartArt có tên <b>Target List</b>.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectfile": [],
+      "title": "Networking",
+      "tasks": [
+        {
+          "question": "Áp dụng kiểu hình Bevel Perspective Left  White cho hình ảnh trên slide 2.",
+          "answers": "1. Click vào video trên <b>Sldie 3</b>. <br/> 2. Trong tab <b> Playback</b>  click vào chức năng <b>Start</b> và chọn <b>Automatically</b>. <br/> 3. Chọn chức năng <b>Rewind after Playing</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên slide 3  thiết lập sao cho video được phát tự động khi bắt đầu trình chiếu slide và hiển thị lại màn hình tiêu đề đầu tiên của video sau khi kết thúc việc phát video.",
+          "answers": "1. Click vào biểu đồ <b>IEEE Wireless Network Standards</b> trên slide 4. <br/> 2. Trong tab <b> Design (của Chart Tools)</b>  chọn kiểu biểu đồ có tên là <b>Style 9</b> trong chức năng <b>Chart Styles</b>",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi kiểu bảng trên slide 5 thành Light Style 3 - Accent 6.",
+          "answers": "1. Click vào bảng trên Slide 5. <br/> 2. Chọn tab <b>Design (của Table Tools)</b>  chọn kiểu bảng có tên <b>Light Style 3 - Accent 6</b> trong chức năng <b>Table Styles</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi màu của đối tượng đồ họa trên slide 6 thành Colorful Range - Accent Colors 5 to 6.",
+          "answers": "1. Click vào đối tượng đồ họa trên Slide 6. <br/> 2.  Chọn tab <b>Design (của SmartArt Tools)</b>  click vào chức năng <b>Change Colors</b> và chọn <b>Colorsful Range - Accent Colors 5 to 6</b>.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectfile": [],
+      "title": "Scuba",
+      "tasks": [
+      
+         {
+          "question": "Trên slide 1  thay đổi hiệu ứng Shapes của hình thành Arcs.",
+          "answers": "1. Click vào hình trên slide 1. <br/> 2. Chọn tab <b>Animations</b>  chọn hiệu ứng <b>Arcs</b> trong nhóm hiệu ứng <b>Motion Paths</b>",
+          "image": ""
+        },
+        {
+          "question": "Áp dụng hiệu ứng chuyển slide Conveyor từ trái sang cho tất cả các slide.",
+          "answers": "1. Chọn tab <b>Transitions</b>. <br/> 2. Chọn hiệu ứng <b>Conveyor</b> và thiết lập <b>From Left</b> trong chức năng <b>Effect Options</b>. <br/> 3. Nhấn <b>Apply To All</b> để áp dụng cho tất cả các slide.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide 2  thay đổi hiệu ứng hoạt hình (animation) của tất cả các dòng trong danh sách gạch đầu dòng xuất hiện theo hướng từ góc trên bên trái (From Top-Left).",
+          "answers": "1. Click chọn slide 2  sau đó chọn tab <b>Animations</b> <br/> 2. Trong nhóm chức năng <b>Advanced Animation</b>  click chọn <b>Animation Pane</b>. <br/> 3. Trong hộp thoại <b>Animation Pane</b>  click chọn từng hiệu ứng sau đó click chọn <b>From Top-Left</b>trong chức năng <b>Effect Options</b>.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide 3  chèn chú thích với nội dung <u>‘New fee to $90’</u> cho chuỗi ‘Pay $75’.",
+          "answers": "1. Chọn chuỗi ‘Pay $75’ trên slide 3. <br/> 2. Click tab <b>Review</b>  chọn chức năng <b>New Comment</b>. <br/> 3. Nhập nội dung ‘New fee to $90’ vào hộp thoại <b>Comments</b> bên phải.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide 4  thay đổi thứ tự các hiệu ứng hoạt hình (animation) sao cho các đối tượng khi trình chiếu sẽ xuất hiện theo thứ tự Theory  Skills  Ocean Dive.",
+          "answers": "1. Click chọn slide 4  click vào tab <b>Animations</b> sau đó chọn chức năng <b>Animation Pane</b> trong nhóm <b>Advanced Animation</b>. <br/> 2. Trong hộp thoại <b>Animation Pane</b> bên phải  di chuyển các hiệu ứng sao cho hiệu ứng dòng <b>Theory...</b> trở thành số 1  hiệu ứng cho dòng <b>Skills...</b> trở thành số 2.",
+          "image": ""
+        },
+        {
+          "question": "Ẩn tất cả các ghi chú (comment) trong bài thuyết trình hiện tại.",
+          "answers": "1. Click chọn tab <b>Review</b>  click vào mũi tên hướng xuống trong chức năng <b>Show Comments</b> của nhóm chức năng <b>Comments</b>. <br/> 2. Bỏ chọn chức năng <b>Comment Pane</b> và chức năng <b>Show Markup</b>.",
+          "image": ""
+        },
+        {
+          "question": "Xóa tất cả các thuộc tính và thông tin cá nhân của tập tin. Bỏ qua các thuộc tính ẩn khác.",
+          "answers": "1. Click tab <b>File</b>  chọn tab <b> Info</b> <br/> 2. Trong hộp thoại <b>Info</b>  click vào <b>Check for Issues</b> sau đó chọn <b>Inspect Document</b> <br/> 3. Nhấn vào nút <b>Inspect</b>  sau đó nhấn vào nút <b>Remove All</b> trên dòng <b>Document Properties and Personal Information</b>. <br/> 3. Nhấn <b>Close</b> để hoàn thành tác vụ.",
+          "image": ""
+        }
+        
+      ]
+    }
+  ]
+}
