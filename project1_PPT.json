@@ -11,8 +11,7 @@
         "LakeVacations.pptx",
         "MobileApps.pptx",
         "Rodeos.pptx",
-
-"Powerpoint.rar"
+        "Powerpoint.rar"
 
       ],
       "title": "AdventureTravel",
@@ -53,8 +52,8 @@
           "answers": "1. Chọn khung nội dung bên trái trên slide có tiêu đề <b>Our most popular flavors</b>.<br/> 2. Chọn thẻ <b>Insert</b>  sau đó chọn <b>Table</b> -> <b>Insert Table</b>.<br/> 3. Thiết lập <b>Number of Columns</b> -> <b>2</b> và <b>Number of Rows</b> -> <b>9</b>.<br/> 4. Chọn  thẻ <b>Design</b> trong <b>Table Tools</b>  chọn <b>Light Style 2 - Accent 1</b> trong nhóm <b>Table Styles</b>.<br/>"
         },
         {
-          "question": "Trên slide <u>Our most popular flavors</u>  chèn bảng từ tập tin <i>Flavors.xlsx</i> trong thư mục <i>Documents//PiMOS</i> vào khung chèn nội dung bên phải.",
-          "answers": "1. Chọn vào khung trống bên phải trên slide có tiêu đề <b>Our most popular flavors</b>.<br/> 2. Chọn thẻ <b>Insert</b>  sau đó chọn <b>Object</b> trong nhóm <b>Text</b>.<br/> 3. Chọn mục <b>Create from file</b> nhấn vào nút <b>Browse</b>.<br/> 4. Tìm đến thư mục <b>Document//PiMOS</b> chọn tập tin <b>Flavors.xlsx</b> -> <b>OK</b>.<br/>"
+          "question": "Trên slide <u>Our most popular flavors</u>  chèn bảng từ tập tin <i>Flavors.xlsx</i> trong thư mục <i>Documents//PowerPoint</i> vào khung chèn nội dung bên phải.",
+          "answers": "1. Chọn vào khung trống bên phải trên slide có tiêu đề <b>Our most popular flavors</b>.<br/> 2. Chọn thẻ <b>Insert</b>  sau đó chọn <b>Object</b> trong nhóm <b>Text</b>.<br/> 3. Chọn mục <b>Create from file</b> nhấn vào nút <b>Browse</b>.<br/> 4. Tìm đến thư mục <b>Document//PowerPoint</b> chọn tập tin <b>Flavors.xlsx</b> -> <b>OK</b>.<br/>"
         },
         {
           "question": "Chèn biểu đồ dạng Pie trên slide <u>Popular flavor Orders</u> sử dụng dữ liệu mặc định.",
@@ -89,7 +88,7 @@
         },
         {
           "question": "Lưu bài thuyết trình hiện tại thành dạng pdf với tên <u>\"BussinessCamp\"</u> vào thư mục ….. nằm trong thư mục Documents.",
-          "answers": "1. Click vào tab <b>File</b> và chọn chức năng <b>Save As</b>. <br/> 2. Trong hộp thoại <b>Save As</b>  chọn chức năng <b>Browse</b> và tìm đến thư mục <b>PiMOS</b> trong thư mục <b>Documents</b> <br/> 3. Nhập \"BussinessCamp\" vào trường <b>File Name</b>  click chọn loại file là <b>PDF</b> tại trường <b>Save as type</b>. <br/> 3. Nhấn <b>Save</b> để kết thúc."
+          "answers": "1. Click vào tab <b>File</b> và chọn chức năng <b>Save As</b>. <br/> 2. Trong hộp thoại <b>Save As</b>  chọn chức năng <b>Browse</b> và tìm đến thư mục <b>PowerPoint</b> trong thư mục <b>Documents</b> <br/> 3. Nhập \"BussinessCamp\" vào trường <b>File Name</b>  click chọn loại file là <b>PDF</b> tại trường <b>Save as type</b>. <br/> 3. Nhấn <b>Save</b> để kết thúc."
         }
       ]
     },
@@ -140,11 +139,8 @@
         {
           "question": "Chuyển đổi danh sách trên slide <u>Planning</u> thành sơ đồ dạng <u>Vertical Accent List</u>.",
           "answers": "1. Chọn danh sách trong slide có tiêu đề <b>Planning</b>.<br/> 2. Chọn thẻ <b>Home</b>  sau đó chọn <b>Convert to SmartArt</b> trong nhóm <b>Paragraph</b>.<br/> 3. Chọn <b>Vertical Accent List</b> trong nhóm <b>List</b>.<br/>"
-        },
-        {
-          "question": "Trên slide <u>Planning</u>  thay đổi hiệu ứng chữ trong ô textbox là hiệu ứng <u>Teeter</u>.",
-          "answers": "1. Chọn chữ trong ô textbox trong slide có tiêu đề <b>Planning</b>.<br/> 2. Chọn thẻ <b>Animations</b>  chọn hiệu ứng <b>Teeter</b> trong nhóm <b>Animation</b>.<br/>"
         }
+       
       ]
     },
     {
@@ -152,25 +148,25 @@
       "projectfile": [],
       "title": "MobileApps",
       "tasks": [
-        {
-          "question": "Trên slide 2  đặt tiêu đề là <u>Mobile Apps</u>  sau đó chèn hình <i>Smartphone.jpg</i> trong thư mục Documents\\PiMOS vào dưới tiêu đề slide.",
-          "answers": "1. Chọn slide 2.<br/> 2. Nhập <b>Mobile Apps</b> vào ô tiêu đề.<br/> 3. Chọn thẻ <b>Insert</b>  chọn <b>Pictures</b> -> <b>This Device</b>.<br/> 4. Chọn hình <b>Smartphone.jpg</b> trong thư mục <b>Documents\\PiMOS</b> và nhấn <b>Insert</b>.<br/>"
+       {
+          "question": "Áp dụng hiệu ứng chuyển slide kiểu <u>Shape</u> khi chuyển từ slide 1 sang slide 2.",
+          "answers": "1. Chọn slide thứ 2  sau đó chọn thẻ <b>Transitions</b>.<br/> 2. Tìm và chọn hiệu ứng <b>Shape</b> trong nhóm <b>Transiton to This Slide</b>.<br/>",
+          "image": ""
         },
         {
-          "question": "Trên slide 3  tạo biểu đồ hình tròn từ bảng dữ liệu có sẵn.",
-          "answers": "1. Chọn slide 3.<br/> 2. Chọn bảng dữ liệu trên slide.<br/> 3. Chọn thẻ <b>Insert</b>  chọn <b>Chart</b>.<br/> 4. Chọn loại biểu đồ <b>Pie</b> và nhấn <b>OK</b>.<br/>"
+          "question": "Trên slide <u>The Case for Mobile Apps</u>  thiết lập hiệu ứng <u>Fly in</u> hướng từ trên xuống cho dòng đầu tiên của danh sách gạch đầu dòng  hiệu ứng này xuất hiện ngay sau hiệu ứng chuyển slide. Các dòng còn lại cũng chọn hiệu ứng <u>Fly in</u> từ trên xuống nhưng các hiệu ứng xuất hiện sau hiệu ứng trước nó 1 giây.",
+          "answers": "1. Tô đen dòng đầu tiên <b>Mobile apps vs. mobile web</b> trong slide có tiêu đề <b>The Case for Mobile Apps</b>.<br/> 2. Chọn thẻ <b>Animations</b>  thiết lập hiệu ứng <b>Fly in</b> trong nhóm <b>Animation</b>.<br/> 3. Thiết lập <b>From Top</b> trong <b>Effect Options</b>  sau đó thiết lập <b>Start</b> thành <b>After previous</b>.<br/> 4. Tô đen 3 dòng còn lại. Làm tương tự các bước 2 và 3. sau đó thiết lập <b>Delay</b> thành <b>01.00</b>.<br/>",
+          "image": ""
         },
         {
-          "question": "Trên slide 4  chuyển danh sách thành sơ đồ SmartArt kiểu <u>Basic Block List</u>.",
-          "answers": "1. Chọn danh sách trên slide 4.<br/> 2. Chọn thẻ <b>Home</b>  chọn <b>Convert to SmartArt</b>.<br/> 3. Chọn kiểu <b>Basic Block List</b> trong nhóm <b>List</b>.<br/>"
+          "question": "Định dạng danh sách trên slide <u>Considerations</u> thành 2 cột.",
+          "answers": "1. Chọn khung nội dung trong slide có tiêu đề <b>Pros and Cons</b>.<br/> 2. Chọn thẻ <b>Home</b>  thiết lập <b>Two Column</b> trong nhóm <b>Paragraph</b>.<br/>",
+          "image": ""
         },
         {
-          "question": "Trên slide 5  thêm hiệu ứng chuyển động <u>Wipe</u> cho hình  hướng từ trái qua.",
-          "answers": "1. Chọn hình trên slide 5.<br/> 2. Chọn thẻ <b>Animations</b>  chọn hiệu ứng <b>Wipe</b>.<br/> 3. Trong <b>Effect Options</b>  chọn <b>From Left</b>.<br/>"
-        },
-        {
-          "question": "Trên slide cuối cùng  lưu slide này thành hình ảnh <u>JPEG</u> tên <u>LastSlide.jpg</u> vào thư mục Documents\\PiMOS.",
-          "answers": "1. Chọn slide cuối cùng.<br/> 2. Vào thẻ <b>File</b> -> <b>Save As</b>.<br/> 3. Chọn <b>JPEG File Interchange Format (*.jpg)</b> tại <b>Save as type</b>.<br/> 4. Đặt tên <b>LastSlide.jpg</b> và lưu vào thư mục <b>Documents\\PiMOS</b>.<br/>"
+          "question": "Thêm âm thanh <u>Bomb</u> cho hiệu ứng transition của slide <u>Pros and Cons</u>.",
+          "answers": "1. Chọn slide có tiêu đề <b>Pros and Cons</b>.<br/> 2. Chọn thẻ <b>Transitions</b>  thiết lập <b>Sound</b> -> <b>Bomb</b> trong nhóm <b>Timing</b>.<br/>",
+          "image": ""
         }
       ]
     },
@@ -179,25 +175,36 @@
       "projectfile": [],
       "title": "Rodeos",
       "tasks": [
+      
         {
-          "question": "Trên slide 2  chèn video <i>Rodeo.mp4</i> từ thư mục Documents\\PiMOS vào khung nội dung.",
-          "answers": "1. Chọn slide 2.<br/> 2. Chọn thẻ <b>Insert</b> -> <b>Video</b> -> <b>This Device</b>.<br/> 3. Tìm đến thư mục <b>Documents\\PiMOS</b>  chọn <b>Rodeo.mp4</b> và nhấn <b>Insert</b>.<br/>"
+          "question": "Thiết lập cho video slide <u>Timed Events keep you in suspense!</u> tự động phát khi trình chiếu.",
+          "answers": "1. Chọn video trong slide có tiêu đề <b>Timed Events keep you in suspense!</b>.<br/> 2. Chọn thẻ <b>Playback</b> trong nhóm <b>Video Tool</b>.<br/> 3. Thiết lập <b>Start</b> -> <b>Automatically</b>.<br/>",
+          "image": ""
         },
         {
-          "question": "Trên slide 3  chèn biểu đồ cột  sử dụng dữ liệu mặc định.",
-          "answers": "1. Chọn slide 3.<br/> 2. Chọn thẻ <b>Insert</b> -> <b>Chart</b>.<br/> 3. Chọn loại <b>Column</b> và nhấn <b>OK</b>.<br/> 4. Đóng bảng dữ liệu Excel.<br/>"
+          "question": "Trên slide <u>The “World Records” of Rodeo</u>  chỉnh kích thước hình rộng 70% kích thước ban đầu của nó  vẫn giữ nguyên tỉ lệ hình.",
+          "answers": "1. Nhấp chuột chọn hình trong slide có tiêu đề <b>The “World Records” of Rodeo</b>.<br/> 2. Nhấp chuột phải chọn <b>Size & Position</b>.<br/> 3. Trong <b>Size</b> thiết lập <b>Scale Width</b> thành <i>70%</i>.<br/>",
+          "image": ""
         },
         {
-          "question": "Trên slide 4  chuyển danh sách thành sơ đồ SmartArt kiểu <u>Vertical Bullet List</u>.",
-          "answers": "1. Chọn danh sách trên slide 4.<br/> 2. Chọn thẻ <b>Home</b> -> <b>Convert to SmartArt</b>.<br/> 3. Chọn kiểu <b>Vertical Bullet List</b> trong nhóm <b>List</b>.<br/>"
+          "question": "Đổi màu của sơ đồ trên slide <u>Qualifying</u> thành <u>Colorful - Accent Colors 4 to 5</u>.",
+          "answers": "1. Chọn SmartArt trong slide có tiêu đề <b>Qualifying</b>.<br/> 2. Chọn thẻ <b>Design</b> trong <b>SmartArt Tools</b>.<br/> 3. Trong nhóm <b>SmartArt Styles</b> chọn <b>Change Colors</b> thành <i>Colorful - Accent Colors 4 to 5</i>.<br/>",
+          "image": ""
         },
         {
-          "question": "Trên slide 5  thêm hiệu ứng chuyển động <u>Fly In</u> cho hình  hướng từ dưới lên.",
-          "answers": "1. Chọn hình trên slide 5.<br/> 2. Chọn thẻ <b>Animations</b> -> chọn hiệu ứng <b>Fly In</b>.<br/> 3. Trong <b>Effect Options</b>  chọn <b>From Bottom</b>.<br/>"
+          "question": "Chèn video <i>BroncRide.wmv</i> trong thư mục <i>Documents//Powerpoint</i> vào slide <u>Rough stock event</u>.",
+          "answers": "1. Chọn vào khung trống slide có tiêu đề <b>Rough stock event</b>.<br/> 2. Chọn thẻ <b>Insert</b>  chọn <b>Video</b> -> <b>Video on my PC</b>.<br/> 3. Tìm đến thư mục <b>Documents//Powerpoint</b> chọn <b>BroncRide.wmv</b> -> <i>Insert</i>.<br/>",
+          "image": ""
         },
         {
-          "question": "Trên slide cuối  lưu toàn bộ bài thuyết trình thành file video MP4 tên <u>Rodeos.mp4</u> vào thư mục Documents\\PiMOS.",
-          "answers": "1. Vào thẻ <b>File</b> -> <b>Export</b> -> <b>Create a Video</b>.<br/> 2. Chọn <b>Full HD (1080p)</b>.<br/> 3. Nhấn <b>Create Video</b>.<br/> 4. Lưu với tên <b>Rodeos.mp4</b> vào thư mục <b>Documents\\PiMOS</b>.<br/>"
+          "question": "Kiểm tra và xóa toàn bộ thuộc tính và thông tin cá nhân của bài thuyết trình.",
+          "answers": "1. Chọn thẻ <b>File</b>  chọn <b>Info</b>.<br/> 2. Nhấn <b>Check for Issues</b>  chọn <b>Inspect Document</b> -> <b>Inspect</b>.<br/> 3. Nhấn nút <b>Remove All</b> trong mục <b>Document properties and Personal Informations</b> -> <b>Close</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
         }
       ]
     }
