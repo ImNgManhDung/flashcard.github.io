@@ -144,52 +144,27 @@
       "title": "Project 5",
       "tasks": [
         {
-          "question": "",
+          "question": "Chuyển nội dung 'Planned Family Orchard' thành WordArt kiểu Fill - Gold  Accent 4  Soft Bevel.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
+          "question": "Chèn biểu tượng <u>'Copyright SignSign'</u> ngay sau nội dung 'Planned Family'.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
+          "question": "Di chuyển đoạn văn bản thứ hai sau tiêu đề “Brief overview:” sao cho nó nằm giữa hai đoạn bắt đầu từ 'Modern contraceptive  ...' đến '...barriers to accessing services '.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
+          "question": "Chèn ghi chú cuối văn bản ngay sau nội dung 'Plum' đầu tiên trong văn bản với nội dung ghi chú là <u>' A fruit of the subgenus Prunus of the genus Prunus.'</u>.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
+          "question": "Áp dụng kiểu lề trang đối xứng cho tất cả các trang trong tài liệu.",
           "answers": "",
           "image": ""
         }
@@ -201,52 +176,28 @@
       "title": "Project 6",
       "tasks": [
         {
-          "question": "",
+          "question": "Thiết lập hiển thị thanh cuộn ngang  cho tài liệu.",
+          "answers": "",
+          "image": ""
+        },   
+
+        {
+          "question": "Thêm văn bản thay thế với tiêu đề là <u>“Temperatures”</u> và nội dung mô tả là <u>'Water temperatures fluctuate'</u> cho bảng.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
+          "question": "Áp dụng kiểu định dạng Grid Table 5 Dark – Accent 1 cho bảng.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
+          "question": "Thiết lập cho tất cả các cột của bảng có độ rộng bằng nhau.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
+          "question": "Gộp tất cả các ô ở dòng cuối cùng của bảng thành 1 ô.",
           "answers": "",
           "image": ""
         }
@@ -258,52 +209,32 @@
       "title": "Project 7",
       "tasks": [
         {
-          "question": "",
+          "question": "Chèn nội dung của văn bản <i>'company.docx'</i> trong thư mục <i>Word</i> của thư mục <i>Documents</i> vào văn bản ngay sau tiêu đề 'Decadent and delicious fudge'.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
+          "question": "Chèn sơ đồ kiểu Vertical Box List vào văn bản ngay sau nội dung '...to use in any fudge kettle.'.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
+          "question": "Nhập nội dung <u>Fudge/u> vào hình đầu tiên của smartArt sau đó thay đổi vị trí hình trong sơ đồ sao cho hình <u>Fudge</u> nằm ở vị trí cuối cùng.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
+          "question": "Áp dụng kiểu Intense Effect cho sơ đồ  đổi màu sơ đồ thành Colorful Range - Accent Colors 2 to 3.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
+          "question": "Chèn trang bìa kiểu Banded vào văn bản  xóa trường Company Address sau đó nhập nội dung <u>'Gourmet Fudge'</u> vào trường Document Title và <u>'TOCKIST'</u> vào trường Company Name.",
           "answers": "",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
+          "question": "Thêm dòng đầu trang kiểu Facet (Even Page) cho văn bản trừ trang đầu tiên.",
           "answers": "",
           "image": ""
         }
