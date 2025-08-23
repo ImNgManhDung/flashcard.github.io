@@ -505,7 +505,7 @@
 let quizData = {};
 
 
-    fetch('test_excel_1.json')
+    fetch('test_excel_2.json')
         .then(res => res.json())
         .then(data => {
             quizData = data;
@@ -523,12 +523,13 @@ let quizData = {};
         let currentTaskIndex = 0;       // Start from task 1
         let taskStatuses = {};          // Store task statuses
         let timeLeft = 50*60;           // 50 minutes timer
-        updateTimer();
+       
         
         // Initialize
         function init() {
             updateDisplay();
             startTimer();
+            updateTimer();    
             
             // Close dropdown when clicking outside
             document.addEventListener('click', function(e) {

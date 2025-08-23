@@ -1,0 +1,383 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [],
+      "title": "Project 1",
+      "tasks": [
+        {
+          "question": "Sử dụng hàm xử lý chuỗi là để lấy ký tự đầu của cột <b>MÃ HÀNG</b> điền vào cột <b>KÝ TỰ ĐẦU</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Sử dụng hàm xử lý chuỗi là để lấy 2 ký tự cuối của cột <b>MÃ HÀNG</b> điền vào cột <b>HAI KÝ TỰ CUỐI</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Sử dụng hàm xử lý chuỗi là để lấy ký tự thứ 2 của cột <b>MÃ HÀNG</b> điền vào cột <b>KÝ TỰ THỨ 2</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Sử dụng hàm xử lý chuỗi là để lấy ký tự thứ 3 và thứ 4 của cột <b>MÃ HÀNG</b> điền vào cột <b>2 KÝ TỰ 3 VÀ 4</b>.  ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Sử dụng hàm xử lý chuỗi là để ghép nối ký tự đầu và ký tự cuối của cột <b>MÃ HÀNG</b> điền vào cột <b>NỐI KÝ TỰ ĐẦU VÀ CUỐI</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Viết biểu thức so sánh ký tự đầu của <b>MÃ HÀNG</b> có bằng ký tự 'A' hay không và điền vào cột <b>ĐK1</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Viết biểu thức so sánh 2 ký tự thứ 3 và thứ 4 của <b>MÃ HÀNG</b> (chuyển sang dạng số) có bằng số 12 hay không và điền vào cột <b>ĐK2</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Sử dụng hàm luận lý để viết công thức cho cột <b>ĐK3</b> theo yêu cầu sau: 2 ký tự cuối của <b>MÃ HÀNG</b> bằng 42 và <b>SỐ LƯỢNG</b> lớn hơn hoặc bằng 50.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Sử dụng hàm luận lý để viết công thức cho cột <b>ĐK4</b> theo yêu cầu sau: <b>ĐƠN GIÁ</b> lớn hơn 500 và ký tự đầu của <b>MÃ HÀNG</b> bằng B.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectfile": [],
+      "title": "Project 2",
+      "tasks": [
+        {
+          "question": "Thiết lập sao cho không hiển thị bộ lọc ở dòng tiêu đề của bảng (<b>Filter Button</b>).",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tính cột <b>Tên hàng</b> sao cho: Nếu <b>Mã hàng</b> là 'AA' thì <b>Tên hàng</b> là 'Trà', ngược lại thì <b>Tên hàng</b> là 'Sữa'.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tính cột <b>Đơn giá</b> sao cho: Nếu <b>Mã hàng</b> là 'A' thì <b>Đơn giá</b> là 2, ngược lại thì <b>Đơn giá</b> là 4.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>Trị giá</b> = <b>Số lượng</b> * <b>Đơn giá</b>.Nhưng nếu <b>Số lượng</b> lớn hơn 100 và <b>Mã hàng</b> là 'A' thì giảm 10% <b>Trị giá</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Dựa vào ô <b>tỉ giá USD</b> (ô G2) để tính <b>DOANH THU 2016 (VND)</b> và Hoàn chỉnh số liệu trên bảng thống kê.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tạo <b>Alt Text</b> cho bảng kê doanh thu với tiêu đề là: 'ảng báo cáo doanh thu'.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tổng <b>trị giá</b> các mặt hàng có <b>số lượng</b> trên 100.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [],
+      "title": "Project 3",
+      "tasks": [
+        {
+          "question": "Thiết lập sao cho không hiển thị bộ lọc ở dòng tiêu đề của bảng (<b>Filter Button</b>).",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>TÊN MÔN</b>: Nếu ký tự đầu của <b>MÃ SỐ MÔN THI</b> là ‘A’ thì <b>TÊN MÔN</b> là ‘WORD’, ngược lại là ‘EXCEL’.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>ĐIỂM THÊM</b>: Nếu ký tự cuối của <b>MÃ SỐ MÔN THI</b> là ‘1’ thì <b>ĐIỂM THÊM</b> là 1, ngược lại là 0.  ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>TỔNG CỘNG</b> = <b>ĐIỂM</b> + <b>ĐIỂM THÊM</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>KẾT QUẢ</b>: Nếu <b>TỔNG CỘNG</b> > 5 thì ghi ‘Qua môn’, ngược lại ghi ‘Không’.Thêm 1 cột phía trước cột <b>HỌ VÀ TÊN</b> và đặt tên cột mới thêm này là <b>HỌ TÊN ĐÚNG</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Điền thông tin cho cột <b>HỌ TÊN ĐÚNG</b> bằng cách dùng hàm đổi thông tin trong cột <b>HỌ TÊN</b> sao cho kí tự đầu của mỗi từ in hoa, các kí tự còn lại của mỗi từ in thường.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Bỏ bớt các dòng dữ liệu bị trùng <b>Họ và tên</b> trong khối ô <b>A3:I12</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Chuyển đổi bảng về dạng khối ô và giữ nguyên các định dạng khác.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Hoàn chỉnh số liệu trên các bảng thống kê. ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Xác định số thí sinh có <b>điểm</b> từ 5 trở lên.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [],
+      "title": "Project 4",
+      "tasks": [
+        {
+          "question": "<b>Số ngày ở</b> = <b>Ngày đi</b> - <b>Ngày đến</b>, nhưng nếu <b>Ngày đi</b> = <b>Ngày đến</b> thì <b>Số ngày ở</b> là 1.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>Tiền phòng</b> = <b>Số ngày ở</b> * <b>Đơn giá phòng</b>. Với <b>Đơn giá phòng</b> được tính là: Nếu 2 ký tự đầu của <b>Mã phòng</b> là ‘L1’ thì <b>Đơn giá phòng</b> là 300000, ngược lại là 200000.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>Giảm giá</b> được tính như sau: Nếu <b>Ngày đến</b> trước ngày 2/9/2016 và ký tự thứ 3 của <b>Mã phòng</b> là A thì giảm 10% <b>Tiền phòng</b>. ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>Tổng thu</b> = <b>Tiền phòng</b> - <b>Giảm giá</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>Ghi chú</b> hiển thị chuỗi ‘Có’ nếu <b>Số ngày ở</b> lớn hơn 5, ngược lại hiển thị chuỗi ‘Không’.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Hoàn chỉnh số liệu trên các bảng thống kê.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [],
+      "title": "Project 5",
+      "tasks": [
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectfile": [],
+      "title": "Project 6",
+      "tasks": [
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectfile": [],
+      "title": "Project 7",
+      "tasks": [
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
