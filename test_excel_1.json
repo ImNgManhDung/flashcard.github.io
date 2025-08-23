@@ -1,0 +1,219 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [],
+      "title": "Project 1",
+      "tasks": [
+        {
+          "question": "Nhập công thức thích hợp cho các cột còn trống.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectfile": [],
+      "title": "Project 2",
+      "tasks": [
+       
+        {
+          "question": "Hoàn thành bảng cửu chương trong phạm vi ô <b>B3:K12</b> bằng cách chỉ dùng công thức tại ô <b>B3</b> rồi sao chép cho các ô còn lại.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Đặt tên phạm vi ô <b>B16:K16</b> là <b>DONG_1</b> và phạm vi <b>A17:A26</b> là <b>COT_1</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Hoàn thành bảng cửu chương trong phạm vi ô <b>B17:K26</b> bằng cách sử dụng các tên phạm vi vừa tạo để viết công thức trong ô <b>B17</b> và sao chép cho các ô còn lại.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Đổi tên vùng ô <b>Bang1</b> thành <b>BangCuuChuong1</b> và phạm vi tham chiếu là <b>A2:K12</b> thay vì <b>A1:K12</b>.        ",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [],
+      "title": "Project 3",
+      "tasks": [
+        {
+          "question": "Điền dãy số vào cột <b>STT</b> (dùng <b>Fill handle</b>).",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Định dạng phạm vi ô <b>G3:H10</b> thành <b>table</b>, có tiêu đề, sử dụng <b>Table Style Light 7</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>Tăng giá = Giá mua * % tăng giá</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>Thành tiền = Số lượng * (Giá mua + Tăng giá)</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>Cước chuyên chở = Số lượng * 1500</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>Doanh thu = Thành tiền + Cước chuyên chở</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tính số ô chứa số trong phạm vi <b>B4:D11</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tính số ô không rỗng trong phạm vi <b>B4:D11</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tính số ô rỗng trong phạm vi <b>B4:D11</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tính số ô chứa văn bản trong phạm vi <b>B4:D11</b>.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [],
+      "title": "Project 4",
+      "tasks": [
+        {
+          "question": "Dùng chức năng <b>Auto-fill</b> để điền giá trị cho cột <b>STT</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Định dạng phạm vi ô <b>A2:H9</b> thành <b>table</b> có tiêu đề, dùng bất kỳ kiểu bảng nào.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tính giá trị lỗ lớn nhất của <b>Tháng 1/2015</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tính giá trị lãi lớn nhất của <b>Tháng 3/2015</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tính giá trị trung bình của lợi nhuận trong <b>Tháng 5/2015</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Lợi nhuận tháng 1 của mặt hàng <b>A1</b> được tính bằng cách cộng lợi nhuận tháng 1 của mặt hàng <b>A1</b> trong năm 2015 và 2016 ở sheet <b>bai 4</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Sao chép công thức để tính lợi nhuận cho các mặt hàng còn lại ứng với từng tháng giống như mặt hàng <b>A1</b>.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [],
+      "title": "Project 5",
+      "tasks": [
+        {
+          "question": "Lợi nhuận tháng 1 của mặt hàng <b>A1</b> được tính bằng cách cộng lợi nhuận tháng 1 của mặt hàng <b>A1</b> trong năm 2015 và 2016 ở sheet <b>bai 4</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Sao chép công thức để tính lợi nhuận cho các mặt hàng còn lại ứng với từng tháng giống như mặt hàng <b>A1</b>.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectfile": [],
+      "title": "Project 6",
+      "tasks": [
+        {
+          "question": "Định dạng phạm vi ô <b>A1:G8</b> thành <b>table</b> có tiêu đề, dùng bất kỳ kiểu bảng nào.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Gõ công thức trong cột <b>TÊN HÀNG ĐÚNG</b> để viết hoa chữ cái đầu tiên của cột <b>TÊN HÀNG</b> và chuyển các chữ khác thành chữ thường (dùng hàm <b>Proper</b>).",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Gõ công thức thích hợp cho các cột <b>KÝ TỰ ĐẦU, KÝ TỰ CUỐI, KÝ TỰ THỨ 2, 2 KÝ TỰ THỨ 3 VÀ 4, NỐI KÝ TỰ ĐẦU VÀ CUỐI</b> dựa trên cột <b>MÃ HÀNG</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Gõ công thức để hiển thị độ dài của từng chuỗi trong cột <b>MÃ HÀNG</b>.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectfile": [],
+      "title": "Project 7",
+      "tasks": [
+        {
+          "question": "Trong ô <b>D2</b>, hiển thị ngày tháng năm hiện tại (<b>Today</b>).",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trong ô <b>D3</b>, hiển thị ngày trong tuần (<b>Day</b>).",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trong ô <b>D4</b>, hiển thị tháng hiện tại (<b>Month</b>)",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trong ô <b>D5</b>, hiển thị năm hiện tại (<b>Year</b>).",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tính giá trị <b>THÀNH TIỀN</b> của từng mặt hàng đã bán: <b>Thành Tiền = Trị Giá + Phí Vận Chuyển</b>, nhưng giảm giá 10% cho các mặt hàng bán trong tháng 4.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
