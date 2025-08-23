@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+
+        .quiz-container {
+            width: 1359px;
+            height: 190px;
+            background: white;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Header - Compact */
+        .top-header {
+            background: linear-gradient(135deg, #00c851, #007e33);
+            color: white;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-info {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .project-selector {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .choose-project-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            transition: background 0.2s;
+        }
+
+        .choose-project-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .go-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .go-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .center-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .timer {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 4px 10px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .timer.warning {
+            background: #ff4444;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .right-section {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .header-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .header-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .icon-btn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 4px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+        }
+
+        .icon-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Step Progress Bar - Compact */
+        .step-progress {
+            background: white;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            gap: 1px;
+            height: 32px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .step {
+            width: 40px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .step.active {
+            background: #333;
+            color: white;
+        }
+
+        .step.completed {
+            background: #28a745;
+            color: white;
+        }
+
+        .step.review {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .step:not(.active):not(.completed):not(.review) {
+            background: #e9ecef;
+            color: #6c757d;
+        }
+
+        .step:hover:not(.active) {
+            background: #dee2e6;
+        }
+
+        /* Question Area - More Compact */
+        .question-area {
+            flex: 1;
+            background: white;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            min-height: 50px;
+        }
+
+        .question-text {
+            font-size: 13px;
+            line-height: 1.4;
+            color: #333;
+            width: 100%;
+            text-align: left;
+        }
+
+        .task-status {
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-review {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        /* Bottom Controls - Compact */
+        .bottom-controls {
+            background: #f8f9fa;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #e9ecef;
+            height: 40px;
+        }
+
+        .control-btn {
+            padding: 4px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            height: 28px;
+        }
+
+        .control-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-previous {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-previous:hover:not(:disabled) {
+            background: #5a6268;
+        }
+
+        .btn-completed {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-completed:hover {
+            background: #218838;
+        }
+
+        .btn-review {
+            background: #ffc107;
+            color: #212529;
+        }
+
+        .btn-review:hover {
+            background: #e0a800;
+        }
+
+        .btn-next {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-next:hover:not(:disabled) {
+            background: #0056b3;
+        }
+
+        .btn-help {
+            background: #17a2b8;
+            color: white;
+            padding: 4px;
+            width: 28px;
+            height: 28px;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .btn-help:hover {
+            background: #138496;
+        }
+
+        .center-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Project dropdown */
+        .project-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            min-width: 200px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .project-dropdown.show {
+            display: block;
+        }
+
+        .project-option {
+            padding: 8px 12px;
+            color: #333;
+            cursor: pointer;
+            font-size: 11px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .project-option:hover {
+            background: #f8f9fa;
+        }
+
+        .project-option:last-child {
+            border-bottom: none;
+        }
+        /* Modal nền mờ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* Ảnh trong modal */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* Nút tắt */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #ff6666;
+}
+
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Top Header -->
+        <div class="top-header">
+            <div class="left-section">
+                <div class="project-info">
+                    Project <span id="currentProject">1</span> of <span id="totalProjects">12</span>
+                </div>
+                
+                <div class="project-selector">
+                    <button class="choose-project-btn" onclick="toggleProjectDropdown()">
+                        Choose Project ▼
+                    </button>
+                    <button class="go-btn">Go</button>
+                    <button class="go-btn" onclick="DownloadProject(1)">Tải file project</button>
+
+
+
+                    <div class="project-dropdown" id="projectDropdown">
+                        <div class="project-option" onclick="selectProject(1)">Project 1: bai 1 </div>
+                        <div class="project-option" onclick="selectProject(2)">Project 2: bai 2</div>
+                        <div class="project-option" onclick="selectProject(3)">Project 3: bai 3</div>
+                        <div class="project-option" onclick="selectProject(4)">Project 4: bai 4 </div>
+                        <div class="project-option" onclick="selectProject(5)">Project 5: bai 5</div>
+                        <div class="project-option" onclick="selectProject(6)">Project 6: bai 6 </div>
+                        <div class="project-option" onclick="selectProject(7)">Project 7: bai 7</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-section">
+                <div class="timer" id="timer"></div>
+            </div>
+
+            <div class="right-section">
+                <button class="header-btn" onclick="nextProject()">Next Project</button>
+                <button class="header-btn" onclick="restartProject()">Restart Project</button>
+                <button class="icon-btn">✓</button>
+                <button class="icon-btn">✕</button>
+            </div>
+        </div>
+
+        <!-- Step Progress Bar -->
+        <div class="step-progress">
+            <div class="step active" id="step1" onclick="goToStep(1)">1</div>
+            <div class="step" id="step2" onclick="goToStep(2)">2</div>
+            <div class="step" id="step3" onclick="goToStep(3)">3</div>
+            <div class="step" id="step4" onclick="goToStep(4)">4</div>
+            <div class="step" id="step5" onclick="goToStep(5)">5</div>
+            <div class="step" id="step6" onclick="goToStep(6)">6</div>
+             <div class="step" id="step7" onclick="goToStep(7)">7</div>
+            <div class="step" id="step8" onclick="goToStep(8)">8</div>
+            <div class="step" id="step9" onclick="goToStep(9)">9</div>
+             <div class="step" id="step10" onclick="goToStep(10)">10</div>
+            <div class="step" id="step11" onclick="goToStep(11)">11</div>
+            <div class="step" id="step12" onclick="goToStep(12)">12</div>
+        </div>
+
+        <!-- Question Area -->
+        <div class="question-area">
+            <div class="question-text" id="questionText">
+                
+            </div>
+            <div class="task-status status-review" id="taskStatus" style="display: none;">
+                Marked for Review
+            </div>
+        </div>
+
+        <!-- Bottom Controls -->
+        <div class="bottom-controls">
+            <button class="control-btn btn-previous" onclick="previousTask()" id="prevBtn">
+                ◀ Previous Task
+            </button>
+
+            <div class="center-controls">
+                <button class="control-btn btn-completed" onclick="markCompleted()">
+                    Mark Completed
+                </button>
+                <button class="control-btn btn-review" onclick="markForReview()">
+                    Mark for review
+                </button>
+                <button class="control-btn btn-help" onclick="showHelp()">
+                    ?
+                </button>
+            </div>
+
+            <button class="control-btn btn-next" onclick="nextTask()" id="nextBtn">
+                Next Task ▶
+            </button>
+        </div>
+    </div>
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+    <script>
+     
+
+
+let quizData = {};
+
+
+    fetch('test_excel_3.json')
+        .then(res => res.json())
+        .then(data => {
+            quizData = data;
+           
+        })
+        .catch(err => console.error('Lỗi tải dữ liệu:', err));
+
+   
+
+
+
+
+        // State management
+        let currentProjectIndex = 0;    // Start from project 1
+        let currentTaskIndex = 0;       // Start from task 1
+        let taskStatuses = {};          // Store task statuses
+        let timeLeft = 50*60;           // 50 minutes timer
+       
+        
+        // Initialize
+        function init() {
+            updateDisplay();
+            startTimer();
+            updateTimer();    
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.project-selector')) {
+                    document.getElementById('projectDropdown').classList.remove('show');
+                }
+            });
+        }
+
+        // Timer functions
+        function startTimer() {
+            setInterval(() => {
+                timeLeft--;
+                if (timeLeft <= 0) {
+                    timeLeft = 0;
+                }
+                updateTimer();
+            }, 1000);
+        }
+
+        function updateTimer() {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            
+            const timeString = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            const timerEl = document.getElementById('timer');
+            timerEl.textContent = timeString;
+            
+            // Warning when less than 5 minutes
+            if (timeLeft < 300) {
+                timerEl.classList.add('warning');
+            }
+        }
+
+        // Display update functions
+      function updateDisplay() {
+    // Update project info
+    document.getElementById('currentProject').textContent = currentProjectIndex + 1;
+    document.getElementById('totalProjects').textContent = quizData.projects.length;
+    
+    // Update question
+    const currentProject = quizData.projects[currentProjectIndex];
+    const currentTask = currentProject.tasks[currentTaskIndex];
+    document.getElementById('questionText').innerHTML = `
+        ${currentTask.question} <br>
+        ${currentTask.image 
+        ?` <img src="img/${currentTask.image}" 
+             alt="Question Image" 
+             style="width: 50px; height: 50px; object-fit: cover; cursor: pointer;"
+             onclick="openModal('img/${currentTask.image}')"> `
+             : ""}
+    `;
+    
+    // Update step progress
+    updateStepProgress();
+    
+    // Update button states
+    updateButtonStates();
+    
+    // Update task status display
+    updateTaskStatusDisplay();
+}
+
+function openModal(src) {
+    const modal = document.getElementById('imageModal');
+    const img = document.getElementById('modalImage');
+
+    modal.style.display = "block";
+    img.src = src;
+
+    // Dùng Fullscreen API
+    if (modal.requestFullscreen) {
+        modal.requestFullscreen();
+    } else if (modal.webkitRequestFullscreen) { // Safari
+        modal.webkitRequestFullscreen();
+    } else if (modal.msRequestFullscreen) { // IE/Edge cũ
+        modal.msRequestFullscreen();
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = "none";
+
+    // Thoát fullscreen nếu đang bật
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { 
+        document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+    }
+}
+
+       function updateStepProgress() {
+            const currentProject = quizData.projects[currentProjectIndex];
+            const totalSteps = currentProject.tasks.length;
+            
+            for (let i = 1; i <= 12; i++) {
+                const stepEl = document.getElementById(`step${i}`);
+                const stepIndex = i - 1;
+                
+                if (i > totalSteps) {
+                    stepEl.style.display = 'none';
+                } else {
+                    stepEl.style.display = 'flex';
+                    stepEl.className = 'step';
+                    
+                    const status = getTaskStatus(currentProjectIndex, stepIndex);
+                    
+                    if (stepIndex === currentTaskIndex) {
+                        stepEl.classList.add('active');
+                    } else if (status === 'completed') {
+                        stepEl.classList.add('completed');
+                    } else if (status === 'review') {
+                        stepEl.classList.add('review');
+                    }
+                }
+            }
+        }
+
+        function updateButtonStates() {
+            const currentProject = quizData.projects[currentProjectIndex];
+            
+            // Previous/Next task buttons
+            document.getElementById('prevBtn').disabled = currentTaskIndex === 0;
+            document.getElementById('nextBtn').disabled = currentTaskIndex >= currentProject.tasks.length - 1;
+        }
+
+        function updateTaskStatusDisplay() {
+            const statusEl = document.getElementById('taskStatus');
+            const status = getTaskStatus(currentProjectIndex, currentTaskIndex);
+            
+            if (status === 'completed') {
+                statusEl.textContent = 'Completed';
+                statusEl.className = 'task-status status-completed';
+                statusEl.style.display = 'block';
+            } else if (status === 'review') {
+                statusEl.textContent = 'Marked for Review';
+                statusEl.className = 'task-status status-review';
+                statusEl.style.display = 'block';
+            } else {
+                statusEl.style.display = 'none';
+            }
+        }
+
+        // Task status management
+        function getTaskStatus(projectIndex, taskIndex) {
+            return taskStatuses[`${projectIndex}-${taskIndex}`] || null;
+        }
+
+        function setTaskStatus(projectIndex, taskIndex, status) {
+            taskStatuses[`${projectIndex}-${taskIndex}`] = status;
+        }
+
+        // Navigation functions
+        function previousTask() {
+            if (currentTaskIndex > 0) {
+                currentTaskIndex--;
+                updateDisplay();
+            }
+        }
+
+        function nextTask() {
+            const currentProject = quizData.projects[currentProjectIndex];
+            if (currentTaskIndex < currentProject.tasks.length - 1) {
+                currentTaskIndex++;
+                updateDisplay();
+            }
+        }
+
+        function goToStep(stepNumber) {
+            const stepIndex = stepNumber - 1;
+            const currentProject = quizData.projects[currentProjectIndex];
+            
+            if (stepIndex >= 0 && stepIndex < currentProject.tasks.length) {
+                currentTaskIndex = stepIndex;
+                updateDisplay();
+            }
+        }
+
+        function nextProject() {
+            if (currentProjectIndex < quizData.projects.length - 1) {
+                currentProjectIndex++;
+                currentTaskIndex = 0;
+                updateDisplay();
+            }
+        }
+
+        function restartProject() {
+            // Clear all statuses for current project
+            const currentProject = quizData.projects[currentProjectIndex];
+            for (let i = 0; i < currentProject.tasks.length; i++) {
+                delete taskStatuses[`${currentProjectIndex}-${i}`];
+            }
+            
+            currentTaskIndex = 0;
+            updateDisplay();
+        }
+
+        // Project selector functions
+        function toggleProjectDropdown() {
+            const dropdown = document.getElementById('projectDropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        function selectProject(projectNumber) {
+            currentProjectIndex = projectNumber - 1;
+            currentTaskIndex = 0;
+            updateDisplay();
+            
+            document.getElementById('projectDropdown').classList.remove('show');
+        }
+
+        // Task action functions
+        function markCompleted() {
+            const currentStatus = getTaskStatus(currentProjectIndex, currentTaskIndex);
+            
+            if (currentStatus === 'completed') {
+                // If already completed, remove the status
+                delete taskStatuses[`${currentProjectIndex}-${currentTaskIndex}`];
+            } else {
+                // Mark as completed
+                setTaskStatus(currentProjectIndex, currentTaskIndex, 'completed');
+            }
+            updateDisplay();
+        }
+
+        function markForReview() {
+            const currentStatus = getTaskStatus(currentProjectIndex, currentTaskIndex);
+            
+            if (currentStatus === 'review') {
+                // If already marked for review, remove the status
+                delete taskStatuses[`${currentProjectIndex}-${currentTaskIndex}`];
+            } else {
+                // Mark for review
+                setTaskStatus(currentProjectIndex, currentTaskIndex, 'review');
+            }
+            updateDisplay();
+        }
+
+function DownloadProject(projectId) {
+    // tìm project theo id
+    const project = quizData.projects.find(p => p.id === projectId);
+
+    if (!project) {
+        alert("Không tìm thấy project với id = " + projectId);
+        return;
+    }
+
+    const files = project.projectfile;
+
+    if (!files || files.length === 0) {
+        alert("Project này không có file để tải.");
+        return;
+    }
+
+    // tải từng file
+    files.forEach(fileName => {
+        const link = document.createElement("a");
+        link.href = "files/" + fileName;   // đổi "files/" thành đúng thư mục chứa file
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+}
+
+
+
+        function showHelp() {
+    const currentProject = quizData.projects[currentProjectIndex];
+    const currentTask = currentProject.tasks[currentTaskIndex];
+    
+    if (currentTask && currentTask.answers) {
+        alert("gợi ý: " + currentTask.answers);
+    } else {
+        alert('Không có đáp án cho câu hỏi này.');
+    }
+}
+
+        // Initialize when page loads
+        window.onload = init;
+    </script>
+</body>
+</html>

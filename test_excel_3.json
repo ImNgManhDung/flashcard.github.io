@@ -1,0 +1,174 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [],
+      "title": "Project 1",
+      "tasks": [
+        {
+          "question": "Điền <b>STT</b> cho bảng <b>DANH SÁCH THI TUYỂN</b> trong khối ô <b>A6:A10</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>ĐIỂM THÊM</b>: Nếu thí sinh được sinh sau ngày 1/1/2001 thì <b>Điểm thêm</b> là 1, ngược lại <b>Điểm thêm</b> là 0. ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Xếp loại cho thí sinh dựa vào <b>ĐTB</b>, tra cứu trong <b>BẢNG XẾP LOẠI</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Nhập công thức cho cột <b>XẾP HẠNG</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Hoàn chỉnh số liệu bảng <b>THỐNG KÊ SỐ THÍ SINH</b>.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectfile": [],
+      "title": "Project 2",
+      "tasks": [
+        {
+          "question": "<b>TÊN SP</b>: Dựa vào <b>MÃ SP</b>, tra cứu trong bảng <b>SẢN PHẨM</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>ĐƠN GIÁ</b>: Dựa vào <b>MÃ SP</b>, tra cứu trong bảng <b>SẢN PHẨM</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>KHUYẾN MÃI</b>: Dựa vào <b>số lượng</b>, tra cứu trong <b>BẢNG KHUYẾN MÃI</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>THÀNH TIỀN</b> = (<b>SỐ LƯỢNG</b> - <b>KHUYẾN MÃI</b>) * <b>ĐƠN GIÁ</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tính <b>Tổng cộng thành tiền</b> mà khách hàng phải trả.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Hoàn chỉnh số liệu bảng <b>THỐNG KÊ TỔNG THÀNH TIỀN</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Hiển thị các <b>công thức</b> thay vì giá trị của chúng.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [],
+      "title": "Project 3",
+      "tasks": [
+        {
+          "question": "Định dạng dòng 3 có độ cao là 30.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>ĐỊNH MỨC</b> và <b>GIÁ CƯỚC</b>: dựa vào ký tự thứ 2 của <b>LOẠI HÀNG</b> và <b>BẢNG ĐỊNH MỨC VÀ GIÁ CƯỚC</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>TIỀN PHẠT</b>: được tính như sau: <br> Nếu <b>TRỌNG LƯỢNG</b> > <b>ĐỊNH MỨC</b> và tháng vận chuyển sau tháng 9 thì<b>TIỀN PHẠT</b> = (<b>TRỌNG LƯỢNG</b> - <b>ĐỊNH MỨC</b>) * 20% * <b>GIÁ CƯỚC</b>. <br> Ngược lại: <b>TIỀN PHẠT</b> = 0.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>THÀNH TIỀN</b> = (<b>GIÁ CƯỚC</b> + <b>TIỀN PHẠT</b>) * <b>Tỷ giá USD</b>.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [],
+      "title": "Project 4",
+      "tasks": [
+        {
+          "question": "<b>MẶT HÀNG</b>: Dựa vào 2 ký tự đầu của <b>MÃ MH</b>, tra cứu ở <b>BẢNG ĐƠN GIÁ</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>ĐƠN GIÁ</b>: Dựa vào 2 ký tự đầu của <b>MÃ MH</b>, tra cứu ở <b>BẢNG ĐƠN GIÁ</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>PHÍ CHUYÊN CHỞ</b>: = 1% <b>ĐƠN GIÁ</b> đối với mặt hàng Loại 1 và 5% <b>ĐƠN GIÁ</b> đối với mặt hàng Loại 2  ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>THÀNH TIỀN</b> = <b>SỐ LƯỢNG</b> * (<b>ĐƠN GIÁ</b> + <b>PHÍ CHUYÊN CHỞ</b>). <br>  ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>TỔNG CỘNG</b> = <b>THÀNH TIỀN</b> - <b>TIỀN GIẢM</b>. <b>TIỀN GIẢM</b> được tính như sau: Nếu <b>THÀNH TIỀN</b> >= 1000 và hàng được bán trước ngày 1/1/2015 thì <b>TIỀN GIẢM</b> = 1% <b>THÀNH TIỀN</b>, ngược lại <b>TIỀN GIẢM</b> bằng 0.  ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Định dạng thông tin trên cột <b>THÀNH TIỀN</b> và cột <b>TỔNG CỘNG</b> có dạng <b>Currency</b> với 1 số lẻ ở phần thập phân.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Hoàn chỉnh số liệu trên các <b>BẢNG THỐNG KÊ</b>.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [],
+      "title": "Project 5",
+      "tasks": [
+        {
+          "question": "<b>SỐ NGÀY Ở</b> = <b>NGÀY ĐI</b> - <b>NGÀY ĐẾN</b>, nhưng nếu <b>NGÀY ĐI</b> = <b>NGÀY ĐẾN</b> thì <b>SỐ NGÀY Ở</b> = 1.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "<b>TIỀN PHÒNG</b> = <b>SỐ NGÀY Ở</b> * <b>ĐƠN GIÁ PHÒNG</b>. Trong đó: <b>ĐƠN GIÁ PHÒNG</b> dựa vào <b>MÃ PHÒNG</b> (LẦU và LOẠI PHÒNG) và tra trong <b>BẢNG ĐƠN GIÁ PHÒNG</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Định dạng cột <b>TIỀN PHÒNG</b> có dạng <b>Accounting</b> với 1 số lẻ ở phần thập phân.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Hoàn chỉnh số liệu trên các <b>BẢNG THỐNG KÊ</b>.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
