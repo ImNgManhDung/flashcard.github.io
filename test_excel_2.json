@@ -63,8 +63,8 @@
           "image": ""
         },
         {
-          "question": "Tính cột <b>Tên hàng</b> sao cho: Nếu <b>Mã hàng</b> là 'AA' thì <b>Tên hàng</b> là 'Trà', ngược lại thì <b>Tên hàng</b> là 'Sữa'.",
-          "answers": "1. Click vào ô đầu tiên của cột <b>Tên hàng</b>.<br/>2. Nhập công thức: <b>=IF(A2=\"AA\",\"Trà\",\"Sữa\")</b> (với A2 là ô chứa Mã hàng).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
+          "question": "Tính cột <b>Tên hàng</b> sao cho: Nếu <b>Mã hàng</b> là 'A' thì <b>Tên hàng</b> là 'Trà', ngược lại thì <b>Tên hàng</b> là 'Sữa'.",
+          "answers": "1. Click vào ô đầu tiên của cột <b>Tên hàng</b>.<br/>2. Nhập công thức: <b>=IF(A2=\"A\",\"Trà\",\"Sữa\")</b> (với A2 là ô chứa Mã hàng).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
