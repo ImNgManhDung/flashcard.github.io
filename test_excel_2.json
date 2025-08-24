@@ -7,47 +7,47 @@
       "tasks": [
         {
           "question": "Sử dụng hàm xử lý chuỗi là để lấy ký tự đầu của cột <b>MÃ HÀNG</b> điền vào cột <b>KÝ TỰ ĐẦU</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>KÝ TỰ ĐẦU</b>.<br/>2. Nhập công thức: <b>=LEFT(B2,1)</b> (với B2 là ô chứa MÃ HÀNG).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Sử dụng hàm xử lý chuỗi là để lấy 2 ký tự cuối của cột <b>MÃ HÀNG</b> điền vào cột <b>HAI KÝ TỰ CUỐI</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>HAI KÝ TỰ CUỐI</b>.<br/>2. Nhập công thức: <b>=RIGHT(B2,2)</b> (với B2 là ô chứa MÃ HÀNG).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Sử dụng hàm xử lý chuỗi là để lấy ký tự thứ 2 của cột <b>MÃ HÀNG</b> điền vào cột <b>KÝ TỰ THỨ 2</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>KÝ TỰ THỨ 2</b>.<br/>2. Nhập công thức: <b>=MID(B2,2,1)</b> (với B2 là ô chứa MÃ HÀNG).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Sử dụng hàm xử lý chuỗi là để lấy ký tự thứ 3 và thứ 4 của cột <b>MÃ HÀNG</b> điền vào cột <b>2 KÝ TỰ 3 VÀ 4</b>.  ",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>2 KÝ TỰ 3 VÀ 4</b>.<br/>2. Nhập công thức: <b>=MID(B2,3,2)</b> (với B2 là ô chứa MÃ HÀNG).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Sử dụng hàm xử lý chuỗi là để ghép nối ký tự đầu và ký tự cuối của cột <b>MÃ HÀNG</b> điền vào cột <b>NỐI KÝ TỰ ĐẦU VÀ CUỐI</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>NỐI KÝ TỰ ĐẦU VÀ CUỐI</b>.<br/>2. Nhập công thức: <b>=LEFT(B2,1)&RIGHT(B2,1)</b> (với B2 là ô chứa MÃ HÀNG).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Viết biểu thức so sánh ký tự đầu của <b>MÃ HÀNG</b> có bằng ký tự 'A' hay không và điền vào cột <b>ĐK1</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>ĐK1</b>.<br/>2. Nhập công thức: <b>=LEFT(B2,1)=\"A\"</b> (với B2 là ô chứa MÃ HÀNG).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Viết biểu thức so sánh 2 ký tự thứ 3 và thứ 4 của <b>MÃ HÀNG</b> (chuyển sang dạng số) có bằng số 12 hay không và điền vào cột <b>ĐK2</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>ĐK2</b>.<br/>2. Nhập công thức: <b>=VALUE(MID(B2,3,2))=12</b> (với B2 là ô chứa MÃ HÀNG).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Sử dụng hàm luận lý để viết công thức cho cột <b>ĐK3</b> theo yêu cầu sau: 2 ký tự cuối của <b>MÃ HÀNG</b> bằng 42 và <b>SỐ LƯỢNG</b> lớn hơn hoặc bằng 50.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>ĐK3</b>.<br/>2. Nhập công thức: <b>=AND(VALUE(RIGHT(B2,2))=42,C2>=50)</b> (với B2 là MÃ HÀNG, C2 là SỐ LƯỢNG).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Sử dụng hàm luận lý để viết công thức cho cột <b>ĐK4</b> theo yêu cầu sau: <b>ĐƠN GIÁ</b> lớn hơn 500 và ký tự đầu của <b>MÃ HÀNG</b> bằng B.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>ĐK4</b>.<br/>2. Nhập công thức: <b>=AND(D2>500,LEFT(B2,1)=\"B\")</b> (với B2 là MÃ HÀNG, D2 là ĐƠN GIÁ).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         }
       ]
@@ -59,37 +59,37 @@
       "tasks": [
         {
           "question": "Thiết lập sao cho không hiển thị bộ lọc ở dòng tiêu đề của bảng (<b>Filter Button</b>).",
-          "answers": "",
+          "answers": "1. Chọn bảng dữ liệu cần ẩn bộ lọc.<br/>2. Vào thẻ <b>Data</b> trên Ribbon.<br/>3. Trong nhóm <b>Sort & Filter</b>, click vào <b>Filter</b> để bỏ chọn (tắt bộ lọc).<br/>4. Các mũi tên dropdown sẽ biến mất khỏi dòng tiêu đề.",
           "image": ""
         },
         {
           "question": "Tính cột <b>Tên hàng</b> sao cho: Nếu <b>Mã hàng</b> là 'AA' thì <b>Tên hàng</b> là 'Trà', ngược lại thì <b>Tên hàng</b> là 'Sữa'.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>Tên hàng</b>.<br/>2. Nhập công thức: <b>=IF(A2=\"AA\",\"Trà\",\"Sữa\")</b> (với A2 là ô chứa Mã hàng).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Tính cột <b>Đơn giá</b> sao cho: Nếu <b>Mã hàng</b> là 'A' thì <b>Đơn giá</b> là 2, ngược lại thì <b>Đơn giá</b> là 4.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>Đơn giá</b>.<br/>2. Nhập công thức: <b>=IF(A2=\"A\",2,4)</b> (với A2 là ô chứa Mã hàng).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>Trị giá</b> = <b>Số lượng</b> * <b>Đơn giá</b>.Nhưng nếu <b>Số lượng</b> lớn hơn 100 và <b>Mã hàng</b> là 'A' thì giảm 10% <b>Trị giá</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>Trị giá</b>.<br/>2. Nhập công thức: <b>=IF(AND(B2>100,A2=\"A\"),B2*C2*0.9,B2*C2)</b> (với A2 là Mã hàng, B2 là Số lượng, C2 là Đơn giá).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Dựa vào ô <b>tỉ giá USD</b> (ô G2) để tính <b>DOANH THU 2016 (VND)</b> và Hoàn chỉnh số liệu trên bảng thống kê.",
-          "answers": "",
+          "answers": "1. Click vào ô cần tính <b>DOANH THU 2016 (VND)</b>.<br/>2. Nhập công thức: <b>=E2*$G$2</b> (với E2 là doanh thu USD, G2 là tỉ giá USD có dấu $ để cố định).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Tạo <b>Alt Text</b> cho bảng kê doanh thu với tiêu đề là: 'ảng báo cáo doanh thu'.",
-          "answers": "",
+          "answers": "1. Click chuột phải vào bảng cần tạo Alt Text.<br/>2. Chọn <b>Table Properties</b> hoặc <b>Format Table</b>.<br/>3. Tìm mục <b>Alt Text</b> hoặc <b>Alternative Text</b>.<br/>4. Nhập tiêu đề: <b>Bảng báo cáo doanh thu</b>.<br/>5. Click <b>OK</b> để xác nhận.",
           "image": ""
         },
         {
           "question": "Tổng <b>trị giá</b> các mặt hàng có <b>số lượng</b> trên 100.",
-          "answers": "",
+          "answers": "1. Click vào ô cần tính tổng.<br/>2. Nhập công thức: <b>=SUMIF(B:B,\">100\",D:D)</b> (với B:B là cột Số lượng, D:D là cột Trị giá).<br/>3. Nhấn Enter để xác nhận kết quả.",
           "image": ""
         }
       ]
@@ -101,52 +101,52 @@
       "tasks": [
         {
           "question": "Thiết lập sao cho không hiển thị bộ lọc ở dòng tiêu đề của bảng (<b>Filter Button</b>).",
-          "answers": "",
+          "answers": "1. Chọn bảng dữ liệu cần ẩn bộ lọc.<br/>2. Vào thẻ <b>Data</b> trên Ribbon.<br/>3. Trong nhóm <b>Sort & Filter</b>, click vào <b>Filter</b> để bỏ chọn (tắt bộ lọc).<br/>4. Các mũi tên dropdown sẽ biến mất khỏi dòng tiêu đề.",
           "image": ""
         },
         {
-          "question": "<b>TÊN MÔN</b>: Nếu ký tự đầu của <b>MÃ SỐ MÔN THI</b> là ‘A’ thì <b>TÊN MÔN</b> là ‘WORD’, ngược lại là ‘EXCEL’.",
-          "answers": "",
+          "question": "<b>TÊN MÔN</b>: Nếu ký tự đầu của <b>MÃ SỐ MÔN THI</b> là 'A' thì <b>TÊN MÔN</b> là 'WORD', ngược lại là 'EXCEL'.",
+          "answers": "1. Click vào ô đầu tiên của cột <b>TÊN MÔN</b>.<br/>2. Nhập công thức: <b>=IF(LEFT(A2,1)=\"A\",\"WORD\",\"EXCEL\")</b> (với A2 là ô chứa MÃ SỐ MÔN THI).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
-          "question": "<b>ĐIỂM THÊM</b>: Nếu ký tự cuối của <b>MÃ SỐ MÔN THI</b> là ‘1’ thì <b>ĐIỂM THÊM</b> là 1, ngược lại là 0.  ",
-          "answers": "",
+          "question": "<b>ĐIỂM THÊM</b>: Nếu ký tự cuối của <b>MÃ SỐ MÔN THI</b> là '1' thì <b>ĐIỂM THÊM</b> là 1, ngược lại là 0.  ",
+          "answers": "1. Click vào ô đầu tiên của cột <b>ĐIỂM THÊM</b>.<br/>2. Nhập công thức: <b>=IF(RIGHT(A2,1)=\"1\",1,0)</b> (với A2 là ô chứa MÃ SỐ MÔN THI).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>TỔNG CỘNG</b> = <b>ĐIỂM</b> + <b>ĐIỂM THÊM</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>TỔNG CỘNG</b>.<br/>2. Nhập công thức: <b>=C2+D2</b> (với C2 là ĐIỂM, D2 là ĐIỂM THÊM).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
-          "question": "<b>KẾT QUẢ</b>: Nếu <b>TỔNG CỘNG</b> > 5 thì ghi ‘Qua môn’, ngược lại ghi ‘Không’.Thêm 1 cột phía trước cột <b>HỌ VÀ TÊN</b> và đặt tên cột mới thêm này là <b>HỌ TÊN ĐÚNG</b>.",
-          "answers": "",
+          "question": "<b>KẾT QUẢ</b>: Nếu <b>TỔNG CỘNG</b> > 5 thì ghi 'Qua môn', ngược lại ghi 'Không'.Thêm 1 cột phía trước cột <b>HỌ VÀ TÊN</b> và đặt tên cột mới thêm này là <b>HỌ TÊN ĐÚNG</b>.",
+          "answers": "1. Click vào ô đầu tiên của cột <b>KẾT QUẢ</b>.<br/>2. Nhập công thức: <b>=IF(E2>5,\"Qua môn\",\"Không\")</b> (với E2 là TỔNG CỘNG).<br/>3. Nhấn Enter và kéo công thức xuống.<br/>4. Click chuột phải vào cột <b>HỌ VÀ TÊN</b>, chọn <b>Insert</b>.<br/>5. Đặt tên cột mới là <b>HỌ TÊN ĐÚNG</b>.",
           "image": ""
         },
         {
           "question": "Điền thông tin cho cột <b>HỌ TÊN ĐÚNG</b> bằng cách dùng hàm đổi thông tin trong cột <b>HỌ TÊN</b> sao cho kí tự đầu của mỗi từ in hoa, các kí tự còn lại của mỗi từ in thường.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>HỌ TÊN ĐÚNG</b>.<br/>2. Nhập công thức: <b>=PROPER(B2)</b> (với B2 là ô chứa HỌ TÊN gốc).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Bỏ bớt các dòng dữ liệu bị trùng <b>Họ và tên</b> trong khối ô <b>A3:I12</b>.",
-          "answers": "",
+          "answers": "1. Chọn vùng dữ liệu <b>A3:I12</b>.<br/>2. Vào thẻ <b>Data</b> trên Ribbon.<br/>3. Trong nhóm <b>Data Tools</b>, click <b>Remove Duplicates</b>.<br/>4. Chọn cột <b>Họ và tên</b> làm tiêu chí.<br/>5. Click <b>OK</b> để xóa các dòng trùng lặp.",
           "image": ""
         },
         {
           "question": "Chuyển đổi bảng về dạng khối ô và giữ nguyên các định dạng khác.",
-          "answers": "",
+          "answers": "1. Chọn toàn bộ bảng dữ liệu.<br/>2. Vào thẻ <b>Table Design</b> (hoặc <b>Design</b>).<br/>3. Trong nhóm <b>Tools</b>, click <b>Convert to Range</b>.<br/>4. Click <b>Yes</b> để xác nhận chuyển đổi về dạng khối ô thông thường.",
           "image": ""
         },
         {
           "question": "Hoàn chỉnh số liệu trên các bảng thống kê. ",
-          "answers": "",
+          "answers": "1. Sử dụng các hàm thống kê như <b>COUNT</b>, <b>SUM</b>, <b>AVERAGE</b>.<br/>2. Áp dụng công thức tương ứng cho từng ô trong bảng thống kê.<br/>3. Ví dụ: <b>=COUNT(C:C)</b> để đếm số thí sinh, <b>=AVERAGE(C:C)</b> để tính điểm trung bình.<br/>4. Cập nhật tất cả các giá trị thống kê cần thiết.",
           "image": ""
         },
         {
           "question": "Xác định số thí sinh có <b>điểm</b> từ 5 trở lên.",
-          "answers": "",
+          "answers": "1. Click vào ô cần hiển thị kết quả.<br/>2. Nhập công thức: <b>=COUNTIF(C:C,\">=5\")</b> (với C:C là cột ĐIỂM).<br/>3. Nhấn Enter để xác nhận kết quả.",
           "image": ""
         }
       ]
@@ -158,35 +158,34 @@
       "tasks": [
         {
           "question": "<b>Số ngày ở</b> = <b>Ngày đi</b> - <b>Ngày đến</b>, nhưng nếu <b>Ngày đi</b> = <b>Ngày đến</b> thì <b>Số ngày ở</b> là 1.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>Số ngày ở</b>.<br/>2. Nhập công thức: <b>=IF(C2=D2,1,D2-C2)</b> (với C2 là Ngày đến, D2 là Ngày đi).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
-          "question": "<b>Tiền phòng</b> = <b>Số ngày ở</b> * <b>Đơn giá phòng</b>. Với <b>Đơn giá phòng</b> được tính là: Nếu 2 ký tự đầu của <b>Mã phòng</b> là ‘L1’ thì <b>Đơn giá phòng</b> là 300000, ngược lại là 200000.",
-          "answers": "",
+          "question": "<b>Tiền phòng</b> = <b>Số ngày ở</b> * <b>Đơn giá phòng</b>. Với <b>Đơn giá phòng</b> được tính là: Nếu 2 ký tự đầu của <b>Mã phòng</b> là 'L1' thì <b>Đơn giá phòng</b> là 300000, ngược lại là 200000.",
+          "answers": "1. Click vào ô đầu tiên của cột <b>Tiền phòng</b>.<br/>2. Nhập công thức: <b>=E2*IF(LEFT(B2,2)=\"L1\",300000,200000)</b> (với B2 là Mã phòng, E2 là Số ngày ở).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>Giảm giá</b> được tính như sau: Nếu <b>Ngày đến</b> trước ngày 2/9/2016 và ký tự thứ 3 của <b>Mã phòng</b> là A thì giảm 10% <b>Tiền phòng</b>. ",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>Giảm giá</b>.<br/>2. Nhập công thức: <b>=IF(AND(C2<DATE(2016,9,2),MID(B2,3,1)=\"A\"),F2*0.1,0)</b> (với C2 là Ngày đến, B2 là Mã phòng, F2 là Tiền phòng).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>Tổng thu</b> = <b>Tiền phòng</b> - <b>Giảm giá</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>Tổng thu</b>.<br/>2. Nhập công thức: <b>=F2-G2</b> (với F2 là Tiền phòng, G2 là Giảm giá).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
-          "question": "<b>Ghi chú</b> hiển thị chuỗi ‘Có’ nếu <b>Số ngày ở</b> lớn hơn 5, ngược lại hiển thị chuỗi ‘Không’.",
-          "answers": "",
+          "question": "<b>Ghi chú</b> hiển thị chuỗi 'Có' nếu <b>Số ngày ở</b> lớn hơn 5, ngược lại hiển thị chuỗi 'Không'.",
+          "answers": "1. Click vào ô đầu tiên của cột <b>Ghi chú</b>.<br/>2. Nhập công thức: <b>=IF(E2>5,\"Có\",\"Không\")</b> (với E2 là Số ngày ở).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Hoàn chỉnh số liệu trên các bảng thống kê.",
-          "answers": "",
+          "answers": "1. Sử dụng các hàm thống kê như <b>SUM</b>, <b>COUNT</b>, <b>AVERAGE</b>.<br/>2. Áp dụng công thức tương ứng cho từng ô trong bảng thống kê.<br/>3. Ví dụ: <b>=SUM(H:H)</b> để tính tổng doanh thu, <b>=COUNT(A:A)</b> để đếm số khách hàng.<br/>4. Cập nhật tất cả các giá trị thống kê cần thiết.",
           "image": ""
         }
-      
       ]
     }
   ]

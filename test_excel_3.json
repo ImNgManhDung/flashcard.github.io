@@ -7,27 +7,27 @@
       "tasks": [
         {
           "question": "Điền <b>STT</b> cho bảng <b>DANH SÁCH THI TUYỂN</b> trong khối ô <b>A6:A10</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô <b>A6</b>.<br/>2. Nhập số <b>1</b>.<br/>3. Click vào ô <b>A7</b> và nhập số <b>2</b>.<br/>4. Chọn cả hai ô <b>A6:A7</b>.<br/>5. Kéo xuống đến ô <b>A10</b> để tự động điền STT từ 1 đến 5.",
           "image": ""
         },
         {
           "question": "<b>ĐIỂM THÊM</b>: Nếu thí sinh được sinh sau ngày 1/1/2001 thì <b>Điểm thêm</b> là 1, ngược lại <b>Điểm thêm</b> là 0. ",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>ĐIỂM THÊM</b>.<br/>2. Nhập công thức: <b>=IF(C6>DATE(2001,1,1),1,0)</b> (với C6 là ô chứa ngày sinh).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Xếp loại cho thí sinh dựa vào <b>ĐTB</b>, tra cứu trong <b>BẢNG XẾP LOẠI</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>XẾP LOẠI</b>.<br/>2. Nhập công thức: <b>=VLOOKUP(E6,$H$3:$I$6,2,TRUE)</b> (với E6 là điểm trung bình, H3:I6 là vùng bảng xếp loại).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Nhập công thức cho cột <b>XẾP HẠNG</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>XẾP HẠNG</b>.<br/>2. Nhập công thức: <b>=RANK(E6,$E$6:$E$10,0)</b> (với E6 là điểm trung bình cần xếp hạng, E6:E10 là vùng điểm so sánh).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Hoàn chỉnh số liệu bảng <b>THỐNG KÊ SỐ THÍ SINH</b>.",
-          "answers": "",
+          "answers": "1. Sử dụng hàm <b>COUNTIF</b> để đếm số thí sinh theo từng loại.<br/>2. Ví dụ: <b>=COUNTIF(F6:F10,\"Xuất sắc\")</b> để đếm số thí sinh xuất sắc.<br/>3. Tương tự cho các loại khác: <b>=COUNTIF(F6:F10,\"Giỏi\")</b>, <b>=COUNTIF(F6:F10,\"Khá\")</b>.<br/>4. Cập nhật tất cả các ô trong bảng thống kê.",
           "image": ""
         }
       ]
@@ -39,37 +39,37 @@
       "tasks": [
         {
           "question": "<b>TÊN SP</b>: Dựa vào <b>MÃ SP</b>, tra cứu trong bảng <b>SẢN PHẨM</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>TÊN SP</b>.<br/>2. Nhập công thức: <b>=VLOOKUP(B5,$F$5:$G$8,2,FALSE)</b> (với B5 là mã sản phẩm, F5:G8 là bảng sản phẩm).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>ĐƠN GIÁ</b>: Dựa vào <b>MÃ SP</b>, tra cứu trong bảng <b>SẢN PHẨM</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>ĐƠN GIÁ</b>.<br/>2. Nhập công thức: <b>=VLOOKUP(B5,$F$5:$H$8,3,FALSE)</b> (với B5 là mã sản phẩm, F5:H8 là bảng sản phẩm có cột đơn giá).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>KHUYẾN MÃI</b>: Dựa vào <b>số lượng</b>, tra cứu trong <b>BẢNG KHUYẾN MÃI</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>KHUYẾN MÃI</b>.<br/>2. Nhập công thức: <b>=VLOOKUP(D5,$J$5:$K$8,2,TRUE)</b> (với D5 là số lượng, J5:K8 là bảng khuyến mãi).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>THÀNH TIỀN</b> = (<b>SỐ LƯỢNG</b> - <b>KHUYẾN MÃI</b>) * <b>ĐƠN GIÁ</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>THÀNH TIỀN</b>.<br/>2. Nhập công thức: <b>=(D5-F5)*E5</b> (với D5 là số lượng, F5 là khuyến mãi, E5 là đơn giá).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "Tính <b>Tổng cộng thành tiền</b> mà khách hàng phải trả.",
-          "answers": "",
+          "answers": "1. Click vào ô cần hiển thị tổng cộng.<br/>2. Nhập công thức: <b>=SUM(G5:G8)</b> (với G5:G8 là vùng cột thành tiền).<br/>3. Nhấn Enter để xác nhận kết quả tổng cộng.",
           "image": ""
         },
         {
           "question": "Hoàn chỉnh số liệu bảng <b>THỐNG KÊ TỔNG THÀNH TIỀN</b>.",
-          "answers": "",
+          "answers": "1. Sử dụng hàm <b>SUMIF</b> để tính tổng theo từng sản phẩm.<br/>2. Ví dụ: <b>=SUMIF(C5:C8,\"Tên sản phẩm\",G5:G8)</b>.<br/>3. Hoặc sử dụng <b>SUM</b> cho tổng cộng: <b>=SUM(G5:G8)</b>.<br/>4. Cập nhật tất cả các giá trị trong bảng thống kê.",
           "image": ""
         },
         {
           "question": "Hiển thị các <b>công thức</b> thay vì giá trị của chúng.",
-          "answers": "",
+          "answers": "1. Nhấn tổ hợp phím <b>Ctrl + `</b> (dấu backtick).<br/>2. Hoặc vào thẻ <b>Formulas</b> trên Ribbon.<br/>3. Trong nhóm <b>Formula Auditing</b>, click <b>Show Formulas</b>.<br/>4. Các công thức sẽ hiển thị thay vì kết quả tính toán.",
           "image": ""
         }
       ]
@@ -81,22 +81,22 @@
       "tasks": [
         {
           "question": "Định dạng dòng 3 có độ cao là 30.",
-          "answers": "",
+          "answers": "1. Click chuột phải vào số dòng <b>3</b> để chọn toàn bộ dòng.<br/>2. Chọn <b>Row Height</b> từ menu ngữ cảnh.<br/>3. Nhập giá trị <b>30</b> trong hộp thoại.<br/>4. Click <b>OK</b> để áp dụng.",
           "image": ""
         },
         {
           "question": "<b>ĐỊNH MỨC</b> và <b>GIÁ CƯỚC</b>: dựa vào ký tự thứ 2 của <b>LOẠI HÀNG</b> và <b>BẢNG ĐỊNH MỨC VÀ GIÁ CƯỚC</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>ĐỊNH MỨC</b>.<br/>2. Nhập công thức: <b>=VLOOKUP(MID(C3,2,1),$G$3:$I$5,2,FALSE)</b> (với C3 là loại hàng, G3:I5 là bảng tra cứu).<br/>3. Cho cột <b>GIÁ CƯỚC</b>: <b>=VLOOKUP(MID(C3,2,1),$G$3:$I$5,3,FALSE)</b>.<br/>4. Kéo công thức xuống các ô bên dưới.",
           "image": ""
         },
         {
           "question": "<b>TIỀN PHẠT</b>: được tính như sau: <br> Nếu <b>TRỌNG LƯỢNG</b> > <b>ĐỊNH MỨC</b> và tháng vận chuyển sau tháng 9 thì<b>TIỀN PHẠT</b> = (<b>TRỌNG LƯỢNG</b> - <b>ĐỊNH MỨC</b>) * 20% * <b>GIÁ CƯỚC</b>. <br> Ngược lại: <b>TIỀN PHẠT</b> = 0.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>TIỀN PHẠT</b>.<br/>2. Nhập công thức: <b>=IF(AND(D3>E3,MONTH(B3)>9),(D3-E3)*0.2*F3,0)</b>.<br/>3. Với D3 là trọng lượng, E3 là định mức, B3 là ngày vận chuyển, F3 là giá cước.<br/>4. Kéo công thức xuống các ô bên dưới.",
           "image": ""
         },
         {
           "question": "<b>THÀNH TIỀN</b> = (<b>GIÁ CƯỚC</b> + <b>TIỀN PHẠT</b>) * <b>Tỷ giá USD</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>THÀNH TIỀN</b>.<br/>2. Nhập công thức: <b>=(F3+G3)*$K$3</b> (với F3 là giá cước, G3 là tiền phạt, K3 là tỷ giá USD có dấu $ cố định).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         }
       ]
@@ -108,37 +108,37 @@
       "tasks": [
         {
           "question": "<b>MẶT HÀNG</b>: Dựa vào 2 ký tự đầu của <b>MÃ MH</b>, tra cứu ở <b>BẢNG ĐƠN GIÁ</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>MẶT HÀNG</b>.<br/>2. Nhập công thức: <b>=VLOOKUP(LEFT(B3,2),$G$3:$I$6,2,FALSE)</b> (với B3 là mã mặt hàng, G3:I6 là bảng đơn giá).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>ĐƠN GIÁ</b>: Dựa vào 2 ký tự đầu của <b>MÃ MH</b>, tra cứu ở <b>BẢNG ĐƠN GIÁ</b>.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>ĐƠN GIÁ</b>.<br/>2. Nhập công thức: <b>=VLOOKUP(LEFT(B3,2),$G$3:$I$6,3,FALSE)</b> (với B3 là mã mặt hàng, G3:I6 là bảng đơn giá).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>PHÍ CHUYÊN CHỞ</b>: = 1% <b>ĐƠN GIÁ</b> đối với mặt hàng Loại 1 và 5% <b>ĐƠN GIÁ</b> đối với mặt hàng Loại 2  ",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>PHÍ CHUYÊN CHỞ</b>.<br/>2. Nhập công thức: <b>=IF(D3=\"Loại 1\",E3*0.01,E3*0.05)</b> (với D3 là loại mặt hàng, E3 là đơn giá).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>THÀNH TIỀN</b> = <b>SỐ LƯỢNG</b> * (<b>ĐƠN GIÁ</b> + <b>PHÍ CHUYÊN CHỞ</b>). <br>  ",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>THÀNH TIỀN</b>.<br/>2. Nhập công thức: <b>=C3*(E3+F3)</b> (với C3 là số lượng, E3 là đơn giá, F3 là phí chuyên chở).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>TỔNG CỘNG</b> = <b>THÀNH TIỀN</b> - <b>TIỀN GIẢM</b>. <b>TIỀN GIẢM</b> được tính như sau: Nếu <b>THÀNH TIỀN</b> >= 1000 và hàng được bán trước ngày 1/1/2015 thì <b>TIỀN GIẢM</b> = 1% <b>THÀNH TIỀN</b>, ngược lại <b>TIỀN GIẢM</b> bằng 0.  ",
-          "answers": "",
+          "answers": "1. Tạo cột phụ <b>TIỀN GIẢM</b> với công thức: <b>=IF(AND(G3>=1000,A3<DATE(2015,1,1)),G3*0.01,0)</b>.<br/>2. Click vào ô đầu tiên của cột <b>TỔNG CỘNG</b>.<br/>3. Nhập công thức: <b>=G3-H3</b> (với G3 là thành tiền, H3 là tiền giảm).<br/>4. Kéo công thức xuống các ô bên dưới.",
           "image": ""
         },
         {
           "question": "Định dạng thông tin trên cột <b>THÀNH TIỀN</b> và cột <b>TỔNG CỘNG</b> có dạng <b>Currency</b> với 1 số lẻ ở phần thập phân.",
-          "answers": "",
+          "answers": "1. Chọn cột <b>THÀNH TIỀN</b> và <b>TỔNG CỘNG</b>.<br/>2. Click chuột phải và chọn <b>Format Cells</b>.<br/>3. Trong tab <b>Number</b>, chọn <b>Currency</b>.<br/>4. Đặt <b>Decimal places</b> = <b>1</b>.<br/>5. Click <b>OK</b> để áp dụng.",
           "image": ""
         },
         {
           "question": "Hoàn chỉnh số liệu trên các <b>BẢNG THỐNG KÊ</b>.",
-          "answers": "",
+          "answers": "1. Sử dụng các hàm thống kê như <b>SUM</b>, <b>COUNT</b>, <b>AVERAGE</b>.<br/>2. Ví dụ: <b>=SUM(I3:I6)</b> để tính tổng doanh thu.<br/>3. <b>=COUNT(B3:B6)</b> để đếm số mặt hàng.<br/>4. <b>=COUNTIF(D3:D6,\"Loại 1\")</b> để đếm theo loại.<br/>5. Cập nhật tất cả các giá trị thống kê cần thiết.",
           "image": ""
         }
       ]
@@ -150,22 +150,22 @@
       "tasks": [
         {
           "question": "<b>SỐ NGÀY Ở</b> = <b>NGÀY ĐI</b> - <b>NGÀY ĐẾN</b>, nhưng nếu <b>NGÀY ĐI</b> = <b>NGÀY ĐẾN</b> thì <b>SỐ NGÀY Ở</b> = 1.",
-          "answers": "",
+          "answers": "1. Click vào ô đầu tiên của cột <b>SỐ NGÀY Ở</b>.<br/>2. Nhập công thức: <b>=IF(D3=E3,1,E3-D3)</b> (với D3 là ngày đến, E3 là ngày đi).<br/>3. Nhấn Enter để xác nhận.<br/>4. Kéo công thức xuống các ô bên dưới để áp dụng cho toàn bộ dữ liệu.",
           "image": ""
         },
         {
           "question": "<b>TIỀN PHÒNG</b> = <b>SỐ NGÀY Ở</b> * <b>ĐƠN GIÁ PHÒNG</b>. Trong đó: <b>ĐƠN GIÁ PHÒNG</b> dựa vào <b>MÃ PHÒNG</b> (LẦU và LOẠI PHÒNG) và tra trong <b>BẢNG ĐƠN GIÁ PHÒNG</b>.",
-          "answers": "",
+          "answers": "1. Tạo cột phụ <b>ĐƠN GIÁ PHÒNG</b> với công thức tra cứu.<br/>2. Sử dụng: <b>=INDEX($I$3:$K$5,MATCH(LEFT(C3,1),$H$3:$H$5,0),MATCH(RIGHT(C3,1),$I$2:$K$2,0))</b>.<br/>3. Click vào ô <b>TIỀN PHÒNG</b>: <b>=F3*G3</b> (với F3 là số ngày ở, G3 là đơn giá phòng).<br/>4. Kéo công thức xuống các ô bên dưới.",
           "image": ""
         },
         {
           "question": "Định dạng cột <b>TIỀN PHÒNG</b> có dạng <b>Accounting</b> với 1 số lẻ ở phần thập phân.",
-          "answers": "",
+          "answers": "1. Chọn toàn bộ cột <b>TIỀN PHÒNG</b>.<br/>2. Click chuột phải và chọn <b>Format Cells</b>.<br/>3. Trong tab <b>Number</b>, chọn <b>Accounting</b>.<br/>4. Đặt <b>Decimal places</b> = <b>1</b>.<br/>5. Click <b>OK</b> để áp dụng định dạng.",
           "image": ""
         },
         {
           "question": "Hoàn chỉnh số liệu trên các <b>BẢNG THỐNG KÊ</b>.",
-          "answers": "",
+          "answers": "1. Sử dụng các hàm thống kê phù hợp.<br/>2. <b>=SUM(H3:H7)</b> để tính tổng doanh thu.<br/>3. <b>=COUNT(B3:B7)</b> để đếm số khách hàng.<br/>4. <b>=AVERAGE(H3:H7)</b> để tính trung bình tiền phòng.<br/>5. <b>=COUNTIF(C3:C7,\"L1*\")</b> để đếm theo loại phòng.<br/>6. Cập nhật tất cả các giá trị thống kê cần thiết.",
           "image": ""
         }
       ]
