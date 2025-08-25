@@ -783,7 +783,7 @@
             quizData.projects.forEach((project, index) => {
                 const option = document.createElement('div');
                 option.className = 'project-option';
-                option.textContent = `Project ${index + 1}: ${project.name || 'bai ' + (index + 1)}`;
+                option.textContent = `P${index + 1}: ${project.title || 'bai ' + (index + 1)}`;
                 option.onclick = () => selectProject(index + 1);
                 dropdown.appendChild(option);
             });

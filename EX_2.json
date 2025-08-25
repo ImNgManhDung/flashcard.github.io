@@ -6,7 +6,7 @@
         "ForestNursery.xlsx",
         "Fudge.xlsx",
         "GameStore.xlsx",
-        "GameStore.xlsx",
+        "MusicStore.xlsx",
         "GrainProduction.xlsx",
         "IceCream.xlsx",
         "LunchTrucks.xlsx"
@@ -127,53 +127,27 @@
       "title": "GrainProduction",
       "tasks": [
         {
-          "question": "",
-          "answers": "",
+          
+
+
+
+          "question": "Trên trang tính 'Invoice'  mỗi đơn hàng được giảm 15%  hãy tính giá giảm (Discount) cho các đơn hàng. ",
+          "answers": "1. Chọn trang tính <b>Invoice</b>  <br/>2. Nhập công thức sau vào o E4:<b> =[@Amount]*15%</b>",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Kiểm tra khả năng truy nhập của các trang tính. Sửa lỗi bằng cách thêm Title của Alt Text là <u>'Grain Production'</u> cho 'Diagram Invoice'   không chỉnh sửa các cảnh báo.",
+          "answers": "1. Chọn tab File  trong nhóm chức năng <b>Inspect Workbook</b>  chọn <b>Check Accessibility</b>.  <br/>2. Trong hộp thoại <b>Accessibility Checker</b>  chọn <b>Diagram Invoice</b>  <br/>3. Click chuột phải vào đối tượng được chọn  chọn <b>Alt Text</b>  <br/>4. Nhập <b>Grain Production</b> vào phần <b>Alt Text</b>.",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Grain Production'  nhập công thức để tính tổng giá trị của các sản phẩm tương ứng vào ô E4:I4",
+          "answers": "1. Chọn trang tính <b>Grain Production</b><br/>2. Nhập công thức sau: <b>=SUMIF(Table2[Product] E3 Table2[Metric Tons])</b> vào ô E4.<br/>3. Sau đó sao chép công thức sang F4:I4. Copy ô E4 chọn vùng F4:I4 chuột phải -> Paste Special -> Formulas.",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
+          "question": "Kiểm tra thông tin cá nhân và xóa thuộc tính của sổ tính. ",
+          "answers": "1. Chọn tab <b>File</b>  trong nhóm chức năng <b>Inspect Workbook</b>  chọn <b>Inspec Document</b>.  <br/>2. Trong hộp thoại <b>Document Inspector</b>  nhấn Inspect. Cuộn con chuột để tìm dòng <b>Document Properties and Personal Information</b> và nhấn <b>Remove All</b>. Sau đó nhấn Close.",
           "image": ""
         }
       ]

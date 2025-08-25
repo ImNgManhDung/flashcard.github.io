@@ -2,57 +2,37 @@
   "projects": [
     {
       "id": 1,
-      "projectfile": [],
-      "title": "Project 1",
+      "projectfile": [
+
+"NetworkHardware.xlsx",
+"PoliceAuction.xlsx",
+"RockCrawlingTrails.xlsx",
+"SCUBAGearRental.xlsx",
+"Sports.xlsx",
+"TacoStands.xlsx"
+
+      ],
+      "title": "NetworkHardware",
       "tasks": [
         {
-          "question": "https://drive.google.com/file/d/1LCQrqYTAHe9J4f0j2AtSdchGNDhZV3pA/view?usp=sharing",
-          "answers": "",
+         
+          "question": " Sử dụng tính năng sao chép công thức của Excel để sao chép công thức trong ô F5 xuống khối ô F6:F15.",
+          "answers": "1. Click chọn ô F <br/>5. Nhấn Ctrl + C   <br/>2. Chọn vùng ô F6:F1 <br/>5. Click chuột phải lên vùng ô vừa chọn  chọn <b>Paste Special...</b>  <br/>3. Trong hộp thoại <b>Paste Special</b> chọn Formulas  nhấn OK.",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trong ô C16  sử dụng hàm xác định giá trị lớn nhất trong các ô C5:C15  sau đó sao chép công thức xuống khối ô D16:F16.",
+          "answers": "1. Nhập công thức tại ô C16 như sau: <b>=MAX(C5:C15)</b>  <br/>2. Sau đó áp dụng tự động điền sang từ ô C16 sang khối ô D16:F16",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trong ô E29  sử dụng hàm xác định giá trị nhỏ nhất trong các ô E20:E28.",
+          "answers": "1. Nhập công thức tại ô E29 như sau: <b>=MIN(E20:E28)</b>",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
+          "question": "Chèn hình trong tập tin <i>iNetworkTopology.png</i> trong folder <i>PiMOS</i> của thư mục <i>Documents</i> vào ô A1.",
+          "answers": "1. Chọn ô A1  <br/>2. Chọn tab <b>Insert</b>  trong nhóm chức năng <b>IILustrations</b>  chọn chức năng <b>Pictures</b>.  <br/>3. Tìm đến file <b>iNetwordTopology.png</b> và nhấn OK",
           "image": ""
         }
       ]
@@ -60,56 +40,32 @@
     {
       "id": 2,
       "projectfile": [],
-      "title": "Project 2",
+      "title": "PoliceAuction",
       "tasks": [
-        {
-          "question": "",
-          "answers": "",
+        {         
+
+          "question": "Trên trang tính 'Sold'  sử dụng công cụ của Excel để gỡ bỏ tất cả những bản ghi có giá trị 'Lot #' trùng nhau. Không gỡ bỏ các bản ghi khác. ",
+          "answers": "1. Chọn trang tính <b>Sold</b>  click vào vùng dữ liệu  <br/>2. Chọn tab <b><b>Data</b></b>  trong nhóm chức năng <b><b>Data</b> Tools</b>  chọn chức năng <b>Remove Duplicates</b>.  <br/>3. Chọn cột <b>Lot #</b> và nhấn Ok",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Sold'  định dạng bảng 'Police Auction' sao cho các dòng cách dòng được tô bóng. Sử dụng kỹ thuật tự động để các dòng thêm mới tự cập nhật định dạng.",
+          "answers": "1. Chọn trang tính <b>Sold</b>  click vào bảng <b>Police Auction</b>.  <br/>2. Chọn tab <b>Desgin</b>  <br/>3. Trong nhóm chức năng <b>Table Style Options</b>  chọn chức năng <b><b>Banded Row</b>s</b>",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Vehicles'  định dạng những ô trong cột 'Price' có giá trị trên trung bình với kiểu định dạng 'Green Fill with Dark Green Text'. Sử dụng kỹ thuật để tự động cập nhật định dạng khi giá trị thay đổi.",
+          "answers": "1. Chọn trang tính <b>Vehicles</b>  chọn vùng ô <b>G4:G17</b>   <br/>2. Chọn tab <b><b>Home</b></b>  trong nhóm chức năng <b>Styles</b>  chọn chức năng <b>Conditional Formatting</b>.  <br/>3. Chọn Top/Bottom Rules -> Above Average  <br/>4. Trong hộp thoại Above Average  chọn Green Fill with Dark Green Text",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Vehicles'  tại ô B4 trong cột 'Code'  điền công thức để trả về 2 kí tự ngoài cùng bên trái của cột 'Style' trong ô D4. Sau đó tự động điền công thức xuống đến ô B17",
+          "answers": "1. Chọn trang tính Vehicles  <br/>2. Tại ô B4 nhập công thức: =LEFT(D4 2)  sau đó áp dụng tự động điền xuống ô B17",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Sold'  sắp xếp bảng trên cột 'Item Type' với thứ tự 'Appliance' xuất hiện trước rồi tới 'Furniture'. Sau đó sắp xếp theo thứ tự bảng chữ cái (từ A đến Z) trên cột  'Description'. Cuối cùng  sắp xếp theo thứ tự tăng dần trên cột 'Price'.",
+          "answers": "1. Chọn trang tính Sold  <br/>2. Chọn tab <b>Home</b>  trong nhóm chức năng <b>Editting</b>  chọn <b>Sort & Filter</b>  sau đó chọn <b>Custom Sort…</b>  <br/>3. Ở dòng đầu tiên:<br >  - Sort by: <b>Item Type</b>  - Sort on: <b><b>Values</b></b>  - Order: <b><b>Custom List…</b></b>  sau đó nhập <b>Appliance</b>  nhấn Enter rồi nhập tiếp <b>Furniture</b>. Sau đó nhấn <b>Add</b> và nhấn <b>Ok</b>. <br/>4. Nhấn <b>Add Level</b><br/>5. Ở dòng vừa thêm vào chọn như sau:   - Sort by: <b>Description</b>  - Sort on: <b>Values</b>  - Order: <b>A to Z</b>  <br/>6. Nhấn<b> Add Level</b>  <br/>7.  Ở dòng vừa thêm vào chọn như sau:   - Sort by: <b>Price </b> - Sort on: <b>Values</b>  - Order: <b>Smallest to Largest</b>",
           "image": ""
         }
       ]
@@ -117,56 +73,31 @@
     {
       "id": 3,
       "projectfile": [],
-      "title": "Project 3",
+      "title": "RockCrawlingTrails",
       "tasks": [
-        {
-          "question": "",
-          "answers": "",
+        {       
+          "question": "Trên trang tính 'Rock Crawling'  vẽ 1 biểu đồ mới dạng '3-D Pie' cho cột 'Trail'  và cột  'Apr'  sau đó di chuyển biểu đồ xuống dưới bảng dữ liệu và bên phải của biểu đồ còn lại. ",
+          "answers": "1. Chọn trang tính <b>Rock Crawling</b>  <br/>2. Chọn cột Trail  nhấn giữ Ctrl  sau đó chọn tiếp cột Apr.  <br/>3. Vào tab <b>Insert</b>  trong nhóm chức năng Charts  chọn biểu đồ 3-D Pie trong <b>Insert</b> Pie or Doughnut Chart.  <br/>4. Kéo biểu đồ vừa tạo xuống dưới bảng dữ liệu và nằm bên phải biểu đồ còn lại",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Rock Crawling'  thêm tiêu đề cho biểu đồ cột có sẵn với nội dung tiêu đề là <u>'Moab Trails Successful Attempts'</u>. ",
+          "answers": "1. Chọn trang tính <b>Rock Crawling</b>  <br/>2. Chọn biểu đồ có sẵn  chọn tab <b>Design</b>  trong nhóm chức năng <b>Chart Layouts</b>  click vào <b>Add Chart Element</b>  sau đó chọn <b>Chart Title -> Above Chart</b> (hoặc Centered Overlay)  <br/>3. Nhập <b>MoabTrails Successful Attempts<b> vào hộp thoại <b>Chart title</b>",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Thêm dòng mới tự động tính tổng cột Total trên trang tính 'Moab'.",
+          "answers": "1. Chọn trang tính <b>Moab</b>  <br/>2. Click vào ô bất kì trong bảng  chọn tab <b>Design</b>. Trong nhóm chức năng Table Style Option  chọn chức năng Total Row",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Moab'  nhập công thức vào B16:D16 để trả về giá trị lớn nhất các tháng từ tháng một đến tháng ba.",
+          "answers": "1. Chọn trang tính <b>Moab</b>  <br/>2. Nhập công thức tại ô B16 là: <b>=MAX(B10:B14) </b> <br/>3. Áp dụng tự động điền sang từ ô B16 tới ô D16",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Rock Crawling'  tạo nhãn trục dọc dạng Vertical Title với nội dung ' Total' và nhãn trục ngang với tên là 'Trail' cho biểu đồ cột có sẵn. ",
+          "answers": "1. Chọn trang tính <b>Rock Crawling</b>  <br/>2. Chọn biểu đồ có sẵn  chọn tab <b>Design</b>  trong nhóm chức năng Chart Layouts  click vào <b>Add Chart Element</b>  sau đó chọn <b>Axis Titles -> Primary Vertical</b>  <br/>3. Nhập Total vào nhãn trục dọc mới tạo.  <br/>4. Chọn biểu đồ có sẵn  chọn tab <b>Design</b>  trong nhóm chức năng Chart Layouts  click vào Add Chart Element  sau đó chọn Axis Titles -> Primary Horizontal  <br/>5. Nhập Total Trail nhãn trục ngang mới tạo.",
           "image": ""
         }
       ]
@@ -174,56 +105,36 @@
     {
       "id": 4,
       "projectfile": [],
-      "title": "Project 4",
+      "title": "4",
       "tasks": [
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Accessory'  chèn nội dung tập tin <i>MoreToys.csv</i> nằm trong thư mục <i>PiMOS</i> của thư mục <i>Documents</i> vào vị trí ô A16. Chọn dấu phân cách là dấu phẩy (comma) (Chấp nhận tất cả các mặc định khác). ",
+          "answers": "1. Chọn trang tính Accessory  <br/>2. Chọn ô A1 <br/>3. Chọn tab <b>Data</b>  trong nhóm chức năng <b>Get External Data</b>  chọn <b>From Text</b>.  <br/>3. Chọn file <b>MoreToys.csv</b> nằm trong thư mục <b>Documents</b>. Sau đó nhấn Next.  <br/>4. Ở bước 2 trong hộp thoại <b>Text Import Wizard</b>. Tích vào <b>Comma</b> sau đó nhấn Finish.  <br/>5. Nhấn OK",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Chèn một trang tính mới tên <u>'Inventory Report'</u>. ",
+          "answers": "1. Click vào dấu cộng ngoài cùng bên phải tên trang tính.  <br/>2. Nhập tên trang tính mới là <b>Inventory Report</b>",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Rooms'  chèn một dòng mới vào bảng 'Computer Room Rentals' sao cho dòng này tự động tính tổng số liệu trong bảng.",
+          "answers": "1. Chọn trang tính <b>Rooms</b>  <br/>2. Click vào ô bất kì trong bảng <b>Computer Room Rental</b>s. Chọn tab <b>Design</b>  trong nhóm chức năng <b>Table Styles Options</b>  chọn chức năng <b>Total Row</b>.",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Room'  thay đổi kích thước biểu đồ 'Room Rentals' sao cho nó lấp đầy các ô từ C18 đến F33.",
+          "answers": "1. Chọn trang tính <b>Rooms</b>  <br/>2. Thay đổi kích thước biểu đồ sau cho cạnh trái nằm trong cột C. Tương tự cho 3 cạnh còn lại",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Boats'  di chuyển biểu đồ 'Inventory' sang trang tính mới với tên là <u>'New Inventory'</u>. ",
+          "answers": "1. Chọn trang tính <b>Boats</b>  <br/>2. Click chuột phải vào biểu đồ Inventory  chọn <b>Move Charts</b>.   <br/>3. Trong hộp thoại <b>Move Charts</b>  chọn <b>New Worksheet</b> và nhập tên là New Inventory",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Rooms'  hoán đổi (switch) hàng cột cho biểu đồ.",
+          "answers": "1. Chọn trang tính <b>Rooms</b>  <br/>2. Click vào biểu đồ. Chọn tab <b>Design</b>. Trong nhóm chức năng <b>Data</b>  chọn chức năng <b>Swith Row/Column</b>",
           "image": ""
         }
       ]
@@ -231,56 +142,32 @@
     {
       "id": 5,
       "projectfile": [],
-      "title": "Project 5",
+      "title": "Sports",
       "tasks": [
-        {
-          "question": "",
-          "answers": "",
+        {    
+
+          "question": " Trên trang tính 'Sports Club'  định dạng biểu đồ có sẵn thành kiểu Style 3 và màu là Monochromatic Color 6 (Monochromatic pallete 2). ",
+          "answers": "1. Chọn trang tính <b>Sports Club</b>  <br/>2. Click vào biểu đồ  chọn tab <b>Design</b>.<br/>3. Trong nhóm chức năng <b>Chart Styles</b>  chọn Style 3. Trong nhóm chức năng <b>Colors</b>  chọn Monochromatic Color 6 (Monochromatic pallete 2).",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Sport Rental'  chuyển bảng Market Sport Rental thành dạng khối ô. Giữ nguyên các định dạng khác.",
+          "answers": "1. Chọn trang tính <b>Sport <b>Rental</b>  <br/>2. Click vào ô bất kì nào trong bảng Market <b>Sport <b>Rental</b>.  <br/>3. Chọn tab <b>Design</b>  trong nhóm chức năng Tools  chọn chức năng <b>Convert to Range</b> và nhấn Ok",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Sport Rental'  di chuyển biểu đồ sang trang tính mới với tên là <u>'Sports Chart'</u>. ",
+          "answers": "1. Chọn trang tính <b>Sport <b>Rental</b>  <br/>2. Click chuột phải vào biểu đồ  chọn <b>Move Chart</b> <br/>3. Trong hộp thoại <b>Move Chart</b>  chọn <b>New Sheet</b>  nhập Sports Chart và nhấn Ok",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Thêm văn bản thay thế <u>'New Sports'</u> cho biểu đồ trên trang tính 'Sports Club'",
+          "answers": "1. Chọn  trang tính <b>Sports Club</b>  <br/>2. Click chuột phải vào biểu đồ  chọn Format Chart Area.  <br/>3. Trong hộp thoại Format Chart Area  chọn tab Size and Properties.  <br/>4. Nhập<b> New Sports</b> vào titles của Alt Text.",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
+          "question": "Hiển thị  trang tính bị ẩn 'Charts'.",
+          "answers": "1. Click chuột phải vào tên trang tính bất kì  chọn Unhide…  <br/>2. Chọn trang tính tên Charts",
           "image": ""
         }
       ]
@@ -288,56 +175,26 @@
     {
       "id": 6,
       "projectfile": [],
-      "title": "Project 6",
+      "title": "TacoStands",
       "tasks": [
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Qtr 1'  áp dụng định dạng kiểu “Table Style Light 17” cho bảng dữ liệu 'Quarter 1 Taco Revenue'.",
+          "answers": "1. Chọn trang tính <b>Qtr 1</b>  <br/>2. Click vào ô bất kì trong bảng Quarter 1 Taco <b>Revenue</b>.  <br/>3. Chọn tab <b>Design</b>  trong nhóm chức năng Table Styles  chọn Table Style Light 17",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Qtr 1'  định dạng nội dung các ô thuộc cột 'Total' trong bảng 'Quarter 1 Taco Revenue' không hiển thị số lẻ phần thập phân.",
+          "answers": "1. Chọn trang tính <b>Qtr 1</b>. Chọn chỉ dữ liệu trong cột Total (không chọn chữ Total  tiêu đề cột)  <br/>2. Click phải chuột chọn <b>Format Cell</b>  trong nhóm chức năng Number  nhập Decimal là 0.",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Qtr 2'  nhập công thức để hiển thị chuỗi <u>'Pass'</u> vào cột Result nếu giá trị trong cột Total lớn hơn hoặc bằng 100000  ngược lại hiển thị chuỗi <u>'No'</u>.",
+          "answers": "1. Chọn trang tính <b>Qtr 2</b>  <br/>2. Nhập công thức tại ô F10 như sau: <b>=IF([@Total]>=100000 'Pass' 'No')</b>",
           "image": ""
         },
         {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
+          "question": "Trên trang tính 'Qtr 2'  chèn biểu đồ sparkline dạng cột tại ô E16 để biểu diễn tổng doanh thu các vùng.",
+          "answers": "1. Chọn trang tính <b>Qtr 2</b>  <br/>2. Chọn ô E16 <br/>6. Chọn tab <b>Insert</b>  trong nhóm chức năng Sparklines  chọn Column  <br/>3. Trong hộp thoại Create Sparklines  nhập địa chỉ dòng <b>Data</b> Range là E10:E14 sau đó nhấn OK",
           "image": ""
         }
       ]
@@ -345,7 +202,7 @@
     {
       "id": 7,
       "projectfile": [],
-      "title": "Project 7",
+      "title": "7",
       "tasks": [
         {
           "question": "",
