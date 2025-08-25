@@ -746,7 +746,7 @@
 
         // Load quiz data from JSON file
         function loadQuizData() {
-            fetch('test_excel_2.json')
+            fetch('EX_1.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Failed to load data');
@@ -783,7 +783,7 @@
             quizData.projects.forEach((project, index) => {
                 const option = document.createElement('div');
                 option.className = 'project-option';
-                option.textContent = `Project ${index + 1}: ${project.name || 'bai ' + (index + 1)}`;
+                option.textContent = `P${index + 1}: ${project.title || 'bai ' + (index + 1)}`;
                 option.onclick = () => selectProject(index + 1);
                 dropdown.appendChild(option);
             });
@@ -1083,7 +1083,7 @@
             // Download each file
             files.forEach(fileName => {
                 const link = document.createElement("a");
-                link.href = "files/" + fileName;   
+                link.href = "files/excelexam" + fileName;   
                 link.download = fileName;
                 document.body.appendChild(link);
                 link.click();

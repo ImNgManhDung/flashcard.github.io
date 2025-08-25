@@ -1,0 +1,279 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [
+        "ForestNursery.xlsx",
+        "Fudge.xlsx",
+        "GameStore.xlsx",
+        "GameStore.xlsx",
+        "GrainProduction.xlsx",
+        "IceCream.xlsx",
+        "LunchTrucks.xlsx"
+      ],
+      "title": "ForestNursery",
+      "tasks": [
+        {
+          "question": "Trên trang tính 'Q1 Sales'  đếm bao nhiêu đơn hàng có tổng giá trị đơn hàng (từ tháng 1 đến tháng 3) lớn hơn 1200 tại ô F25. ",
+          "answers": "1. Chọn trang tính <b>Q1 Sales</b>  <br/>2. Nhập công thức ở ô F25 như sau:<b> =COUNTIF(Table1[Total] '>1200')</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Q1 Sales'  tính tổng giá trị của các đơn hàng có giá trị đơn hàng (Total)  trên 1200 tại ô F26. ",
+          "answers": "1.  Chọn trang tính <b>Q1 Sales</b>  <br/>2. Nhập công thức ở ô F26 như sau: <b>=SUMIF(Table1[Total] '>1200' Table1[Total])</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Small Tree Sales'  điền công thức vào ô F20 tìm giá trị thấp nhất của cột 'Total'. ",
+          "answers": "1. Chọn trang tính <b>Small Tree Sales</b>  <br/>2. Nhập công thức ở ô F20 như sau:<b> =MIN(Table5[Total])</b>",
+          "image": ""
+        },
+        {
+          "question": "Copy dữ liệu từ A8:E13 trên trang tính 'Q1 Sales và hoán vị nó thành khối ô bắt đầu từ ô A8 trên trang tính 'Seedling Sales'.",
+          "answers": "1. Chọn dữ liệu từ A8:E13 trên trang tính <b>Q1 Sales</b>  sau đó nhấn Ctrl+C  <br/>2. Click vào ô A8 trên trang tính <b>Seedling Sales</b>  click chuột phải chọn <b>Transpose</b> trong nhóm <b>Paste Special…</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Small Tree Sales'  điền công thức vào ô F21 để tìm giá trị cao nhất của cột 'Total'. ",
+          "answers": "1. Chọn trang tính <b>Small Tree Sales</b>  <br/>2. Nhập công thức ở ô F21 như sau: <b>=MAX(Table5[Total])</b>",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectfile": [],
+      "title": "Fudge",
+      "tasks": [
+        {
+         
+          "question": " Trên trang tính 'Profits'  dùng hàm để tính giá trung bình các hương liệu ở vị trí thích hợp.",
+          "answers": "1. Chọn trang tính <b>Profits</b>  <br/>2. Nhập công thức tại ô A29 như sau: <b>=AVERAGE(Table2[Price])</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Costs'  dùng hàm để tính thành tiền lớn nhất của chi phí các hương liệu ở vị trí tương ứng.",
+          "answers": "1. Chọn trang tính <b>Costs</b>  <br/>2. Nhập công thức vào ô B28 như sau: <b>=MAX(Table1[Cost ($)])</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên ô B29 trong trang tính 'Costs'  dùng hàm tính số hương liệu giá từ 5 trở lên.",
+          "answers": "1. Chọn trang tính <b>Costs</b>  <br/>2. Nhập công thức vào ô B29 như sau: <b>=COUNTIF(Table1[Price ($)] '>=5')</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Profits'  thay đổi dữ liệu biểu đồ sẵn có trong trang tính  sao cho biểu đồ chỉ thể hiện dữ liệu tổng lợi nhuận.",
+          "answers": "1. Chọn trang tính <b>Profits</b>  <br/>2. Click vào biểu đồ  chọn tab <b>Design</b>. Trong nhóm chức năng <b>Data</b> chọn Select <b>Data</b>.  <br/>3. Trong hộp thoại Select <b>Data</b> Source  ở dòng Chart <b>Data</b> range. Xóa vùng địa chỉ đang có. Chọn cột Flavor  nhấn giữ Ctrl  chọn tiếp cột <b>Total Profit</b>. Nhấn Ok. (vùng địa chỉ tại dòng Chart <b>Data</b> range hiển thị như sau: =<b>Profits</b>!A3:A26 <b>Profits</b>!G3:G26)",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Gourmet Fudge'  nhập văn bản thay thế (alter text) cho nhóm hình (group) gồm một WordArt và hình ngôi sao 12 cánh với tiêu đề văn bản thay thế (alter text title) là <u>“Gourmet Fudge”</u>.",
+          "answers": "1. Chọn trang tính <b>Gourmet Fudge</b>  <br/>2. Click chuột phải vào nhóm hình  chọn <b>Size and Properties</b>.  <br/>3. Sau đó nhập vào dòng Titles là <b>Gourmet Fudge</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thêm từ 'Gourmet Fudge' vào thuộc tính chủ đề (subject) của sổ tính.",
+          "answers": "1. Chọn tab File  chọn tab Info  <br/>2. Click vào dòng <b>Show All Properties</b>  nhập vào trường Subject là <b>Gourmet Fudge</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Costs'  hiển thị các công thức trên trang tính worksheet thay cho giá trị của công thức.",
+          "answers": "1. Chọn trang tính <b>Costs</b>  <br/>2. Chọn tab <b>Formulas</b>  trong nhóm chức năng <b>Formula Auditing</b>  chọn chức năng <b>Show Formulas</b>",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [],
+      "title": "GameStore",
+      "tasks": [
+        {
+        
+
+
+
+
+
+          "question": " Thiết lập canh lề kiểu 'Narrow' cho trang tính 'New Releases'. ",
+          "answers": " 1. Chọn trang tính <b>New Releases</b>  <br/>2. Chọn tab <b>Page Layout</b>  trong nhóm chức năng <b>Page Setup</b>  chọn chức năng Margins.  <br/>3. Chọn Narrow",
+          "image": ""
+        },
+        {
+          "question": "Di chuyển đến vùng NewestTitles trên trang tính 'New Releases' và xoá dữ liệu trên vùng đó. ",
+          "answers": "1. Chọn trang tính <b>New Releases</b>  <br/>2. Click vào Name box chọn NewestTitles  <br/>3. Nhấn phím delete trên bàn phím.",
+          "image": ""
+        },
+        {
+          "question": "Trên ô I7 trong trang tính 'New Releases'  sử dụng công thức để tính trung bình của cột 'Review Score' với giá trị System là 'Ycube 720'. ",
+          "answers": "1. Chọn trang tính <b>New Releases</b>  <br/>2. Nhập công thức tại ô I7 như sau: <b>=AVERAGEIF(B7:B16 H7 E7:E16)</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'New Releases'  chỉnh cho chiều cao của dòng 2 là 34.5.",
+          "answers": "1. Chọn trang tính <b>New Releases</b>  <br/>2. Chọn dòng  <br/>2. Chọn tab <b>Home</b>  trong nhóm chức năng Cells  chọn chức năng Row Height…  <br/>3. Trong hộp thoại Row Height  nhập 3 <br/>4.5 và nhấn OK",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'New Releases'  hiển thị dòng 10 và 11. ",
+          "answers": "1. Chọn trang tính <b>New Releases</b>  <br/>2. Chọn dòng 10 tới dòng 1 <br/>3. Click chuột phải chọn Unhide",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [],
+      "title": "GrainProduction",
+      "tasks": [
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [],
+      "title": "IceCream",
+      "tasks": [
+        {
+
+          "question": "Trên trang tính 'Profits'  tuỳ chỉnh sao cho biếu đồ hiển thị 'Flavors' trên trục ngang. ",
+          "answers": "1. Chọn trang tính <b>Profits</b>  <br/>2. Click vào biểu đồ  chọn tab <b>Design</b>. Trong nhóm chức năng <b>Data</b> chọn <b>Switch Row/Column</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Profits'  áp dụng kiểu biểu đồ Style 11 cho biểu đồ 'Flavor Expenses  Income and Profit'. ",
+          "answers": "1. Chọn trang tính <b>Profits</b>  <br/>2. Click vào biểu đồ  chọn tab <b>Design</b>. Trong nhóm chức năng <b>Chart Styles</b>  chọn Style 11",
+          "image": ""
+        },
+        {
+          "question": "Thay thế toàn bộ từ 'Choco' trong trang tính 'Costs' trong sổ tính thành từ 'Chocolate'.",
+          "answers": "1. Chọn tab <b>Home</b>  trong nhóm chức năng <b>Editting</b>  chọn Find & Select  sau đó chọn Replace.  <br/>2. Trong hộp thoại <b>Find and Replace</b>  nhập Choco vào dòng Find What: và nhập Chocolate vào dòng Replace with  <br/>3. Nhấn Replace All  sau đó nhấn Close.",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Profits'  hiệu chỉnh biểu đồ sao cho phần chú thích nằm phía trên biểu đồ.",
+          "answers": "1. Chọn trang tính <b>Profits</b>  <br/>2. Chọn biểu đồ có sẵn  chọn tab <b>Design</b>  trong nhóm chức năng Chart Layouts  click vào Add Chart Element  sau đó chọn Legend  chọn tiếp là Top.",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Costs'  tại ô B27 chèn sparkline dạng cột thể hiện sự thay đổi của cột 'Cost'.",
+          "answers": "1. Chọn trang tính <b>Costs</b>  <br/>2. Click vào ô B27  chọn tab <b>Insert</b>s  trong nhóm <b>Sparklines</b>  chọn Coulmn.  <br/>3. Trong hộp thoại <b>Create Spartlines</b>  tại dòng <b>Data</b> Range  nhập vào vùng địa chỉ B4:B2 <br/>6. Sau đó nhấn OK",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectfile": [],
+      "title": "LunchTrucks",
+      "tasks": [
+        {
+          "question": "Trên trang tính 'Food Inventory'  định dạng bảng sao cho các dòng tô nền xen kẽ nhau. Sử dụng kỹ thuật để định dạng được cập nhật tự động khi chèn thêm dòng mới.",
+          "answers": "1. Chọn trang tính <b>Food Inventory</b>  <br/>2. Click vào ô bất kì trong bảng. Chọn tab <b>Design</b>  trong nhóm chức năng <b>Table Styles Options</b>  chọn chức năng <b>Banded Row</b>.",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Revenue'  sắp xếp bảng sao cho các dòng trên cột 'Menu Item' chứa giá trị 'Taco Meal' đi trước các dòng chứa giá trị 'Riblet Meal'. Sau đó  sắp xếp theo mẫu tự chữ cái tăng dần trên cột 'Location'. Cuối cùng sắp xếp theo thứ tự giảm dần trên cột 'Total'.",
+          "answers": "1. Chọn trang tính <b>Revenue</b>  <br/>2. Chọn tab <b>Home</b>  trong nhóm chức năng <b>Editting</b>  chọn Sort & Filter  sau đó chọn Custom Sort…  <br/>3. Ở dòng đầu tiên:<br >  - Sort by: Menu Item  - Sort on: <b>Values</b>  - Order: <b>Custom List…</b>  sau đó nhập Taco Meal  nhấn Enter rồi nhập tiếp Riblet Meal. Sau đó nhấn Add và nhấn Ok.  <br/>4. Nhấn Add Level  <br/>5. Ở dòng vừa thêm vào chọn như sau:   - Sort by: Location  - Sort on: <b>Values</b>  - Order: A to Z  <br/>6. Nhấn Add Level  <br/>7.  Ở dòng vừa thêm vào chọn như sau:   - Sort by: Total  - Sort on: <b>Values</b>  - Order:Largest to Smallest1. Chọn trang tính <b>Revenue</b>  <br/>2. Chọn tab <b>Home</b>  trong nhóm chức năng <b>Editting</b>  chọn Sort & Filter  sau đó chọn Custom Sort…  <br/>3. Ở dòng đầu tiên:<br >  - Sort by: Menu Item  - Sort on: <b>Values</b>  - Order: <b>Custom List…</b>  sau đó nhập Taco Meal  nhấn Enter rồi nhập tiếp Riblet Meal. Sau đó nhấn Add và nhấn Ok.  <br/>4. Nhấn Add Level  <br/>5. Ở dòng vừa thêm vào chọn như sau:   - Sort by: Location  - Sort on: <b>Values</b>  - Order: A to Z  <br/>6. Nhấn Add Level  <br/>7.  Ở dòng vừa thêm vào chọn như sau:   - Sort by: Total  - Sort on: <b>Values</b>  - Order:Largest to Smalles",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Food Inventory'  tại ô G1  sử dụng công thức xác định giá trị trung bình các giá trị trên cột 'Unit Cost'.",
+          "answers": "1. Chọn trang tính <b>Food Inventory</b>  <br/>2. Nhập công thức tại ô G1 như sau:<b> =AVERAGE(_[Unit Cost])</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Food Inventory'  tại ô G1  sử dụng công thức xác định giá trị trung bình các giá trị trên cột 'Unit Cost'.",
+          "answers": "1. Chọn trang tính <b>Food Inventory</b>  <br/>2. Nhập công thức tại ô G1 như sau:<b> =AVERAGE(_[Unit Cost])</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Food Inventory'  nhập công thức tại ô G2 trả về giá trị 'Unit Cost' nhỏ nhất.",
+          "answers": "1. Chọn trang tính <b>Food Inventory</b>  <br/>2. Nhập công thức tại ô G1 như sau: <b>=MIN(_[Unit Cost])</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Food Inventory'  sử dụng công cụ dữ liệu excel để xóa khỏi bảng tất cả các dòng trùng nhau giá trị trên cột 'Food Item'. Không xóa các dòng khác.",
+          "answers": "1. Chọn trang tính <b>Food Inventory</b>  <br/>2. Click vào ô bất kì trong bảng  chọn tab <b>Data</b>  trong nhóm chức năng <b>Data</b> Tools  chọn chức năng <b>Remove Dupplicates</b>.  <br/>3. Trong hộp thoại Remove Dupplicate  chỉ chọn Food Item và nhấn OK",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectfile": [],
+      "title": "MusicStore",
+      "tasks": [
+        {
+          "question": "Trên trang tính 'Sales Commissions'  điền giá trị cột 'Commission' với Commission = Total * Commission Rate. ",
+          "answers": "1. Chọn trang tính <b>Sales Commissions</b>  <br/>2. Nhập công thức tại ô G4 là:<b> =[@[Total Sales]]*$J$3</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Sales Commissions'  trộn vào canh giữa cho vùng A2:G2. ",
+          "answers": "1. Chọn trang tính <b>Sales Commissions</b>  <br/>2. Chọn khối ô A2:G2. Chọn tab <b>Home</b>  trong nhóm chức năng Alignment  chọn chức năng Merge & Center",
+          "image": ""
+        },
+        {
+          "question": "Trên trang  tính 'Sales Commissions'  điền công thức tìm giá trị thấp nhất của cột 'Target Sales' tại ô B13. ",
+          "answers": "1. Chọn trang tính <b>Sales Commissions</b>  <br/>3. Nhập công thức tại ô B13 như sau: <b>=MIN(Bonuses[Target Sales])</b>",
+          "image": ""
+        },
+        {
+          "question": "Trong trang tính 'Sales Commissions'  tạo liên kết cho ô A15 để gửi email đến địa chỉ <u>'support.admin@musicstore.com'</u> với chủ đề là <u>'Sales Report'</u>. ",
+          "answers": "1. Chọn trang tính <b>Sales Commissions</b>  <br/>2. Click chuột phải vào ô A15 chọn Hyperlink...  <br/>3. Trong hộp thoại <b>Insert Hyperlink</b>  chọn E-mail Address. Nhập <b>support.admin@musicstore.com</b> vào trường <b>E-mail address</b> và nhập <b>Sales Report</b> vào trường <b>Subject</b>. Sau đó nhấn OK",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [
+          "BikeSales.xlsx",
+          "ClubFundraiser.xlsx",
+          "ComputerHotline.xlsx",
+          "EmployeeBonuses.xlsx",
+          "FarmMarket.xlsx",
+          "FeedStore.xlsx",
+          "FishingSupplies.xlsx"
+      ],
+      "title": "BikeSales",
+      "tasks": [
+       
+        {
+          "question": "Cấu hình Excel để in vùng A1:F17 trên trang tính 'Q1 Sales'.",
+          "answers": "1. Chọn trang tính <b>Q1 Sales</b>  chọn vùng ô A1:F17  <br/>2. Chọn tab <b>Page Layout</b>  trong nhóm chức năng <b>Page Setup</b>  chọn chức năng Print Area  chọn Set Print Area.",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Q1 Sales'  nhập công thức để tính tổng các sản phẩm vào ô B19",
+          "answers": "1. Chọn trang tính <b>Q1 Sales</b>  <br/>2. Tại ô B19  nhập công thức như sau: <b>=SUM(Table1[Total])</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Q1 Sales'  luôn hiển thị dòng 3 khi cuộn trang tính theo chiều dọc. ",
+          "answers": "1. Chọn trang tính <b>Q1 Sales</b>  chọn dòng 4  <br/>2. Chọn tab <b>View</b>  trong nhóm chức năng <b>Windown</b>  chọn <b>Freeze Panes</b>  sau đó chọn <b>Freeze Panes</b>.",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Catalog'  tạo bảng từ vùng ô A3:F17  có thiết lập tiêu đề cho bảng. ",
+          "answers": "1. Chọn trang tính <b>Catalog</b> Chọn vùng ô A1:F17<br/>2.Chọn tab Insert  trong nhóm chức năng <b>Tables</b> chọn chức năng <b>Table</b>  sau đó check vào <b>My table has header</b> -> OK.",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Faculty List'  nối chuỗi 'LastName' vào sau 'FirstName'  thêm dấu phẩy và khoảng trắng ở giữa để điền dữ liệu cho cột 'FullName' (Ví dụ: 'David  Smith'). ",
+          "answers": "1. Chọn trang tính <b>Faculty List</b>  <br/>2. Tại ô C2  nhập công thức như sau: <b>=CONCATENATE([@[First Name]] '  ' [@[Last Name]])</b>",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectfile": [],
+      "title": "ClubFundraiser",
+      "tasks": [
+        {
+          "question": "Trên trang tính 'Fundraiser'  thiết lập sao cho các dòng 2 và dòng 4 không nhìn thấy nhưng nó vẫn còn tồn tại trên trang tính.",
+          "answers": "1. Chọn trang tính <b>Fundraiser</b>  <br/>2. Chọn dòng 2  nhấn giữ Ctrl chọn tiếp dòng  <br/>4.  <br/>3. Click chuột phải chọn Hide",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Fundraiser'  xóa cột J.",
+          "answers": "1. Chọn trang tính <b>Fundraiser</b>  <br/>2. Chọn cột J  Click chuột phải chọn Delete",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Fundraiser'  tại cột 'FullName'  sử dụng hàm để nối 'Last Name' vào sau 'First Name'  có khoảng trắng ở giữa  viết hoa chữ cái đầu mỗi từ. Ví dụ: Alan Buresh",
+          "answers": "1. Chọn trang tính <b>Fundraiser</b>  <br/>2. Nhập công thức tại ô A5 như sau: <b>=PROPER(CONCATENATE([@Firstname] ' ' [@Lastname]))</b>",
+          "image": ""
+        },
+        {
+          "question": "Cấu hình trang tính 'Fundraiser' sao cho dòng 1 đến dòng 3 được in lặp lại trên mỗi trang in.",
+          "answers": "1. Chọn hình trang tính <b>Fundraiser</b>  <br/>2. Chọn tab <b>Page Layout</b>  trong nhóm chức năng <b>Page Setup</b>  chọn chức năng Print Titles  <br/>3.Ở dòng Row to repeat at top  chọn từ dòng 1 đến dong 3 sau đó nhấn OK",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [],
+      "title": "ComputerHotline",
+      "tasks": [
+        {
+          "question": "Trong trang tính 'Employee Hours'  chuyển bảng 'Table1' về dạng khối ô. Giữ nguyên các định dạng khác.",
+          "answers": "1. Chọn trang tính <b>Employee Hours</b> Nhấn Ctrl+G chọn bảng 'Table1' OK.<br/>2. Click vào một ô bất kì trong bảng <b>Table1</b>. Chọn tab <b>Design</b>  trong nhóm chức năng Tools  chọn chức năng <b>Convert to Range</b> và nhấn OK",
+          "image": ""
+        },
+        {
+          "question": "Trong trang tính 'Average Call Time'  chèn cột tên <u>'Sat'</u> vào bên trái cột 'Trend'.",
+          "answers": "1. Chọn trang tính <b>Average Call Time</b>  <br/>2. Chọn khối ô G3:G16  click chuột phải chọn <b>Insert</b>  sau đó chọn tiếp <b>Table Columns to the Left</b>.  <br/>3. Nhập Sat vào tên cột.",
+          "image": ""
+        },
+        {
+          "question": "Sao chép khối ô A20:B22 trong trang tính 'Employee Hours' sang khối ô A21:C22 trên trang tính 'Average Call Time'.",
+          "answers": "1. Chọn khối ô A20:B22 trong trang tính 'Employee Hours'  nhấn Ctrl+C  <br/>2. Mở trang tính 'Average Call Time'  click chuột phải vào ô A21  trong <b>Paste option…</b> chọn <b>Transpose (T)</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Employee Hours'  tạo một biểu đồ 3D-Clustered Bar sao cho biểu đồ hiển thị số lượng giờ làm của từng nhân viên (Employee) các ngày trong tuần. Đặt tên cho biểu đồ là <u>'EmployeeHourWorking'</u>. Thêm Legend dạng Bottom. Thay đổi tiêu đề biểu đồ thành <u>'Employee Hours'</u>.",
+          "answers": "1. Chọn trang tính <b>Employee Hours</b>. Chọn khối ô A3:A16  nhấn giữ Ctrl  chọn tiếp khối ô C3:G16  <br/>2. Chọn tab <b>Insert</b>  trong nhóm chức năng Charts  chọn biểu đồ 3D-Clustered Bar.  <br/>3. Click vào biểu đồ vừa tạo  chọn tab Format. Trong nhóm chức năng Arrange  chọn chức năng Selection Pane. Trong hộp thoại Selection  chỉnh sửa lại tên biểu đồ thành <b>EmployeeHourWorking</b>.  <br/>4. Chọn tab <b>Design</b>  trong nhóm chức năng Chart Layouts  chọn Add Chart Element. Sau đó chọn Legend và chọn Bottom.  <br/>5. Thay đổi Chart Titles thành <b>Employee Hours</b>",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [],
+      "title": "EmployeeBonuses",
+      "tasks": [
+        {
+          "question": "Sắp xếp các trang tính (worksheet) sao cho trang tính 'Parts' đứng ở vị trí đầu tiên.",
+          "answers": "1. Tại vùng tên trang tính (worksheet)  click và giữ chuột trái vào trang tính <b>/Parts<b> và di chuyển lên vị trí ngoài cùng bên trái. ",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Employee Bonuses'  thay đổi định dạng cột 'Commission' về định dạng  có 3 chữ số thập phân. ",
+          "answers": "1. Chọn trang tính <b>Employee Bonuses</b>  chọn vùng ô F4:F11  <br/>2. Chọn tab <b><b>Home</b></b>  trong nhóm chức năng <b>Number</b>  chọn chức năng <b>Increase Decimal</b> sao cho hiển thị đủ 3 số thập phân.",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính  'Employee Bonuses'  nhập công thức tại ô B21 tính số người bán hàng có tổng giá trị hàng bán (Total Sales) lớn hơn hoặc bằng 200000. ",
+          "answers": "1. Chọn trang tính <b>Employee Bonuses</b>  chọn ô B21  <br/>2. Nhập công thức sau:<b> =COUNTIF(Bonuses[Total Sales] '>=200000')</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính  'Employee Bonuses'  nhập công thức tại ô B22 tính tổng số tiền của tất cả các đơn hàng có có tổng giá trị hàng bán (Total Sales) lớn hơn hoặc bằng 200000.",
+          "answers": "1. Chọn trang tính <b>Employee Bonuses</b> chọn ô B22  <br/>2. Nhập công thức sau: <b>=SUMIF(Bonuses[TotalSales] '>=200000' Bonuses[TotalCompensation])</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Parts'  dựa vào 3 tháng từ Jan ... Mar  hãy vẽ biểu đồ xu hướng (trend) dạng cột (Column Sparkline) cho từng nhân viên bán hàng. ",
+          "answers": "1. Chọn trang tính <b>Part</b>  chọn vùng ô <b>B4:D11</b>  <br/>2. Chọn tab <b><b>Insert</b></b>  trong nhóm chức năng <b>Sparklines</b>  chọn <b>Column</b>.  <br/>3. Trong hộp thoại <b>Craete Spartlines</b>  tại dòng <b>Location Range</b>  click vào vùng nhập địa chỉ và chọn vùng ô F4:F11 và nhấn Ok",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [],
+      "title": "FarmMarket",
+      "tasks": [
+        {
+          "question": "Trên trang tính 'Rental Revenue'  gộp các dòng từ 2 đến 7 trên 2 cột A và B của vùng dữ liệu Farmers Market Space Rental để tạo thành một cột duy nhất gồm 6 dòng với tên cột là 'Downtown'. Các giá trị vẫn duy trì định dạng canh trái.",
+          "answers": "1. Chọn trang tính <b>Rental</b> <b>Revenue</b>  <br/>2. Chọn vùng ô A2:B7. Chọn tab <b>Home</b>  trong nhóm chức năng Alignment  chọn Merge Across.",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Rental Revenue'  thay đổi chiều cao 2 dòng đầu tiên thành 32.",
+          "answers": "1. Chọn trang tính <b>Rental</b> <b>Revenue</b>  <br/>2. Chọn 2 dòng đầu tiên. Chọn tab <b>Home</b>  trong nhóm chức năng Cells  chọn Format. Sau đó chọn Row Height…  <br/>3. Trong hộp thoại Row Height nhập 32 và nhấn OK",
+          "image": ""
+        },
+        {
+          "question": "Đổi tên trang tính 'Summary' thành 'Farmers Market Sales' và đổi màu vùng tên trang tính thành Blue.",
+          "answers": "1. Click chuột phải vào tên trang tính <b>Sumary</b>  chọn Rename.  <br/>2. Nhập <b>Farmers</b> Market Sales.  <br/>3. Click chuột phải vào tên trang tính vừa đổi  chọn Tab Color. Trong hộp thoại Tab Color chọn Blue.",
+          "image": ""
+        },
+        {
+          "question": "Trong A1:E1 trên trang tính 'Farmers Market'  tạo liên kết đến trang web <u>'www.marketsales.com.vn'</u>. Hiển thị chuỗi <u>'URL'</u> trong ô.",
+          "answers": "1. Chọn A1: E1 trên trang tính <b>Farmers Market</b>  <br/>2. Click chuột phải chọn Hyperlink…  <br/>3. Trong hộp thoại <b>Insert</b> Hyperlinks. Nhâp www.marketsales.com.vn vào Address và URL vào Text to display. Sau đó nhân OK",
+          "image": ""
+        },
+        {
+          "question": "Trong trang tính 'Farmers Market'   hiệu chỉnh để in trang tính vừa đủ trên 1 trang.",
+          "answers": "1. Chọn trang tính Farmers <br/>2. Chọn tab Page Layout  trong nhóm chức năng Scale to Fit chọn như sau:  - Width: 1 page  - Height: 1 page",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectfile": [],
+      "title": "FeedStore",
+      "tasks": [
+        {
+          "question": "Hiển thị trang tính 'Fencing'. ",
+          "answers": "1. Chọn trang tính bất kì  <br/>2. Click chuột phải chọn <b>Unhide…</b>  <br/>3. Trong hộp thoại <b>Unhide</b>  chọn trang tính <b>Fencing</b> và nhấn Ok",
+          "image": ""
+        },
+        {
+          "question": "Hiển thị nội dung trong ô A1 của trang tính 'Home-Made Pet Food' trên 2 dòng (2 lines). ",
+          "answers": "1. Chọn trang tính <b><b>Home</b>-Made Pet Food</b>  <br/>2. Chọn ô A1  trong tab<b> <b>Home</b></b>  trong nhóm chức năng <b>Alignment</b>  chọn chức năng <b>Wrap Text</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Feed Inventory'  xóa link trên ô C33 nhưng vẫn hiển thị nội dung trong ô.",
+          "answers": "1. Chọn trang tính <b>Feed Inventory</b>  <br/>2. Click chuột phải vào ô C33  sau đó chọn <b>Remove Hyperlink</b>",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Feed Inventory'  thay đổi kích thước biểu đồ 'Total Inventory' để nó chỉ hiển thị từ ô H3 tới ô O19",
+          "answers": "1. Chọn trang tính <b>Feed Inventory</b>  <br/>2. Thay đổi kích thước biểu đồ sao cho cạnh trái biểu đồ nằm trong cột H  cạnh phải nằm trong cột O  cạnh trên nằm trong dòng 3 và cạnh dưới nằm trong dòng 1 <br/>9.",
+          "image": ""
+        },
+        {
+          "question": "Trên trang tính 'Feed Inventory'  thêm Alt Text cho bảng 'Brand Totals' với Title là <u>'Total'</u> và Description là <u>'Fencing Store'</u>.",
+          "answers": "1. Chọn trang tính <b>Feed Inventory</b>  <br/>2. Click chuột phải vào bảng <b>Brand Totals</b>  chọn <b>Table</b> sau đó chọn <b>Alternative Text…</b>  <br/>3. Trong hộp thoại <b>Alternative Text</b>  nhập <b>Total</b> vào <b>Titles</b> và <b>Fencing Store</b> vào <b>Desciption</b>.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectfile": [],
+      "title": "FishingSupplies",
+      "tasks": [
+        {
+          "question": "Trong trang tính 'Carriers and Coolers'  định dạng sao cho dòng 9 và dòng 10 vẫn còn trên trang tính nhưng không nhìn thấy chúng.",
+          "answers": "1. Chọn trang tính <b>Carriers and Coolers</b>  <br/>2. Chọn dòng 9 và dòng 10.  <br/>3. Click chuột phải chọn <b>Hide</b>",
+          "image": ""
+        },
+        {
+          "question": "Trong trang tính 'Carriers and Coolers'  thay thế tất cả từ 'rod holder' thành 'Small cooler'. ",
+          "answers": "1. Chọn trang tính <b>Carriers and Coolers</b>  <br/>2. Chọn tab <b><b>Home</b></b>  trong nhóm chức năng <b><b>Editting</b></b>  chọn <b>Find & Select</b>  sau đó chọn <b>Replace</b>  <br/>3. Trong hộp thoại <b>Find and Replace</b>: nhập các giá trị sau vào dòng tương ứng:  - Find what: <b>rod holder</b>  - Replace with: <b>Small cooler</b>  <br/>4. Nhấn <b>Replace All</b>",
+          "image": ""
+        },
+        {
+          "question": "Trong trang tính 'Discount'  xóa cột B.",
+          "answers": "1. Chọn trang tính <b>Discount</b>  <br/>2. Chọn cột B  click chuột phải chọn <b>Delete…</b>",
+          "image": ""
+        },
+        {
+          "question": "Trong trang tính 'Carriers and Coolers'  thiết lập dòng 1 đến 3 luôn lặp lại đầu mỗi trang in. ",
+          "answers": "1. Chọn trang tính <b>Carriers and Coolers</b>  <br/>2. Chọn tab <b><b>Page Layout</b></b>  trong nhóm chức năng <b><b>Page Setup</b></b>  chọn <b>Print Titles</b>.  <br/>3. Trong nhóm <b>Print titles</b>  click vào vùng nhập địa chỉ ở dòng <b>Rows to repeat at top</b>  sau đó chọn dòng 1 đến dòng  <br/>3.  <br/>4. Nhấn Ok",
+          "image": ""
+        },
+        {
+          "question": "Trong trang tính 'Carriers and Coolers'  thêm chân trang kiểu Page 1 of ? vào giữa Footer. ",
+          "answers": "1. Chọn trang tính <b>Carriers and Coolers</b>  <br/>2. Chọn tab <b><b>Insert</b></b>  trong nhóm chức năng <b>Text</b>  chọn <b>Header & Footer</b>.  <br/>3. Chọn tab <b><b>Design</b></b>  trong nhóm chức năng <b>Header & Footer</b>  click vào <b>Footer</b> và chọn kiểu <b>Page 1 of ?</b>",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
