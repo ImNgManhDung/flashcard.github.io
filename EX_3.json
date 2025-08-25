@@ -31,7 +31,7 @@
           "image": ""
         },
         {
-          "question": "Chèn hình trong tập tin <i>iNetworkTopology.png</i> trong folder <i>PiMOS</i> của thư mục <i>Documents</i> vào ô A1.",
+          "question": "Chèn hình trong tập tin <i>iNetworkTopology.png</i> trong folder <i>Excel</i> của thư mục <i>Documents</i> vào ô A1.",
           "answers": "1. Chọn ô A1  <br/>2. Chọn tab <b>Insert</b>  trong nhóm chức năng <b>IILustrations</b>  chọn chức năng <b>Pictures</b>.  <br/>3. Tìm đến file <b>iNetwordTopology.png</b> và nhấn OK",
           "image": ""
         }
@@ -108,7 +108,7 @@
       "title": "4",
       "tasks": [
         {
-          "question": "Trên trang tính 'Accessory'  chèn nội dung tập tin <i>MoreToys.csv</i> nằm trong thư mục <i>PiMOS</i> của thư mục <i>Documents</i> vào vị trí ô A16. Chọn dấu phân cách là dấu phẩy (comma) (Chấp nhận tất cả các mặc định khác). ",
+          "question": "Trên trang tính 'Accessory'  chèn nội dung tập tin <i>MoreToys.csv</i> nằm trong thư mục <i>Excel</i> của thư mục <i>Documents</i> vào vị trí ô A16. Chọn dấu phân cách là dấu phẩy (comma) (Chấp nhận tất cả các mặc định khác). ",
           "answers": "1. Chọn trang tính Accessory  <br/>2. Chọn ô A1 <br/>3. Chọn tab <b>Data</b>  trong nhóm chức năng <b>Get External Data</b>  chọn <b>From Text</b>.  <br/>3. Chọn file <b>MoreToys.csv</b> nằm trong thư mục <b>Documents</b>. Sau đó nhấn Next.  <br/>4. Ở bước 2 trong hộp thoại <b>Text Import Wizard</b>. Tích vào <b>Comma</b> sau đó nhấn Finish.  <br/>5. Nhấn OK",
           "image": ""
         },
