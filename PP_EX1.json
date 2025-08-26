@@ -3,7 +3,7 @@
     {
       "id": 1,
       "projectfile": [
-        
+
 "CustomConstruction.pptx",
 
 "EcoFriendly.pptx",
@@ -101,23 +101,23 @@
           "image": ""
         },
         {
-          "question": "Trên Slide 3  định dạng danh sách gạch đầu dòng cho các đoạn văn bản từ “Leading ... decades”. Sử dụng tập tin <i>MS_Tomologo.png</i> trong thư mục PiMOS nằm trong thư mục Documents làm ký hiệu bullet.",
-          "answers": "1. Chọn đoạn văn bản từ <u>'Leading....decades'</u> <br/> 2. Trong tính năng <b>Bullets</b> chọn <b>Bullets and <b>Numbering</b> <br/> 3. Trong hộp thoại <b> Bullets and Numbering</b>  chọn <b> Picture</b>. Tìm và chọn file <b>MS_Tomologo.png</b> trong thư mục <PiMOS</b> nằm trong thư mục <b>Documents</>.",
+          "question": "Trên Slide 3  định dạng danh sách gạch đầu dòng cho các đoạn văn bản từ “Leading ... decades”. Sử dụng tập tin <i>MS_Tomologo.png</i> trong thư mục PowerPoint nằm trong thư mục Documents làm ký hiệu bullet.",
+          "answers": "1. Chọn đoạn văn bản từ <u>'Leading....decades'</u> <br/> 2. Trong tính năng <b>Bullets</b> chọn <b>Bullets and <b>Numbering</b> <br/> 3. Trong hộp thoại <b> Bullets and Numbering</b>  chọn <b> Picture</b>. Tìm và chọn file <b>MS_Tomologo.png</b> trong thư mục <PowerPoint</b> nằm trong thư mục <b>Documents</>.",
           "image": ""
         },
         {
-          "question": "Chèn thêm slide mới sau slide 3 bằng cách sử dụng lại slide có tiêu đề là 'Board of Directors' từ tập tin <i>FTDraft.pptx</i> trong thư mục PiMOS nằm trong thư mục Documents.",
-          "answers": "1. Click vào bên dưới <b>Slide 3</b>. Trong chức năng <b> New Slide</b>  chọn chức năng <b> Reuse Slides...</b>. <br/> 2. Nhấn <b>Browse</b> để tìm tới file <FTDraft.pptx</b> trong thư mục <b>PiMOS</b> nằm trong thư mục <b>Documents</b>. <br/> 3. Trong hộp thoại <b> Reuse Slides</b> nằm bên phải  click chọn slide có tiêu đề <b>Board of Director</b>.",
+          "question": "Chèn thêm slide mới sau slide 3 bằng cách sử dụng lại slide có tiêu đề là 'Board of Directors' từ tập tin <i>FTDraft.pptx</i> trong thư mục PowerPoint nằm trong thư mục Documents.",
+          "answers": "1. Click vào bên dưới <b>Slide 3</b>. Trong chức năng <b> New Slide</b>  chọn chức năng <b> Reuse Slides...</b>. <br/> 2. Nhấn <b>Browse</b> để tìm tới file <FTDraft.pptx</b> trong thư mục <b>PowerPoint</b> nằm trong thư mục <b>Documents</b>. <br/> 3. Trong hộp thoại <b> Reuse Slides</b> nằm bên phải  click chọn slide có tiêu đề <b>Board of Director</b>.",
           "image": ""
         },
         {
-          "question": "Trong khung bên phải của slide có tiêu đề 'FusionTomo'  chèn video <i>pimos.mp4</i> trong thư mục PiMOS nằm trong thư mục Documents.",
-          "answers": "1. Chọn slide có tiêu đề <b> FusionTomo</b>. <br/> 2. Trong tab <b>Insert</b>  click vào chức năng <b>Video</b> và chọn chức năng <b> Video on My PC...</b> <br/> 3. Tìm và chọn video có tên <b>pimos.mp4</b> trong thư mục <b>PiMOS</b> nằm trong thư mục <b>Documents</b>.",
+          "question": "Trong khung bên phải của slide có tiêu đề 'FusionTomo'  chèn video <i>pimos.mp4</i> trong thư mục PowerPoint nằm trong thư mục Documents.",
+          "answers": "1. Chọn slide có tiêu đề <b> FusionTomo</b>. <br/> 2. Trong tab <b>Insert</b>  click vào chức năng <b>Video</b> và chọn chức năng <b> Video on My PC...</b> <br/> 3. Tìm và chọn video có tên <b>pimos.mp4</b> trong thư mục <b>PowerPoint</b> nằm trong thư mục <b>Documents</b>.",
           "image": ""
         },
         {
-          "question": "Chèn 1 slide mới vào cuối bài thuyết trình bằng cách nhập thông tin từ tập tin <i>MS_FusionTomo.docx</i> trong thư mục PiMOS nằm trong thư mục Documents.",
-          "answers": "1. Click vào cuối bài thuyết trình. Click vào chức năng <b>New Slide</b> và chọn <b>Slides from Outline...</b>. <br/> 2. Tìm vào chọn file <b>MS_FusionTomo.docx</b> nằm trong thư mục <b>PiMOS</b> trong thư mục <b>Documents</b>.",
+          "question": "Chèn 1 slide mới vào cuối bài thuyết trình bằng cách nhập thông tin từ tập tin <i>MS_FusionTomo.docx</i> trong thư mục PowerPoint nằm trong thư mục Documents.",
+          "answers": "1. Click vào cuối bài thuyết trình. Click vào chức năng <b>New Slide</b> và chọn <b>Slides from Outline...</b>. <br/> 2. Tìm vào chọn file <b>MS_FusionTomo.docx</b> nằm trong thư mục <b>PowerPoint</b> trong thư mục <b>Documents</b>.",
           "image": ""
         },
         {
@@ -176,8 +176,8 @@
       "title": "InternetSales",
       "tasks": [
         {
-          "question": "Thêm 2 slide mới ngay sau slide tiêu đề từ tập tin <i>Marketing.rtf</i> trong thư mục <i>Documents//PiMOS</i> ",
-          "answers": "1. Chọn vào khoảng trống giữa slide 1 và slide 2.<br/> 2. Chọn thẻ <b>Home</b>.<br/> 3. Chọn chức năng <b>New Slide</b> trong nhóm <b>Slides</b>.<br/> 4. Sau đó  chọn <b>Slide from Outline</b>.<br/> 5. Tìm đến thư mục <b>Document//PiMOS</b>  chọn tập tin <b>Marketing.rtf</b> -><b>Open</b>.<br/>",
+          "question": "Thêm 2 slide mới ngay sau slide tiêu đề từ tập tin <i>Marketing.rtf</i> trong thư mục <i>Documents//PowerPoint</i> ",
+          "answers": "1. Chọn vào khoảng trống giữa slide 1 và slide 2.<br/> 2. Chọn thẻ <b>Home</b>.<br/> 3. Chọn chức năng <b>New Slide</b> trong nhóm <b>Slides</b>.<br/> 4. Sau đó  chọn <b>Slide from Outline</b>.<br/> 5. Tìm đến thư mục <b>Document//PowerPoint</b>  chọn tập tin <b>Marketing.rtf</b> -><b>Open</b>.<br/>",
           "image": ""
         },
         {
@@ -196,8 +196,8 @@
           "image": ""
         },
         {
-          "question": "Trên slide <u>Summary</u>  chèn bảng từ tập tin <i>Flavors.xlsx</i> trong thư mục <i>Documents//PiMOS</i> vào khung có sẵn.",
-          "answers": "1. Chọn vào khung trống trên slide có tiêu đề <b>Summary</b>.<br/> 2. Chọn thẻ <b>Insert</b>  sau đó chọn <b>Object</b> trong nhóm <b>Text</b>.<br/> 3. Chọn mục <b>Create from file</b> nhấn vào nút <b>Browse</b>.<br/> 4. Tìm đến thư mục <b>Document//PiMOS</b> chọn tập tin <b>Flavors.xlsx</b> -> <b>OK</b>.<br/>",
+          "question": "Trên slide <u>Summary</u>  chèn bảng từ tập tin <i>Flavors.xlsx</i> trong thư mục <i>Documents//PowerPoint</i> vào khung có sẵn.",
+          "answers": "1. Chọn vào khung trống trên slide có tiêu đề <b>Summary</b>.<br/> 2. Chọn thẻ <b>Insert</b>  sau đó chọn <b>Object</b> trong nhóm <b>Text</b>.<br/> 3. Chọn mục <b>Create from file</b> nhấn vào nút <b>Browse</b>.<br/> 4. Tìm đến thư mục <b>Document//PowerPoint</b> chọn tập tin <b>Flavors.xlsx</b> -> <b>OK</b>.<br/>",
           "image": ""
         },
         {
@@ -234,8 +234,8 @@
           "image": ""
         },
         {
-          "question": "Chèn thêm các slide mới lấy từ tập tin <i>PoliceAuction_2.pptx</i> trong thư mục PiMOS nằm trong thư mục Documents (giữ đúng thứ tự của các slide) vào cuối bài thuyết trình hiện tại. Không giữ lại định dạng dữ liệu nguồn. (don’t keep source formating).",
-          "answers": "1. Click vào vị trí dưới cùng trong hộp thoại bên trái. Click vào mũi tên trong chức năng <b>New Slide</b> và chọn chức năng <b>Reuse Slides</b>. <br/> 2. Trong hộp thoại <b>Reuse Slides</b>  nhấn nút <b>Browse</b> để tìm chọn file <b>PoliceAution_2.pptx</b> trong thư mục PiMOS. <br/> 3. Click lần lượt vào các slide xuất hiện trong hộp thoại <b>Reuse Slides</> theo thứ tự từ trên xuống.",
+          "question": "Chèn thêm các slide mới lấy từ tập tin <i>PoliceAuction_2.pptx</i> trong thư mục PowerPoint nằm trong thư mục Documents (giữ đúng thứ tự của các slide) vào cuối bài thuyết trình hiện tại. Không giữ lại định dạng dữ liệu nguồn. (don’t keep source formating).",
+          "answers": "1. Click vào vị trí dưới cùng trong hộp thoại bên trái. Click vào mũi tên trong chức năng <b>New Slide</b> và chọn chức năng <b>Reuse Slides</b>. <br/> 2. Trong hộp thoại <b>Reuse Slides</b>  nhấn nút <b>Browse</b> để tìm chọn file <b>PoliceAution_2.pptx</b> trong thư mục PowerPoint. <br/> 3. Click lần lượt vào các slide xuất hiện trong hộp thoại <b>Reuse Slides</> theo thứ tự từ trên xuống.",
           "image": ""
         }
       ]

@@ -746,7 +746,7 @@
 
         // Load quiz data from JSON file
         function loadQuizData() {
-            fetch('EX_2.json')
+            fetch('W_2.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Failed to load data');
@@ -1083,7 +1083,7 @@
             // Download each file
             files.forEach(fileName => {
                 const link = document.createElement("a");
-                link.href = "files/excelexam/" + fileName;   
+                link.href = "files/wordexam/" + fileName;   
                 link.download = fileName;
                 document.body.appendChild(link);
                 link.click();
