@@ -13,7 +13,7 @@
 
 "Leadership",
 
-"Meeting",
+"Scholarship",
 
 "Memo",
 
@@ -26,14 +26,6 @@
       "title": "FusionTomo",
       "tasks": [
         {
-
-
-
-
-
-
-
-
 
           "question": "Chèn nội dung tệp <i>'manage.docx'</i> trong thư mục <i>Word</i> của thư mục <i>Documents</i> vào văn bản ngay sau tiêu đề 'Our Management'.",
           "answers": "1. Tìm <b>Our Management</b> trong văn bản(Ctrl+F gõ vào Our Management để tìm). Click chuột chọn dòng trống bên dưới tiêu đề <b>Our Management</b>.<br/>2.  Chọn thẻ <b>Insert</b>  trong nhóm <b>Text</b> Chọn <b>Object</b>-><b>Text from file...</b>.<br/>3. Tìm tới thư mục <b>Document</b> trong <b>Quick Access</b><br/>4. Chọn tập tin <b>manage.docx</b>-><b>Insert</b>.",
@@ -58,33 +50,8 @@
           "question": "Áp dụng hiệu ứng phát sáng  'Teal  11 pt glow  Accent color 5' cho hình ảnh đồ họa trong văn bản.",
           "answers": "1. Click chuột trái vào hình ảnh trong tài liệu.<br/>2. Chọn thẻ <b>Format</b> Trong <b>Picture Tool</b>.<br/>3. Trong nhóm <b>Picture Styles</b> chọn  <b>Picture Effects</b> -> <b>Glow</b>.<br/>4. Tìm và chọn loại <b>Teal  11 pt glow  Accent color 5</b>.",
           "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        },
-        {
-          "question": "",
-          "answers": "",
-          "image": ""
-        }
-      ]
+        }   
+            ]
     },
     {
       "id": 2,
@@ -93,13 +60,6 @@
       "tasks": [
         {
           
-
-
-
-
-
-
-
 
           "question": "Thiết lập vị trí canh lề của hình hai tách cà phê trên cái dĩa nằm về bên trái so với lề trang.",
           "answers": "1. Click chuột phải vào ảnh chọn <b>Size and Position...</b> Chọn thẻ <b>Position</b>.<br/>2. Trong mục Horizontal  thiết lập  <b>Alignment</b>-><b>Left</b>  và relative to <b>Margin</b>.",
@@ -128,7 +88,6 @@
       "title": "Muffin",
       "tasks": [
         {   
-
 
           "question": "Hiển thị tiêu đề <i>“Integral”</i> trên tất cả các trang trừ trang đầu tiên",
           "answers": "<b>Bước 1:</b> Chọn tab <b>Insert</b>.<br><b>Bước 2:</b> Chọn <b>Header</b> và chọn kiểu <b>Integral</b>.<br><b>Bước 3:</b> Đánh dấu vào ô <b>Different First Page</b>.",
@@ -188,17 +147,6 @@
       "tasks": [
         {
 
-
-
-
-
-
-
-
-
-
-
-
           "question": "Thiết lập hướng trang in là Landscape cho trang văn bản nằm phía sau dấu ngắt phần.",
           "answers": "1. Chọn thẻ <b>Home</b>  trong nhóm <b>Editing</b> mở rộng <b>Find</b>  chọn chức năng <b>Go To...</b>(<i>Hoặc sử dụng phím tắt Ctrl + G </i>)<br/>2. Click chuột chọn <b>Section</b><br/>2.  Nhập số <b>2</b> vào phần <b>Enter section number:</b> -> <b>Go to</b> -> <b>Close</b>.<br/>3. Chọn thẻ <b>Layout</b> trong nhóm <b>Page Setup</b><br/>4. Chọn <b>Orientation</b>-><b>Landscape</b>.",
           "image": ""
@@ -252,20 +200,10 @@
     {
       "id": 6,
       "projectfile": [],
-      "title": "Meeting",
+      "title": "Scholarship",
       "tasks": [
         {
-
-          
-
-
-
-
-
-
-
-
-
+       
 
           "question": "Thiết lập sao cho toàn bộ văn bản đều cách dòng đôi.",
           "answers": "1. Chọn toàn bộ văn bản (Ctrl + A ).<br/>2. Click chuột phải vị trí bất kỳ trong văn bản chọn <b>Paragraph...</b>.<br/>2. Trong thẻ  <b>Indents and Spacing</b>  trong mục <b>Spacing</b> chọn <b>Line Spacing</b> -> <b>Double</b> -> <b>OK</b> .",
@@ -294,18 +232,7 @@
       "title": "Memo",
       "tasks": [
         {
-          
-
-
-
-
-
-
-
-
-
-
-
+        
           "question": "Chuyển nội dung bắt đầu từ 'Ontario...' đến '...Vince' thành bảng với kí tự phân cách là kí tự tab.",
           "answers": "1. Tìm <b>Ontario</b> trong văn bản(Ctrl+F gõ vào Ontario để tìm).<br/>2. Click chuột chọn đoạn văn bản từ <b>Ontario</b> đến hết <b>Vince</b>. Chọn thẻ <b>Insert</b> .<br/>3. Trong nhóm <b>Tables</b> Chọn <b>Convert Text to Table...</b> .<br/>4. Trong phần <b>Separate Text As</b> chọn <b>Tabs</b> -> <b>OK</b>.",
           "image": ""
