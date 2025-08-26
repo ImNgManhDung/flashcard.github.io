@@ -1,0 +1,295 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [
+"Reforestation"
+,
+"Report"
+,
+"RockArt"
+,
+"RockCrawling",
+"TacoTrucks",
+"UtahSnow"
+
+
+      ],
+      "title": "Reforestation",
+      "tasks": [
+        {
+         
+
+
+          "question": " Áp dụng hình mờ kiểu DO NOT COPY 1 cho tất cả các trang của văn bản.",
+          "answers": "1. Chọn toàn bộ văn bản (Ctrl + A)  chọn thẻ <b>Design</b>  trong nhóm <b>Page Background</b>.<br/>2. Chọn <b>Water Mark</b> -> <b>DO NOT COPY 1</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi năm của trích dẫn (1) thành 2017.",
+          "answers": "1. Chọn thẻ <b>References</b>  trong nhóm <b>Citations & Bibliography</b> Chọn <b>Manage Sources</b>.<br/>2. Tìm và chọn tài liệu tham khảo đề bài yêu cầu trong <b>Current List</b>.<br/>3. Nhấn vào nút <b>Edit...</b><br/>4. Trong mục <b>Year</b> nhập vào <b>2017</b>. <b>OK</b> -> <b>Close</b>.",
+          "image": ""
+        },
+        {
+          "question": "Di chuyển hình trong văn bản để hình nằm dưới tiêu đề 'Five Steps:'.",
+          "answers": "1. Chọn hình trong văn bản.<br/>2. Click và giữ chuột trái  kéo hình đến đoạn trống dưới tiêu đề <b>Five Steps:</b> thả chuột.",
+          "image": ""
+        },
+        {
+          "question": "Áp dụng kiểu định dạng Relaxed Perspective  White cho ảnh trong văn bản.",
+          "answers": "1. Chọn hình trong văn bản  chọn thẻ <b>Format</b> trong <b>Picture Tool</b>.<br/>2. Trong nhóm <b>Picture Styles</b> mở rộng danh sách <b>Style</b>.<br/>3. Tìm và chọn <b>Relaxed Perspective  White</b> .",
+          "image": ""
+        },
+        {
+          "question": "Chèn ngắt phần dạng Even Page ngay trước tiêu đề 'Tool to Plant Tree Seedlings'.",
+          "answers": "1. Tìm <b>Tool to Plant Tree Seedlings</b> trong văn bản(Ctrl+F gõ vào Tool to Plant Tree Seedlings để tìm).<br/>2. Click chuột chọn phía trước tiêu đề  chọn thẻ <b>Layout</b>  trong nhóm <b>Page Setup</b>.<br/>3. Chọn <b>Breaks</b> trong phần <b>Section Break</b> -> <b>Next Page</b>.",
+          "image": ""
+        },
+        {
+          "question": "Xóa các thông tin cá nhân khỏi văn bản.",
+          "answers": "1. Chọn thẻ <b>File</b> -> <b>Info</b>.<br/>2. Click vào <b>Check for Issues</b>(nút hình vuông thứ hai bên trái).<br/>3. Chọn <b>Inspect document</b> -> <b>Yes</b> -> <b>Inspect</b>.<br/>4. Trong mục <b>Document Properties and Personal Information</b> (mục thứ 2).<br/>5. Nhấnvào nút <b>Remove All</b> để xóa thông tin  nhấn vào <b>Close</b> để quay trở lại văn bản.",
+          "image": ""
+        }
+      ]
+    },
+    {
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+      "id": 2,
+      "projectfile": [],
+      "title": "Report",
+      "tasks": [
+        {
+          "question": " Chèn hình <i>'dayofweek.jpg'</i> trong thư mục <i>PiMOS</i> của thư mục <i>Documents</i> vào văn bản sao cho hình nằm sau nội dung '...today resemble those names.'. Thay đổi chiều ngang hình là 6.2'.",
+          "answers": "1. Tìm <b>today resemble those names.</b> trong văn bản(Ctrl+F gõ vào today resemble those names. để tìm)  chọn đoạn phía sau chuỗi vừa tìm.<br/>2. Chọn thẻ <b>Insert</b>  trong nhóm <b>Illustrations</b> Chọn <b>Pictures</b>.<br/>3. Tìm tới thư mục <b>Document</b> trong <b>Quick Access</b>.<br/>4. Chọn tập tin <b>dayofweek.jpg</b>-><b>Insert</b>.<br/>4. Click chuột phải vào ảnh chọn <b>Size and Position...</b> thay đổi kích thước chiều ngang(Width) thành <b>6.2'</b> .",
+          "image": ""
+        },
+        {
+          "question": "Chèn ngắt phần kiểu Next Page ngay trước tiêu đề 'Facts about Saturday and Sunday'.",
+          "answers": "1. Tìm <b>Facts about Saturday and Sunday</b> trong văn bản(Ctrl+F gõ vào Facts about Saturday and Sunday để tìm).<br/>2. Click chuột chọn phía chữ <b>F</b> trong tiêu đề  chọn thẻ <b>Layout</b>  trong nhóm <b>Page Setup</b>.<br/>3. Chọn <b>Breaks</b> trong phần <b>Section Break</b> -> <b>Next Page</b>.",
+          "image": ""
+        },
+        {
+          "question": "Vẽ hình 6-Point Star bên phải chữ “Days of the Week” ở đầu văn bản và nhập nội dung '6D' vào hình.",
+          "answers": "1. Tìm <b>Facts about Saturday and Sunday</b> trong văn bản(Ctrl+F gõ vào Facts about Saturday and Sunday để tìm).<br/>2. Trong nhóm <b>Illustrations</b> Chọn <b>Shapes</b>.<br/>3. Tìm và chọn khối có tên <b>6-Point Star</b> (trong <b>Stars and Banners</b>)<br/>4. Click giữ chuột trái và vẽ khối vào bên phải cách xa dòng chữ <b>Facts about Saturday and Sunday</b>.<br/>8. Click chuột phải vào khối vừa tạo chọn <b>Add text</b>. Sau đó  nhập chuỗi  <b>6D</b></br>.",
+          "image": ""
+        },
+        {
+          "question": "Chèn trang bìa kiểu Filigree vào văn bản  xóa trường thông tin Address.",
+          "answers": "1. Chọn thẻ <b>Insert</b>  trong nhóm <b>Pages</b>.<br/>2. Chọn <b>Cover Page</b>  tìm và chọn kiểu <b>Filigree</b>.<br/>3. Trong trang bìa  tìm vùng <b>Abstract</b> (bên trên phía góc trái hiện chữ Abstract).<br/>4.Click chuột vào tiêu đề <b>Abstract</b> phía bên trái nhấn <b>Delete</b> trên bàn phím.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Loại bỏ các thông tin cá nhân khỏi văn bản.",
+          "answers": "1. Chọn thẻ <b>File</b> -> <b>Info</b>.<br/>2. Click vào <b>Check for Issues</b>(nút hình vuông thứ hai bên trái).<br/>3. Chọn <b>Inspect document</b> -> <b>Yes</b> -> <b>Inspect</b>.<br/>4. Trong mục <b>Document Properties and Personal Information</b> (mục thứ 2).<br/>5. Nhấnvào nút <b>Remove All</b> để xóa thông tin  nhấn vào <b>Close</b> để quay trở lại văn bản.",
+          "image": ""
+        },
+        {
+          "question": "Tô sáng cho nội dung 'Anglo-Saxons' với màu Turquoise.",
+          "answers": "1. Tìm <b>Anglo-Saxons</b> trong văn bản(Ctrl+F gõ vào Anglo-Saxons để tìm).<br/>2. Click chuột chọn văn bản <b>Anglo-Saxons</b>.<br/>3. Chọn thẻ <b>Home</b>  trong nhóm <b>Font</b>  chọn <b>Hight Light</b> (<i>nằm gần cuối hàng thứ hai trong nhóm Font</i>) -> <b>Turquoise</b>.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [],
+      "title": "RockArt",
+      "tasks": [
+        {       
+
+
+          "question": " Chèn nội dung tệp <i>Preservation.docx</i> trong thư mục <i>PiMOS</i> của thư mục <i>Documents</i> ngay bên dưới đoạn văn bản “The quality and ...are called ‘pictographs’. ” bên dưới tiêu đề “Ancient Rock Art”.",
+          "answers": "1. Tìm <b>The quality and</b> trong văn bản(Ctrl+F gõ vào The quality and để tìm). Click chuột chọn dòng trống bên dưới.<br/>2.  Chọn thẻ <b>Insert</b>  trong nhóm <b>Text</b> Chọn <b>Object</b>-><b>Text from file...</b>.<br/>3. Tìm tới thư mục <b>Document</b> trong <b>Quick Access</b><br/>4. Chọn tập tin <b>Preservation.docx</b>-><b>Insert</b>.",
+          "image": ""
+        },
+        {
+          "question": "Chèn bảng gồm 5 dòng  4 cột bên dưới đoạn văn bản “The earliest rock … created rock art.”.",
+          "answers": "1. Tìm <b>The earliest rock art</b> trong văn bản(Ctrl+F gõ vào The earliest rock art để tìm). Click chuột chọn dòng trống bên dưới.<br/>2.  Chọn thẻ <b>Insert</b>  trong nhóm <b>Tables</b> Chọn <b>Insert Table...</b>.<br/>3. Nhập vào số lượng cột <b>Number of Columns: </b>  -> <b>4</b> và số lượng dòng  <b>Number of Rows: </b>  -> <b>5</b><br/>4. Chọn <b>OK</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi giá trị trường năm của tài liệu tham khảo của tác giả “Greywolf  David” thành năm <u>'2001'</u>.",
+          "answers": "1. Chọn thẻ <b>References</b>  trong nhóm <b>Citations & Bibliography</b> Chọn <b>Manage Sources</b>.<br/>2. Tìm và chọn tài liệu tham khảo đề bài yêu cầu trong <b>Current List</b>.<br/>3. Nhấn vào nút <b>Edit...</b><br/>4. Trong mục <b>Year</b> nhập vào <b>2001</b>. <b>OK</b> -> <b>Close</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thiết lập thông tin thuộc tính chủ đề của tệp văn bản là chuỗi <u>“Travel”</u>.",
+          "answers": "1. Chọn thẻ <b>File</b> -> <b>Info</b>.<br/>2. Trong danh sách thuộc tính <b>Properties</b>(danh sách phía bên phải).<br/>3. Nhấn vào <b>Show All Properties</b><br/>4. Trong mục <b>Subject</b> nhập vào <b>Travel</b>. Nhấn vào nút mũi tên <b>Back</b> phía trên <b>Info</b> để quay trở lại văn bản.",
+          "image": ""
+        },
+        {
+          "question": "Thiết lập sao cho chỉ hiển thị kí tự tab và kí tự khoảng cách để khắc phục khó khăn. Không xóa kí tự tab và kí tự khoảng cách.",
+          "answers": "1. Chọn thẻ <b>File</b> -> <b>Options</b>.<br/>2. Click chọn <b>Display</b>  trong phần <b>Always show these formating marks on the screen</b>.<br/>3. Check vào <b>Tab Charaters</b> và <b>Spaces</b>.<br/>3. Bỏ check các tùy chọn khác -> <b>OK</b>.",
+          "image": ""
+        },
+        {
+          "question": "Cập nhập toàn bộ bảng mục lục hiện có trong văn bản.",
+          "answers": "1. Chọn thẻ <b>References</b>  trong nhóm <b>Table of Contents</b>.<br/>2. Click chọn <b>Update Table</b>  check vào <b>Update Entire Table</b> -> <b>OK</b>.<br/>",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [],
+      "title": "RockCrawling",
+      "tasks": [
+        {
+          "question": "Gộp tất cả các ô trong dòng cuối cùng của bảng thành một ô.",
+          "answers": "1. Chọn dòng cuối cùng trong bảng.<br/>2. Chọn thẻ <b>Layout</b> trong <b>Table Tool</b>.<br/>3. Trong nhóm <b>Merge</b> chọn <b>Merge Cells</b>.",
+          "image": ""
+        },
+        {
+          "question": "Chèn văn bản thay thế cho bảng trong văn bản với tiêu đề <u>'Rock Crawling'</u> và nội dung mô tả <u>'Vehicles Commonly Used'</u>.",
+          "answers": "1. Click chuột phải vào một vị trí bất kỳ trong bảng (Table). Sau đó  chọn <b>Table Properties...</b>.<br/>2. Chọn thẻ <b>Alt Text</b>  trong mục <b>Title</b> nhập vào <b>Rock Crawling</b>  và <b>Description</b> nhập vào <b>Vehicles Commonly Used</b>",
+          "image": ""
+        },
+        {
+          "question": "Chèn hình Star: 8-Point vào văn bản  hiệu chỉnh chiều ngang và chiều cao của hình là 1”  thiết lập vị trí hình nằm ở góc trên bên trái của trang.",
+          "answers": "1. Chọn thẻ <b>Insert</b>  trong nhóm <b>Illustrations</b> Chọn <b>Shapes</b>.<br/>2. Tìm và chọn khối có tên <b>Star: 8-Point</b> (trong <b>Stars and Banners</b>)<br/>3. Click giữ chuột trái và vẽ khối vào văn bản.<br/>4. Chọn thẻ <b>Format</b> trong <b>Drawing Tool</b>.<br/>5. Trong nhóm <b>Size</b> thay đổi kích thước chiều ngang(Width) và chiều cao(height) thành 1'.<br/>6. Click chuột phải vào khối  chọn <b>More Layout Position...</b> Chọn thẻ <b>Position</b>.<br/>7. Trong mục  <b>Horizontal</b>  thiết lập  <b>Alignment</b>-><b>Left</b>  và relative to <b>Page</b>.<br/>8. Trong mục <b>Vertical</b>  thiết lập  <b>Alignment</b>-><b>Top</b>  và relative to <b>Page</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thêm nội dung 'Star' vào hình ngôi sao vừa tạo.",
+          "answers": "1. Click chuột phải vào khối vừa tạo chọn <b>Add text</b>. Sau đó  nhập chuỗi <b>Star</b>.",
+          "image": ""
+        },
+        {
+          "question": "Áp dụng hình mờ kiểu DO NOT COPY 1 cho tất cả các trang của văn bản.",
+          "answers": "1. Chọn toàn bộ văn bản (Ctrl + A)  chọn thẻ <b>Design</b>  trong nhóm <b>Page Background</b>.<br/>2. Chọn <b>Water Mark</b> -> <b>DO NOT COPY 1</b>.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [],
+      "title": "5",
+      "tasks": [
+        {
+
+          "question": "Thiết lập sao cho toàn bộ văn bản đều cách dòng đôi.",
+          "answers": "1. Chọn toàn bộ văn bản (Ctrl + A ).<br/>2. Click chuột phải vị trí bất kỳ trong văn bản chọn <b>Paragraph...</b>.<br/>2. Trong thẻ  <b>Indents and Spacing</b>  trong mục <b>Spacing</b> chọn <b>Line Spacing</b> -> <b>Double</b> -> <b>OK</b> .",
+          "image": ""
+        },
+        {
+          "question": "Áp dụng kiểu Center Shadow Rectangle cho hình trong văn bản",
+          "answers": "1. Chọn hình trong văn bản  chọn thẻ <b>Format</b> trong <b>Picture Tool</b>.<br/>2. Trong nhóm <b>Picture Styles</b> mở rộng danh sách <b>Style</b>.<br/>3. Tìm và chọn <b>Center Shadow Rectangle</b> .",
+          "image": ""
+        },
+        {
+          "question": "Di chuyển hình trong văn bản sao cho hình nằm ở trước tiêu đề 'TEXTBOOK COSTS:'",
+          "answers": "1. Chọn hình trong văn bản.<br/>2. Click và giữ chuột trái  kéo hình đến đoạn trống trước tiêu đề <b>TEXTBOOK COSTS:</b> thả chuột.",
+          "image": ""
+        },
+        {
+          "question": "Chèn dòng đầu trang kiểu Facet (Odd Page) vào văn bản sao cho dòng đầu trang không xuất hiện ở trang đầu tiên",
+          "answers": "1. Chọn thẻ <b>Insert</b>  trong nhóm <b>Header & Footer</b>.<br/>2. Chọn <b>Header</b> -> <b>Edit Header</b><br/>3. Trong thẻ <b>Design</b> của <b>Header & Footer</b>  trong nhóm <b>Options</b> check vào<b>Different First Page</b>.<br/>4. Di chuyển đến trang thứ 2 và chọn vào phần đầu trang (phần đầu trang có hiển thị <b>Header</b>  <i>Phần đầu trang hiển thị <b>First Page Header</b> là trang đầu tiên</i>).<br/>5. Trong <b>Design</b> của <b>Header & Footer</b>   trong nhóm <b>Header & Footer</b>.<br/>6. Chọn <b>Header</b>  tìm và chọn loại <b>Facet (Odd Page)</b>.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectfile": [],
+      "title": "TacoTrucks",
+      "tasks": [
+        {         
+          "question": "Áp dụng kiểu định dạng Lines (Simple) cho văn bản.",
+          "answers": "1. Chọn thẻ <b>Design</b>  trong nhóm <b>Document Formating</b> .<br/>3. Mở rộng danh sách <b>Style Set</b> (danh sách có chữ Tile).<br/>3. Tìm và chọn <b>Lines (Simple)</b>.",
+          "image": ""
+        },
+        {
+          "question": "Tô sáng  cho nội dung 'mushrooms and onions' với màu Bright Green. ",
+          "answers": "1. Tìm <b>mushrooms and onions</b> trong văn bản(Ctrl+F gõ vào mushrooms and onions để tìm).<br/>2. Click chuột chọn văn bản <b>mushrooms and onions</b>.<br/>3. Chọn thẻ <b>Home</b>  trong nhóm <b>Font</b>  chọn <b>Hight Light</b> (<i>nằm gần cuối hàng thứ hai trong nhóm Font</i>) -> <b>Bright Green</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi dấu đầu dòng trong văn bản thành hình <i>'taco.png'</i> trong thư mục <i>PiMOS</i> của thư mục <i>Documents</i>.",
+          "answers": "1. Tìm danh sách không có thứ tự trong văn bản.<br/>2. Chọn đoạn văn bản danh sách không có thứ tự từ <b>The Big Beef…</b> đến <b>..Pico De Gallo or Sour Cream – $0.75</b><br/>2. Chọn thẻ <b>Home</b> Trong nhóm <b>Paragraph</b> chọn mở rộng <b>Bullets</b>.<br/>3. Chọn chức năng <b>Define New Bullet...</b> chọn <b>Pictures...</b>.<br/>4. Chọn <b>From a File</b>  tìm tới thư mục <b>Document</b> trong <b>Quick Access</b><br/>4. Chọn tập tin <b>taco.png</b> -> <b>Insert</b> -> <b>OK</b>.",
+          "image": ""
+        },
+        {
+          "question": "Chèn biểu tượng Registered Sign ngay sau nội dung 'Mexican' trong văn bản.",
+          "answers": "1. Tìm <b>Mexican</b> trong văn bản(Ctrl+F gõ vào Mexican để tìm).<br/>2. Click chuột ngay sau chuỗi  <b>Mexican</b>. Chọn thẻ <b>Insert</b> -> <b>Symbol</b>.<br/>2. Chọn <b>More symbol</b>-><b>Special Characters</b>.<br/>3. Chọn <b>Registered</b>-> <b>Insert</b>.",
+          "image": ""
+        },
+        {
+          "question": "Sử dụng chức năng Go to để di chuyển đến phân vùng 2 và xóa đoạn văn bản thứ 3 sau tiêu đề của phân vùng này.",
+          "answers": "1. Chọn thẻ <b>Home</b>  trong nhóm <b>Editing</b> mở rộng <b>Find</b>  chọn chức năng <b>Go To...</b>(<i>Hoặc sử dụng phím tắt Ctrl + G </i>)<br/>2. Click chuột chọn <b>Section</b><br/>2.  Nhập số <b>2</b> vào phần <b>Enter section number:</b> -> <b>Go to</b> -> <b>Close</b>.<br/>3. Chọn đoạn thứ 3 sau tiêu đề <b>Tostadas and vampiros</b> (từ <b>Tacos árabes (literally “Arab tacos”)</b> đến <b>to get your fix.</b>)nhấn phím <b>Delete</b> trên bàn phím để xóa.<br/>(<i>Lưu ý: đoạn thứ 3 sau tiêu đề nên không tính đoạn tiêu đề.</i>)",
+          "image": ""
+        },
+        {
+          "question": "Thiết lập hướng trang thành hướng ngang cho phân vùng 2.",
+          "answers": "1. Chọn thẻ <b>Home</b>  trong nhóm <b>Editing</b> mở rộng <b>Find</b>  chọn chức năng <b>Go To...</b>(<i>Hoặc sử dụng phím tắt Ctrl + G </i>)<br/>2. Click chuột chọn <b>Section</b><br/>2.  Nhập số <b>2</b> vào phần <b>Enter section number:</b> -> <b>Go to</b> -> <b>Close</b>.<br/>3. Chọn thẻ <b>Layout</b> trong nhóm <b>Page Setup</b><br/>4. Chọn <b>Orientation</b>-><b>Landscape</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thêm nội dung <u>'Taco Trucks'</u> vào thuộc tính Title của văn bản.",
+          "answers": "1. Chọn thẻ <b>File</b> -> <b>Info</b>.<br/>2. Trong danh sách thuộc tính <b>Properties</b>(danh sách phía bên phải).<br/>3. Nhấn vào <b>Show All Properties</b><br/>4. Trong mục <b>Title</b> nhập vào <b>Taco Trucks</b>. Nhấn vào nút mũi tên <b>Back</b> phía trên <b>Info</b> để quay trở lại văn bản.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectfile": [],
+      "title": "UtahSnow",
+      "tasks": [
+        {
+          "question": "Dùng chức năng của Word để tìm và thay thế tất cả các từ 'falls' thành <u>'drops'</u>.",
+          "answers": " 1. Chọn vị trí bất kỳ trong văn bản.<br/>2. Chọn thẻ <b>Home</b>  trong nhóm <b>Editing</b> .<br/>3. Chọn <b>Replace</b>  nhập <b>falls</b> vào phần <b>Find What:</b> và  <b>drops</b> vào phần <b>Replace With:</b> -> <b>Replace All</b>. <b>OK</b> -> <b>Close</b>.",
+          "image": ""
+        },
+        {
+          "question": "Chèn số trang kiểu Brackets 1 ở cuối mỗi trang trừ trang đầu tiên.",
+          "answers": "1. Chọn thẻ <b>Insert</b>  trong nhóm <b>Header & Footer</b>.<br/>2. Chọn <b>Footer</b> -> <b>Edit Footer</b><br/>3. Trong thẻ <b>Design</b> của <b>Header & Footer</b>  trong nhóm <b>Options</b> check vào<b>Different First Page</b>.<br/>4. Di chuyển đến trang thứ 2 và chọn vào phần chân trang (phần chân trang có hiển thị <b>Footer</b>  <i>Phần chân trang hiển thị <b>First Page Footer</b> là trang đầu tiên</i>).<br/>5. Trong <b>Design</b> của <b>Header & Footer</b>   trong nhóm <b>Header & Footer</b>.<br/>6. Chọn <b>Page Number</b>-> <b>Bottom of Page</b> tìm và chọn loại <b>Brackets 1</b>.",
+          "image": ""
+        },
+        {
+          "question": "Nhập nội dung 'Short Term Forecast' bên dưới đoạn kết thúc bằng '..many snowboarders attest it is true!' ở phân vùng 2.",
+          "answers": "1. Chọn thẻ <b>Home</b>  trong nhóm <b>Editing</b> mở rộng <b>Find</b>  chọn chức năng <b>Go To...</b>(<i>Hoặc sử dụng phím tắt Ctrl + G </i>)<br/>2. Click chuột chọn <b>Section</b><br/>2.  Nhập số <b>2</b> vào phần <b>Enter section number:</b> -> <b>Go to</b> -> <b>Close</b>.<br/>3. Chọn đoạn trống bên dưới đoạn <b>many snowboarders attest it is true!</b> nhập vào <b>Short Term Forecast</b>.",
+          "image": ""
+        },
+        {
+          "question": "Chèn hình <i>'mountain.jpg'</i> trong thư mục <i>PiMOS</i> của thư mục <i>Documents</i> vào văn bản sao cho hình nằm giữa đoạn 2 và 3 trong văn bản.",
+          "answers": "1. Di chuyển lên đầu văn bản  chọn đoạn trống phía dưới đoạn <b>In 1985  an ...attest it is true!</b> trong văn bản.<br/>2. Chọn thẻ <b>Insert</b>  trong nhóm <b>Illustrations</b> Chọn <b>Pictures</b>.<br/>3. Tìm tới thư mục <b>Document</b> trong <b>Quick Access</b>.<br/>4. Chọn tập tin <b>mountain.jpg</b>-><b>Insert</b>.",
+          "image": ""
+        },
+        {
+          "question": "Chuyển nội dung bắt đầu từ 'The Cottonwood ...' đến '...This results in “The Greatest Snow on Earth”!' thành danh sách có thứ tự.",
+          "answers": "1. Tìm danh sách không có thứ tự trong văn bản.<br/>2. Chọn đoạn văn bản danh sách không có thứ tự từ <b>The Cottonwood Canyons ...</b> đến <b>'…This results in “The Greatest Snow on Earth”!'</b><br/>3. Chọn thẻ <b>Home</b>  trong nhóm <b>Paragraph</b> click chọn <b>Numbering</b> (chức năng thứ 2 bên cạnh <b>Bullet</b>).",
+          "image": ""
+        },
+        {
+          "question": "Tùy chỉnh danh sách có thứ tự  trong văn bản để bắt đầu đánh số từ 2001.",
+          "answers": "1. Chọn đoạn văn bản danh sách có thứ tự từ <b>The Cottonwood Canyons ...</b> đến <b>'…This results in “The Greatest Snow on Earth”!'</b><br/>2. Click chuột phải vào số <b>1.</b> ở đầu dòng  chọn <b>Set Numbering Value...</b>.<br/>3. Trong phần <b>Set Value to</b> nhập <b>2001</b> -> <b>OK</b>.",
+          "image": ""
+        },
+        {
+          "question": "Định dạng WordArt kiểu Fill -White  Outline - Accent 2  Hard Shadow  - Accent 2 cho nội dung 'The Greatest Snow on Earth' ở đầu văn bản.",
+          "answers": "1. Tìm <b>The Greatest Snow on Earth</b> trong văn bản(Ctrl+F gõ vào The Greatest Snow on Earth để tìm).<br/>2. Dùng chuột chọn chuỗi <b>The Greatest Snow on Earth</b>. Sau đó  chọn thẻ <b>Insert</b>.<br/>3. Trong nhóm <b>Text</b> chọn <b>Word Art</b>.<br/>4. Tìm và chọn kiểu <b>Fill: White; Outline: Orange  Accent color 2; Hard Shadow: Orange  - Accent color 2</b>.",
+          "image": ""
+        },
+        {
+          "question": "Sử dụng Goto để đi đến thẻ đánh dấu 'Forecast' và xóa nội dung của thẻ đánh dấu này.",
+          "answers": "1. Chọn thẻ <b><u>Home</u></b>  trong nhóm <b>Editing</b> mở rộng <b>Find</b>  chọn chức năng <b>Go To...</b>(<i>Hoặc sử dụng phím tắt Ctrl + G </i>)<br/>2. Click chuột chọn <b>Bookmark</b><br/>3.  Chọn <b>Forecast</b> trong phần <b>Enter Bookmark Name:</b> -> <b>Go to</b> -> <b>Close</b>.<br/>4. Nhấn phím <b>Delete</b> trên bàn phím để xóa.",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
