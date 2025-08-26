@@ -3,15 +3,12 @@
     {
       "id": 1,
       "projectfile": [
-"Reforestation"
-,
-"Report"
-,
-"RockArt"
-,
-"RockCrawling",
-"TacoTrucks",
-"UtahSnow"
+"Reforestation.docx",
+"Report.docx",
+"RockArt.docx",
+"RockCrawling.docx",
+"TacoTrucks.docx",
+"UtahSnow.docx"
 
 
       ],
@@ -52,19 +49,7 @@
         }
       ]
     },
-    {
-
-     
-
-
-
-
-
-
-
-
-
-
+    { 
 
 
       "id": 2,
