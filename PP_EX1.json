@@ -1,0 +1,322 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [
+        
+"CustomConstruction.pptx",
+
+"EcoFriendly.pptx",
+
+"FusionTomo.pptx",
+
+"IceCream.pptx",
+
+"InternetSales.pptx",
+
+"PoliceAuction.pptx",
+
+"RockCrawling.pptx",
+
+"Smartphones.pptx"
+
+      ],
+      "title": "CustomConstruction",
+      "tasks": [
+        {
+          "question": "Trên slide <u>Mission Statement</u>  thiết lập vị trí chữ nằm dưới cùng trong textbox và định dạng chữ hoa nhỏ.",
+          "answers": "1. Chọn khung nội dung trong slide có tiêu đề <b>Mission Statement</b>.<br/> 2. Chọn thẻ <b>Home</b>  trong nhóm <b>Paragraph</b> thiết lập <b>Align Text</b> -> <b>Bottom</b>.<br/> 3. Trong thẻ <b>Home</b>  chọn mở rộng nhóm <b>Font</b> sau đó check vào <b>Small Caps</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Tạo một bài thuyết trình tùy chỉnh bao gồm các slide theo thứ tự 2 3 5 và 2 .",
+          "answers": "1. Chọn thẻ <b>Slide Show</b>  sau đó chọn <b>Custom Slide Show</b> -> <b>Custom Shows</b>.<br/> 2. Chọn <b>New</b>  check vào slide <b>2  3  5</b> -> <b>Add</b>.<br/> 3. Check thêm vào slide <b>2</b> -> <b>Add</b>  nhấn nút <b>OK</b> -> <b>Close</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Chỉnh sửa chủ đề của bài thuyết trình thành <u>Atlas</u>.",
+          "answers": "1. Chọn thẻ <b>Design</b>  chọn chủ đề <b>Atlas</b> trong nhóm <b>Themes</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Thiết lập để in bài thuyết trình ra 4 bản  tùy chọn in ghi chú với hướng in trang giấy ngang và in tất cả các trang 1 trước  sau đó mới in các trang 2 và các trang còn lại sau.",
+          "answers": "1. Chọn thẻ <b>File</b>  sau đó chọn mục <b>Print</b>.<br/> 2. Thiết lập <b>Copies</b> -> <b>4</b>  <b>Print Layout</b> -> <b>Notes Page</b>(mục đang hiển thị Full Page Slides).<br/> 3. Thay đổi <b>Orientation</b> -> <b>Landscape Orientation</b> và <b>Collated</b> -> <b>Uncollated</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi kích thước bài thuyết trình thành 4:3 và đảm bảo nội dung được vừa với kích thước mới.",
+          "answers": "1. Chọn thẻ <b>Design</b>  sau đó chọn mục <b>Slide Size</b>.<br/> 2. Thiết lập <b>Standard 4:3</b> -> <b>Ensure Fit</b>.<br/>",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectfile": [],
+      "title": "EcoFriendly",
+      "tasks": [
+        {
+
+          "question": "Nhập chuỗi <u>Friendly Stocks</u> trong khung bên trái vùng footer của trang handout.",
+          "answers": "1. Chọn tab <b>View</b>  Click chọn chức năng <b> Handout Master</b> (trong nhóm chức năng <b>Master Views</b>). <br/> 2. Trong tab <b> Handout Master</b>  nhập 'Friendly Stocks' vào hộp thoại dưới cùng bên trái. <br/> 3. Nhấn <b>Close Master View</b> để hoàn tất.",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi bài thuyết trình để hiển thị theo dạng Widescreen (16:9) và đảm bảo kích thước của phần nội dung được co giãn vừa khít với kích cỡ slide mới.",
+          "answers": "1. Chọn tab <b>Design</b>  click vào chức năng <b>Slide Size</b> ( trong nhóm chức năng <b>Customize</b>) và chọn chức năng <b> Widescreen (16:9)</b>. <br/> 2.  Trong hộp thoại mới mở ra chọn chức năng <b>Ensure Fit</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi bài thuyết trình bằng cách di chuyển để slide 5 thành slide 3.",
+          "answers": "1. Nhấn và giữ chuột trái vào slide 5  sau đó kéo slide 5 hiện tại lên vị trí slide 3.",
+          "image": ""
+        },
+        {
+          "question": "Cấu hình tùy chọn in ấn để chỉ in nội dung vùng 'Basic define'.",
+          "answers": "1. Click vào tab <b>File</b> và chọn chức năng <b>Print</b>. <br/> 2. Trong hộp thoại <b>Print</b>  click vào chức năng đầu tiên bên dưới chữ <b>Settings</b> và chọn <b>Basic define</b> trong nhóm <b>Secsions</b>.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide Eco-Friendly Stock Growth  thêm biểu đồ dạng Open-High-Low-Close Stock  sử dụng thiết kế và dữ liệu mặc định",
+          "answers": "1. Click chọn slide có tiêu đề <b>Eco-Friendly Stock Growth</b>  chọn tab <b>Insert</b> sau đó nhấn chọn chức năng <b>Chart</b> trong nhóm chức năng <b>IIIustrations</b> <br/> 2. Trong hộp thoại <b>Insert Chart</b>  chọn biểu đồ có tên <b>Open-High-Low-Close</b> trong nhóm <b>Stock</b> và nhấn <b>OK</b>.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [],
+      "title": "FusionTomo",
+      "tasks": [
+        { 
+
+
+
+
+ 
+
+
+          "question": "Thay đổi màu chủ đề của Slide Master sang màu cam.",
+          "answers": "1. Chọn tab <b>View</b>. Trong nhóm chức năng <b>Master Views</b>  chọn chức năng <b>Slide Master</b>. <br/> 2. Trong tab <b> Slide Master</b>  click vào chức <b>Color</b> trong nhóm chức năng <b>Background</b>. Sau đó chọn màu <b>Orange</b>. <br/> 3. Đóng tab <b>Slide Master</b>.",
+          "image": ""
+        },
+        {
+          "question": "Trên Slide 3  định dạng danh sách gạch đầu dòng cho các đoạn văn bản từ “Leading ... decades”. Sử dụng tập tin <i>MS_Tomologo.png</i> trong thư mục PiMOS nằm trong thư mục Documents làm ký hiệu bullet.",
+          "answers": "1. Chọn đoạn văn bản từ <u>'Leading....decades'</u> <br/> 2. Trong tính năng <b>Bullets</b> chọn <b>Bullets and <b>Numbering</b> <br/> 3. Trong hộp thoại <b> Bullets and Numbering</b>  chọn <b> Picture</b>. Tìm và chọn file <b>MS_Tomologo.png</b> trong thư mục <PiMOS</b> nằm trong thư mục <b>Documents</>.",
+          "image": ""
+        },
+        {
+          "question": "Chèn thêm slide mới sau slide 3 bằng cách sử dụng lại slide có tiêu đề là 'Board of Directors' từ tập tin <i>FTDraft.pptx</i> trong thư mục PiMOS nằm trong thư mục Documents.",
+          "answers": "1. Click vào bên dưới <b>Slide 3</b>. Trong chức năng <b> New Slide</b>  chọn chức năng <b> Reuse Slides...</b>. <br/> 2. Nhấn <b>Browse</b> để tìm tới file <FTDraft.pptx</b> trong thư mục <b>PiMOS</b> nằm trong thư mục <b>Documents</b>. <br/> 3. Trong hộp thoại <b> Reuse Slides</b> nằm bên phải  click chọn slide có tiêu đề <b>Board of Director</b>.",
+          "image": ""
+        },
+        {
+          "question": "Trong khung bên phải của slide có tiêu đề 'FusionTomo'  chèn video <i>pimos.mp4</i> trong thư mục PiMOS nằm trong thư mục Documents.",
+          "answers": "1. Chọn slide có tiêu đề <b> FusionTomo</b>. <br/> 2. Trong tab <b>Insert</b>  click vào chức năng <b>Video</b> và chọn chức năng <b> Video on My PC...</b> <br/> 3. Tìm và chọn video có tên <b>pimos.mp4</b> trong thư mục <b>PiMOS</b> nằm trong thư mục <b>Documents</b>.",
+          "image": ""
+        },
+        {
+          "question": "Chèn 1 slide mới vào cuối bài thuyết trình bằng cách nhập thông tin từ tập tin <i>MS_FusionTomo.docx</i> trong thư mục PiMOS nằm trong thư mục Documents.",
+          "answers": "1. Click vào cuối bài thuyết trình. Click vào chức năng <b>New Slide</b> và chọn <b>Slides from Outline...</b>. <br/> 2. Tìm vào chọn file <b>MS_FusionTomo.docx</b> nằm trong thư mục <b>PiMOS</b> trong thư mục <b>Documents</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi hiệu ứng chuyển slide từ slide 3 sang slide 4 là Wind.",
+          "answers": "1. Click vào <b>Slide 4</b> <br/> 2. Trong tab <b>Traisitions</b> chọn hiệu ứng <b>Wind</b>.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [],
+      "title": "IceCream",
+      "tasks": [
+        {      
+
+          "question": "Xác định vị trí trung tâm của slide bằng cách hiển thị đường hướng dẫn (guides).",
+          "answers": "1. Chọn tab <b>View</b>  sau đó chọn chức năng <b>Guides</b> trong nhóm chức năng <b>Show</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thêm âm thanh Suction cho hiệu ứng transition của slide 3.",
+          "answers": "1. Chọn slide 3. <br/> 2. Chọn tab <b>Transitions</b>  click vào chức năng <b>Sound</b> và chọn âm thanh <b>Suction</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi dạng biểu đồ trên slide 3 thành Line with Marker.",
+          "answers": "1. Click vào biểu đồ trên slide 3 <br/> 2. Chọn chức năng <b>Change Chart Type</b> trong tab <b>Chart Design</b> <br/> 3. Trong hộp thoại <b>Change Chart Type</b>  chọn loại nhóm biểu đồ dạng <b>Line</b> sau đó click chọn loại biểu đồ có tên là <b>Line with Marker</b>. <br/> 4. Nhấn <b>OK</b> để hoàn thành.",
+          "image": ""
+        },
+        {
+          "question": "Trên slide 4  thêm tiêu đề văn bản thay thế cho bảng là <u>'Data in Market'</u>.",
+          "answers": "1. Click chuột phải vào bảng trên slide 4 và chọn <b>Format Shape</b>. <br/> 2. Trong hộp thoại <b>Format Shape</b>  chọn tab <b>Size & Properties</b>. <br/> 3. Thiết lập trường <b>Title</b> của chức năng <b>Alt Text</b> là 'Data in Market'",
+          "image": ""
+        },
+        {
+          "question": "Trên slide cuối  thay đổi nội dung các hình (shapes) trên sơ đồ để có thể đọc theo thứ tự: 'Exciting Flavors+Quality Ingredients --> Amazing Ice Cream'.",
+          "answers": "1. Click vào sơ đồ (SmartArt) trong slide cuối. <br/> 2. Chọn tab <b>SmartArt Design</b>. <br/> 3. Click vào khối tròn có nội dung <b>Exciting Flavors</b>  sau đó chọn chức năng <b>Move Up</b> trong nhóm chức năng <b>Create Graphic</b> để di chuyển khối này lên phía trên 2 khối còn lại.",
+          "image": ""
+        },
+        {
+          "question": "Áp dụng thời gian thực hiện hiệu ứng chuyển slide là 2.25 và không sử dụng thời gian trình chiếu cho tất cả các slide trong bài thuyết trình.",
+          "answers": "1. Chọn tab <b>Transitions</b>. <br/> 2. Thiết lập trường <b>Duration</b> thành <b>2.25</b>  bỏ chọn tính năng <b>After</b> và nhấn <b>Apply To All</b> để áp dụng tùy chỉnh cho tất cả các slide.",
+          "image": ""
+        },
+        {
+          "question": "Thiết lập tùy chọn in ấn để in chất lượng cao (High Quality).",
+          "answers": "1. Chọn tab <b>File</b> sau đó click vào chức năng <b>Print</b>. >br /> 2. Trong hộp thoại <b>Print</b>  click vào <b>Full Page Slides<b/> và chọn <b>High Quality</b>.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [],
+      "title": "InternetSales",
+      "tasks": [
+        {
+          "question": "Thêm 2 slide mới ngay sau slide tiêu đề từ tập tin <i>Marketing.rtf</i> trong thư mục <i>Documents//PiMOS</i> ",
+          "answers": "1. Chọn vào khoảng trống giữa slide 1 và slide 2.<br/> 2. Chọn thẻ <b>Home</b>.<br/> 3. Chọn chức năng <b>New Slide</b> trong nhóm <b>Slides</b>.<br/> 4. Sau đó  chọn <b>Slide from Outline</b>.<br/> 5. Tìm đến thư mục <b>Document//PiMOS</b>  chọn tập tin <b>Marketing.rtf</b> -><b>Open</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Trên slide có tiêu đề <u>Monthly Income</u>  xóa cột cuối cùng của bảng  thêm 2 dòng trống vào bên dưới dòng 1  bỏ tô màu xen kẽ giữa các dòng  chọn tô màu xen kẽ giữa các cột.",
+          "answers": "1. Chọn cột cuối cùng trong bảng trên slide có tiêu đề <b>Monthly Income</b>.<br/> 2. Click chuột phải vào chột vừa chọn  sau đó chọn mục <b>Deletes</b> -> <b>Delete Columns</b>.<br/> 3. Chọn dòng đầu tiên trong bảng  click chuột phải vào dòng vừa chọn  sau đó chọn mục <b>Insert</b> -> <b>Insert Rows Below</b> (2 lần).<br/> 4. Chọn thẻ <b>Design</b> trong <b>Table Tools</b> chọn dấu check <b>Banded Columns</b> và tắt dấu check <b>Banded Rows</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Trên slide <i>Investing in Internet Technologies</i>  thay đổi thời điểm bắt đầu của video là 1 giây.",
+          "answers": "1. Chọn video trên slide có tiêu đề <b>Investing in Internet Technologies</b>.<br/> 2. Click chuột phải vào video vừa chọn  sau đó chọn mục <b>Trim</b>.<br/> 3. Thiết lập <b>Start Time</b> là <b>00:01.00</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Trên slide <u>Mobile Technologies</u>  thiết lập kiểu biểu đồ <u>Style 7</u> và màu  <u>Colorfull Color 3</u>.",
+          "answers": "1. Chọn biểu đồ trên slide có tiêu đề <b>Mobile Technologies</b>.<br/> 2. Chọn thẻ <b>Design</b> trong <b>Chart Tools</b>.<br/> 3. Chọn <b>Style 7</b> trong nhóm <b>Chart Style</b> và <b>Colorfull Color 3</b> trong chức năng <b>Change Colors</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Trên slide <u>Summary</u>  chèn bảng từ tập tin <i>Flavors.xlsx</i> trong thư mục <i>Documents//PiMOS</i> vào khung có sẵn.",
+          "answers": "1. Chọn vào khung trống trên slide có tiêu đề <b>Summary</b>.<br/> 2. Chọn thẻ <b>Insert</b>  sau đó chọn <b>Object</b> trong nhóm <b>Text</b>.<br/> 3. Chọn mục <b>Create from file</b> nhấn vào nút <b>Browse</b>.<br/> 4. Tìm đến thư mục <b>Document//PiMOS</b> chọn tập tin <b>Flavors.xlsx</b> -> <b>OK</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Thiết lập sao cho PowerPoint chỉ lưu các ký tự được dùng trong bài thuyết trình vào bài thuyết trình hiện tại.",
+          "answers": "1. Chọn thẻ <b>File</b> -> <b>Options</b>.<br/> 2. Trong mục <b>Save</b>  chọn <b>Embed fonts in the file</b> -> <b>Embed only the character..</b>.<br/>",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "projectfile": [],
+      "title": "PoliceAuction",
+      "tasks": [
+        {
+
+          "question": "Thay đổi màu cho sơ đồ (smartart) theo mẫu Colorful Range - Accent Colors 3 to 4.",
+          "answers": "1. Click chọn sơ đồ trên slide 4 sau đó chọn tab <b>SmartArt Design</b>. <br/> 2. CLick chọn chức năng <b>Change Colors</b> và chọn màu <b>Colorful Range-Accent Color 3 to 4 </b> trong nhóm <b>Colorful</b>.",
+          "image": ""
+        },
+        {
+          "question": "Áp dụng hiệu ứng Smoothly transition cho tất cả các slide.",
+          "answers": "1. Click chọn tab <b>Transitions</b>  sau đó click vào chức năng <b>Effect Options</b> và chọn <b>Smoothly</b>. <br/> 2. Nhấn <b>Apply To All</b> để áp dụng cho tất cả slide.",
+          "image": ""
+        },
+        {
+          "question": "Áp dụng hiệu ứng xuất hiện dạng Float In cho danh sách không có thứ tự trên slide cuối.",
+          "answers": "1. Chọn danh sách không có thứ tự trên slide cuối. <br/> 2. Chọn hiệu ứng <b>Float In</b> trong nhóm <b>Entrance</b>.",
+          "image": ""
+        },
+        {
+          "question": "Xóa dòng cuối của bảng và thêm 1 cột vào cuối bảng với tên cột mới thêm là Date trên Slide 2.",
+          "answers": "1. Click chuột phải vào dòng cuối của bảng trên slide 2 và chọn chức năng <b>Delete Rows</b> trong chức năng <b>Delete</b> <br/> 2. Click chuột phải vào cột <b>Total Sales</b>  chọn chức năng <b>Insert Columns to the Right</b> trong nhóm <b>Insert</b>. <br/> 3. Nhập 'Date' vào ô trên cùng trong cột mới thêm.",
+          "image": ""
+        },
+        {
+          "question": "Chèn thêm các slide mới lấy từ tập tin <i>PoliceAuction_2.pptx</i> trong thư mục PiMOS nằm trong thư mục Documents (giữ đúng thứ tự của các slide) vào cuối bài thuyết trình hiện tại. Không giữ lại định dạng dữ liệu nguồn. (don’t keep source formating).",
+          "answers": "1. Click vào vị trí dưới cùng trong hộp thoại bên trái. Click vào mũi tên trong chức năng <b>New Slide</b> và chọn chức năng <b>Reuse Slides</b>. <br/> 2. Trong hộp thoại <b>Reuse Slides</b>  nhấn nút <b>Browse</b> để tìm chọn file <b>PoliceAution_2.pptx</b> trong thư mục PiMOS. <br/> 3. Click lần lượt vào các slide xuất hiện trong hộp thoại <b>Reuse Slides</> theo thứ tự từ trên xuống.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "projectfile": [],
+      "title": "RockCrawling",
+      "tasks": [
+        {     
+
+          "question": "  Nhân bản cho slide có tiêu đề 'Why Rock Crawl in Moab  Utah?'.",
+          "answers": " 1. Click chuột phải vào slide có tiêu đề <b> Why Rock Crawl in Moab  Utah?</b> và chọn <Duplicate Slide</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi thứ tự các slide trong bài thuyết trình sao cho slide cuối có tiêu đề 'Main Activities' trở thành slide 3.",
+          "answers": "1. Click và giữ chuột trái vào slide có tiêu đề <b>Main Activities</b>. <br/> 2. Sau đó kéo slide đang chọn lên vị trí thứ 3.",
+          "image": ""
+        },
+        {
+          "question": " Thiết lập để slide có tiêu đề 'Main Activities' có thể nhìn thấy khi trình chiếu.",
+          "answers": "1. Click chuột phải vào slide có tiêu đề <b>Main Activities</b> và bỏ chọn <b> Hide Slide</b>",
+          "image": ""
+        },
+        {
+          "question": "Xóa thông tin ngày tháng ở góc phải trên của handouts được tạo từ bài thuyết trình này.",
+          "answers": "1. Click vào tab <b>View</b>  chọn tính năng <b>Handout Master</b>. <br/> 2. Trong tab <b>Handout Master</b>  bỏ chọn tính năng <b>Date</b>. <br/> 3. Đóng tab <Handout Master</b>",
+          "image": ""
+        },
+        {
+          "question": "Thêm chuỗi <u>“Crawling Activities”</u> cho thuộc tính chủ đề của tập tin này.",
+          "answers": "1. Click vào <b>File</b>  trong khung bên phải chọn chức năng <b>Show All Properties</b> để hiển thị các thuộc tính của tài liệu. <br/> 2. Tìm thuộc tính <b>Subject</b> và thiết lập giá trị thuộc tính là <Crawling Activities</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thiết lập tùy chọn in ấn sao cho bài thuyết trình được in dạng handouts và in thành 6 bản trong đó 1 trang giấy sẽ hiển thị 4 slide  tất cả các bản in của trang 1 sẽ được in trước  sau đó mới in đến các bản in của trang 2 và các trang còn lại.",
+          "answers": "1. Click vào <b>File</b>  chọn chức năng <b>Print</b>. <br/> 2. Thiết lập giá trị <b>Copies</b> thành 6. <br/> 4. Click vào <b>Full Page Slides</b> và chọn <b>4 Slide Horizontal</b>. <br/> 5. Click vào <b>Collated</b> và chọn <b>Uncollated</b>.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "projectfile": [],
+      "title": "Smartphones",
+      "tasks": [
+        {
+
+
+
+
+
+
+
+          "question": "Trên slide Tiêu đề  chỉnh vị trí lề trái của khung xén hình thành 2” nhưng không làm thay đổi kích thước hình.",
+          "answers": "1. Nhấp chuột chọn hình trong slide Tiêu đề.<br/> 2. Nhấp chuột phải chọn <b>Format Picture</b> để hiển thị chức năng <b>Format Picture</b> phía bên phải.<br/> 3. Trong <b>Format Picture</b> chọn mục <b>Picture</b>-><b>Crop</b> thiết lập <b>Left</b> 2'.",
+          "image": ""
+        },
+        {
+          "question": "Xóa slide có tiêu đề <u>Objects</u>.",
+          "answers": "1. Nhấp chuột phải vào slide có tiêu đề <b>Objects</b>(trong danh sách slide bên trái) -> <b>Delete Slides</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Tạo bố cục mới <i>New_Layout</i>  thêm khung chứa SmartArt vào bố cục mới này sao cho khung chứa SmartArt canh giữa so với khung tiêu đề.",
+          "answers": "1. Chọn thẻ <b>View</b>  sau đó chọn <b>Slide Master</b> trong nhóm <b>Master Views</b>.<br/> 2. Chọn tính năng <b>Insert Layout</b> trong nhóm <b>Edit Master</b>.<br/> 3. Click chuột phải vào layout vừa tạo chọn <b>Rename Layout</b>  nhập tên <b>New_Layout</b> -> <b>Rename</b>.<br/> 4. Chọn tính năng <b>Insert Placeholder</b> <b>SmartArt</b> trong nhóm <b>Master Layout</b>.<br/> 5. Vẽ SmartArt trên layout vừa tạo  giữ <b>Ctrl</b> chọn <b>SmartArt</b> và <b>Khung tiêu đề</b> sau đó chọn <b>Align Center</b> trong nhóm <b>Arrange</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Tạo một nhân bản của slide <u>Smartphones Today</u>.",
+          "answers": "1. Nhấp chuột phải vào slide có tiêu đề <b>Smartphones Today</b>(trong danh sách slide bên trái) -> <b>Duplicate Slides</b>.<br/>",
+          "image": ""
+        },
+        {
+          "question": "Trên slide <u>Future Smartphones</u>  đổi màu hình thành <u>Red</u>  đổi màu đường viền thành <u>Green</u>.",
+          "answers": "1. Chọn khối trong slide có tiêu đề <b>Future Smartphones</b>.<br/> 2. Chọn thẻ <b>Format</b> trong nhóm <b>Drawing Tools</b>.<br/> 3. Trong nhóm <b>Shape Styles</b>  thiết lập <b>Shape Fill</b> -> <b>Red</b> và <b>Shape Outline</b> -> <b>Green</b>.<br/>",
+          "image": ""
+        }
+        
+      ]
+    }
+  ]
+}
