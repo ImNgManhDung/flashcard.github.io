@@ -1,0 +1,215 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "projectfile": [
+
+       
+      ],
+      "title": "Travel",
+      "tasks": [
+        {
+          "question": "Chuyển nội dung <b>Margie's Travel Adventures</b> thành WordArt kiểu Fill - Gold  Accent 4  Soft Bevel.",
+          "answers": "1. Tìm <b>Margie's Travel Adventures</b> trong văn bản(Ctrl+F gõ vào Planned Family Orchard để tìm).<br/>2. Dùng chuột chọn chuỗi <b>Planned Family Orchard</b>. Sau đó  chọn thẻ <b>Insert</b>.<br/>3. Trong nhóm <b>Text</b> chọn <b>Word Art</b>.<br/>4. Tìm và chọn kiểu <b>Fill - Gold  Accent 4  Soft Bevel</b>.",
+          "image": ""
+        },
+        {
+          "question": "Trong phần <i>“Margie's Travel Adventures”</i>  chèn một kí tự phía sau. Sử dụng phông chữ <b>Webdings</b> với mã ký tự <b>'73'</b> (cây ).",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Đặt khoảng cách dòng cho toàn bộ tài liệu là <b>1.4 lines</b>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Thiết lập thông tin thuộc tính chủ đề của tệp văn bản là chuỗi <u>“Travel”</u>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Chèn dòng đầu trang vào văn bản sao cho dòng đầu trang không xuất hiện ở trang đầu tiên",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Loại bỏ các thông tin thuộc tính về Header,Watermark ra khỏi văn bản",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Chèn sơ đồ kiểu Vertical Box List vào văn bản ngay sau nội dung .",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Sử dụng chức năng tìm kiếm để tìm tới ví trí 'margie@margiestravel.com' và  tạo liên kết cho văn bản để gửi email đến địa chỉ <u>margie@margiestravel.com</u> với nội dung hiển thị là <u>margie@margiestravel.com</u>. ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Chuyển nội dung của Watermark thành  Traverl Every Day! với kích thước là 30",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projectfile": [],
+      "title": "Report",
+      "tasks": [
+        {
+          "question": "Trong phần Manufacturing Process thay đổi thứ tự của đối tượng đồ họa Sieving lên đầu  ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi màu của đối tượng đồ họa trong Manufacturing Process thành Colored Ounline - Accent 1.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tìm kiếm nội dung văn bản thứ 2 'Product History' và thay đổi kiểu của nội sang kiểu Heading 1",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Hãy thêm bình luận cho nội dung 400 mg với nội dung là <b>Matching</b> ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trong phần Fill Materials hãy sắp xếp nội dung của bảng theo cột 'Component' giảm dần ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Trong phần Fill Materials hãy làm cho đường viền bao quanh bảng với kiểu <b>Singer soild line, 1/2pt, Accent 1</b> của bảng",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tùy chỉnh tùy chọn Word để hiển thị toàn bộ định dạng đặc biệt",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "projectfile": [],
+      "title": "Publisher",
+      "tasks": [
+        {
+          "question": "Chèn văn bản thay thế cho bảng trong văn bản với tiêu đề <u>Publisher</u> và nội dung mô tả <u>'PublisherOur Specializations'</u>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Chèn file <b>Preservation.docx</b> ở phía dưới đoạn 'Where to find us'",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tạo mục lục ở đầu đoạn và chỉ hiển thị tiêu đề ở mức độ 2",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Chèn ghi chú cho <b>Genre</b> ở cuối trang với nội dung ghi chú là <u>A catagories</u>.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "projectfile": [],
+      "title": "Networking",
+      "tasks": [
+        {       
+
+          "question": " Chèn kí tự đặc biệt <u>Registered Sign</u> vào sau chuỗi ký tự trong dòng đầu trang.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Chèn nội dung tệp <i>WirelessNetworks.docx</i> trong thư mục <i>Word</i> của thư mục <i>Documents</i></i> vào cuối tập tin văn bản.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Định dạng dấu đầu dòng kiểu dấu check cho đoạn văn bản từ 'Communications satellites…' đến '...known as Wifi.' và khoảng cách dòng của văn bản là 1.15 lines.",
+          "answers": "Cuối tài liệu  chèn SmartArt dạng Vertical Box List  lần lượt nhập <u>“Building”</u>  <u>“Maintaining”</u>  <u>“Activating”</u> và chỉnh chiều ngang của SmartArt là 3.2”.",
+          "image": ""
+        },
+        {
+          "question": "Chèn hình thanh cuộn ngang vào cuối văn bản  kích thước chiều ngang và chiều cao của hình là 2”. Nhập văn bản <u>“Welcome”</u> vào hình vừa chèn. Tô nền màu xanh lá cây.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Tạo thẻ đánh dấu cho từ “World Wide Web” với tên là <u>“WWW”</u>.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Thay đổi hướng trang in cho toàn bộ văn bản là hướng ngang.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Chèn hình <i>networking.jpg</i> trong thư mục <i>Word</i> của thư mục <i>Documents</i> bên dưới đoạn tiêu đề Networking ở đầu văn bản  hiệu chỉnh văn bản bao bọc hình dạng Square  chiều ngang hình là 2” và chiều cao hình là 1.5”. ",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Chỉnh vị trí hình vừa chèn vào văn bản sao cho hình nằm ở vị trí tuyệt đối theo chiều ngang so với trang là 1” và vị trí tuyệt đối theo chiều dọc so với trang là 3”.",
+          "answers": "",
+          "image": ""
+        },
+        {
+          "question": "Định dạng vị trí hình thanh cuộn ngang vị trí trên cùng bên phải của trang.",
+          "answers": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "projectfile": [],
+      "title": "Insurance",
+      "tasks": [
+        {      
+
+          "question": "Thiết lập hiển thị thanh cuộn ngang  cho tài liệu.",
+          "answers": "1. Chọn thẻ <b>File</b> -> <b>Options</b>.<br/>2. Chọn <b>Advanced</b>  tìm đến phần <b>Display</b>  check vào <b>Show horizontal scroll Bar</b>. Click vào <b>OK</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thêm văn bản thay thế với tiêu đề là <u>“Temperatures”</u> và nội dung mô tả là <u>Water temperatures fluctuate</u> cho bảng.",
+          "answers": "1. Click chuột phải vào một vị trí bất kỳ trong bảng (Table). Sau đó  chọn <b>Table Properties...</b>.<br/>2. Chọn thẻ <b>Alt Text</b>  trong mục <b>Title</b> nhập vào <b>Temperatures</b>  và <b>Description</b> nhập vào <b>Water temperatures fluctuate</b>",
+          "image": ""
+        },
+        {
+          "question": "Áp dụng kiểu định dạng Grid Table 5 Dark – Accent 1 cho bảng.",
+          "answers": "1. Click chuột trái vào một vị trí bất kỳ trong bảng (Table).<br/>2. Chọn thẻ <b>Design</b> trong <b>Table Tool</b><br/>3. Trong nhóm <b>Table Styles</b>  tìm và chọn loại <b>Grid Table 5 Dark – Accent 1</b>.",
+          "image": ""
+        },
+        {
+          "question": "Thiết lập cho tất cả các cột của bảng có độ rộng bằng nhau.",
+          "answers": "1. Click chuột trái vào một vị trí bất kỳ trong bảng (Table).<br/>2. Chọn thẻ <b>Layout</b> trong <b>Table Tool</b><br/>3. Trong nhóm <b>Cell Size</b>  chọn <b>Distribute Columns</b>.",
+          "image": ""
+        },
+        {
+          "question": "Gộp tất cả các ô ở dòng cuối cùng của bảng thành 1 ô.",
+          "answers": "1. Chọn dòng cuối cùng trong bảng.<br/>2. Chọn thẻ <b>Layout</b> trong <b>Table Tool</b>.<br/>3. Trong nhóm <b>Merge</b> chọn <b>Merge Cells</b>.",
+          "image": ""
+        }
+      ]
+    }     
+   
+  ]
+}
