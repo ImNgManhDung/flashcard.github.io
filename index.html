@@ -1,1174 +1,674 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz System</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #f5f5f5;
-            overflow: hidden;
-        }
-
-        .quiz-container {
-            width: 1359px;
-            height: 190px;
-            background: white;
-            border: 1px solid #ddd;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Top Header - Compact */
-        .top-header {
-            background: linear-gradient(135deg, #00c851, #007e33);
-            color: white;
-            padding: 6px 12px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 40px;
-        }
-
-        .left-section {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .project-info {
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        .project-selector {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .choose-project-btn {
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 3px 8px;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 11px;
-            transition: background 0.2s;
-        }
-
-        .choose-project-btn:hover {
-            background: rgba(255,255,255,0.3);
-        }
-
-        .go-btn {
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 3px 8px;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 11px;
-            font-weight: 600;
-        }
-
-        .go-btn:hover {
-            background: rgba(255,255,255,0.3);
-        }
-
-        .center-section {
-            display: flex;
-            align-items: center;
-        }
-
-        .timer {
-            font-family: 'Courier New', monospace;
-            font-size: 13px;
-            font-weight: bold;
-            padding: 4px 10px;
-            background: rgba(255,255,255,0.15);
-            border-radius: 4px;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .timer.warning {
-            background: #ff4444;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-
-        .right-section {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .header-btn {
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 4px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 11px;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-
-        .header-btn:hover {
-            background: rgba(255,255,255,0.3);
-        }
-
-        .header-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .icon-btn {
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 4px;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-        }
-
-        .icon-btn:hover {
-            background: rgba(255,255,255,0.3);
-        }
-
-        /* Step Progress Bar - Compact */
-        .step-progress {
-            background: white;
-            padding: 2px;
-            display: flex;
-            justify-content: center;
-            gap: 1px;
-            height: 25px;
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        .step {
-            width: 40px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 11px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .step.active {
-            background: #333;
-            color: white;
-        }
-
-        .step.completed {
-            background: #28a745;
-            color: white;
-        }
-
-        .step.review {
-            background: #ffc107;
-            color: #333;
-        }
-
-        .step:not(.active):not(.completed):not(.review) {
-            background: #e9ecef;
-            color: #6c757d;
-        }
-
-        .step:hover:not(.active) {
-            background: #dee2e6;
-        }
-
-        /* Question Area - More Compact */
-        .question-area {
-            flex: 0.1;
-            background: white;
-            padding: 10px 15px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            min-height: 50px;
-        }
-
-        .question-text {
-            font-size: 13px;
-            line-height: 1.4;
-            color: #333;
-            width: 100%;
-            text-align: left;
-        }
-
-        .task-status {
-            position: absolute;
-            top: 8px;
-            right: 15px;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 10px;
-            font-weight: 500;
-        }
-
-        .status-completed {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .status-review {
-            background: #fff3cd;
-            color: #856404;
-            border: 1px solid #ffeaa7;
-        }
-
-        /* Bottom Controls - Compact */
-        .bottom-controls {
-            background: #f8f9fa;
-            padding: 6px 12px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-top: 1px solid #e9ecef;
-            height: 40px;
-        }
-
-        .control-btn {
-            padding: 4px 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 11px;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            height: 28px;
-        }
-
-        .control-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .btn-previous {
-            background: #6c757d;
-            color: white;
-        }
-
-        .btn-previous:hover:not(:disabled) {
-            background: #5a6268;
-        }
-
-        .btn-completed {
-            background: #28a745;
-            color: white;
-        }
-
-        .btn-completed:hover {
-            background: #218838;
-        }
-
-        .btn-review {
-            background: #ffc107;
-            color: #212529;
-        }
-
-        .btn-review:hover {
-            background: #e0a800;
-        }
-
-        .btn-next {
-            background: #007bff;
-            color: white;
-        }
-
-        .btn-next:hover:not(:disabled) {
-            background: #0056b3;
-        }
-
-        .btn-help {
-            background: #17a2b8;
-            color: white;
-            padding: 4px;
-            width: 28px;
-            height: 28px;
-            justify-content: center;
-            border-radius: 50%;
-        }
-
-        .btn-help:hover {
-            background: #138496;
-        }
-
-        .center-controls {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Project dropdown */
-        .project-dropdown {
-         
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            min-width: 500px;
-            z-index: 1000;
-            display: none;
-            font-weight: bold;
-        }
-
-        .project-dropdown.show {
-             display: flex;          /* bật flex để item nằm ngang */
-             flex-direction: row;    /* nằm ngang */
-            justify-content: center;
-            gap: 5px;   
-            flex-wrap: wrap;        
-        }
-
-        .project-option {
-            padding: 8px 12px;
-            color: #333;
-            cursor: pointer;
-            font-size: 11px;
-                border: 1px solid #ddd;
-    border-radius: 4px;
-        }
-
-        .project-option:hover {
-            background: #f8f9fa;
-        }
-
-        .project-option:last-child {
-            border-bottom: none;
-        }
-        /* Modal nền mờ */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.7);
-}
-
-/* Ảnh trong modal */
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 80%;
-  max-height: 80%;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
-/* Nút tắt */
-.close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.close:hover {
-  color: #ff6666;
-}
-
-.loading {
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: #666;
-}
-
-
-.loading {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        /* Help Modal Styles */
-        .help-modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(4px);
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from { 
-                opacity: 0;
-                transform: translate(-50%, -60%);
-            }
-            to { 
-                opacity: 1;
-                transform: translate(-50%, -50%);
-            }
-        }
-
-        .help-modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            max-width: 500px;
-            width: 90%;
-            max-height: 80vh;
-            overflow: hidden;
-            animation: slideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .help-modal-header {          
-
-            background: black;
-            color: white;
-            padding: 5px 10px 5px 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;            
-        }
-
-        .help-modal-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            /* background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
-            animation: shimmer 3s infinite; */
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        .help-modal-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .help-icon {
-            font-size: 24px;
-            /* animation: bounce 2s infinite; */
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-8px); }
-            60% { transform: translateY(-4px); }
-        }
-
-        .help-close {
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .help-close:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: rotate(90deg) scale(1.1);
-        }
-
-        .help-modal-body {
-            padding: 25px;
-            font-size: 14px;
-            line-height: 1.6;
-            color: #333;
-            max-height: 60vh;
-            overflow-y: auto;
-            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
-        }
-
-        .help-modal-body::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .help-modal-body::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 3px;
-        }
-
-        .help-modal-body::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #667eea, #764ba2);
-            border-radius: 3px;
-        }
-
-        .help-modal-body::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #5a67d8, #6b46c1);
-        }
-
-        .help-modal-body .help-icon {
-            color: #667eea;
-            margin-right: 8px;
-            font-size: 16px;
-        }
-
-        /* Responsive design for help modal */
-        @media (max-width: 768px) {
-            .help-modal-content {
-                width: 95%;
-                max-width: none;
-            }
-            
-            .help-modal-header {
-                padding: 15px;
-            }
-            
-            .help-modal-title {
-                font-size: 16px;
-            }
-            
-            .help-modal-body {
-                padding: 20px;
-                font-size: 13px;
-            }
-        }
-
-        /* Enhanced close button animation */
-        .help-close::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.3s ease;
-        }
-
-        .help-close:hover::before {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard</title>
+ <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <div class="quiz-container">
-        <!-- Top Header -->
-        <div class="top-header">
-            <div class="left-section">
-                <div class="project-info">
-                    Project <span id="currentProject">-</span> of <span id="totalProjects">-</span>
-                </div>
-                
-                <div class="project-selector">
-                    <button class="choose-project-btn" onclick="toggleProjectDropdown()">
-                        Choose Project ▼
-                    </button>
-                    <button class="go-btn">Go</button>
-                    <button class="go-btn" onclick="DownloadProject(1)">Tải file project</button>
+  <h1>💡 Từ vựng mỗi ngày</h1>
 
-                    <div class="project-dropdown" id="projectDropdown">
-                        <!-- Will be populated by JavaScript -->
-                    </div>
-                </div>
-            </div>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
 
-            <div class="center-section">
-                <div class="timer" id="timer">50:00</div>
-            </div>
-
-            <div class="right-section">
-                <button class="header-btn" onclick="nextProject()">Next Project</button>
-                <button class="header-btn" onclick="restartProject()">Restart Project</button>
-                <button class="icon-btn">✓</button>
-                <button class="icon-btn">✕</button>
-            </div>
-        </div>
-
-        <!-- Step Progress Bar -->
-        <div class="step-progress">
-            <div class="step active" id="step1" onclick="goToStep(1)">1</div>
-            <div class="step" id="step2" onclick="goToStep(2)">2</div>
-            <div class="step" id="step3" onclick="goToStep(3)">3</div>
-            <div class="step" id="step4" onclick="goToStep(4)">4</div>
-            <div class="step" id="step5" onclick="goToStep(5)">5</div>
-            <div class="step" id="step6" onclick="goToStep(6)">6</div>
-             <div class="step" id="step7" onclick="goToStep(7)">7</div>
-            <div class="step" id="step8" onclick="goToStep(8)">8</div>
-            <div class="step" id="step9" onclick="goToStep(9)">9</div>
-             <div class="step" id="step10" onclick="goToStep(10)">10</div>
-            <div class="step" id="step11" onclick="goToStep(11)">11</div>
-            <div class="step" id="step12" onclick="goToStep(12)">12</div>
-        </div>
-
-        <!-- Question Area -->
-        <div class="question-area">
-            <div class="question-text" id="questionText">
-                <div class="loading">Đang tải dữ liệu...</div>
-            </div>
-            <div class="task-status status-review" id="taskStatus" style="display: none;">
-                Marked for Review
-            </div>
-        </div>
-
-        <!-- Bottom Controls -->
-        <div class="bottom-controls">
-            <button class="control-btn btn-previous" onclick="previousTask()" id="prevBtn" disabled>
-                ◀ Previous Task
-            </button>
-
-            <div class="center-controls">
-                <button class="control-btn btn-completed" onclick="markCompleted()">
-                    Mark Completed
-                </button>
-                <button class="control-btn btn-review" onclick="markForReview()">
-                    Mark for review
-                </button>
-                <button class="control-btn btn-help" onclick="showHelp()">
-                    ?
-                </button>
-            </div>
-
-            <button class="control-btn btn-next" onclick="nextTask()" id="nextBtn" disabled>
-                Next Task ▶
-            </button>
-        </div>
+  <div class="card-container">
+    <div class="card" id="card" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)" onclick="flipCard(event)">
+      <div class="card-controls">
+        <button class="control-btn" id="learnBtn" onclick="toggleLearned(event)" title="Đánh dấu đã học">○</button>
+        <button class="control-btn copy" onclick="copyWord(event)" title="Sao chép từ">📋</button>
+        <button class="control-btn sound" onclick="playPronunciation(event)" title="Phát âm">🔊</button>
+      </div>
+      <div class="word-line">
+        <div class="word" id="word">Đang tải...</div>
+        <div class="pronunciation" id="pronunciation"></div>
+        <div class="word-type" id="wordType"></div>
+      </div>
+      <div class="meaning" id="meaning"></div>
+      <div class="example" id="example"></div>
     </div>
+  </div>
 
+  <div class="status" id="status"></div>
+  <div class="api-status" id="apiStatus" style="display: none;"></div>
 
-<!-- Help Modal -->
-<div id="helpModal" class="help-modal">
-    <div class="help-modal-content">
-        <div class="help-modal-header">
-            <h3 class="help-modal-title">
-                <span class="help-icon">💡</span>
-                Gợi ý
-            </h3>
-            <button class="help-close" onclick="closeHelpModal()">&times;</button>
-        </div>
-        <div class="help-modal-body" id="helpModalBody">
-            <!-- Help content will be inserted here -->
-        </div>
-    </div>
-</div>
-    <script>
-        // Global variables
-        let quizData = null;
-        let currentProjectIndex = 0;
-        let currentTaskIndex = 0;
-        let taskStatuses = {};
-        let timeLeft = 50 * 60; // 50 minutes in seconds
-        let timerInterval = null;
-        let dataLoaded = false;
+  <script>
+    let vocabulary = [];
+    let currentIndex = 0;
+    let flipped = false;
+    let currentAudio = null;
+    let wordDataCache = {};
 
-        // Initialize application
-        function init() {
-            // Start timer immediately
-            startTimer();
-            updateTimer();
+    // Touch/swipe variables
+    let startX = 0;
+    let startY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let isDragging = false;
+    let cardEl = null;
+
+    const wordEl = document.getElementById("word");
+    const pronunciationEl = document.getElementById("pronunciation");
+    const meaningEl = document.getElementById("meaning");
+    const exampleEl = document.getElementById("example");
+    const statusEl = document.getElementById("status");
+    const wordTypeEl = document.getElementById("wordType");
+    const learnBtnEl = document.getElementById("learnBtn");
+    const progressFillEl = document.getElementById("progressFill");
+    const apiStatusEl = document.getElementById("apiStatus");
+
+    // Mapping cho từ loại
+    const partOfSpeechMap = {
+      'noun': { short: 'n', name: 'Danh từ', class: 'n' },
+      'verb': { short: 'v', name: 'Động từ', class: 'v' },
+      'adjective': { short: 'adj', name: 'Tính từ', class: 'adj' },
+      'adverb': { short: 'adv', name: 'Trạng từ', class: 'adv' },
+      'preposition': { short: 'prep', name: 'Giới từ', class: 'prep' },
+      'conjunction': { short: 'conj', name: 'Liên từ', class: 'conj' },
+      'interjection': { short: 'interj', name: 'Thán từ', class: 'interj' },
+      'pronoun': { short: 'pron', name: 'Đại từ', class: 'pron' },
+      'determiner': { short: 'det', name: 'Từ hạn định', class: 'det' },
+      'exclamation': { short: 'interj', name: 'Thán từ', class: 'interj' }
+    };
+
+    // Hàm hiển thị trạng thái API
+    function showApiStatus(message, type) {
+      apiStatusEl.textContent = message;
+      apiStatusEl.className = `api-status ${type}`;
+      apiStatusEl.style.display = 'block';
+      
+      setTimeout(() => {
+        apiStatusEl.style.display = 'none';
+      }, 3000);
+    }
+
+    // Enhanced word data với phiên âm có sẵn
+    const enhancedWordData = {
+      'intend': { pronunciation: '/ɪnˈtend/', partOfSpeech: 'verb' },
+      'serendipity': { pronunciation: '/ˌsɛrənˈdɪpɪti/', partOfSpeech: 'noun' },
+      'ephemeral': { pronunciation: '/ɪˈfɛmərəl/', partOfSpeech: 'adjective' },
+      'ubiquitous': { pronunciation: '/juːˈbɪkwɪtəs/', partOfSpeech: 'adjective' },
+      'mellifluous': { pronunciation: '/məˈlɪfluəs/', partOfSpeech: 'adjective' },
+      'quintessential': { pronunciation: '/ˌkwɪntɪˈsɛnʃəl/', partOfSpeech: 'adjective' },
+      'quickly': { pronunciation: '/ˈkwɪkli/', partOfSpeech: 'adverb' },
+      'beautiful': { pronunciation: '/ˈbjuːtɪfəl/', partOfSpeech: 'adjective' },
+      'adventure': { pronunciation: '/ədˈventʃər/', partOfSpeech: 'noun' },
+      'mysterious': { pronunciation: '/mɪˈstɪəriəs/', partOfSpeech: 'adjective' },
+      'important': { pronunciation: '/ɪmˈpɔːrtənt/', partOfSpeech: 'adjective' },
+      'understand': { pronunciation: '/ˌʌndərˈstænd/', partOfSpeech: 'verb' },
+      'develop': { pronunciation: '/dɪˈveləp/', partOfSpeech: 'verb' },
+      'different': { pronunciation: '/ˈdɪfərənt/', partOfSpeech: 'adjective' },
+      'available': { pronunciation: '/əˈveɪləbəl/', partOfSpeech: 'adjective' },
+      'necessary': { pronunciation: '/ˈnesəseri/', partOfSpeech: 'adjective' },
+      'possible': { pronunciation: '/ˈpɑːsəbəl/', partOfSpeech: 'adjective' },
+      'environment': { pronunciation: '/ɪnˈvaɪrənmənt/', partOfSpeech: 'noun' },
+      'knowledge': { pronunciation: '/ˈnɑːlɪdʒ/', partOfSpeech: 'noun' },
+      'experience': { pronunciation: '/ɪkˈspɪriəns/', partOfSpeech: 'noun' }
+    };
+
+    // Hàm lấy dữ liệu từ Dictionary API với nhiều fallback
+    async function fetchWordData(word) {
+      const wordLower = word.toLowerCase();
+      
+      // Kiểm tra cache trước
+      if (wordDataCache[wordLower]) {
+        return wordDataCache[wordLower];
+      }
+
+      // Kiểm tra dữ liệu có sẵn trước
+      if (enhancedWordData[wordLower]) {
+        const data = enhancedWordData[wordLower];
+        wordDataCache[wordLower] = data;
+        return data;
+      }
+
+      // Thử gọi API với timeout và retry
+      const apiUrls = [
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${wordLower}`,
+        `https://api.dictionaryapi.dev/api/v2/entries/en_US/${wordLower}`
+      ];
+
+      for (const apiUrl of apiUrls) {
+        try {
+          // showApiStatus('Đang tải phiên âm...', 'loading');
             
-            // Load quiz data
-            loadQuizData();
+          // Tạo AbortController để timeout
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+
+          const response = await fetch(apiUrl, {
+            signal: controller.signal,
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            }
+          });
+
+          clearTimeout(timeoutId);
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+
+          const data = await response.json();
+          
+          if (data && data.length > 0) {
+            const entry = data[0];
             
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.project-selector')) {
-                    document.getElementById('projectDropdown').classList.remove('show');
-                }
-            });
+            // Lấy phiên âm
+            let pronunciation = '';
+            if (entry.phonetics && entry.phonetics.length > 0) {
+              // Tìm phiên âm có text
+              const phoneticWithText = entry.phonetics.find(p => p.text && p.text.trim());
+              if (phoneticWithText) {
+                pronunciation = phoneticWithText.text;
+              } else if (entry.phonetics[0].text) {
+                pronunciation = entry.phonetics[0].text;
+              }
+            }
+            
+            // Lấy từ loại
+            let partOfSpeech = 'noun';
+            if (entry.meanings && entry.meanings.length > 0) {
+              partOfSpeech = entry.meanings[0].partOfSpeech || 'noun';
+            }
+            
+            // Lấy âm thanh phát âm
+            let audioUrl = '';
+            if (entry.phonetics && entry.phonetics.length > 0) {
+              const phoneticWithAudio = entry.phonetics.find(p => p.audio && p.audio.trim());
+              if (phoneticWithAudio) {
+                audioUrl = phoneticWithAudio.audio;
+              }
+            }
+
+            const wordData = {
+              pronunciation: pronunciation || `/${wordLower}/`,
+              partOfSpeech: partOfSpeech,
+              audioUrl: audioUrl
+            };
+
+            // Lưu vào cache
+            wordDataCache[wordLower] = wordData;
+            // showApiStatus('Tải phiên âm thành công!', 'success');
+            
+            return wordData;
+          }
+        } catch (error) {
+          console.error(`Lỗi khi gọi API ${apiUrl}:`, error);
+          
+          if (error.name === 'AbortError') {
+            showApiStatus('Timeout - Sử dụng dữ liệu offline', 'error');
+          } else {
+            showApiStatus('Lỗi mạng - Sử dụng dữ liệu offline', 'error');
+          }
+          
+          // Thử API tiếp theo
+          continue;
+        }
+      }
+
+      // Fallback data với phiên âm ước tính
+      const fallbackData = {
+        pronunciation: generateFallbackPronunciation(wordLower),
+        partOfSpeech: guessPartOfSpeech(wordLower),
+        audioUrl: ''
+      };
+      
+      wordDataCache[wordLower] = fallbackData;
+      return fallbackData;
+    }
+
+    // Hàm tạo phiên âm ước tính đơn giản
+    function generateFallbackPronunciation(word) {
+      // Một số quy tắc phiên âm cơ bản
+      const rules = {
+        'tion': 'ʃən',
+        'sion': 'ʃən',
+        'ough': 'ʌf',
+        'ight': 'aɪt',
+        'ph': 'f',
+        'th': 'θ',
+        'ch': 'tʃ',
+        'sh': 'ʃ',
+        'ing': 'ɪŋ',
+        'ed': 'd',
+        'ly': 'li'
+      };
+      
+      let pronunciation = word.toLowerCase();
+      
+      // Áp dụng các quy tắc
+      for (const [pattern, replacement] of Object.entries(rules)) {
+        pronunciation = pronunciation.replace(new RegExp(pattern, 'g'), replacement);
+      }
+      
+      return `/${pronunciation}/`;
+    }
+
+    // Hàm đoán từ loại dựa trên hậu tố
+    function guessPartOfSpeech(word) {
+      const adjSuffixes = ['able', 'ible', 'al', 'ful', 'less', 'ous', 'ive', 'ic'];
+      const nounSuffixes = ['tion', 'sion', 'ment', 'ness', 'ity', 'er', 'or', 'ist'];
+      const verbSuffixes = ['ate', 'ize', 'ify', 'en'];
+      const advSuffixes = ['ly'];
+      
+      for (const suffix of adjSuffixes) {
+        if (word.endsWith(suffix)) return 'adjective';
+      }
+      
+      for (const suffix of nounSuffixes) {
+        if (word.endsWith(suffix)) return 'noun';
+      }
+      
+      for (const suffix of verbSuffixes) {
+        if (word.endsWith(suffix)) return 'verb';
+      }
+      
+      for (const suffix of advSuffixes) {
+        if (word.endsWith(suffix)) return 'adverb';
+      }
+      
+      return 'noun'; // Default
+    }
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function updateProgress() {
+      const progress = ((currentIndex + 1) / vocabulary.length) * 100;
+      progressFillEl.style.width = progress + '%';
+    }
+
+    async function loadCard(index) {
+      const word = vocabulary[index];
+      
+      // Hiển thị từ ngay lập tức
+      wordEl.textContent = word.word;
+      pronunciationEl.textContent = 'Đang tải...';
+      pronunciationEl.className = 'pronunciation loading';
+      wordTypeEl.textContent = '';
+      wordTypeEl.style.display = 'none';
+      
+      meaningEl.textContent = flipped ? word.meaning : '';
+      exampleEl.textContent = flipped ? word.example : '';
+
+      // Cập nhật trạng thái học
+      updateLearnedStatus(word.word);
+      updateProgress();
+
+      // Lấy thông tin từ API
+      try {
+        const wordData = await fetchWordData(word.word);
+        
+        // Hiển thị phiên âm
+        pronunciationEl.textContent = wordData.pronunciation;
+        pronunciationEl.className = 'pronunciation';
+        
+        // Lưu URL audio để sử dụng khi phát âm
+        if (wordData.audioUrl) {
+          word.audioUrl = wordData.audioUrl;
         }
 
-        // Load quiz data from JSON file
-        function loadQuizData() {
-            fetch('W_1.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to load data');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    quizData = data;
-                    dataLoaded = true;
-                    console.log('Data loaded successfully:', quizData);
-                    
-                    // Initialize display after data is loaded
-                    populateProjectDropdown();
-                    updateDisplay();
-                })
-                .catch(error => {
-                    console.error('Error loading quiz data:', error);
-                    document.getElementById('questionText').innerHTML = `
-                        <div style="color: red;">
-                            Không thể tải dữ liệu. Vui lòng kiểm tra file test_excel_3.json<br>
-                            Error: ${error.message}
-                        </div>
-                    `;
-                });
+        // Hiển thị từ loại
+        if (wordData.partOfSpeech && partOfSpeechMap[wordData.partOfSpeech]) {
+          const posInfo = partOfSpeechMap[wordData.partOfSpeech];
+          wordTypeEl.textContent = `(${posInfo.short})`;
+          wordTypeEl.className = `word-type ${posInfo.class}`;
+          wordTypeEl.title = posInfo.name;
+          wordTypeEl.style.display = 'inline-block';
+        } else {
+          wordTypeEl.textContent = '(n)';
+          wordTypeEl.className = 'word-type n';
+          wordTypeEl.title = 'Danh từ';
+          wordTypeEl.style.display = 'inline-block';
         }
 
-        // Populate project dropdown
-        function populateProjectDropdown() {
-            if (!quizData || !quizData.projects) return;
-            
-            const dropdown = document.getElementById('projectDropdown');
-            dropdown.innerHTML = '';
-            
-            quizData.projects.forEach((project, index) => {
-                const option = document.createElement('div');
-                option.className = 'project-option';
-                option.textContent = `P${index + 1}: ${project.title || 'bai ' + (index + 1)}`;
-                option.onclick = () => selectProject(index + 1);
-                dropdown.appendChild(option);
-            });
+      } catch (error) {
+        console.error('Lỗi khi tải card:', error);
+        pronunciationEl.textContent = `/${word.word}/`;
+        pronunciationEl.className = 'pronunciation error';
+        
+        wordTypeEl.textContent = '(n)';
+        wordTypeEl.className = 'word-type n';
+        wordTypeEl.title = 'Danh từ';
+        wordTypeEl.style.display = 'inline-block';
+      }
+    }
+
+    function updateLearnedStatus(word) {
+      const learned = JSON.parse(localStorage.getItem("learnedWords") || "[]");
+      const isLearned = learned.includes(word);
+      
+      learnBtnEl.textContent = isLearned ? "✓" : "○";
+      learnBtnEl.className = isLearned ? "control-btn learned" : "control-btn";
+      
+      if (isLearned) {
+        statusEl.textContent = "✅ Bạn đã học từ này";
+      } else {
+        statusEl.textContent = "🔔 Bạn chưa học từ này";
+      }
+    }
+
+    function flipCard(event) {
+      // Không flip nếu click vào control buttons
+      if (event && event.target.closest('.card-controls')) {
+        return;
+      }
+      
+      if (!isDragging) {
+        flipped = !flipped;
+        loadCard(currentIndex);
+      }
+    }
+
+    function toggleLearned(event) {
+      event.stopPropagation();
+      const word = vocabulary[currentIndex].word;
+      let learned = JSON.parse(localStorage.getItem("learnedWords") || "[]");
+      
+      if (learned.includes(word)) {
+        learned = learned.filter(w => w !== word);
+      } else {
+        learned.push(word);
+      }
+      
+      localStorage.setItem("learnedWords", JSON.stringify(learned));
+      updateLearnedStatus(word);
+    }
+
+    function copyWord(event) {
+      event.stopPropagation();
+      const word = vocabulary[currentIndex];
+      const textToCopy = word.word;
+      
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const copyBtn = event.target;
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = "✓";
+        copyBtn.style.background = "linear-gradient(145deg, #28a745, #20c997)";
+        
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.style.background = "linear-gradient(145deg, #007acc, #0056b3)";
+        }, 1000);
+      }).catch(err => {
+        console.error('Không thể sao chép:', err);
+      });
+    }
+
+    function playPronunciation(event) {
+      event.stopPropagation();
+      
+      const word = vocabulary[currentIndex];
+      
+      // Thử phát âm từ API trước (nếu có)
+      if (word.audioUrl) {
+        try {
+          // Dừng audio hiện tại nếu có
+          if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+          }
+          
+          currentAudio = new Audio(word.audioUrl);
+          currentAudio.play().catch(err => {
+            console.log('Không thể phát âm từ API, chuyển sang Web Speech API');
+            playWithSpeechAPI(word.word);
+          });
+          return;
+        } catch (error) {
+          console.log('Lỗi khi phát âm từ API:', error);
         }
+      }
+      
+      // Fallback sang Web Speech API
+      playWithSpeechAPI(word.word);
+    }
 
-        // Timer functions
-        function startTimer() {
-            if (timerInterval) {
-                clearInterval(timerInterval);
-            }
-            
-            timerInterval = setInterval(() => {
-                if (timeLeft > 0) {
-                    timeLeft--;
-                    updateTimer();
-                } else {
-                    clearInterval(timerInterval);
-                    handleTimeUp();
-                }
-            }, 1000);
+    function playWithSpeechAPI(word) {
+      if ('speechSynthesis' in window) {
+        // Dừng phát âm hiện tại nếu có
+        speechSynthesis.cancel();
+        
+        const utterance = new SpeechSynthesisUtterance(word);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.8;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+        
+        speechSynthesis.speak(utterance);
+      } else {
+        console.log('Trình duyệt không hỗ trợ phát âm');
+      }
+    }
+
+    function nextCard() {
+      if (vocabulary.length === 0) return;
+      currentIndex = (currentIndex + 1) % vocabulary.length;
+      flipped = false;
+      loadCard(currentIndex);
+    }
+
+    function prevCard() {
+      if (vocabulary.length === 0) return;
+      currentIndex = (currentIndex - 1 + vocabulary.length) % vocabulary.length;
+      flipped = false;
+      loadCard(currentIndex);
+    }
+
+    // Touch handlers
+    function handleTouchStart(event) {
+      startX = event.touches[0].clientX;
+      startY = event.touches[0].clientY;
+      currentX = startX;
+      currentY = startY;
+      isDragging = false;
+      cardEl = event.target.closest('.card');
+    }
+
+    function handleTouchMove(event) {
+      if (!cardEl) return;
+      
+      event.preventDefault();
+      currentX = event.touches[0].clientX;
+      currentY = event.touches[0].clientY;
+      
+      const diffX = currentX - startX;
+      const diffY = currentY - startY;
+      
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+        isDragging = true;
+        cardEl.style.transform = `translateX(${diffX}px) rotate(${diffX * 0.1}deg)`;
+        cardEl.style.opacity = 1 - Math.abs(diffX) / 300;
+      }
+    }
+
+    function handleTouchEnd(event) {
+      if (!cardEl) return;
+      
+      const diffX = currentX - startX;
+      const threshold = 80;
+      
+      if (Math.abs(diffX) > threshold) {
+        if (diffX > 0) {
+          cardEl.style.transform = 'translateX(100%) rotate(20deg)';
+          cardEl.style.opacity = '0';
+          setTimeout(() => {
+            prevCard();
+            resetCardPosition();
+          }, 300);
+        } else {
+          cardEl.style.transform = 'translateX(-100%) rotate(-20deg)';
+          cardEl.style.opacity = '0';
+          setTimeout(() => {
+            nextCard();
+            resetCardPosition();
+          }, 300);
         }
+      } else {
+        resetCardPosition();
+      }
+      
+      isDragging = false;
+      cardEl = null;
+    }
 
-        function updateTimer() {
-            const hours = Math.floor(timeLeft / 3600);
-            const minutes = Math.floor((timeLeft % 3600) / 60);
-            const seconds = timeLeft % 60;
-            
-            const timeString = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            const timerEl = document.getElementById('timer');
-            timerEl.textContent = timeString;
-            
-            // Warning when less than 5 minutes
-            if (timeLeft < 300 && timeLeft > 0) {
-                timerEl.classList.add('warning');
-            } else {
-                timerEl.classList.remove('warning');
-            }
+    function resetCardPosition() {
+      const card = document.getElementById('card');
+      card.style.transform = 'translateX(0) rotate(0deg)';
+      card.style.opacity = '1';
+    }
+
+    // Mouse events for desktop
+    let mouseDown = false;
+    let startMouseX = 0;
+    let startMouseY = 0;
+
+    document.getElementById('card').addEventListener('mousedown', (e) => {
+      mouseDown = true;
+      startMouseX = e.clientX;
+      startMouseY = e.clientY;
+      isDragging = false;
+      cardEl = e.target.closest('.card');
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!mouseDown || !cardEl) return;
+      
+      const diffX = e.clientX - startMouseX;
+      const diffY = e.clientY - startMouseY;
+      
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 10) {
+        isDragging = true;
+        cardEl.style.transform = `translateX(${diffX}px) rotate(${diffX * 0.1}deg)`;
+        cardEl.style.opacity = 1 - Math.abs(diffX) / 300;
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      if (!mouseDown || !cardEl) return;
+      
+      const diffX = e.clientX - startMouseX;
+      const threshold = 80;
+      
+      if (Math.abs(diffX) > threshold) {
+        if (diffX > 0) {
+          cardEl.style.transform = 'translateX(100%) rotate(20deg)';
+          cardEl.style.opacity = '0';
+          setTimeout(() => {
+            prevCard();
+            resetCardPosition();
+          }, 300);
+        } else {
+          cardEl.style.transform = 'translateX(-100%) rotate(-20deg)';
+          cardEl.style.opacity = '0';
+          setTimeout(() => {
+            nextCard();
+            resetCardPosition();
+          }, 300);
         }
+      } else {
+        resetCardPosition();
+      }
+      
+      mouseDown = false;
+      isDragging = false;
+      cardEl = null;
+    });
 
-        function handleTimeUp() {
-            alert('Hết thời gian! Bài thi đã kết thúc.');
-            // Disable all buttons or redirect
-        }
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        prevCard();
+      } else if (e.key === 'ArrowRight') {
+        nextCard();
+      } else if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        flipCard();
+      }
+    });
 
-        // Display update functions
-        function updateDisplay() {
-            if (!dataLoaded || !quizData || !quizData.projects || !quizData.projects[currentProjectIndex]) {
-                return;
-            }
+    // Sample data
+    const sampleData = [
+      {
+        word: "intend",
+        meaning: "Có ý định, dự định",
+        example: "I intend to finish this project by tomorrow."
+      },
+      {
+        word: "serendipity",
+        meaning: "Sự tình cờ may mắn",
+        example: "Finding this book was pure serendipity."
+      },
+      {
+        word: "ephemeral",
+        meaning: "Tạm thời, phù du",
+        example: "The beauty of cherry blossoms is ephemeral."
+      },
+      {
+        word: "ubiquitous",
+        meaning: "Có mặt khắp nơi",
+        example: "Smartphones are ubiquitous in modern society."
+      },
+      {
+        word: "mellifluous",
+        meaning: "Ngọt ngào, du dương",
+        example: "Her mellifluous voice captivated the audience."
+      },
+      {
+        word: "quintessential",
+        meaning: "Điển hình, tinh túy",
+        example: "This painting is quintessential of the Renaissance period."
+      },
+      {
+        word: "quickly",
+        meaning: "Một cách nhanh chóng",
+        example: "She ran quickly to catch the bus."
+      },
+      {
+        word: "beautiful",
+        meaning: "Đẹp, xinh đẹp",
+        example: "The sunset was beautiful tonight."
+      },
+      {
+        word: "adventure",
+        meaning: "Cuộc phiêu lưu, mạo hiểm",
+        example: "Their trip to the mountains was quite an adventure."
+      },
+      {
+        word: "mysterious",
+        meaning: "Bí ẩn, khó hiểu",
+        example: "The old mansion had a mysterious atmosphere."
+      }
+    ];
 
-            // Update project info
-            document.getElementById('currentProject').textContent = currentProjectIndex + 1;
-            document.getElementById('totalProjects').textContent = quizData.projects.length;
-            
-            // Update question
-            const currentProject = quizData.projects[currentProjectIndex];
-            
-            if (!currentProject.tasks || currentProject.tasks.length === 0) {
-                document.getElementById('questionText').innerHTML = 'Không có câu hỏi nào trong project này.';
-                return;
-            }
-            
-            const currentTask = currentProject.tasks[currentTaskIndex];
-            
-            if (!currentTask) {
-                document.getElementById('questionText').innerHTML = 'Không tìm thấy câu hỏi.';
-                return;
-            }
-            
-            document.getElementById('questionText').innerHTML = `
-                ${currentTask.question || 'Không có câu hỏi'} <br>
-                ${currentTask.image 
-                ? ` <img src="img/${currentTask.image}" 
-                     alt="Question Image" 
-                     style="width: 50px; height: 50px; object-fit: cover; cursor: pointer;"
-                     onclick="openModal('img/${currentTask.image}')"> `
-                : ""}
-            `;
-            
-            // Update step progress
-            updateStepProgress();
-            
-            // Update button states
-            updateButtonStates();
-            
-            // Update task status display
-            updateTaskStatusDisplay();
-        }
+    // Initialize with sample data
+    vocabulary = sampleData;
+    shuffle(vocabulary);
+    currentIndex = 0;
+    loadCard(currentIndex);
 
-        function updateStepProgress() {
-            if (!dataLoaded || !quizData || !quizData.projects || !quizData.projects[currentProjectIndex]) {
-                return;
-            }
-            
-            const currentProject = quizData.projects[currentProjectIndex];
-            const totalSteps = currentProject.tasks ? currentProject.tasks.length : 0;
-            
-            for (let i = 1; i <= 12; i++) {
-                const stepEl = document.getElementById(`step${i}`);
-                const stepIndex = i - 1;
-                
-                if (i > totalSteps) {
-                    stepEl.style.display = 'none';
-                } else {
-                    stepEl.style.display = 'flex';
-                    stepEl.className = 'step';
-                    
-                    const status = getTaskStatus(currentProjectIndex, stepIndex);
-                    
-                    if (stepIndex === currentTaskIndex) {
-                        stepEl.classList.add('active');
-                    } else if (status === 'completed') {
-                        stepEl.classList.add('completed');
-                    } else if (status === 'review') {
-                        stepEl.classList.add('review');
-                    }
-                }
-            }
-        }
-
-        function updateButtonStates() {
-            if (!dataLoaded || !quizData || !quizData.projects || !quizData.projects[currentProjectIndex]) {
-                document.getElementById('prevBtn').disabled = true;
-                document.getElementById('nextBtn').disabled = true;
-                return;
-            }
-            
-            const currentProject = quizData.projects[currentProjectIndex];
-            const totalTasks = currentProject.tasks ? currentProject.tasks.length : 0;
-            
-            // Previous/Next task buttons
-            document.getElementById('prevBtn').disabled = currentTaskIndex === 0;
-            document.getElementById('nextBtn').disabled = currentTaskIndex >= totalTasks - 1;
-        }
-
-        function updateTaskStatusDisplay() {
-            const statusEl = document.getElementById('taskStatus');
-            const status = getTaskStatus(currentProjectIndex, currentTaskIndex);
-            
-            if (status === 'completed') {
-                statusEl.textContent = 'Completed';
-                statusEl.className = 'task-status status-completed';
-                statusEl.style.display = 'block';
-            } else if (status === 'review') {
-                statusEl.textContent = 'Marked for Review';
-                statusEl.className = 'task-status status-review';
-                statusEl.style.display = 'block';
-            } else {
-                statusEl.style.display = 'none';
-            }
-        }
-
-        // Task status management
-        function getTaskStatus(projectIndex, taskIndex) {
-            return taskStatuses[`${projectIndex}-${taskIndex}`] || null;
-        }
-
-        function setTaskStatus(projectIndex, taskIndex, status) {
-            taskStatuses[`${projectIndex}-${taskIndex}`] = status;
-        }
-
-        // Navigation functions
-        function previousTask() {
-            if (currentTaskIndex > 0) {
-                currentTaskIndex--;
-                updateDisplay();
-            }
-        }
-
-        function nextTask() {
-            if (!dataLoaded || !quizData || !quizData.projects || !quizData.projects[currentProjectIndex]) {
-                return;
-            }
-            
-            const currentProject = quizData.projects[currentProjectIndex];
-            const totalTasks = currentProject.tasks ? currentProject.tasks.length : 0;
-            
-            if (currentTaskIndex < totalTasks - 1) {
-                currentTaskIndex++;
-                updateDisplay();
-            }
-        }
-
-        function goToStep(stepNumber) {
-            if (!dataLoaded || !quizData || !quizData.projects || !quizData.projects[currentProjectIndex]) {
-                return;
-            }
-            
-            const stepIndex = stepNumber - 1;
-            const currentProject = quizData.projects[currentProjectIndex];
-            const totalTasks = currentProject.tasks ? currentProject.tasks.length : 0;
-            
-            if (stepIndex >= 0 && stepIndex < totalTasks) {
-                currentTaskIndex = stepIndex;
-                updateDisplay();
-            }
-        }
-
-        function nextProject() {
-            if (!dataLoaded || !quizData || !quizData.projects) {
-                return;
-            }
-            
-            if (currentProjectIndex < quizData.projects.length - 1) {
-                currentProjectIndex++;
-                currentTaskIndex = 0;
-                updateDisplay();
-            }
-        }
-
-        function restartProject() {
-            if (!dataLoaded || !quizData || !quizData.projects || !quizData.projects[currentProjectIndex]) {
-                return;
-            }
-            
-            // Clear all statuses for current project
-            const currentProject = quizData.projects[currentProjectIndex];
-            const totalTasks = currentProject.tasks ? currentProject.tasks.length : 0;
-            
-            for (let i = 0; i < totalTasks; i++) {
-                delete taskStatuses[`${currentProjectIndex}-${i}`];
-            }
-            
-            currentTaskIndex = 0;
-            updateDisplay();
-        }
-
-        // Project selector functions
-        function toggleProjectDropdown() {
-            const dropdown = document.getElementById('projectDropdown');
-            dropdown.classList.toggle('show');
-        }
-
-        function selectProject(projectNumber) {
-            if (!dataLoaded || !quizData || !quizData.projects) {
-                return;
-            }
-            
-            const projectIndex = projectNumber - 1;
-            if (projectIndex >= 0 && projectIndex < quizData.projects.length) {
-                currentProjectIndex = projectIndex;
-                currentTaskIndex = 0;
-                updateDisplay();
-            }
-            
-            document.getElementById('projectDropdown').classList.remove('show');
-        }
-
-        // Task action functions
-        function markCompleted() {
-            const currentStatus = getTaskStatus(currentProjectIndex, currentTaskIndex);
-            
-            if (currentStatus === 'completed') {
-                // If already completed, remove the status
-                delete taskStatuses[`${currentProjectIndex}-${currentTaskIndex}`];
-            } else {
-                // Mark as completed
-                setTaskStatus(currentProjectIndex, currentTaskIndex, 'completed');
-            }
-            updateDisplay();
-        }
-
-        function markForReview() {
-            const currentStatus = getTaskStatus(currentProjectIndex, currentTaskIndex);
-            
-            if (currentStatus === 'review') {
-                // If already marked for review, remove the status
-                delete taskStatuses[`${currentProjectIndex}-${currentTaskIndex}`];
-            } else {
-                // Mark for review
-                setTaskStatus(currentProjectIndex, currentTaskIndex, 'review');
-            }
-            updateDisplay();
-        }
-
-        function DownloadProject(projectId) {
-            if (!dataLoaded || !quizData || !quizData.projects) {
-                alert("Dữ liệu chưa được tải. Vui lòng đợi.");
-                return;
-            }
-            
-            // Find project by id
-            const project = quizData.projects.find(p => p.id === projectId);
-
-            if (!project) {
-                alert("Không tìm thấy project với id = " + projectId);
-                return;
-            }
-
-            const files = project.projectfile;
-
-            if (!files || files.length === 0) {
-                alert("Project này không có file để tải.");
-                return;
-            }
-
-            // Download each file
-            files.forEach(fileName => {
-                const link = document.createElement("a");
-                link.href = "files/wordexam/" + fileName;   
-                link.download = fileName;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            });
-        }
-
-        function showHelp() {
-            if (!dataLoaded || !quizData || !quizData.projects || !quizData.projects[currentProjectIndex]) {
-                showHelpModal('Dữ liệu chưa được tải.');
-                return;
-            }
-            
-            const currentProject = quizData.projects[currentProjectIndex];
-            const currentTask = currentProject.tasks ? currentProject.tasks[currentTaskIndex] : null;
-            
-            if (currentTask && currentTask.answers) {
-                showHelpModal(currentTask.answers);
-            } else {
-                showHelpModal('Không có gợi ý cho câu hỏi này.');
-            }
-        }
-
-        // Help Modal functions
-        function showHelpModal(content) {
-            const modal = document.getElementById('helpModal');
-            const body = document.getElementById('helpModalBody');
-            
-            if (modal && body) {
-                body.innerHTML = `<span class="help-icon"></span> ${content}`;
-                modal.style.display = 'block';
-                
-                // Close modal when clicking outside
-                modal.onclick = function(event) {       
-                    if (event.target === modal) {
-                        closeHelpModal();
-                    }
-                }
-            } else {
-                // Fallback to alert if modal elements not found
-                alert('Gợi ý: ' + content);
-            }
-        }
-
-        function closeHelpModal() {
-            const modal = document.getElementById('helpModal');
-            if (modal) {
-                modal.style.display = 'none';
-            }
-        }
-
-        // Modal functions
-        function openModal(src) {
-            const modal = document.getElementById('imageModal');
-            const img = document.getElementById('modalImage');
-
-            modal.style.display = "block";
-            img.src = src;
-
-            // Use Fullscreen API
-            if (modal.requestFullscreen) {
-                modal.requestFullscreen();
-            } else if (modal.webkitRequestFullscreen) { // Safari
-                modal.webkitRequestFullscreen();
-            } else if (modal.msRequestFullscreen) { // IE/Edge old
-                modal.msRequestFullscreen();
-            }
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = "none";
-
-            // Exit fullscreen if active
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.webkitExitFullscreen) { 
-                document.webkitExitFullscreen();
-            } else if (document.msExitFullscreen) {
-                document.msExitFullscreen();
-            }
-        }
-
-        // Initialize when page loads
-        window.onload = init;
-    </script>
+    // Try to fetch data.json, fall back to sample data if not available
+    fetch("data1.json")
+      .then(res => res.json())
+      .then(data => {
+        vocabulary = data;
+        shuffle(vocabulary);
+        currentIndex = 0;
+        loadCard(currentIndex);
+      })
+      .catch(err => {
+        console.log("Sử dụng dữ liệu mẫu vì không tìm thấy data.json");
+        // Keep using sample data
+      });
+  </script>
 </body>
 </html>
